@@ -1,5 +1,12 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Remove scroll lateral */
     background-color: #FCE6CA;
-    color: white;
-    font-family: Arial, sans-serif;
   }

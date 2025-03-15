@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Window from "./Window";
-import { DesktopWrapper } from "./styles/Desktop.styles";
+import { DesktopWrapper, ContentArea } from "./styles/Desktop.styles";
 
 const Desktop: React.FC = () => {
   const [windows, setWindows] = useState([
@@ -14,11 +14,13 @@ const Desktop: React.FC = () => {
 
   return (
     <DesktopWrapper>
-      {windows.map((win) => (
-        <Window key={win.id} title={win.title} onClose={() => closeWindow(win.id)}>
-          {win.content}
-        </Window>
-      ))}
+      <ContentArea>
+        {windows.map((win) => (
+          <Window key={win.id} title={win.title} onClose={() => closeWindow(win.id)}>
+            {win.content}
+          </Window>
+        ))}
+      </ContentArea>
     </DesktopWrapper>
   );
 };
