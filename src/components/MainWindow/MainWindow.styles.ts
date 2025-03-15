@@ -13,11 +13,16 @@ export const MainWindowWrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 90%;
-  height: 200px;
-  background: white;
-  border-radius: 10px;
+  width: 100%;
   position: absolute;
   top: 50px;
   left: 50px;
+  
+  p {
+    max-width: 60%;
+  }
+`;
+
+export const ContainerImage = styled.div`
+display: flex;
 `;
