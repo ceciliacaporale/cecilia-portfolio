@@ -7,8 +7,8 @@ export const WindowWrapper = styled.div`
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 100px;
+  left: 100px;
 `;
 
 export const Header = styled.div`
