@@ -4,9 +4,11 @@ export const DesktopWrapper = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end; 
   align-items: center;
-
+  overflow: hidden;
+  position: relative;
 `;
 
 export const ContentArea = styled.div`
@@ -22,4 +24,5 @@ export const ContentArea = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  bottom: 0; 
 `;
