@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Window from "./Window";
+import Window from "./Window/Window";
 import { DesktopWrapper, ContentArea } from "./styles/Desktop.styles";
-import MainWindow from "./MainWindow";
+import MainWindow from "./MainWindow/MainWindow";
 
 const Desktop: React.FC = () => {
   const [windows, setWindows] = useState([

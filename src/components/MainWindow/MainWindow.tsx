@@ -1,5 +1,5 @@
 import React from "react";
-import { MainWindowWrapper, Container } from "./styles/MainWindow.styles";
+import { MainWindowWrapper, Container } from "./MainWindow.styles";
 
 interface MainWindowProps {
   title?: string;

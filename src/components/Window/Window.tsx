@@ -1,5 +1,5 @@
 import React from "react";
-import { WindowWrapper, Header, CloseButton, Content } from "./styles/Window.styles";
+import { WindowWrapper, Header, CloseButton, Content } from "./Window.styles";
 
 interface WindowProps {
   title: string;
