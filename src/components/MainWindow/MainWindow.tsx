@@ -1,5 +1,4 @@
 import React from "react";
-import Typewriter from "typewriter-effect";
 import {
   MainWindowWrapper,
   Container,
@@ -14,6 +13,7 @@ import StarPink from "../../assets/starpink.png?url";
 import WindowImage from "../WindowImage/WindowImage";
 import SocialMedia from "../SocialMedia";
 import Tabs from "../Tabs";
+import TitleAnimation from "../TitleAnimation";
 
 interface MainWindowProps {
   title?: string;
@@ -35,19 +35,7 @@ const MainWindow: React.FC<MainWindowProps> = () => {
       <Tabs />
       <MainWindowWrapper>
         <WindowHeaderComponent />
-
-        <h1>
-          <Typewriter
-            options={{
-              strings: ["Hello World!", "Olá Mundo!", "¡Hola Mundo!", "Ciao Mondo!"],
-              autoStart: true,
-              loop: true,
-              delay: 75, 
-              deleteSpeed: 190,
-            }}
-          />
-        </h1>
-
+        <TitleAnimation/>
         <Container>
           <ContainerImage>
             <p>

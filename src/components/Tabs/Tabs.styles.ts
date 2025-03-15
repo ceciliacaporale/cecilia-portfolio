@@ -18,8 +18,7 @@ export const Tab = styled.div`
     cursor: pointer;
 
     &:hover {
-      color:#fff;
-      text-shadow: .01em .01em .01em #000;
+      font-weight: bold;
     }
   }
   @media (max-width: 1250px) {
