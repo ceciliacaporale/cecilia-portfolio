@@ -65,3 +65,9 @@ export const Tooltip = styled.span`
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
 `;
+
+export const SmileWrapper = styled.div`
+  position: absolute;
+  top: -40px; 
+  left: -48px; 
+`;

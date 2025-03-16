@@ -1,9 +1,11 @@
 import React from "react";
-import { SocialMediaWrapper, Header, Content, IconWrapper, Tooltip } from "./SocialMedia.styles";
+import { SocialMediaWrapper, Header, Content, IconWrapper, Tooltip, SmileWrapper } from "./SocialMedia.styles";
 import GitHubIcon from "../../assets/github.svg?url";
 import LinkedinIcon from "../../assets/linkedin.svg?url";
 import MediumIcon from "../../assets/medium.svg?url";
 import MailIcon from "../../assets/mail.svg?url";
+import Smile from "../../assets/smileface.svg?url";
+
 
 interface SocialMediaProps {
   title: string;
@@ -11,8 +13,13 @@ interface SocialMediaProps {
 
 const SocialMedia: React.FC<SocialMediaProps> = ({ title }) => {
   return (
-<SocialMediaWrapper>
+    <SocialMediaWrapper>
+      <SmileWrapper>
+        <img src={Smile} alt="Smile" width="100" height="100" />
+      </SmileWrapper>
+      
       <Header>{title}</Header>
+
       <Content>
         <IconWrapper>
           <a href="https://github.com/ceciliacaporale" target="_blank" rel="noopener noreferrer">

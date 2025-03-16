@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Adobe Illustrator 24.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="450px"
+	 height="458px" viewBox="0 0 450 458" style="enable-background:new 0 0 450 458;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C8F763;}
+	.st1{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st2{fill:#FFFFFF;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st3{fill:#FFCE81;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st4{stroke:#000000;stroke-miterlimit:10;}
+	.st5{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:0,0,0,0,0,0;}
+	.st6{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:0,0,0,0,0,0;}
+	.st7{fill:#F763A6;}
+	.st8{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+	.st10{fill:#FFCE81;}
+	
+		.st11{fill:#77E8FF;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0,0,0,0,0,0;}
+	.st12{fill:#77E8FF;}
+	
+		.st13{fill:#F763A6;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0,0,0,0,0,0;}
+	
+		.st14{fill:#FFCE81;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0,0,0,0,0,0;}
+	
+		.st15{fill:#C8F763;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0,0,0,0,0,0;}
+	.st16{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:square;stroke-miterlimit:10;}
+	.st17{fill:none;stroke:#EBD259;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st18{display:none;fill:none;stroke:#F7E37C;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st19{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st20{fill:none;stroke:#DE8E6F;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st21{fill:none;stroke:#DBBA6E;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st22{fill:none;stroke:#F7F6F6;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st23{fill:none;stroke:#EDC5E8;stroke-width:13;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st24{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
+	.st25{fill:none;stroke:#FFD1B8;stroke-width:30;stroke-miterlimit:10;}
+	.st26{fill:#D5E4E8;stroke:#000000;stroke-width:3;stroke-linecap:square;stroke-miterlimit:10;}
+	.st27{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st28{fill:none;stroke:#9F2DF7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st29{fill:none;stroke:#000000;stroke-linecap:square;stroke-miterlimit:10;}
+	.st30{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st31{fill:none;stroke:#F7E37C;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st32{fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10;}
+	.st33{fill:#F7E37C;}
+	.st34{fill:none;stroke:#F7E37C;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st35{fill:none;}
+	.st36{fill:#D5E8E6;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st37{opacity:0.4588;fill:#FFFFFF;}
+	.st38{fill:none;stroke:#F763A6;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st39{fill:none;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;}
+	.st40{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st41{fill:#FFCE81;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:10;}
+	.st42{fill:#F763A6;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st43{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st44{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:square;stroke-miterlimit:10;}
+	.st45{fill:none;stroke:#CFCFCF;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st46{fill:none;stroke:#E6E6E6;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st47{fill:none;stroke:#EDEDED;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st48{opacity:0.4588;fill:none;stroke:#FFB8D7;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st49{fill:#F2DE00;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st50{fill:#F2DE00;}
+	.st51{fill:none;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st52{fill:#00BEED;}
+	.st53{fill:none;stroke:#00BEED;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st54{fill:none;stroke:#F7ECB2;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st55{fill:none;stroke:#C8F763;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st56{fill:none;stroke:#C9704D;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st57{fill:none;stroke:#3CC26B;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st58{fill:none;stroke:#9AFCAC;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st59{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st60{fill:none;stroke:#77E8FF;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st61{fill:none;stroke:#F763A6;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st62{fill:#FA89B5;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st63{fill:#1C39BA;stroke:#000000;stroke-miterlimit:10;}
+	.st64{fill:none;stroke:#E6CD55;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st65{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st66{fill:none;stroke:#7EF0E4;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st67{fill:none;stroke:#D9D1C5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st68{fill:none;stroke:#DBAFED;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st69{fill:#FFFFFF;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st70{fill:none;stroke:#8A5943;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st71{fill:none;stroke:#BA8B77;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st72{fill:#D5E8E6;}
+	.st73{fill:#FFCE81;stroke:#000000;stroke-width:6;stroke-miterlimit:10;}
+	.st74{fill:none;stroke:#000000;stroke-width:7;stroke-miterlimit:10;}
+	.st75{fill:#F763A6;stroke:#000000;stroke-width:6;stroke-miterlimit:10;}
+	.st76{fill:#E3FBB1;stroke:#000000;stroke-width:6;stroke-miterlimit:10;}
+	.st77{fill:#77E9FF;stroke:#000000;stroke-width:6;stroke-miterlimit:10;}
+</style>
+<g id="Layer_1">
+	<path class="st18" d="M43.14,369.18c0.28,0.85,0.55,1.71,0.83,2.56C43.62,371.64,43.27,371.54,43.14,369.18z"/>
+	<rect x="67.46" y="187.19" class="st72" width="2.5" height="2.5"/>
+	<g>
+		<ellipse class="st73" cx="223.5" cy="223.93" rx="66" ry="63"/>
+		<ellipse cx="205.47" cy="203.24" rx="6.1" ry="12.12"/>
+		<ellipse cx="241.34" cy="206.01" rx="6.1" ry="12.12"/>
+		<path class="st74" d="M185.52,238.73c7.23,11.61,22.59,19.2,38.02,18.79s30.21-8.79,36.59-20.75"/>
+	</g>
+</g>
+<g id="Layer_2">
+</g>
+<g id="Layer_2_copy">
+</g>
+</svg>
