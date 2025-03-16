@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 export const SocialMediaWrapper = styled.div`
   width: 350px;
-  height: 130px;
+  height: 110px;
   background: white;
   border-radius: 10px;
   position: absolute;
   box-shadow: 10px 10px 0 #000000;
-  top: 350px;
+  top: 360px;
   left: 150px;
   translate: -6px -6px;
-  border: 3px solid #000000;
+  border: 2px solid #000000;
   box-shadow: 12px 12px 0 #000000;
   transition: all 0.3s ease; //add animação de transitionnnnn
 `;
