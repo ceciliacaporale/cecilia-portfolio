@@ -12,6 +12,8 @@ const Desktop: React.FC = () => {
     { id: 2, title: "Projetos", content: "Meus projetos legais" },
   ]);
 
+  const [isLoadingVisible, setIsLoadingVisible] = useState(true);
+
   const closeWindow = (id: number) => {
     setWindows(windows.filter((win) => win.id !== id));
   };
@@ -19,7 +21,7 @@ const Desktop: React.FC = () => {
   return (
     <DesktopWrapper>
       <ContentArea>
-        <LoadingWindow />
+        {isLoadingVisible && <LoadingWindow onClose={() => setIsLoadingVisible(false)} />} 
         <MainWindow />
         {windows.map((win) => (
           <Window key={win.id} title={win.title} onClose={() => closeWindow(win.id)}>

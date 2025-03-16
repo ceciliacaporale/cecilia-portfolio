@@ -1,22 +1,32 @@
 import React from "react";
-import { LoadingWindowWrapper, Header, Content, WindowButtons } from "./LoadingWindow.styles";
+import { 
+  LoadingWindowWrapper, 
+  Header, 
+  Content, 
+  WindowButtons, 
+  Loader 
+} from "./LoadingWindow.styles";
 
 interface LoadingWindowProps {
-  title: string;
+  onClose: () => void;
 }
 
-const LoadingWindow: React.FC<LoadingWindowProps> = ({ title }) => {
+const LoadingWindow: React.FC<LoadingWindowProps> = ({ onClose }) => {
   return (
     <LoadingWindowWrapper>
-       <WindowButtons>
-          <span className="close"></span>
-          <span className="minimize"></span>
-          <span className="maximize"></span>
-        </WindowButtons>
-      <Header>
-        {title}
-      </Header>
-      <Content>constante evolução</Content>
+      <WindowButtons>
+        <span className="close" onClick={onClose}>✕</span>
+      </WindowButtons>
+      <Header>constante evolução</Header>
+      <Content>
+        <Loader>
+          <div className="container">
+            <div className="box"></div>
+            <div className="box"></div>
+            <div className="box"></div>
+          </div>
+        </Loader>
+      </Content>
     </LoadingWindowWrapper>
   );
 };
