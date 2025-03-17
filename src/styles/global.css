@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
 
 * {
     margin: 0;
@@ -8,12 +10,23 @@
   
   html, body {
     font-family: 'Roboto', sans-serif;
-    width: 100%;
-    height: 100%;
     overflow-x: hidden;
     background-color: #FCE6CA;
     
     .pixel-font {
       font-family: "Pixelify Sans", sans-serif;
+    }
+
+    .inter-font {
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+    }
+
+    .squada-one-regular {
+      font-family: "Squada One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
     }
   }
