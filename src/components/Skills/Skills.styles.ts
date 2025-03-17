@@ -22,19 +22,13 @@ export const Header = styled.div`
   padding: 0 12px;
   position: relative;
   cursor: grab;
+  font-family: "Pixelify Sans", sans-serif;
+  justify-content: center;
   user-select: none;
 
   &:active {
     cursor: grabbing;
   }
-`;
-
-export const CloseButton = styled.button`
-  background: transparent;
-  border: none;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
 `;
 
 export const Content = styled.div`
@@ -51,7 +45,6 @@ export const Content = styled.div`
   margin: 6px 4px 4px 0;
   position: relative;
   text-transform: lowercase;
-  cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 

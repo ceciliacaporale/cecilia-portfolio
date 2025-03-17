@@ -4,11 +4,11 @@ import { SkillsWrapper, Header, Content, SmileWrapper } from "./Skills.styles";
 import Cursor from "../../assets/cursor.png?url";
 
 interface SkillsProps {
-  title: string;
+  title?: string;
 }
 
 const Skills: React.FC<SkillsProps> = ({ title }) => {
-  const { position, handleMouseDown } = useDraggable(window.innerWidth - 400, 348);
+  const { position, handleMouseDown } = useDraggable(window.innerWidth - 380, 290);
 
   return (
     <SkillsWrapper style={{ left: position.x, top: position.y }}>
@@ -17,7 +17,7 @@ const Skills: React.FC<SkillsProps> = ({ title }) => {
       </SmileWrapper>
     
       <Header onMouseDown={handleMouseDown}>
-        {title}
+        {'skills'}
       </Header>
       <Content>
       <div className="card__tags">
@@ -33,7 +33,7 @@ const Skills: React.FC<SkillsProps> = ({ title }) => {
       <li className="tag__name">css</li>
       <li className="tag__name">strapi</li>
       <li className="tag__name">figma</li>
-
+      <li className="tag__name">illustrator</li>
     </ul>
     </div> 
       </Content>
