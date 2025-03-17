@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,4 +12,8 @@
     height: 100%;
     overflow-x: hidden;
     background-color: #FCE6CA;
+    
+    .pixel-font {
+      font-family: "Pixelify Sans", sans-serif;
+    }
   }
