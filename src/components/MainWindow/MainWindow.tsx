@@ -1,18 +1,23 @@
 import React from "react";
-import { MainWindowWrapper, Container, ContainerImage, TabsContainer, WindowHeader, WindowButtons, Tab } from "./MainWindow.styles";
-import Alvo from "../../assets/alvo.png"; 
+import { MainWindowWrapper, Container, ContainerImage, TabsContainer, WindowHeader, WindowButtons, Tab, ContainerSocialMedia } from "./MainWindow.styles";
+import Ceci from "../../assets/ceci.png?url"; 
+import Star from "../../assets/star.png?url"; 
+import StarPink from "../../assets/starpink.png?url"; 
+import WindowImage from "../WindowImage/WindowImage";
+import SocialMedia from "../SocialMedia/SocialMedia";
+
 interface MainWindowProps {
   title?: string;
 }
 
 const MainWindow: React.FC<MainWindowProps> = () => {
   return (
-    <><TabsContainer>
+    <><><TabsContainer>
       <Tab>home  <span className="close-tab">✕</span></Tab>
       <Tab>sobre mim <span className="close-tab">✕</span></Tab>
-      <Tab>blog <span className="close-tab">✕</span></Tab>
+      <Tab>projetos <span className="close-tab">✕</span></Tab>
     </TabsContainer>
-    <MainWindowWrapper>
+      <MainWindowWrapper>
         <WindowHeader>
           <WindowButtons>
             <span className="close"></span>
@@ -20,22 +25,35 @@ const MainWindow: React.FC<MainWindowProps> = () => {
             <span className="maximize"></span>
           </WindowButtons>
         </WindowHeader>
-
+        <h1>Hello World!</h1>
         <Container>
-          <h1>Hello World</h1>
           <ContainerImage>
-          <p>
-            Sou desenvolvedora front-end e minha trajetória começou no início de
-            2022, quando iniciei a faculdade de Engenharia de Software. Logo
-            ingressei no mercado de trabalho, onde venho evoluindo constantemente,
-            sempre em busca de aprimoramento.
-            Ao longo desses anos, me especializei no desenvolvimento de
-            aplicações front-end escaláveis e responsivas, utilizando tecnologias
-          </p>
-            <img src={Alvo} alt="Imagem teste" />
+            <p>
+              Sou Maria Cecília, desenvolvedora front-end.
+              Adoro transformar ideias em código e criar experiências interativas. Quando não estou programando, provavelmente estou rabiscando alguma ilustração por aí.
+              Iniciei minha carreira no início de 2022 e, desde então, sigo aprendendo e evoluindo a cada projeto. Estou sempre aberta a colaborações, então sinta-se à vontade para entrar em contato para qualquer oportunidade!
+              Bem-vindo ao meu cantinho na internet e espero que aproveite a visita!
+            </p>
+            <WindowImage
+              title=""
+              imageSrc={Ceci}
+              width="200px"
+              height="200px"
+              $headerColor="#FFF982"  />
           </ContainerImage>
+          <div className="star-green">
+            <img src={Star} width={40} height={40} />
+          </div>
+          <div className="star-pink">
+            <img src={StarPink} width={40} height={40} />
+          </div>
         </Container>
-      </MainWindowWrapper></>
+      </MainWindowWrapper>
+      </>
+      <ContainerSocialMedia>
+        <SocialMedia />
+      </ContainerSocialMedia>
+      </>
 );
 };
 
