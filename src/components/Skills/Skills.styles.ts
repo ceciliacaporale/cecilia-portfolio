@@ -6,7 +6,6 @@ export const SkillsWrapper = styled.div`
   background: white;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(219, 85, 85, 0.2);
-  position: absolute;
   z-index: 99;
   border: 1px solid #000;
   box-shadow: 8px 8px 0 #7AEBC9;

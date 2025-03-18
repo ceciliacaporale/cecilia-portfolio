@@ -11,6 +11,7 @@ const typing = keyframes`
 
 export const TerminalWrapper = styled.div`
   width: 355px;
+  max-width: 100%;
   height: 200px;
   background-color: #ffff;
   color: #000;
@@ -18,9 +19,7 @@ export const TerminalWrapper = styled.div`
   border-radius: 8px;
   box-shadow: 8px 8px 0 #fc54a9;
   position: absolute;
-  bottom: -35px;
-  right: 250px;
-  transform: translate(-50%, -50%);
+
   border: 2px solid black;
   display: flex;
   flex-direction: column;
@@ -31,7 +30,6 @@ export const TerminalWrapper = styled.div`
     top: 10px;
     right: -1rem;
   }
-
 `;
 
 export const Header = styled.div`
@@ -39,6 +37,7 @@ export const Header = styled.div`
   align-items: center;
   gap: 5px;
   padding: 5px 10px;
+  cursor: grab;
 `;
 
 export const Dot = styled.span<{ color: string }>`

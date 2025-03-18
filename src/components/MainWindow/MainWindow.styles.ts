@@ -11,9 +11,9 @@ export const MainWindowWrapper = styled.div`
   flex-direction: column;
   overflow: hidden;
   min-height: 240px;
+  height: 300px;
 
   h1 { 
-    margin-top: -1rem;
     padding: 20px 0 0 20px;
     font-family: "Squada One", sans-serif;
     color: #FDF282;
@@ -24,13 +24,10 @@ export const MainWindowWrapper = styled.div`
     -webkit-text-stroke: .025em #000;
   }
 
-  @media (max-width: 986px) {
-    height: 360px;
-  }
 `;
 
 export const WindowHeader = styled.div`
-  height: 35px;
+ height: 35px;
   border-radius: 12px 12px 0 0;
   display: flex;
   align-items: center;
@@ -41,7 +38,7 @@ export const WindowHeader = styled.div`
 export const WindowButtons = styled.div`
   display: flex;
   gap: 8px;
-
+  padding-top: 1rem;
   span {
     width: 12px;
     height: 12px;
@@ -69,18 +66,20 @@ export const Container = styled.div`
     max-width: 70%;
     font-size: 16px;
     font-family: "Inter", sans-serif;
+
+    
   }
 
   .star-green { 
     top: 140px;
-    right: 5px;
+    right: 0px;
     z-index: 9;
     position: absolute;
   }
 
   .star-pink { 
-    top: 30px;
-    right: 200px;
+    top: 36px;
+    right: 280px;
     z-index: 9;
     position: absolute;
   }
@@ -97,6 +96,12 @@ export const ContainerImage = styled.div`
     
   & > div { 
     margin-top: -4rem; 
+
+    @media (min-width: 1034px) {
+    width: 280px;
+    height: 280px;
+    margin-top: -98px;
+  }
   }
 `;
 
@@ -142,12 +147,16 @@ export const TabsContainer = styled.div`
   z-index: 10;
   font-family: "Pixelify Sans", sans-serif;
 
+  @media (min-width: 1735px) {
+    left: 3rem;
+  }
+
   @media (max-width: 1735px) {
-    left: 2rem;
+    left: 3rem;
   }
 
   @media (max-width: 1219px) {
-    left: 2rem;
+    left: 1rem;
   }
 `;
 
@@ -157,11 +166,16 @@ export const ContainerSocialMedia = styled.div`
   left: 1%;
   top: 2rem;
 
-  @media (max-width: 1166px) {
-    top: 3rem;
+  @media (max-width: 986px) {
+    top: 5.5rem;
   }
 
-  @media (max-width: 986px) {
-    top: 7rem;
+  @media (min-width: 987px) {
+    top: 4.8rem;
+  }
+
+  @media (min-width: 1034px) {
+    top: 3rem;
+    left: 3rem;
   }
 `;

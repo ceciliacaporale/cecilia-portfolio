@@ -13,14 +13,6 @@ export const WindowSmileWrapper = styled.div`
     16px 16px 0 #5B5BFF, 
     16px 16px 0 1px black; 
   z-index: 99;
-  bottom: 7rem;
-  left: 4rem;
-  /* top: 10rem;
-  right: 32rem; */
-  @media(min-width: 600px) {
-  background-color: red !important;
-}
-
 `;
 
 export const Header = styled.div`

@@ -2,7 +2,6 @@ import React from "react";
 import useDraggable from "../../hooks/useDraggable"; 
 import { WindowInfoWrapper, Header, Content } from "./WindowInfo.styles";
 import Pixel from "./../../assets/smilepixel.png?url"
-import Close from "./../../assets/close.png?url"
 
 
 interface WindowInfoProps {
@@ -11,15 +10,15 @@ interface WindowInfoProps {
 }
 
 const WindowInfo: React.FC<WindowInfoProps> = ({ title, containerRef }) => {
-  const { position, handleMouseDown } = useDraggable(190, 580, containerRef);
+  const { position, handleMouseDown } = useDraggable(200, 470, containerRef, 200, 80);
 
   return (
-        <WindowInfoWrapper
-        style={{
-          left: position.x,
-          top: position.y,
-          position: "absolute", 
-        }}
+      <WindowInfoWrapper
+          style={{
+            left: position.x,
+            top: position.y,
+            position: "absolute", 
+          }}
       >
       <Header onMouseDown={handleMouseDown}>
         {title}

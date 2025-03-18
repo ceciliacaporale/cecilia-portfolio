@@ -1,7 +1,5 @@
 import React from "react";
-import useDraggable from "../../hooks/useDraggable"; 
 import Shape from "../../assets/shape.png?url";
-import Spiral from "../../assets/spiral.png?url";
 
 import { 
   LoadingWindowWrapper, 
@@ -16,17 +14,15 @@ interface LoadingWindowProps {
 }
 
 const LoadingWindow: React.FC<LoadingWindowProps> = ({ onClose }) => {
-  const { elementRef, position, handleMouseDown } = useDraggable(window.innerWidth - 390, -50);
 
   return (
     <LoadingWindowWrapper 
-      ref={elementRef}
-      style={{ left: `${position.x}px`, top: `${position.y}px` }}
+    
     >
       <WindowButtons>
         <span className="close" onClick={onClose}>✕</span>
       </WindowButtons>
-      <Header className="draggable-header" onMouseDown={handleMouseDown}>
+      <Header className="draggable-header" >
       constant evolution
       </Header>
       <Content>

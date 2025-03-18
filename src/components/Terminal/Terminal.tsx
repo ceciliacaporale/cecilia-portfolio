@@ -7,7 +7,12 @@ import {
   Cursor,
 } from "./Terminal.styles";
 import Star from "./../../assets/staryellow.png?url"
+import useDraggable from "../../hooks/useDraggable"; 
 // import Shine from "./../../assets/shineblue.png?url"
+
+interface TerminalProps {
+  containerRef?: React.RefObject<HTMLDivElement>; 
+}
 
 const messages = [
     "$ initializing...",
@@ -18,7 +23,8 @@ const messages = [
     "..."
   ];
   
-  const Terminal: React.FC = () => {
+  const Terminal: React.FC<TerminalProps> = ({ containerRef }) => {
+    const { position, handleMouseDown } = useDraggable(430, 380, containerRef, 355, 200);
     const [displayedText, setDisplayedText] = useState<string>("");
     const [messageIndex, setMessageIndex] = useState<number>(0);
     const [charIndex, setCharIndex] = useState<number>(0);
@@ -42,8 +48,13 @@ const messages = [
   
     return (
         <>
-        <TerminalWrapper>
-                <Header>
+        <TerminalWrapper 
+           style={{
+            left: position.x,
+            top: position.y,
+            position: "absolute", 
+          }}>
+                <Header onMouseDown={handleMouseDown}>
                     <Dot color="#ED83A2" />
                     <Dot color="#FAC93E" />
                     <Dot color="#AFE90A" />

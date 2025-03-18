@@ -5,13 +5,19 @@ import Hastag from "../../assets/hastag.png?url";
 
 interface SkillsProps {
   title?: string;
+  containerRef?: React.RefObject<HTMLDivElement>; 
+  
 }
 
-const Skills: React.FC<SkillsProps> = ({ title }) => {
-  const { position, handleMouseDown } = useDraggable(window.innerWidth - 380, 290);
+const Skills: React.FC<SkillsProps> = ({ title, containerRef }) => {
+  const { position, handleMouseDown } = useDraggable(160, 30, containerRef);
 
   return (
-    <SkillsWrapper style={{ left: position.x, top: position.y }}>
+    <SkillsWrapper style={{
+      left: position.x,
+      top: position.y,
+      position: "absolute", 
+    }}>
        <SmileWrapper>
         <img src={Hastag} alt="Smile" width="24" height="24" />
       </SmileWrapper>

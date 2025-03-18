@@ -10,10 +10,7 @@ export const WindowInfoWrapper = styled.div`
   z-index: 99;
   border: 1px solid #000;
 
-  left: 50px;
-  top: 100px;
 `;
-
 
 export const Header = styled.div`
   height: 20px;
@@ -30,6 +27,7 @@ export const Header = styled.div`
   cursor: grab;
   user-select: none;
   gap: 5px;
+
   &:active {
     cursor: grabbing;
   }
