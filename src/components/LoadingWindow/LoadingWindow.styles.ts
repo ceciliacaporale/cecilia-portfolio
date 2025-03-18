@@ -6,26 +6,28 @@ const loadAnimation = keyframes`
 `;
 
 export const LoadingWindowWrapper = styled.div`
-  width: 250px;
-  height: 86px;
+  width: 200px;
+  height: 85px;
   background: white;
   border-radius: 10px;
   position: absolute;
   border: 1px solid #000;
-  top: -10px;
-  right: 100px;
   z-index: 999;
 `;
 
 export const Header = styled.div`
   height: 25px;
-  background:rgb(255, 184, 166);
+  background:#FAC93E;
   border-radius: 10px 10px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px;
+  border-bottom: 1px solid #000;
   font-size: 14px;
+   cursor: grab;
+   user-select: none;
+   font-family: "Pixelify Sans", sans-serif;
 `;
 
 export const Content = styled.div`
@@ -35,6 +37,18 @@ export const Content = styled.div`
   align-items: center;
   gap: 10px;
   font-size: 14px;
+
+  .star {
+    position: absolute;
+    top: -16px;
+    left: -10px;
+  }
+
+  .spiral {
+    position: absolute;
+    top: 60px;
+    right: -10px;
+  }
 `;
 
 export const WindowButtons = styled.div`
@@ -59,7 +73,7 @@ export const Loader = styled.div`
   .container {
     width: 180px;
     height: 18px;
-    border: 2px solid #b2b2b2;
+    border: 1px solid #000;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
