@@ -1,17 +1,22 @@
 import styled from "styled-components";
 
 export const DesktopWrapper = styled.div`
-width: 100vw;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end; 
   align-items: center;
   position: absolute;
+
+  @media (min-width: 1901px) {
+      padding-top: 4rem;
+  }
+
 `;
 
 export const ContentArea = styled.div`
-width: 90%; 
+  width: 90%; 
   max-width: 100%;
   margin-top: 4rem;
   height: 90%;
@@ -23,4 +28,9 @@ width: 90%;
   align-items: center;
   position: relative;
   bottom: 0; 
+
+  @media (min-width: 1901px) {
+      max-width: 60%;
+  }
+  
 `;

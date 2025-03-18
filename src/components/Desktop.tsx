@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { DesktopWrapper, ContentArea } from "./styles/Desktop.styles";
 import MainWindow from "./MainWindow/MainWindow";
 import WindowSmile from "./WindowSmile/WindowSmile";
@@ -22,15 +22,16 @@ const Desktop: React.FC = () => {
   const closeWindow = (id: number) => {
     setWindows(windows.filter((win) => win.id !== id));
   };
+  const containerRef = useRef<HTMLDivElement>(null); 
 
   return (
     <DesktopWrapper>
-      <ContentArea>
+      <ContentArea  ref={containerRef}>
         {/* {isLoadingVisible && <LoadingWindow onClose={() => setIsLoadingVisible(false)} />}  */}
         <MainWindow />
          <WindowSmile />
       {/* <Skills /> */}
-      {/* <WindowInfo /> */}
+      <WindowInfo  containerRef={containerRef}  />
       {/* <Terminal /> */}
       {/* <Smiling />
       <Checkerboard /> */}

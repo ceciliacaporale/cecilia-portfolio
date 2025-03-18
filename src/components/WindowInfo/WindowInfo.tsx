@@ -7,13 +7,20 @@ import Close from "./../../assets/close.png?url"
 
 interface WindowInfoProps {
   title?: string;
+  containerRef?: React.RefObject<HTMLDivElement>; 
 }
 
-const WindowInfo: React.FC<WindowInfoProps> = ({ title }) => {
-  const { position, handleMouseDown } = useDraggable(window.innerWidth - 1090, 430);
+const WindowInfo: React.FC<WindowInfoProps> = ({ title, containerRef }) => {
+  const { position, handleMouseDown } = useDraggable(190, 580, containerRef);
 
   return (
-    <WindowInfoWrapper style={{ left: position.x, top: position.y }}>
+        <WindowInfoWrapper
+        style={{
+          left: position.x,
+          top: position.y,
+          position: "absolute", 
+        }}
+      >
       <Header onMouseDown={handleMouseDown}>
         {title}
         <p>_</p>

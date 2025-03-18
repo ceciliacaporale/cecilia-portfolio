@@ -1,31 +1,47 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
-const useDraggable = (initialX: number, initialY: number) => {
-  const elementRef = useRef<HTMLDivElement>(null);
+const useDraggable = (
+  initialX: number,
+  initialY: number,
+  containerRef?: React.RefObject<HTMLDivElement>
+) => {
   const [position, setPosition] = useState({ x: initialX, y: initialY });
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
 
   const handleMouseDown = (e: React.MouseEvent) => {
+    if (!containerRef?.current) return;
+
     setIsDragging(true);
+
+    const container = containerRef.current.getBoundingClientRect();
     setOffset({
-      x: e.clientX - position.x,
-      y: e.clientY - position.y,
+      x: e.clientX - (container.left + position.x),
+      y: e.clientY - (container.top + position.y),
     });
+
+    e.preventDefault(); // Evita comportamento inesperado ao arrastar
   };
 
   const handleMouseMove = (e: MouseEvent) => {
-    if (!isDragging) return;
+    if (!isDragging || !containerRef?.current) return;
 
-    setPosition({
-      x: e.clientX - offset.x,
-      y: e.clientY - offset.y,
-    });
+    const container = containerRef.current.getBoundingClientRect();
+    const minX = 0;
+    const maxX = container.width - 200; // Considera a largura do WindowInfo
+    const minY = 0;
+    const maxY = container.height - 80; // Considera a altura do WindowInfo
+
+    let newX = e.clientX - container.left - offset.x;
+    let newY = e.clientY - container.top - offset.y;
+
+    newX = Math.min(Math.max(newX, minX), maxX);
+    newY = Math.min(Math.max(newY, minY), maxY);
+
+    setPosition({ x: newX, y: newY });
   };
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
+  const handleMouseUp = () => setIsDragging(false);
 
   useEffect(() => {
     if (isDragging) {
@@ -42,7 +58,7 @@ const useDraggable = (initialX: number, initialY: number) => {
     };
   }, [isDragging]);
 
-  return { elementRef, position, handleMouseDown };
+  return { position, handleMouseDown };
 };
 
 export default useDraggable;

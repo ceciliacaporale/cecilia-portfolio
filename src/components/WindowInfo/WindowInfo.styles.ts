@@ -6,9 +6,12 @@ export const WindowInfoWrapper = styled.div`
   background: #F0BAFD;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(219, 85, 85, 0.2);
-  position: absolute;
+  position: relative;
   z-index: 99;
   border: 1px solid #000;
+
+  left: 50px;
+  top: 100px;
 `;
 
 
