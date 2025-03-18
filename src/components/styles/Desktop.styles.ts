@@ -1,18 +1,17 @@
 import styled from "styled-components";
 
 export const DesktopWrapper = styled.div`
-  width: 100vw;
+width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end; 
   align-items: center;
-  overflow: hidden;
-  position: relative;
+  position: absolute;
 `;
 
 export const ContentArea = styled.div`
-  width: 90%; 
+width: 90%; 
   max-width: 100%;
   margin-top: 4rem;
   height: 90%;
@@ -22,7 +21,6 @@ export const ContentArea = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
   bottom: 0; 
 `;
