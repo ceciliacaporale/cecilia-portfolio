@@ -1,22 +1,20 @@
 import React from "react";
-import { WindowSmileWrapper, Header, Content, WindowButtons } from "./WindowSmile.styles";
-
+import { WindowSmileWrapper, Header, Content } from "./WindowSmile.styles";
+// import Love from "./../../assets/love.png?url"
 interface WindowSmileProps {
-  title: string;
+  title?: string;
 }
 
 const WindowSmile: React.FC<WindowSmileProps> = ({ title }) => {
+  console.log("Styled Components carregado!");
   return (
     <WindowSmileWrapper>
       <Header>
-          <WindowButtons>
-            <span className="close"></span>
-            <span className="minimize"></span>
-            <span className="maximize"></span>
-            </WindowButtons>
         {title}
       </Header>
-      <Content>aa</Content>
+      <Content>
+      {/* <img src={Love} alt="GitHub" width="80px" height="80px" /> */}
+      </Content>
     </WindowSmileWrapper>
   );
 };

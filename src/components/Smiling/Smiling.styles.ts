@@ -7,8 +7,8 @@ export const SmilingWrapper = styled.div`
   border-radius: 10px;
   box-shadow: 8px 8px 0 #000;
   position: relative;
-  top: 270px;
-  right: -450px;
+  top: 285px;
+  right: -120px;
   translate: -6px -6px;
   border: 2px solid #000000;
   z-index: 99999;

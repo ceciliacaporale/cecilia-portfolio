@@ -1,24 +1,43 @@
 import styled from "styled-components";
 
 export const WindowSmileWrapper = styled.div`
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   background: white;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(219, 85, 85, 0.2);
   position: absolute;
-  top: 500px;
-  left: 200px;
+  border: 1px solid black;
+  box-shadow: 
+    8px 8px 0 #FC54A9, 
+    8px 8px 0 1px black, 
+    16px 16px 0 #5B5BFF, 
+    16px 16px 0 1px black; 
+  z-index: 99;
+  bottom: 7rem;
+  left: 4rem;
+  /* top: 10rem;
+  right: 32rem; */
+  @media(min-width: 600px) {
+  background-color: red !important;
+}
+
 `;
 
 export const Header = styled.div`
-  height: 35px;
-  border-radius: 12px 12px 0 0;
+  height: 20px;
+  border-radius: 10px 10px 0 0;
   display: flex;
   align-items: center;
-  background-color: #222;
+  background-color: #6DCBE2;
+  border-bottom: 1px solid black;
   padding: 0 12px;
   position: relative;
+  cursor: grab;
+  user-select: none;
+
+  &:active {
+    cursor: grabbing;
+  }
 `;
 
 export const CloseButton = styled.button`
@@ -32,26 +51,4 @@ export const CloseButton = styled.button`
 export const Content = styled.div`
   padding: 20px;
   color: black;
-`;
-
-export const WindowButtons = styled.div`
-  display: flex;
-  gap: 8px;
-
-  span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
-  .close {
-    background:rgb(252, 65, 174);
-  }
-  .minimize {
-    background: #ffbd2e;
-  }
-  .maximize {
-    background:rgb(102, 240, 123);
-  }
 `;

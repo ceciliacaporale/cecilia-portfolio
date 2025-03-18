@@ -8,7 +8,7 @@ import Smile from "../../assets/smileface.svg?url";
 
 
 interface SocialMediaProps {
-  title: string;
+  title?: string;
 }
 
 const SocialMedia: React.FC<SocialMediaProps> = ({ title }) => {

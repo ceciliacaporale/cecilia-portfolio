@@ -6,9 +6,11 @@ export const SocialMediaWrapper = styled.div`
   background: white;
   border-radius: 10px;
   position: absolute;
-  box-shadow: 8px 8px 0 #ecaeef;
-  top: 360px;
-  left: 150px;
+  box-shadow: 
+  8px 8px 0 #ED83A2,
+  8px 8px 0 1px black;
+  top: 255px;
+  left: 90px;
   translate: -6px -6px;
   border: 2px solid #000000;
   transition: all 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -70,4 +72,5 @@ export const SmileWrapper = styled.div`
   position: absolute;
   top: -40px; 
   left: -48px; 
+  
 `;
