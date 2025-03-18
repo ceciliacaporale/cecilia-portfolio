@@ -59,4 +59,9 @@ export const SmileWrapper = styled.div`
   top: -7px; 
   right: 10px; 
   z-index: 9999;
+  transition: transform 0.6s ease-in-out;
+
+  :hover {
+    transform: rotate(15deg);
+  }
 `;

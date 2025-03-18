@@ -1,7 +1,7 @@
 import React from "react";
 import useDraggable from "../../hooks/useDraggable"; 
 import { SkillsWrapper, Header, Content, SmileWrapper } from "./Skills.styles";
-import Cursor from "../../assets/cursor.png?url";
+import Hastag from "../../assets/hastag.png?url";
 
 interface SkillsProps {
   title?: string;
@@ -13,7 +13,7 @@ const Skills: React.FC<SkillsProps> = ({ title }) => {
   return (
     <SkillsWrapper style={{ left: position.x, top: position.y }}>
        <SmileWrapper>
-        <img src={Cursor} alt="Smile" width="24" height="24" />
+        <img src={Hastag} alt="Smile" width="24" height="24" />
       </SmileWrapper>
     
       <Header onMouseDown={handleMouseDown}>
