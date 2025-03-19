@@ -16,10 +16,9 @@ export const MobileWrapper = styled.div`
 `;
 
 export const ContentArea = styled.div`
-  width: 90%; 
+  width: 95%; 
   max-width: 100%;
-  margin-top: 4rem;
-  height: 90%;
+  height: 98%;
   background-color: white;
   border-radius: 50px 50px 0 0; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

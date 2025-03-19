@@ -33,8 +33,8 @@ const Desktop: React.FC = () => {
          <Skills containerRef={containerRef} />
       <WindowInfo  containerRef={containerRef}  />
       <Terminal containerRef={containerRef}  />
-      {/* <Smiling containerRef={containerRef} /> */}
-      {/* <Checkerboard /> */}
+      {/* <Checkerboard containerRef={containerRef}/> */}
+      <Smiling containerRef={containerRef} />
       </ContentArea>
     </DesktopWrapper>
   );
