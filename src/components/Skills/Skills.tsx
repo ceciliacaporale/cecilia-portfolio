@@ -10,7 +10,7 @@ interface SkillsProps {
 }
 
 const Skills: React.FC<SkillsProps> = ({ title, containerRef }) => {
-  const { position, handleMouseDown } = useDraggable(160, 30, containerRef);
+  const { position, handleMouseDown } = useDraggable(1000, 380, containerRef, 200, 250);
 
   return (
     <SkillsWrapper style={{

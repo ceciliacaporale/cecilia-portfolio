@@ -10,7 +10,7 @@ export const DesktopWrapper = styled.div`
   position: absolute;
 
   @media (min-width: 1901px) {
-      padding-top: 4rem;
+      padding-top: 7.5rem;
   }
 
 `;

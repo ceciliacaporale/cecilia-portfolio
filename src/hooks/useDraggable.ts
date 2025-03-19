@@ -4,7 +4,7 @@ const useDraggable = (
   initialX: number,
   initialY: number,
   containerRef?: React.RefObject<HTMLDivElement>,
-  componentWidth: number = 190, // Default para o SkillsWrapper
+  componentWidth: number = 190,
   componentHeight: number = 238
 ) => {
   const [position, setPosition] = useState({ x: initialX, y: initialY });
@@ -17,8 +17,8 @@ const useDraggable = (
     const handleResize = () => {
       clearTimeout(timeout);
       timeout = setTimeout(() => {
-        setPosition({ x: initialX, y: initialY }); // Resetar para a posição inicial
-      }, 1000); // Espera 1 segundo após parar de redimensionar
+        setPosition({ x: initialX, y: initialY }); 
+      }, 1000); 
     };
   
     window.addEventListener("resize", handleResize);
@@ -44,20 +44,27 @@ const useDraggable = (
 
   const handleMouseMove = (e: MouseEvent) => {
     if (!isDragging || !containerRef?.current) return;
-
+  
     const container = containerRef.current.getBoundingClientRect();
-    
+  
     const minX = 0;
-    const maxX = container.width - componentWidth;
     const minY = 0;
-    const maxY = container.height - componentHeight;
-
+  
+    // dimensões dos containers
+    const containerWidth = container.width;
+    const containerHeight = container.height;
+  
+    // faz o calculo dos limitess
+    const maxX = Math.max(0, containerWidth - componentWidth);
+    const maxY = Math.max(0, containerHeight - componentHeight);
+  
     let newX = e.clientX - container.left - offset.x;
     let newY = e.clientY - container.top - offset.y;
-
+  
+    // mantem dentro dos limites do area content :)
     newX = Math.max(minX, Math.min(newX, maxX));
     newY = Math.max(minY, Math.min(newY, maxY));
-
+  
     setPosition({ x: newX, y: newY });
   };
 
@@ -67,13 +74,13 @@ const useDraggable = (
     const adjustPositionOnResize = () => {
       if (!containerRef?.current) return;
       const container = containerRef.current.getBoundingClientRect();
-
+  
       setPosition((prev) => ({
         x: Math.max(0, Math.min(prev.x, container.width - componentWidth)),
         y: Math.max(0, Math.min(prev.y, container.height - componentHeight)),
       }));
     };
-
+  
     window.addEventListener("resize", adjustPositionOnResize);
     return () => window.removeEventListener("resize", adjustPositionOnResize);
   }, [containerRef, componentWidth, componentHeight]);
