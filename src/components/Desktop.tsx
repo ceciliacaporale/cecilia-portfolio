@@ -27,14 +27,14 @@ const Desktop: React.FC = () => {
   return (
     <DesktopWrapper>
       <ContentArea  ref={containerRef}>
-        {/* {isLoadingVisible && <LoadingWindow onClose={() => setIsLoadingVisible(false)} />}  */}
+        {isLoadingVisible && <LoadingWindow onClose={() => setIsLoadingVisible(false)} />} 
         <MainWindow />
-         <WindowSmile />
-      {/* <Skills /> */}
+         <WindowSmile containerRef={containerRef} />
+         <Skills containerRef={containerRef} />
       <WindowInfo  containerRef={containerRef}  />
-      {/* <Terminal /> */}
-      {/* <Smiling />
-      <Checkerboard /> */}
+      <Terminal containerRef={containerRef}  />
+      {/* <Smiling containerRef={containerRef} /> */}
+      {/* <Checkerboard /> */}
       </ContentArea>
     </DesktopWrapper>
   );
