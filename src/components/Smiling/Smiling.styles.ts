@@ -11,14 +11,10 @@ export const SmilingWrapper = styled.div`
   translate: -6px -6px;
   border: 2px solid #000000;
   z-index: 99999;
+  user-select: none;
+  cursor: grab;
   `;
 
-export const Header = styled.div`
-  border-radius: 12px 12px 0 0;
-  display: flex;
-  align-items: center;
-  position: relative;
-`;
 
 export const Content = styled.div`
   display: flex;

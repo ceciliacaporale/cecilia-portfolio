@@ -50,6 +50,12 @@ export const ContentWrapper = styled.div`
   align-items: center;
   gap: 10px;
 
+  @media (min-width: 626px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
   h1 { 
     font-family: "Squada One", sans-serif;
     color: #FDF282;
@@ -61,9 +67,17 @@ export const ContentWrapper = styled.div`
   }
 
   p {
-    /* max-width: 70%; */
     font-size: 18px;
     font-family: "Inter", sans-serif;
     text-align: center;
+    @media (min-width: 626px) {
+      text-align: left;
+    }
+  }
+
+  @media (min-width: 626px) {
+    h1, p {
+      max-width: 50%;
+    }
   }
 `;
