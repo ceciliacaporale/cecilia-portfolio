@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const MainWindowMobileWrapper = styled.div`
   width: 96%;
+  height: 370px;
   background: white;
   border-radius: 2rem;
   top: 1rem;
@@ -42,19 +43,29 @@ export const WindowButtons = styled.div`
 
 export const Container = styled.div`
   padding: 10px;
+
+  .star-green {
+    position: absolute;
+    top: 14rem;
+    left: 13.7rem;
+    z-index: 9999;
+  }
+
+  .star-pink {
+    position: absolute;
+    top: 5rem;
+    left: -4px;
+    z-index: 9999;
+  }
 `;
 
 export const ContentWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  align-items: center; 
+  gap: 2rem; 
+  justify-content: center;
+  padding: 10px;
 
-  @media (min-width: 626px) {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
 
   h1 { 
     font-family: "Squada One", sans-serif;
@@ -64,6 +75,7 @@ export const ContentWrapper = styled.div`
     font-weight: 300;
     font-size: 3rem;
     -webkit-text-stroke: .025em #000;
+    margin-bottom: 8px;
   }
 
   p {
@@ -74,10 +86,30 @@ export const ContentWrapper = styled.div`
       text-align: left;
     }
   }
+`;
 
-  @media (min-width: 626px) {
-    h1, p {
-      max-width: 50%;
-    }
+export const ContainerText = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+`;
+
+export const ContainerSocialMedia = styled.div`
+  position: absolute;
+  top: 2rem;
+  width: 50%;
+
+  @media (max-width: 986px) {
+    top: 5.5rem;
+  }
+
+  @media (min-width: 987px) {
+    top: 4.8rem;
+  }
+
+  @media (min-width: 1034px) {
+    top: 3rem;
+    left: 3rem;
   }
 `;

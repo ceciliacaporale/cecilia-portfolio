@@ -161,7 +161,6 @@ export const TabsContainer = styled.div`
 `;
 
 export const ContainerSocialMedia = styled.div`
-  background-color: red;
   position: absolute;
   left: 1%;
   top: 2rem;
