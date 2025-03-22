@@ -14,6 +14,14 @@ export const SocialMediaWrapper = styled.div`
   translate: -6px -6px;
   border: 2px solid #000000;
   transition: all 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+ 
+    img {
+    -webkit-user-drag: none;
+    pointer-events: none; 
+    -webkit-user-drag: none;
+    pointer-events: none;   
+    user-select: none;
+    }
 
   &:hover {
     transform: translate(-2px, -2px);

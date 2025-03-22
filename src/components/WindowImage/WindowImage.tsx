@@ -34,7 +34,7 @@ const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, width, heigh
             src={imageSrc} 
             alt={title} 
             width="100%" 
-            height="70%" 
+            height="auto" 
             onMouseMove={handleMouseMove} 
             onMouseEnter={() => setShowTooltip(true)}
             onMouseLeave={() => setShowTooltip(false)}

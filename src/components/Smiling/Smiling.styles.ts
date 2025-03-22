@@ -13,6 +13,11 @@ export const SmilingWrapper = styled.div`
   z-index: 99999;
   user-select: none;
   cursor: grab;
+
+  img {
+    -webkit-user-drag: none;
+    pointer-events: none; 
+  }
   `;
 
 
