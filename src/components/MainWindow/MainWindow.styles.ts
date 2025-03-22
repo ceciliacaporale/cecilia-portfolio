@@ -12,7 +12,14 @@ export const MainWindowWrapper = styled.div`
   overflow: hidden;
   min-height: 240px;
   height: 300px;
-
+  -webkit-user-drag: none;
+  pointer-events: none; 
+  -webkit-user-drag: none;
+    pointer-events: none;   
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
   h1 { 
     padding: 20px 0 0 20px;
     font-family: "Squada One", sans-serif;
