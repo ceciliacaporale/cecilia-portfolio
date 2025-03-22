@@ -10,18 +10,13 @@ import WindowInfo from "./WindowInfo/WindowInfo";
 import Smiling from "./Smiling/Smiling";
 import Terminal from "./Terminal/Terminal";
 import Checkerboard from "./Checkerboard/Checkerboard";
+import MemoryStorage from "./MemoryStorage/MemoryStorage";
+import RetroComputer from "./RetroComputer/RetroComputer";
 
 const Desktop: React.FC = () => {
-  const [windows, setWindows] = useState([
-    { id: 1, title: "Sobre Mim", content: "Texto sobre mim" },
-    { id: 2, title: "Projetos", content: "Meus projetos legais" },
-  ]);
 
   const [isLoadingVisible, setIsLoadingVisible] = useState(true);
 
-  const closeWindow = (id: number) => {
-    setWindows(windows.filter((win) => win.id !== id));
-  };
   const containerRef = useRef<HTMLDivElement>(null); 
 
   return (
@@ -30,11 +25,13 @@ const Desktop: React.FC = () => {
         {isLoadingVisible && <LoadingWindow onClose={() => setIsLoadingVisible(false)} />} 
         <MainWindow />
          <WindowSmile containerRef={containerRef} />
-         <Skills containerRef={containerRef} />
+         <Skills containerRef={containerRef} width="400px" height="190px"/>
       <WindowInfo  containerRef={containerRef}  />
       <Terminal containerRef={containerRef}  />
       {/* <Checkerboard containerRef={containerRef}/> */}
       <Smiling containerRef={containerRef} />
+      <MemoryStorage containerRef={containerRef}/>
+      <RetroComputer />
       </ContentArea>
     </DesktopWrapper>
   );
