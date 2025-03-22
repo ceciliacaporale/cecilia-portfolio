@@ -47,8 +47,8 @@ export const WindowButtons = styled.div`
   gap: 8px;
   padding-top: 1rem;
   span {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     display: inline-block;
     border: 1px solid #000;

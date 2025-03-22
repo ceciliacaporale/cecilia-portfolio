@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainWindowMobileWrapper = styled.div`
   width: 96%;
-  height: 370px;
+  height: auto;
   background: white;
   border-radius: 2rem;
   top: 1rem;
@@ -23,8 +23,8 @@ export const WindowButtons = styled.div`
   gap: 8px;
   padding-top: 1rem;
   span {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     display: inline-block;
     border: 1px solid #000;
@@ -46,26 +46,26 @@ export const Container = styled.div`
 
   .star-green {
     position: absolute;
-    top: 14rem;
-    left: 13.7rem;
+    top: 20rem;
+    right: 13rem;
     z-index: 9999;
   }
 
   .star-pink {
     position: absolute;
     top: 5rem;
-    left: -4px;
+    left: 13rem;
     z-index: 9999;
   }
 `;
 
 export const ContentWrapper = styled.div`
   display: flex;
-  align-items: center; 
-  gap: 2rem; 
-  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   padding: 10px;
-
+  flex-direction: column;
+  justify-content: center;
 
   h1 { 
     font-family: "Squada One", sans-serif;
@@ -73,18 +73,16 @@ export const ContentWrapper = styled.div`
     text-shadow: .05em .05em 0 #000;
     text-transform: uppercase;
     font-weight: 300;
-    font-size: 3rem;
+    font-size: 5rem;
     -webkit-text-stroke: .025em #000;
     margin-bottom: 8px;
   }
 
   p {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-family: "Inter", sans-serif;
-    text-align: center;
-    @media (min-width: 626px) {
-      text-align: left;
-    }
+    text-align: left;
+    margin-bottom: 4rem;
   }
 `;
 
@@ -92,24 +90,13 @@ export const ContainerText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  align-items: center;
 `;
 
 export const ContainerSocialMedia = styled.div`
   position: absolute;
-  top: 2rem;
+  top: 41rem;
   width: 50%;
+  z-index: 999;
 
-  @media (max-width: 986px) {
-    top: 5.5rem;
-  }
-
-  @media (min-width: 987px) {
-    top: 4.8rem;
-  }
-
-  @media (min-width: 1034px) {
-    top: 3rem;
-    left: 3rem;
-  }
 `;

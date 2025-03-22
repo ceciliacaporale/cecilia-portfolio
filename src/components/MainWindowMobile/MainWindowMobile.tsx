@@ -25,8 +25,8 @@ const MainWindowMobile: React.FC<MainWindowMobileProps> = () => {
           <WindowImage
             title=""
             imageSrc={Ceci}
-            width="400"
-            height="250px"
+            width="400px"
+            height="400px"
             $headerColor="#FFF982" />
           <ContainerText>
             <h1>Hello World!</h1>
@@ -39,10 +39,10 @@ const MainWindowMobile: React.FC<MainWindowMobileProps> = () => {
           </ContainerText>
         </ContentWrapper>
         <div className="star-green">
-          <img src={Star} width={40} height={40} />
+          <img src={Star} width={70} height={70} />
         </div>
         <div className="star-pink">
-          <img src={StarPink} width={40} height={40} />
+          <img src={StarPink} width={70} height={70} />
         </div>
       </Container>
     </MainWindowMobileWrapper>
