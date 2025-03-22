@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
-export const SocialMediaWrapper = styled.div`
-  width: 235px;
-  height: 70px;
+interface SocialMediaWrapperProps {
+  width?: string;
+  height?: string;
+}
+
+export const SocialMediaWrapper = styled.div<SocialMediaWrapperProps>`
+  width: ${({ width }) => width || "235px"};
+  height: ${({ height }) => height || "70px"};
   background: white;
   border-radius: 10px;
   position: absolute;
