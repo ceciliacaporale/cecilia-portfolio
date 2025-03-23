@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Shape from "../../assets/shape.png?url";
 
 import { 
@@ -14,20 +14,29 @@ interface LoadingWindowProps {
 }
 
 const LoadingWindow: React.FC<LoadingWindowProps> = ({ onClose }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 2000); 
+
+    return () => clearTimeout(timer); 
+  }, []);
+
+  if (!isVisible) return null; 
 
   return (
-    <LoadingWindowWrapper 
-    
-    >
+    <LoadingWindowWrapper>
       <WindowButtons>
         <span className="close" onClick={onClose}>✕</span>
       </WindowButtons>
-      <Header className="draggable-header" >
-      constant evolution
+      <Header className="draggable-header">
+        constant evolution
       </Header>
       <Content>
         <div className="star">
-        <img src={Shape} width={35}/>
+          <img src={Shape} width={35} />
         </div>
         <Loader>
           <div className="container">
@@ -37,7 +46,7 @@ const LoadingWindow: React.FC<LoadingWindowProps> = ({ onClose }) => {
           </div>
         </Loader>
         <div className="spiral">
-        {/* <img src={Spiral} width={30}/> */}
+          {/* <img src={Spiral} width={30}/> */}
         </div>
       </Content>
     </LoadingWindowWrapper>

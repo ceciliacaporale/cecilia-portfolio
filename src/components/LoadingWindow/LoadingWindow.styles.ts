@@ -25,7 +25,6 @@ export const Header = styled.div`
   padding: 5px;
   border-bottom: 1px solid #000;
   font-size: 14px;
-   cursor: grab;
    user-select: none;
    font-family: "Pixelify Sans", sans-serif;
 `;
