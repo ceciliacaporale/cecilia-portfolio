@@ -12,6 +12,8 @@ import Terminal from "./Terminal/Terminal";
 import Checkerboard from "./Checkerboard/Checkerboard";
 import MemoryStorage from "./MemoryStorage/MemoryStorage";
 import RetroComputer from "./RetroComputer/RetroComputer";
+import SoftwareSkills from "./SoftwareSkills/SoftwareSkills";
+import ProjetosButton from "./ProjectsButton/ProjectsButton";
 
 const Desktop: React.FC = () => {
 
@@ -24,14 +26,16 @@ const Desktop: React.FC = () => {
       <ContentArea  ref={containerRef}>
         {isLoadingVisible && <LoadingWindow onClose={() => setIsLoadingVisible(false)} />} 
         <MainWindow />
-         <WindowSmile containerRef={containerRef} />
+         {/* <WindowSmile containerRef={containerRef} /> */}
          <Skills containerRef={containerRef} width="400px" height="190px"/>
       <WindowInfo  containerRef={containerRef}  />
       <Terminal containerRef={containerRef}  />
       {/* <Checkerboard containerRef={containerRef}/> */}
-      <Smiling containerRef={containerRef} />
+      {/* <Smiling containerRef={containerRef} /> */}
       <MemoryStorage containerRef={containerRef}/>
-      <RetroComputer />
+      <RetroComputer containerRef={containerRef} />
+      <SoftwareSkills containerRef={containerRef} />
+      <ProjetosButton containerRef={containerRef}/>
       </ContentArea>
     </DesktopWrapper>
   );

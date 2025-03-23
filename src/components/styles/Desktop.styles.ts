@@ -9,15 +9,9 @@ export const DesktopWrapper = styled.div`
   align-items: center;
   position: absolute;
 
-  @media (min-width: 1901px) {
-      padding-top: 7.5rem;
-  }
-
 `;
 
 export const ContentArea = styled.div`
-  width: 90%; 
-  max-width: 100%;
   margin-top: 4rem;
   height: 90%;
   background-color: white;
@@ -29,8 +23,21 @@ export const ContentArea = styled.div`
   position: relative;
   bottom: 0; 
 
-  @media (min-width: 1901px) {
-      max-width: 60%;
+ @media (max-width: 1900px ) {
+  max-width: 80rem;
+ }
+
+  @media (min-width: 2232px) {
+    max-width: 58% !important;
+    background-color: red;
   }
-  
+
+  @media (min-width: 1901px) {
+      max-width: 70%;
+  }
+
+  @media (max-width: 1391px) {
+    width: 95%; 
+
+  }
 `;
