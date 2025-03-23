@@ -16,10 +16,7 @@ export const MainWindowWrapper = styled.div`
   pointer-events: none; 
   -webkit-user-drag: none;
     pointer-events: none;   
-    user-select: none;
-    -webkit-user-select: none; 
-    -moz-user-select: none;
-    -ms-user-select: none; 
+
   h1 { 
     padding: 20px 0 0 20px;
     font-family: "Squada One", sans-serif;
@@ -73,8 +70,6 @@ export const Container = styled.div`
     max-width: 70%;
     font-size: 16px;
     font-family: "Inter", sans-serif;
-
-    
   }
 
   .star-green { 
@@ -120,7 +115,6 @@ export const Tab = styled.div`
     font-size: 10px;
     font-weight: bold;
     color: #000;
-    cursor: pointer;
     padding: 0px;
     transition: color 0.2s ease-in-out;
     
@@ -145,7 +139,6 @@ export const TabsContainer = styled.div`
   top: 17px;
   left: 60px;
   display: flex;
-  z-index: 10;
   font-family: "Pixelify Sans", sans-serif;
 
   @media (min-width: 1735px) {

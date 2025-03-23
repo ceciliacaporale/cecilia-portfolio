@@ -36,7 +36,7 @@ interface SkillsProps {
 }
 
 const Skills = ({ containerRef }: SkillsProps) => {
-  const { position, handleMouseDown } = useDraggable(860, 550, containerRef, 100, 10); 
+  const { position, handleMouseDown } = useDraggable(890, 550, containerRef, 358, 180); 
 
   return (
     <SkillsWrapper

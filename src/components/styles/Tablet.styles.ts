@@ -31,3 +31,10 @@ export const ContentArea = styled.div`
   } */
   
 `;
+
+export const LoadingWindowContainer = styled.div`
+top: -2rem;
+display: flex;
+left: 10rem;
+position: relative;
+`;

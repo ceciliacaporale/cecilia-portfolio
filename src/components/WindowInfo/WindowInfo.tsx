@@ -10,7 +10,7 @@ interface WindowInfoProps {
 }
 
 const WindowInfo: React.FC<WindowInfoProps> = ({ title, containerRef }) => {
-  const { position, handleMouseDown } = useDraggable(100, 640, containerRef, 200, 80);
+  const { position, handleMouseDown } = useDraggable(100, 640, containerRef, 150, 100);
 
   return (
       <WindowInfoWrapper
