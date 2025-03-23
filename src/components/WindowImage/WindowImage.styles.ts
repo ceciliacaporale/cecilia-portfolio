@@ -85,16 +85,16 @@ export const WindowButtons = styled.div`
     background: rgb(255, 255, 255);
   }
 `;
-
 export const Tooltip = styled.div`
-  position: fixed;
+  position: absolute;
   background: #FFF982;
   color: black;
   font-size: 12px;
   padding: 4px 8px;
   border-radius: 10px;
   white-space: nowrap;
-  z-index: 9999;
+  z-index: 99999; /* Valor alto para evitar sobreposição */
   pointer-events: none;
   border: 1px solid #000;
+  transform: translate(-50%, -100%);
 `;

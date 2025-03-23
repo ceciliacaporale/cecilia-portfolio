@@ -6,13 +6,13 @@ import { SiStyledcomponents, SiTypescript, SiStrapi, SiStorybook } from "react-i
 import Favorite from "./../../assets/favorite.png?url"
 
 const skillColors = [
-  "#EFD81E", 
-  "#5ED3F3", 
-  "#7CB804",
-  "#2F74BF",
-  "#E35A01",
-  "#0191D4", 
-  "#CE5FA7",
+  "#FFF98D", 
+  "#57C0C3", 
+  "#92EE96",
+  "#ED83A2",
+  "#FAC951",
+  "#ED83A2", 
+  "#FAC951",
   "#8C75F7",
   "#F74681",
   "#FFF98D",
@@ -36,12 +36,15 @@ interface SkillsProps {
 }
 
 const Skills = ({ containerRef }: SkillsProps) => {
-  const { position, handleMouseDown } = useDraggable(150, 350, containerRef, -50, 50); 
+  const { position, handleMouseDown } = useDraggable(860, 550, containerRef, 100, 10); 
 
   return (
     <SkillsWrapper
-      style={{ transform: `translate(${position.x}px, ${position.y}px)` }}
-    >
+    style={{
+      left: position.x,
+      top: position.y,
+      position: "absolute", 
+    }}>
       <Header onMouseDown={handleMouseDown}>
         <HeaderTitle></HeaderTitle>
         <DotsContainer>

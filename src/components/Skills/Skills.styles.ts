@@ -56,6 +56,10 @@ export const SkillIcon = styled.div<{ color: string }>`
     font-size: 32px;
   }
 
+  &:hover {
+    transform: scale(1.1);
+  }
+
 `;
 
 export const HeaderTitle = styled.span`

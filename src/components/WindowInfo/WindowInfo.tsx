@@ -1,7 +1,7 @@
 import React from "react";
 import useDraggable from "../../hooks/useDraggable"; 
 import { WindowInfoWrapper, Header, Content } from "./WindowInfo.styles";
-import Pixel from "./../../assets/smilepixel.png?url"
+import Star from "./../../assets/web.png?url";
 
 
 interface WindowInfoProps {
@@ -10,7 +10,7 @@ interface WindowInfoProps {
 }
 
 const WindowInfo: React.FC<WindowInfoProps> = ({ title, containerRef }) => {
-  const { position, handleMouseDown } = useDraggable(200, 470, containerRef, 200, 80);
+  const { position, handleMouseDown } = useDraggable(100, 640, containerRef, 200, 80);
 
   return (
       <WindowInfoWrapper
@@ -22,16 +22,16 @@ const WindowInfo: React.FC<WindowInfoProps> = ({ title, containerRef }) => {
       >
       <Header onMouseDown={handleMouseDown}>
         {title}
-        <p>_</p>
-        <p>Д</p>
-        <p>X</p>
       </Header>
 
       <Content>
       <p>
-        código, design e ilustração
+      © {new Date().getFullYear()} Maria Cecilia. <br />
+        Made with love and caffeine.
         </p>
-      <img src={Pixel} alt="a" width={22} height={22}/>
+        <div className="star">
+          <img src={Star} alt="star" width="25" height="25" />
+        </div>
       </Content>
     </WindowInfoWrapper>
   );

@@ -7,7 +7,6 @@ export const SkillsWrapper = styled.div`
   border: 2px solid black;
   border-radius: 10px;
   padding: 8px;
-  position: absolute;
 `;
 
 export const Header = styled.div`

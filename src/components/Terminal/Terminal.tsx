@@ -24,7 +24,7 @@ const messages = [
   ];
   
   const Terminal: React.FC<TerminalProps> = ({ containerRef }) => {
-    const { position, handleMouseDown } = useDraggable(430, 380, containerRef, 355, 200);
+    const { position, handleMouseDown } = useDraggable(410, 530, containerRef, 355, 200);
     const [displayedText, setDisplayedText] = useState<string>("");
     const [messageIndex, setMessageIndex] = useState<number>(0);
     const [charIndex, setCharIndex] = useState<number>(0);

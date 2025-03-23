@@ -96,7 +96,7 @@ export const ContainerText = styled.div`
 export const ContainerSocialMedia = styled.div`
   position: absolute;
   top: 41rem;
-  width: 50%;
+  width: 58%;
   z-index: 999;
 
 `;

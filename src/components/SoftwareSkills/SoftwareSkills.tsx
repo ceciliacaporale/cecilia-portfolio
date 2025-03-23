@@ -18,12 +18,15 @@ interface SoftwareSkillsProps {
 }
 
 const SoftwareSkills = ({ containerRef }: SoftwareSkillsProps) => {
-  const { position, handleMouseDown } = useDraggable(200, 400, containerRef, -50, 50); 
+  const { position, handleMouseDown } = useDraggable(1080, 380, containerRef, 160, 145); 
 
   return (
     <SkillsWrapper
-      style={{ transform: `translate(${position.x}px, ${position.y}px)` }}
-    >
+    style={{
+        left: position.x,
+        top: position.y,
+        position: "absolute", 
+      }}>
       <Header onMouseDown={handleMouseDown}>
         <HeaderTitle></HeaderTitle>
         <DotsContainer>

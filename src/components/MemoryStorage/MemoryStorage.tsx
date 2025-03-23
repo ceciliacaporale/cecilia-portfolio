@@ -17,13 +17,13 @@ import useDraggable from "../../hooks/useDraggable";
 
 const categories = [
   { name: "code & tech", percent: "35%", color: "#FAC951" },
-  { name: "music", percent: "25%", color: "#12BFC2" },
+  { name: "coffe", percent: "25%", color: "#12BFC2" },
   { name: "travel & adventures", percent: "20%", color: "#FFF98D" },
   { name: "art & creativity", percent: "20%", color: "#ff86a4" }
 ];
 
 const MemoryStorage: React.FC<{ containerRef: React.RefObject<HTMLDivElement> }> = ({ containerRef }) => {
-  const { position, handleMouseDown } = useDraggable(100, 270, containerRef, 460, 140);
+  const { position, handleMouseDown } = useDraggable(500, 380, containerRef, 460, 140);
   return (
     <MemoryStorageWrapper
     style={{ 

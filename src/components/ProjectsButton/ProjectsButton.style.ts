@@ -34,6 +34,5 @@ export const ButtonWrapper = styled.button`
         right: -50px;
         position: relative;
     }
-
   }
 `;

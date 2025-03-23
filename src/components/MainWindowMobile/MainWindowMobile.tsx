@@ -47,7 +47,7 @@ const MainWindowMobile: React.FC<MainWindowMobileProps> = () => {
       </Container>
     </MainWindowMobileWrapper>
     <ContainerSocialMedia>
-        <SocialMedia />
+        <SocialMedia  width="360px" height="84px" iconSize="45px" />
     </ContainerSocialMedia></>
   );
 };

@@ -3,7 +3,7 @@ import { RetroComputerWrapper, Monitor, ScreenContent, Keyboard, Key, keys } fro
 import useDraggable from "../../hooks/useDraggable"; 
 
 const RetroComputer = ({ containerRef }: { containerRef: React.RefObject<HTMLDivElement> }) => {
-    const { position, handleMouseDown } = useDraggable(500, 500, containerRef, 180, 210); 
+    const { position, handleMouseDown } = useDraggable(200, 400, containerRef, 180, 210); 
 
     const perfil = [
         "const perfil = {",

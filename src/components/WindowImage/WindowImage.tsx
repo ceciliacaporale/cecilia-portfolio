@@ -14,8 +14,11 @@ const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, width, heigh
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLImageElement>) => {
-    setTooltipPosition({ x: e.clientX + 10, y: e.clientY + 10 });
+    setTooltipPosition({ x: e.clientX, y: e.clientY });
+    setShowTooltip(true);
   };
+  
+  console.log(showTooltip, tooltipPosition);
 
   return (
     <WindowImageWrapper width={width} height={height}>
@@ -42,8 +45,13 @@ const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, width, heigh
         ) : (
           <p>Imagem indisponível :c</p>
         )}
-        {showTooltip && <Tooltip style={{ left: tooltipPosition.x, top: tooltipPosition.y }}>Ceci</Tooltip>}
       </Content>
+
+      {showTooltip && (
+        <Tooltip style={{ left: tooltipPosition.x, top: tooltipPosition.y, transform: "translate(-50%, -100%)" }}>
+          Ceci
+        </Tooltip>
+      )}
     </WindowImageWrapper>
   );
 };

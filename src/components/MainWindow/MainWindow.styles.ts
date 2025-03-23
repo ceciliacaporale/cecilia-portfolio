@@ -6,7 +6,7 @@ export const MainWindowWrapper = styled.div`
   border-radius: 12px;
   position: relative;
   top: 51px;
-  border: 1px solid #000;
+  border: 2px solid #000;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -27,7 +27,7 @@ export const MainWindowWrapper = styled.div`
     text-shadow: .05em .05em 0 #000;
     text-transform: uppercase;
     font-weight: 300;
-    font-size: 38px;
+    font-size: 42px;
     -webkit-text-stroke: .025em #000;
   }
 
@@ -95,18 +95,12 @@ export const Container = styled.div`
 export const ContainerImage = styled.div`
   justify-content: space-between;
   display: flex;
-  width: 100%;
-
-  @media (max-width: 682px) {
-    flex-direction: column;
-  }
-    
+  /* width: 100%; */
   & > div { 
-    margin-top: -4rem; 
 
     @media (min-width: 1034px) {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 260px;
     margin-top: -98px;
   }
   }
@@ -114,11 +108,11 @@ export const ContainerImage = styled.div`
 
 export const Tab = styled.div`
   background: white;
-  border: 1px solid #000;
-  padding: 2px 8px;
+  border: 1.7 solid #000;
+  padding: 2px 12px;
   border-radius: 8px 8px 0 0;
   font-size: 14px;
-  top: 12px;
+  top: 13px;
   left: 2rem;
   position: relative;
   
