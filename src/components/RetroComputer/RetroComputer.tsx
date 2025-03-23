@@ -1,31 +1,36 @@
 import React from "react";
 import { RetroComputerWrapper, Monitor, ScreenContent, Keyboard, Key, keys } from "./RetroComputer.styles";
-// import Star from "./../../assets/staryellow.png?url";
+import useDraggable from "../../hooks/useDraggable"; 
 
-const RetroComputer = () => {
+const RetroComputer = ({ containerRef }: { containerRef: React.RefObject<HTMLDivElement> }) => {
+    const { position, handleMouseDown } = useDraggable(500, 500, containerRef, 180, 210); 
 
     const perfil = [
         "const perfil = {",
         "  nome: 'Cecília',",
-        "  idade: 14,",
+        "  idade: 24,",
         "  local: 'Minas Gerais',",
         "  area: 'Front-end',",
         "};",
-      ];
+    ];
       
     return (
-      <RetroComputerWrapper>
+      <RetroComputerWrapper
+      style={{
+        left: position.x,
+        top: position.y,
+        position: "absolute", 
+      }}
+        onMouseDown={handleMouseDown}
+      >
         <Monitor>
-        {/* <div className="star">
-          <img src={Star} alt="star" width="30" height="30" />
-        </div> */}
-        <ScreenContent>
-        {perfil.map((linha, index) => (
-            <React.Fragment key={index}>
-            {linha} <br />
-            </React.Fragment>
-        ))}
-        </ScreenContent>
+          <ScreenContent>
+            {perfil.map((linha, index) => (
+              <React.Fragment key={index}>
+                {linha} <br />
+              </React.Fragment>
+            ))}
+          </ScreenContent>
         </Monitor>
         <Keyboard>
           {keys.map((key) => (
@@ -34,7 +39,6 @@ const RetroComputer = () => {
         </Keyboard>
       </RetroComputerWrapper>
     );
-  };
-  
-  export default RetroComputer;
-  
+};
+
+export default RetroComputer;

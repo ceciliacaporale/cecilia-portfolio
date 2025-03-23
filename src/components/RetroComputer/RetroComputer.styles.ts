@@ -11,7 +11,8 @@ export const RetroComputerWrapper = styled.div`
   box-shadow: 6px 6px 0px black;
   width: 170px;
   z-index: 9;
-
+  cursor: grab;
+  user-select: none;
 `;
 
 export const Monitor = styled.div`
