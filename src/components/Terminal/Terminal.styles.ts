@@ -42,8 +42,8 @@ export const Header = styled.div`
 `;
 
 export const Dot = styled.span<{ color: string }>`
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border: 1px solid #000;
   background: ${(props) => props.color};
   border-radius: 50%;

@@ -55,9 +55,9 @@ const messages = [
             position: "absolute", 
           }}>
                 <Header onMouseDown={handleMouseDown}>
-                    <Dot color="#ED83A2" />
-                    <Dot color="#FAC93E" />
-                    <Dot color="#AFE90A" />
+                    <Dot color="#ff86a4" />
+                    <Dot color="#FAC951" />
+                    <Dot color="#94EE9C" />
                 </Header>
                 <TerminalContent>
                     {displayedText}
