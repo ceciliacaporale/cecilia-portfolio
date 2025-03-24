@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const WindowInfoWrapper = styled.div`
   width: 150px;
-  height: 80px;
+  height: 100px;
   background: #ffff;
   border-radius: 10px;
   position: relative;
@@ -12,7 +12,7 @@ export const WindowInfoWrapper = styled.div`
 `;
 
 export const Header = styled.div`
-  height: 16px;
+  height: 24px;
   border-radius: 8px 8px 0 0;
   display: flex;
   align-items: center;
@@ -27,7 +27,7 @@ export const Header = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 8px;
+  padding: 10px;
   display: flex;
 
   .star {
@@ -42,6 +42,5 @@ export const Content = styled.div`
   p { 
     max-width: 117px;
     font-size: 12px;
-    /* font-family: "Pixelify Sans", sans-serif; */
   }
 `;

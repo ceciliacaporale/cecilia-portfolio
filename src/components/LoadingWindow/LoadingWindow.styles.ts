@@ -11,19 +11,19 @@ export const LoadingWindowWrapper = styled.div`
   background: white;
   border-radius: 10px;
   position: absolute;
-  border: 1px solid #000;
+  border: 2px solid #000;
   z-index: 999;
 `;
 
 export const Header = styled.div`
   height: 25px;
   background:#FAC93E;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px 8px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px;
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #000;
   font-size: 14px;
    user-select: none;
    font-family: "Pixelify Sans", sans-serif;
@@ -65,6 +65,11 @@ export const WindowButtons = styled.div`
     cursor: pointer;
     padding: 0px;
     transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    
+    &:hover {
+      color:rgb(14, 13, 14);
+    }
   }
 `;
 
@@ -72,7 +77,7 @@ export const Loader = styled.div`
   .container {
     width: 180px;
     height: 18px;
-    border: 1px solid #000;
+    border: 2px solid #000;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -84,6 +89,7 @@ export const Loader = styled.div`
     height: 100%;
     background: linear-gradient(to bottom,rgb(199, 255, 108) 0%,rgb(105, 177, 22) 17%,rgb(60, 221, 233) 32%, #869ef3 45%,rgb(70, 245, 186) 59%,rgb(72, 249, 255) 100%);
     display: inline-block;
+    border: 1px solid #000;
     margin-right: 2px;
     animation: ${loadAnimation} 2s infinite linear;
   }

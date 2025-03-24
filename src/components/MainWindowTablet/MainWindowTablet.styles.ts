@@ -6,7 +6,7 @@ export const MainWindowTabletWrapper = styled.div`
   background: white;
   border-radius: 2rem;
   top: 1rem;
-  border: 1px solid #000;
+  border: 2px solid #000;
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -107,19 +107,6 @@ export const ContainerText = styled.div`
 
 export const ContainerSocialMedia = styled.div`
   position: absolute;
-  top: 2rem;
+  top: 6rem;
   width: 50%;
-
-  @media (max-width: 986px) {
-    top: 5.5rem;
-  }
-
-  @media (min-width: 987px) {
-    top: 4.8rem;
-  }
-
-  @media (min-width: 1034px) {
-    top: 3rem;
-    left: 3rem;
-  }
 `;

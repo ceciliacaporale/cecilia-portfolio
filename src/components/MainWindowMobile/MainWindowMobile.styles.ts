@@ -6,7 +6,7 @@ export const MainWindowMobileWrapper = styled.div`
   background: white;
   border-radius: 2rem;
   top: 1rem;
-  border: 1px solid #000;
+  border: 2px solid #000;
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -98,5 +98,4 @@ export const ContainerSocialMedia = styled.div`
   top: 41rem;
   width: 58%;
   z-index: 999;
-
 `;

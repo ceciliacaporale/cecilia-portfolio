@@ -12,7 +12,7 @@ export const SocialMediaWrapper = styled.div<SocialMediaWrapperProps>`
   border-radius: 10px;
   position: absolute;
   box-shadow: 
-  8px 8px 0 #ED83A2,
+  8px 8px 0 #FB56A7,
   8px 8px 0 1px black;
   top: 255px;
   left: 90px;
@@ -65,12 +65,12 @@ export const IconWrapper = styled.div`
   }
 `;
 
-export const Tooltip = styled.span`
+export const Tooltip = styled.span<{ bgColor: string }>`
   position: absolute;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  background: #B4FCA8;
+  background: ${({ bgColor }) => bgColor};
   color: black;
   padding: 5px 10px;
   border-radius: 10px;
@@ -79,6 +79,7 @@ export const Tooltip = styled.span`
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
+  font-family: "Pixelify Sans", sans-serif;
 `;
 
 export const SmileWrapper = styled.div`

@@ -9,6 +9,7 @@ export const MemoryStorageWrapper = styled.div`
   box-shadow: 5px 5px 0px #000;
   position: relative;
   padding: 0 10px;
+  user-select: none;
 `;
 
 export const Header = styled.div`
@@ -20,7 +21,6 @@ export const Header = styled.div`
   border-bottom: 1px solid black;
   padding: 4px 8px;
   cursor: grab;
-  user-select: none;
 `;
 
 export const HeaderTitle = styled.span`

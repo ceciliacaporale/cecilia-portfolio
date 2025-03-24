@@ -12,6 +12,7 @@ interface SocialMediaProps {
   width?: string;
   height?: string;
   iconSize?: string;
+  bgColor?: string;
 }
 
 const SocialMedia: React.FC<SocialMediaProps> = ({ title, width, height,  iconSize = "30px" }) => {
@@ -27,31 +28,31 @@ const SocialMedia: React.FC<SocialMediaProps> = ({ title, width, height,  iconSi
         <IconWrapper>
           <a href="https://github.com/ceciliacaporale" target="_blank" rel="noopener noreferrer">
             <img src={GitHubIcon} alt="GitHub" width={iconSize} height={iconSize} />
-            <Tooltip>GitHub</Tooltip>
+            <Tooltip bgColor="#FE87A4">GitHub</Tooltip>
           </a>
         </IconWrapper>
         <IconWrapper>
           <a href="https://www.linkedin.com/in/mariaceciliacaporale/" target="_blank" rel="noopener noreferrer">
             <img src={LinkedinIcon} alt="LinkedIn" width={iconSize} height={iconSize} />
-            <Tooltip>LinkedIn</Tooltip>
+            <Tooltip bgColor="#1CBFC1">LinkedIn</Tooltip>
           </a>
         </IconWrapper>
         <IconWrapper>
           <a href="https://medium.com/@cecicaporale16" target="_blank" rel="noopener noreferrer">
             <img src={InstagramIcon} alt="Instagram" width={iconSize} height={iconSize} />
-            <Tooltip>Instagram</Tooltip>
+            <Tooltip bgColor="#FAC95F">Instagram</Tooltip>
           </a>
         </IconWrapper>
         <IconWrapper>
           <a href="mailto:cecicaporale16@gmail.com">
             <img src={MailIcon} alt="E-mail" width={iconSize} height={iconSize} />
-            <Tooltip>E-mail</Tooltip>
+            <Tooltip bgColor="#FFF996">E-mail</Tooltip>
           </a>
         </IconWrapper>
         <IconWrapper>
           <a href="https://medium.com/@cecicaporale16" target="_blank" rel="noopener noreferrer">
             <img src={MediumIcon} alt="Medium" width={iconSize} height={iconSize} />
-            <Tooltip>Medium</Tooltip>
+            <Tooltip bgColor="#94EE9C">Medium</Tooltip>
           </a>
         </IconWrapper>
       </Content>

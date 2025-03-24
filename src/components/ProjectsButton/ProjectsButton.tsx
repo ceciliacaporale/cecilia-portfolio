@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonWrapper } from "./ProjectsButton.style";
+import { ButtonWrapper, ContainerImg } from "./ProjectsButton.style";
 import Smile from "./../../assets/smileface.svg?url";
 
 const ProjetosButton = () => {
@@ -8,12 +8,13 @@ const ProjetosButton = () => {
   };
 
   return (
-    <ButtonWrapper onClick={handleClick}>
-        Projetos
-        <div className="smile">
-          <img src={Smile} alt="Smile" width="95" height="95" />
-        </div>
+    <><ButtonWrapper onClick={handleClick}>
+      Projetos
     </ButtonWrapper>
+    <ContainerImg>
+        <img src={Smile} alt="Smile" width="95" height="95" />
+    </ContainerImg>
+    </>
   );
 };
 

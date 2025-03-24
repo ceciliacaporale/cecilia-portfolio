@@ -1,7 +1,22 @@
 import React, { type RefObject } from "react";
-import { SkillsWrapper, Header, SkillsGrid, SkillIcon, HeaderTitle, DotsContainer, Dot } from "./SoftwareSkills.styles";
+import { 
+  SkillsWrapper, 
+  Header, 
+  SkillsGrid, 
+  SkillIcon, 
+  HeaderTitle, 
+  DotsContainer, 
+  Dot,  
+} from "./SoftwareSkills.styles";
 import useDraggable from "../../hooks/useDraggable";
-import { SiVisualstudiocode, SiFigma, SiAdobeillustrator, SiMiro, SiNotion, SiGithub } from "react-icons/si";
+import { 
+  SiVisualstudiocode, 
+  SiFigma, 
+  SiAdobeillustrator, 
+  SiMiro, 
+  SiNotion, 
+  SiGithub 
+} from "react-icons/si";
 import { dotColors } from "../Skills/Skills.styles";
 
 const softwares = [
@@ -22,7 +37,7 @@ const SoftwareSkills = ({ containerRef }: SoftwareSkillsProps) => {
 
   return (
     <SkillsWrapper
-    style={{
+      style={{
         left: position.x,
         top: position.y,
         position: "absolute", 
@@ -37,7 +52,7 @@ const SoftwareSkills = ({ containerRef }: SoftwareSkillsProps) => {
       </Header>
       <SkillsGrid>
         {softwares.map((software, index) => (
-          <SkillIcon key={index} title={software.name}>
+          <SkillIcon key={index}>
             {software.icon}
           </SkillIcon>
         ))}

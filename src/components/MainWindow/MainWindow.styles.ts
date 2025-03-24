@@ -27,7 +27,6 @@ export const MainWindowWrapper = styled.div`
     font-size: 42px;
     -webkit-text-stroke: .025em #000;
   }
-
 `;
 
 export const WindowHeader = styled.div`
@@ -81,7 +80,7 @@ export const Container = styled.div`
 
   .star-pink { 
     top: 36px;
-    right: 280px;
+    right: 250px;
     z-index: 9;
     position: absolute;
   }
@@ -90,9 +89,8 @@ export const Container = styled.div`
 export const ContainerImage = styled.div`
   justify-content: space-between;
   display: flex;
-  /* width: 100%; */
-  & > div { 
 
+  & > div { 
     @media (min-width: 1034px) {
     width: 250px;
     height: 260px;
@@ -102,20 +100,15 @@ export const ContainerImage = styled.div`
 `;
 
 export const Tab = styled.div`
-  background: white;
-  border: 1.7 solid #000;
-  padding: 2px 12px;
+  padding: 2px 16px;
   border-radius: 8px 8px 0 0;
   font-size: 14px;
-  top: 13px;
   left: 2rem;
   position: relative;
   
   .close-tab {
-    font-size: 10px;
-    font-weight: bold;
+    font-size: 9px;
     color: #000;
-    padding: 0px;
     transition: color 0.2s ease-in-out;
     
     &:hover {
@@ -124,51 +117,26 @@ export const Tab = styled.div`
   }
 
   &:nth-child(1) {
-    background: #D93487;
+    background: #FE87A4;
   }
   &:nth-child(2) {
-    background: #0EB1BC; 
+    background: #1CBFC1; 
   }
   &:nth-child(3) {
-    background: #90ee90;
+    background: #94EE9C;
   }
 `;
 
 export const TabsContainer = styled.div`
   position: absolute;
-  top: 17px;
-  left: 60px;
+  top: 30px;
   display: flex;
   font-family: "Pixelify Sans", sans-serif;
-
-  @media (min-width: 1735px) {
-    left: 3rem;
-  }
-
-  @media (max-width: 1735px) {
-    left: 3rem;
-  }
-
-  @media (max-width: 1219px) {
-    left: 1rem;
-  }
+  left: 3rem;
 `;
 
 export const ContainerSocialMedia = styled.div`
   position: absolute;
   left: 1%;
-  top: 2rem;
-
-  @media (max-width: 986px) {
-    top: 5.5rem;
-  }
-
-  @media (min-width: 987px) {
-    top: 4.8rem;
-  }
-
-  @media (min-width: 1034px) {
-    top: 3rem;
-    left: 3rem;
-  }
+  top: 3rem;
 `;

@@ -16,7 +16,7 @@ export const WindowImageWrapper = styled.div<WindowProps>`
   border-radius: 10px;
   position: relative;
   z-index: 9;
-  border: 1px solid #000;
+  border: 2px solid #000;
   overflow: hidden;
   cursor: url("/cursoryellow.png"), pointer; 
 
@@ -43,7 +43,7 @@ export const Header = styled.div<HeaderProps>`
   align-items: center;
   justify-content: space-between; 
   background-color: ${(props) => props.headerColor || "rgb(253, 103, 153)"};
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   padding: 0 12px;
   border-radius: 10px 10px 0 0;
   position: relative;
@@ -93,7 +93,7 @@ export const Tooltip = styled.div`
   padding: 4px 8px;
   border-radius: 10px;
   white-space: nowrap;
-  z-index: 99999; /* Valor alto para evitar sobreposição */
+  z-index: 99999;
   pointer-events: none;
   border: 1px solid #000;
   transform: translate(-50%, -100%);

@@ -29,7 +29,6 @@ export const ContentArea = styled.div`
 
   @media (min-width: 2232px) {
     max-width: 58% !important;
-    background-color: red;
   }
 
   @media (min-width: 1901px) {

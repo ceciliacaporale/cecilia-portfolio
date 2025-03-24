@@ -15,9 +15,8 @@ export const ButtonWrapper = styled.button`
     12px 12px 0 1px black; 
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  z-index: 9999999;
+  z-index: 9;
   
-
   &:hover {
     transform: scale(1.05);
   }
@@ -26,13 +25,11 @@ export const ButtonWrapper = styled.button`
     box-shadow: 1px 1px 0px black;
     transform: translate(2px, 2px);
   }
-
-  .smile {
-    position: absolute;
-    img {
-        top: -40px;
-        right: -50px;
-        position: relative;
-    }
-  }
 `;
+
+export const ContainerImg = styled.div`
+ z-index: 99;
+ top: -3.5rem;
+  left: 3.5rem;
+  position: relative;
+`
