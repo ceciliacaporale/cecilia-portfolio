@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Tablet from "../components/Tablet";
-import Mobile from "../components/Mobile";
+import Tablet from "./Tablet/Tablet";
+import Mobile from "./Mobile/Mobile";
 import Desktop from "./Desktop/Desktop";
 
 const Responsive: React.FC = () => {

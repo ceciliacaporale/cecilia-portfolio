@@ -1,6 +1,6 @@
 import React from "react";
-import MainWindowMobile from "./MainWindowMobile/MainWindowMobile";
-import { MobileWrapper, ContentArea } from "./styles/Mobile.styles";
+import MainWindowMobile from "../MainWindowMobile/MainWindowMobile";
+import { MobileWrapper, ContentArea } from "./Mobile.styles";
 
 const Mobile: React.FC = () => {
   return (
