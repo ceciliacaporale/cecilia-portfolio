@@ -10,7 +10,7 @@ interface WindowInfoProps {
 }
 
 const WindowInfo: React.FC<WindowInfoProps> = ({ title, containerRef }) => {
-  const { position, handleMouseDown } = useDraggable(100, 640, containerRef, 150, 100);
+  const { position, handleMouseDown, zIndex } = useDraggable(190, 640, containerRef, 150, 100);
 
   return (
       <WindowInfoWrapper
@@ -18,6 +18,7 @@ const WindowInfo: React.FC<WindowInfoProps> = ({ title, containerRef }) => {
             left: position.x,
             top: position.y,
             position: "absolute", 
+            zIndex,
           }}
       >
       <Header onMouseDown={handleMouseDown}>

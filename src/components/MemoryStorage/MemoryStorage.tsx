@@ -23,13 +23,14 @@ const categories = [
 ];
 
 const MemoryStorage: React.FC<{ containerRef: React.RefObject<HTMLDivElement> }> = ({ containerRef }) => {
-  const { position, handleMouseDown } = useDraggable(500, 380, containerRef, 460, 140);
+  const { position, handleMouseDown, zIndex } = useDraggable(350, 380, containerRef, 460, 140);
   return (
     <MemoryStorageWrapper
     style={{ 
       left: position.x, 
       top: position.y, 
-      position: "absolute" 
+      position: "absolute",
+      zIndex,
     }}
       onMouseDown={handleMouseDown}
     >

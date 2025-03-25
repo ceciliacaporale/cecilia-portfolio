@@ -38,7 +38,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({ title, width, height,  iconSi
           </a>
         </IconWrapper>
         <IconWrapper>
-          <a href="https://medium.com/@cecicaporale16" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/cecicaporale/" target="_blank" rel="noopener noreferrer">
             <img src={InstagramIcon} alt="Instagram" width={iconSize} height={iconSize} />
             <Tooltip bgColor="#FAC95F">Instagram</Tooltip>
           </a>

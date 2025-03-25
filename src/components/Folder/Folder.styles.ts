@@ -5,6 +5,8 @@ export const FolderWrapper = styled.div`
   width: 100px;
   height: 70px;
   cursor: pointer;
+  right: -30rem;
+  user-select: none;
 
   .star-pink {
     position: absolute;
@@ -64,7 +66,6 @@ export const Tooltip = styled.span<{ bgColor: string }>`
   bottom: 4.6rem;
   padding: 5px 10px;
   border-radius: 10px;
-  z-index: 99999;
   font-size: 12px;
   white-space: nowrap;
   opacity: 0;

@@ -16,6 +16,7 @@ export const MainWindowWrapper = styled.div`
   pointer-events: none; 
   -webkit-user-drag: none;
     pointer-events: none;   
+  z-index: 2;
 
   h1 { 
     padding: 20px 0 0 20px;
@@ -130,13 +131,20 @@ export const Tab = styled.div`
 export const TabsContainer = styled.div`
   position: absolute;
   top: 30px;
+  z-index: 1;
   display: flex;
   font-family: "Pixelify Sans", sans-serif;
   left: 3rem;
+
+  :hover {
+    transform: scale(1.1);
+    z-index: 999;
+  }
 `;
 
 export const ContainerSocialMedia = styled.div`
   position: absolute;
   left: 1%;
+  z-index: 3;
   top: 3rem;
 `;

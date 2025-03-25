@@ -1,12 +1,24 @@
 import React, { useState } from "react";
+import useDraggable from "../../hooks/useDraggable"; 
 import { FolderClosed, FolderOpen, FolderTab, FolderWrapper, Paper, Tooltip } from "./Folder.styles";
 import StarPink from "../../assets/starpink.png?url"; 
 
-const Folder = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface FolderProps {
+  containerRef?: React.RefObject<HTMLDivElement>; 
+}
 
+const Folder: React.FC<FolderProps> = ({ containerRef }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const { position, handleMouseDown, zIndex } = useDraggable(1130, 400, containerRef, 100, 70);
   return (
     <FolderWrapper
+      onMouseDown={handleMouseDown}
+      style={{
+        left: position.x,
+        top: position.y,
+        position: "absolute",
+        zIndex 
+      }}
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >

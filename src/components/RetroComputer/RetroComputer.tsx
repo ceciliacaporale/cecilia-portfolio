@@ -3,7 +3,7 @@ import { RetroComputerWrapper, Monitor, ScreenContent, Keyboard, Key, keys } fro
 import useDraggable from "../../hooks/useDraggable"; 
 
 const RetroComputer = ({ containerRef }: { containerRef: React.RefObject<HTMLDivElement> }) => {
-    const { position, handleMouseDown } = useDraggable(200, 400, containerRef, 180, 210); 
+    const { position, handleMouseDown, zIndex } = useDraggable(105, 400, containerRef, 180, 210); 
 
     const perfil = [
         "const perfil = {",
@@ -20,6 +20,7 @@ const RetroComputer = ({ containerRef }: { containerRef: React.RefObject<HTMLDiv
         left: position.x,
         top: position.y,
         position: "absolute", 
+        zIndex,
       }}
         onMouseDown={handleMouseDown}
       >

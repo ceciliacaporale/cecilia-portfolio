@@ -36,7 +36,7 @@ interface SkillsProps {
 }
 
 const Skills = ({ containerRef }: SkillsProps) => {
-  const { position, handleMouseDown } = useDraggable(890, 550, containerRef, 358, 180); 
+  const { position, handleMouseDown, zIndex} = useDraggable(830, 550, containerRef, 358, 180); 
 
   return (
     <SkillsWrapper
@@ -44,6 +44,7 @@ const Skills = ({ containerRef }: SkillsProps) => {
       left: position.x,
       top: position.y,
       position: "absolute", 
+      zIndex,
     }}>
       <Header onMouseDown={handleMouseDown}>
         <HeaderTitle></HeaderTitle>
