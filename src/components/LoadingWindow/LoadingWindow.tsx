@@ -19,7 +19,7 @@ const LoadingWindow: React.FC<LoadingWindowProps> = ({ onClose }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 2000); 
+    }, 5000); 
 
     return () => clearTimeout(timer); 
   }, []);
