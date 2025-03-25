@@ -1,19 +1,18 @@
 import React, { useState, useRef } from "react";
-import { DesktopWrapper, ContentArea } from "./styles/Desktop.styles";
-import MainWindow from "./MainWindow/MainWindow";
-import WindowSmile from "./WindowSmile/WindowSmile";
-import SocialMedia from "./SocialMedia/SocialMedia";
-import LoadingWindow from "./LoadingWindow/LoadingWindow";
-import Skills from "./Skills/Skills";
-import WindowImage from "./WindowImage/WindowImage";
-import WindowInfo from "./WindowInfo/WindowInfo";
-import Smiling from "./Smiling/Smiling";
-import Terminal from "./Terminal/Terminal";
-import Checkerboard from "./Checkerboard/Checkerboard";
-import MemoryStorage from "./MemoryStorage/MemoryStorage";
-import RetroComputer from "./RetroComputer/RetroComputer";
-import SoftwareSkills from "./SoftwareSkills/SoftwareSkills";
-import ProjetosButton from "./ProjectsButton/ProjectsButton";
+import { DesktopWrapper, ContentArea } from "./Desktop.styles";
+import LoadingWindow from "../LoadingWindow/LoadingWindow";
+import MainWindow from "../MainWindow/MainWindow";
+// import WindowInfo from "../WindowInfo/WindowInfo";
+import RetroComputer from "../RetroComputer/RetroComputer";
+import Folder from "../Folder/Folder";
+import SoftwareSkills from "../SoftwareSkills/SoftwareSkills";
+import ProjetosButton from "../ProjectsButton/ProjectsButton";
+// import WindowInfo from "../WindowInfo/WindowInfo";
+import MemoryStorage from "../MemoryStorage/MemoryStorage";
+import Skills from "../Skills/Skills";
+import Terminal from "../Terminal/Terminal";
+import WindowInfo from "../WindowInfo/WindowInfo";
+
 
 const Desktop: React.FC = () => {
 
@@ -36,6 +35,7 @@ const Desktop: React.FC = () => {
       <RetroComputer containerRef={containerRef} />
       <SoftwareSkills containerRef={containerRef} />
       <ProjetosButton containerRef={containerRef}/>
+      <Folder />
       </ContentArea>
     </DesktopWrapper>
   );
