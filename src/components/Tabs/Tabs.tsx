@@ -11,7 +11,6 @@ const Tabs = () => {
   const handleCloseTab = (id: number) => {
     setTabs(tabs.filter(tab => tab.id !== id));
   };
-
   return (
     <TabsContainer>
       {tabs.map(tab => (
