@@ -4,7 +4,7 @@ import Ceci from "../../assets/ceci.png?url";
 import Star from "../../assets/star.png?url"; 
 import StarPink from "../../assets/starpink.png?url"; 
 import WindowImage from "../WindowImage/WindowImage";
-import SocialMedia from "../SocialMedia/SocialMedia";
+import SocialMedia from "../SocialMedia";
 
 interface MainWindowProps {
   title?: string;

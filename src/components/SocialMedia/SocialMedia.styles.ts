@@ -1,35 +1,39 @@
 import styled from "styled-components";
 
+export const DEFAULT_WIDTH = "235px";
+export const DEFAULT_HEIGHT = "70px";
+export const SHADOW_COLOR = "#FB56A7";
+
 interface SocialMediaWrapperProps {
   width?: string;
   height?: string;
 }
 
+interface TooltipProps {
+  bgColor: string;
+}
+
 export const SocialMediaWrapper = styled.div<SocialMediaWrapperProps>`
-  width: ${({ width }) => width || "235px"};
-  height: ${({ height }) => height || "70px"};
+  width: ${({ width }) => width || DEFAULT_WIDTH};
+  height: ${({ height }) => height || DEFAULT_HEIGHT};
   background: white;
   border-radius: 10px;
   position: absolute;
-  box-shadow: 
-  8px 8px 0 #FB56A7,
-  8px 8px 0 1px black;
+  box-shadow: 8px 8px 0 ${SHADOW_COLOR}, 8px 8px 0 1px black;
   top: 255px;
   left: 90px;
-  translate: -6px -6px;
+  transform: translate(-6px, -6px);
   border: 2px solid #000000;
   transition: all 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
- 
-    img {
-    -webkit-user-drag: none;
-    pointer-events: none; 
-    -webkit-user-drag: none;
-    pointer-events: none;   
+
+  img {
     user-select: none;
-    }
+    pointer-events: none;
+    -webkit-user-drag: none;
+  }
 
   &:hover {
-    transform: translate(-2px, -2px);
+    transform: translate(-8px, -8px);
   }
 `;
 
@@ -40,8 +44,6 @@ export const Header = styled.div`
   padding: 0 12px;
   position: relative;
 `;
-
-
 
 export const Content = styled.div`
   padding: 20px;
@@ -65,7 +67,7 @@ export const IconWrapper = styled.div`
   }
 `;
 
-export const Tooltip = styled.span<{ bgColor: string }>`
+export const Tooltip = styled.span<TooltipProps>`
   position: absolute;
   bottom: 40px;
   left: 50%;
@@ -84,7 +86,6 @@ export const Tooltip = styled.span<{ bgColor: string }>`
 
 export const SmileWrapper = styled.div`
   position: absolute;
-  top: -40px; 
-  left: -48px; 
-  
+  top: -40px;
+  left: -48px;
 `;
