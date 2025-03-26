@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-const COLORS = {
-    pink: "#FE87A4",
-    teal: "#1CBFC1",
-    green: "#94EE9C",
-};
 
 export const Tab = styled.div`
   padding: 2px 16px;
@@ -12,29 +7,19 @@ export const Tab = styled.div`
   font-size: 14px;
   position: relative;
   font-family: "Pixelify Sans", sans-serif;
+  background: ${({ color }) => color};
 
   .close-tab {
     margin-left: 10px;
-    font-size: 9px;
+    font-size: 11px;
     color: #000;
     transition: color 0.2s ease-in-out;
     cursor: pointer;
 
     &:hover {
-      color: rgb(107, 105, 105);
+      color:#fff;
+      text-shadow: .01em .01em .01em #000;
     }
-  }
-
-  &:nth-child(1) {
-    background: ${COLORS.pink};
-  }
-
-  &:nth-child(2) {
-    background: ${COLORS.teal};
-  }
-
-  &:nth-child(3) {
-    background: ${COLORS.green};
   }
 `;
 
