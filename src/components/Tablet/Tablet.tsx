@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import MainWindowTablet from "../MainWindowTablet/MainWindowTablet";
+import MainWindowTablet from "../MainWindowTablet";
 import { TabletWrapper, ContentArea, LoadingWindowContainer } from "./Tablet.styles";
 import LoadingWindow from "../LoadingWindow";
 

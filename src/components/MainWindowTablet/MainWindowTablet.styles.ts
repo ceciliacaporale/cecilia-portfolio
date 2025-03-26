@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+const COLORS = {
+  pink: "#FE87A4",
+  teal: "#1CBFC1",
+  green: "#94EE9C",
+};
+
+
 export const MainWindowTabletWrapper = styled.div`
   width: 96%;
   height: 370px;
@@ -44,12 +51,12 @@ export const WindowButtons = styled.div`
 export const Container = styled.div`
   padding: 10px;
 
-  .star-green {
+  /* .star-green {
     position: absolute;
     top: 14rem;
-    left: 13.7rem;
+    left: 16rem;
     z-index: 9999;
-  }
+  } */
 
   .star-pink {
     position: absolute;
@@ -65,13 +72,6 @@ export const ContentWrapper = styled.div`
   gap: 2rem;
   justify-content: center;
   padding: 10px;
-
-  /* @media (max-width: 696px) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(0, 255, 0, 0.2); 
-  } */
 
   h1 { 
     font-family: "Squada One", sans-serif;
@@ -95,18 +95,54 @@ export const ContainerText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-/* 
-  @media screen and (min-width: 600px) {
-    background-color: red !important;
-  } */
-/* @media (max-width: 696px) {
-  align-items: center;
-  text-align: center;
-} */
 `;
 
 export const ContainerSocialMedia = styled.div`
   position: absolute;
   top: 6rem;
   width: 50%;
+`;
+
+export const Tab = styled.div`
+  padding: 2px 16px;
+  border-radius: 8px 8px 0 0;
+  font-size: 14px;
+  position: relative;
+  font-family: "Pixelify Sans", sans-serif;
+  
+  .close-tab {
+    font-size: 9px;
+    color: #000;
+    transition: color 0.2s ease-in-out;
+    
+    &:hover {
+      color: rgb(107, 105, 105);
+    }
+  }
+
+  &:nth-child(1) {
+    background: ${COLORS.pink};
+  }
+  
+  &:nth-child(2) {
+    background: ${COLORS.teal}; 
+  }
+  
+  &:nth-child(3) {
+    background: ${COLORS.green};
+  }
+`;
+
+export const TabsContainer = styled.div`
+  position: absolute;
+  top: -5px;
+  z-index: 1;
+  display: flex;
+  transition: transform 0.2s ease-in-out;
+  left: 3.5rem;
+
+  :hover {
+    transform: scale(1.1);
+    z-index: 999;
+  }
 `;

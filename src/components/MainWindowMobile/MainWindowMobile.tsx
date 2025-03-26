@@ -1,5 +1,5 @@
 import React from "react";
-import { MainWindowMobileWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia } from "./MainWindowMobile.styles";
+import { MainWindowMobileWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia, TabsContainer, Tab } from "./MainWindowMobile.styles";
 import Ceci from "../../assets/ceci.png?url"; 
 import Star from "../../assets/star.png?url"; 
 import StarPink from "../../assets/starpink.png?url"; 
@@ -10,9 +10,25 @@ interface MainWindowMobileProps {
   title?: string;
 }
 
+const Tabs = () => (
+  <TabsContainer>
+    <Tab>
+      home <span className="close-tab">✕</span>
+    </Tab>
+    <Tab>
+      sobre mim <span className="close-tab">✕</span>
+    </Tab>
+    <Tab>
+      projetos <span className="close-tab">✕</span>
+    </Tab>
+  </TabsContainer>
+);
+
 const MainWindowMobile: React.FC<MainWindowMobileProps> = () => {
   return (
-      <><MainWindowMobileWrapper>
+      <>
+      <Tabs />
+      <MainWindowMobileWrapper>
       <WindowHeader>
         <WindowButtons>
           <span className="close"></span>

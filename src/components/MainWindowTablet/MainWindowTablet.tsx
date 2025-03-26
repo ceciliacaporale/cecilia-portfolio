@@ -1,18 +1,31 @@
 import React from "react";
-import { MainWindowTabletWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia } from "./MainWindowTablet.styles";
+import { MainWindowTabletWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia, TabsContainer, Tab } from "./MainWindowTablet.styles";
 import Ceci from "../../assets/ceci.png?url"; 
 import Star from "../../assets/star.png?url"; 
 import StarPink from "../../assets/starpink.png?url"; 
 import WindowImage from "../WindowImage/WindowImage";
 import SocialMedia from "../SocialMedia";
 
-interface MainWindowTabletProps {
-  title?: string;
-}
 
-const MainWindowTablet: React.FC<MainWindowTabletProps> = () => {
+const Tabs = () => (
+  <TabsContainer>
+    <Tab>
+      home <span className="close-tab">✕</span>
+    </Tab>
+    <Tab>
+      sobre mim <span className="close-tab">✕</span>
+    </Tab>
+    <Tab>
+      projetos <span className="close-tab">✕</span>
+    </Tab>
+  </TabsContainer>
+);
+
+const MainWindowTablet: React.FC = () => {
   return (
-      <><MainWindowTabletWrapper>
+      <>
+      <Tabs />
+      <MainWindowTabletWrapper>
       <WindowHeader>
         <WindowButtons>
           <span className="close"></span>
@@ -23,7 +36,6 @@ const MainWindowTablet: React.FC<MainWindowTabletProps> = () => {
       <Container>
         <ContentWrapper>
           <WindowImage
-            title=""
             imageSrc={Ceci}
             width="auto"
             height="253px"
@@ -38,17 +50,16 @@ const MainWindowTablet: React.FC<MainWindowTabletProps> = () => {
             </p>
           </ContainerText>
         </ContentWrapper>
-        <div className="star-green">
+        {/* <div className="star-green">
           <img src={Star} width={40} height={40} />
-        </div>
+        </div> */}
         <div className="star-pink">
           <img src={StarPink} width={40} height={40} />
         </div>
       </Container>
-    </MainWindowTabletWrapper>
-    <ContainerSocialMedia>
+    </MainWindowTabletWrapper><ContainerSocialMedia>
         <SocialMedia />
-    </ContainerSocialMedia></>
+      </ContainerSocialMedia></>
   );
 };
 
