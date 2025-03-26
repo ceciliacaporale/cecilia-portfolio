@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+const COLORS = {
+  yellow: "#FDF282",
+  pink: "#FE87A4",
+  teal: "#1CBFC1",
+  green: "#94EE9C",
+  buttonRed: "rgb(252, 65, 174)",
+  buttonYellow: "#ffbd2e",
+  buttonGreen: "rgb(102, 240, 123)",
+};
+
 export const MainWindowWrapper = styled.div`
   width: 92%;
   background: white;
@@ -12,16 +22,14 @@ export const MainWindowWrapper = styled.div`
   overflow: hidden;
   min-height: 240px;
   height: 300px;
-  -webkit-user-drag: none;
-  pointer-events: none; 
-  -webkit-user-drag: none;
-    pointer-events: none;   
+  user-select: none;
+  pointer-events: none;
   z-index: 2;
 
   h1 { 
     padding: 20px 0 0 20px;
     font-family: "Squada One", sans-serif;
-    color: #FDF282;
+    color: ${COLORS.yellow};
     text-shadow: .05em .05em 0 #000;
     text-transform: uppercase;
     font-weight: 300;
@@ -31,7 +39,7 @@ export const MainWindowWrapper = styled.div`
 `;
 
 export const WindowHeader = styled.div`
- height: 35px;
+  height: 35px;
   border-radius: 12px 12px 0 0;
   display: flex;
   align-items: center;
@@ -43,6 +51,7 @@ export const WindowButtons = styled.div`
   display: flex;
   gap: 8px;
   padding-top: 1rem;
+
   span {
     width: 14px;
     height: 14px;
@@ -52,13 +61,15 @@ export const WindowButtons = styled.div`
   }
 
   .close {
-    background: rgb(252, 65, 174);
+    background: ${COLORS.buttonRed};
   }
+  
   .minimize {
-    background: #ffbd2e;
+    background: ${COLORS.buttonYellow};
   }
+  
   .maximize {
-    background: rgb(102, 240, 123);
+    background: ${COLORS.buttonGreen};
   }
 `;
 
@@ -93,10 +104,10 @@ export const ContainerImage = styled.div`
 
   & > div { 
     @media (min-width: 1034px) {
-    width: 250px;
-    height: 260px;
-    margin-top: -98px;
-  }
+      width: 250px;
+      height: 260px;
+      margin-top: -98px;
+    }
   }
 `;
 
@@ -104,8 +115,8 @@ export const Tab = styled.div`
   padding: 2px 16px;
   border-radius: 8px 8px 0 0;
   font-size: 14px;
-  left: 2rem;
   position: relative;
+  font-family: "Pixelify Sans", sans-serif;
   
   .close-tab {
     font-size: 9px;
@@ -118,13 +129,15 @@ export const Tab = styled.div`
   }
 
   &:nth-child(1) {
-    background: #FE87A4;
+    background: ${COLORS.pink};
   }
+  
   &:nth-child(2) {
-    background: #1CBFC1; 
+    background: ${COLORS.teal}; 
   }
+  
   &:nth-child(3) {
-    background: #94EE9C;
+    background: ${COLORS.green};
   }
 `;
 
@@ -133,8 +146,8 @@ export const TabsContainer = styled.div`
   top: 30px;
   z-index: 1;
   display: flex;
-  font-family: "Pixelify Sans", sans-serif;
-  left: 3rem;
+  transition: transform 0.2s ease-in-out;
+  left: 5rem;
 
   :hover {
     transform: scale(1.1);

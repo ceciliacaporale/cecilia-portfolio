@@ -1,12 +1,11 @@
 import React, { useState, useRef } from "react";
 import { DesktopWrapper, ContentArea } from "./Desktop.styles";
 import LoadingWindow from "../LoadingWindow/LoadingWindow";
-import MainWindow from "../MainWindow/MainWindow";
+import MainWindow from "../MainWindow";
 // import WindowInfo from "../WindowInfo/WindowInfo";
 import RetroComputer from "../RetroComputer/RetroComputer";
 import Folder from "../Folder/Folder";
 import SoftwareSkills from "../SoftwareSkills/SoftwareSkills";
-import ProjetosButton from "../ProjectsButton/ProjectsButton";
 // import WindowInfo from "../WindowInfo/WindowInfo";
 import MemoryStorage from "../MemoryStorage/MemoryStorage";
 import Skills from "../Skills/Skills";
@@ -34,8 +33,7 @@ const Desktop: React.FC = () => {
       <MemoryStorage containerRef={containerRef}/>
       <RetroComputer containerRef={containerRef} />
       <SoftwareSkills containerRef={containerRef} />
-      <ProjetosButton containerRef={containerRef}/>
-      <Folder />
+      <Folder containerRef={containerRef} />
       </ContentArea>
     </DesktopWrapper>
   );
