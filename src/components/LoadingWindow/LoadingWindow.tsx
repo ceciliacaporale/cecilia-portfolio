@@ -1,53 +1,65 @@
 import React, { useState, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
 import Shape from "../../assets/shape.png?url";
-
-import { 
-  LoadingWindowWrapper, 
-  Header, 
-  Content, 
-  WindowButtons, 
-  Loader 
-} from "./LoadingWindow.styles";
+import { Content, Header, Loader, LoadingWindowWrapper, WindowButtons } from "./LoadingWindow.styles";
 
 interface LoadingWindowProps {
   onClose: () => void;
+  delay?: number;
 }
 
-const LoadingWindow: React.FC<LoadingWindowProps> = ({ onClose }) => {
+const DEFAULT_DELAY = 5000; 
+const SHAPE_SIZE = 35;
+
+const LoadingWindow: React.FC<LoadingWindowProps> = ({ 
+  onClose, 
+  delay = DEFAULT_DELAY 
+}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 5000); 
+    }, delay);
 
-    return () => clearTimeout(timer); 
-  }, []);
+    return () => clearTimeout(timer);
+  }, [delay]);
 
-  if (!isVisible) return null; 
+  if (!isVisible) return null;
 
   return (
     <LoadingWindowWrapper>
       <WindowButtons>
-        <span className="close" onClick={onClose}>✕</span>
+        <button 
+          className="close" 
+          onClick={onClose}
+          aria-label="Fechar janela"
+        >
+          ✕
+        </button>
       </WindowButtons>
+      
       <Header className="draggable-header">
         constant evolution
       </Header>
+      
       <Content>
         <div className="star">
-          <img src={Shape} width={35} />
+          <img 
+            src={Shape} 
+            width={SHAPE_SIZE} 
+            height={SHAPE_SIZE}
+            alt="Decoração estrela"
+          />
         </div>
+        
         <Loader>
           <div className="container">
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
+            {[...Array(3)].map((_, i) => (
+              <div key={`box-${i}`} className="box" />
+            ))}
           </div>
         </Loader>
-        <div className="spiral">
-          {/* <img src={Spiral} width={30}/> */}
-        </div>
       </Content>
     </LoadingWindowWrapper>
   );

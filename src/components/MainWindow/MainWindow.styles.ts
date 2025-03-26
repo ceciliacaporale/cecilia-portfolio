@@ -22,7 +22,6 @@ export const MainWindowWrapper = styled.div`
   overflow: hidden;
   min-height: 240px;
   height: 300px;
-  user-select: none;
   pointer-events: none;
   z-index: 2;
 

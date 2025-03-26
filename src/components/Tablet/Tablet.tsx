@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import MainWindowTablet from "../MainWindowTablet/MainWindowTablet";
 import { TabletWrapper, ContentArea, LoadingWindowContainer } from "./Tablet.styles";
-import LoadingWindow from "../LoadingWindow/LoadingWindow";
+import LoadingWindow from "../LoadingWindow";
 
 const Tablet: React.FC = () => {
 

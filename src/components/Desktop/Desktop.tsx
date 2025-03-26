@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { DesktopWrapper, ContentArea } from "./Desktop.styles";
-import LoadingWindow from "../LoadingWindow/LoadingWindow";
+import LoadingWindow from "../LoadingWindow";
 import MainWindow from "../MainWindow";
 // import WindowInfo from "../WindowInfo/WindowInfo";
 import RetroComputer from "../RetroComputer/RetroComputer";
