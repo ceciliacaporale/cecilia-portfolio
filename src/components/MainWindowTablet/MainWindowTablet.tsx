@@ -1,25 +1,11 @@
 import React from "react";
-import { MainWindowTabletWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia, TabsContainer, Tab } from "./MainWindowTablet.styles";
+import { MainWindowTabletWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia } from "./MainWindowTablet.styles";
 import Ceci from "../../assets/ceci.png?url"; 
 import Star from "../../assets/star.png?url"; 
 import StarPink from "../../assets/starpink.png?url"; 
 import WindowImage from "../WindowImage/WindowImage";
 import SocialMedia from "../SocialMedia";
-
-
-const Tabs = () => (
-  <TabsContainer>
-    <Tab>
-      home <span className="close-tab">✕</span>
-    </Tab>
-    <Tab>
-      sobre mim <span className="close-tab">✕</span>
-    </Tab>
-    <Tab>
-      projetos <span className="close-tab">✕</span>
-    </Tab>
-  </TabsContainer>
-);
+import Tabs from "../Tabs";
 
 const MainWindowTablet: React.FC = () => {
   return (

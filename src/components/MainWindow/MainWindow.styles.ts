@@ -110,50 +110,6 @@ export const ContainerImage = styled.div`
   }
 `;
 
-export const Tab = styled.div`
-  padding: 2px 16px;
-  border-radius: 8px 8px 0 0;
-  font-size: 14px;
-  position: relative;
-  font-family: "Pixelify Sans", sans-serif;
-  
-  .close-tab {
-    font-size: 9px;
-    color: #000;
-    transition: color 0.2s ease-in-out;
-    
-    &:hover {
-      color: rgb(107, 105, 105);
-    }
-  }
-
-  &:nth-child(1) {
-    background: ${COLORS.pink};
-  }
-  
-  &:nth-child(2) {
-    background: ${COLORS.teal}; 
-  }
-  
-  &:nth-child(3) {
-    background: ${COLORS.green};
-  }
-`;
-
-export const TabsContainer = styled.div`
-  position: absolute;
-  top: 30px;
-  z-index: 1;
-  display: flex;
-  transition: transform 0.2s ease-in-out;
-  left: 5rem;
-
-  :hover {
-    transform: scale(1.1);
-    z-index: 999;
-  }
-`;
-
 export const ContainerSocialMedia = styled.div`
   position: absolute;
   left: 1%;

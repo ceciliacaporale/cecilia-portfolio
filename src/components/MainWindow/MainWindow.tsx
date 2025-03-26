@@ -3,10 +3,8 @@ import {
   MainWindowWrapper,
   Container,
   ContainerImage,
-  TabsContainer,
   WindowHeader,
   WindowButtons,
-  Tab,
   ContainerSocialMedia
 } from "./MainWindow.styles";
 import Ceci from "../../assets/ceci.png?url";
@@ -14,24 +12,11 @@ import Star from "../../assets/star.png?url";
 import StarPink from "../../assets/starpink.png?url";
 import WindowImage from "../WindowImage/WindowImage";
 import SocialMedia from "../SocialMedia";
+import Tabs from "../Tabs";
 
 interface MainWindowProps {
   title?: string;
 }
-
-const Tabs = () => (
-  <TabsContainer>
-    <Tab>
-      home <span className="close-tab">✕</span>
-    </Tab>
-    <Tab>
-      sobre mim <span className="close-tab">✕</span>
-    </Tab>
-    <Tab>
-      projetos <span className="close-tab">✕</span>
-    </Tab>
-  </TabsContainer>
-);
 
 const WindowHeaderComponent = () => (
   <WindowHeader>
