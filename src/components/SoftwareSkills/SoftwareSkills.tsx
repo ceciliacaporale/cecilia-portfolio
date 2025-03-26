@@ -20,12 +20,12 @@ import {
 import { dotColors } from "../Skills/Skills.styles";
 
 const softwares = [
-  { icon: <SiVisualstudiocode />, name: "VS Code", favorite: true },
-  { icon: <SiFigma />, name: "Figma", favorite: true },
-  { icon: <SiAdobeillustrator />, name: "Illustrator", favorite: false },
-  { icon: <SiMiro />, name: "Miro", favorite: false },
-  { icon: <SiNotion />, name: "Notion", favorite: true },
-  { icon: <SiGithub />, name: "GitHub", favorite: true },
+  { icon: <SiVisualstudiocode />, name: "VS Code"},
+  { icon: <SiFigma />, name: "Figma"},
+  { icon: <SiAdobeillustrator />, name: "Illustrator"},
+  { icon: <SiMiro />, name: "Miro"},
+  { icon: <SiNotion />, name: "Notion"},
+  { icon: <SiGithub />, name: "GitHub"},
 ];
 
 interface SoftwareSkillsProps {
@@ -53,7 +53,7 @@ const SoftwareSkills = ({ containerRef }: SoftwareSkillsProps) => {
       </Header>
       <SkillsGrid>
         {softwares.map((software, index) => (
-          <SkillIcon key={index}>
+          <SkillIcon key={index}  aria-label={software.name}>
             {software.icon}
           </SkillIcon>
         ))}

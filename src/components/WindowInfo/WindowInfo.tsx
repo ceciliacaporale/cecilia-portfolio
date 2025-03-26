@@ -3,35 +3,60 @@ import useDraggable from "../../hooks/useDraggable";
 import { WindowInfoWrapper, Header, Content } from "./WindowInfo.styles";
 import Star from "./../../assets/web.png?url";
 
-
 interface WindowInfoProps {
   title?: string;
-  containerRef?: React.RefObject<HTMLDivElement>; 
+  containerRef?: React.RefObject<HTMLDivElement>;
+  initialPosition?: { x: number; y: number };
 }
 
-const WindowInfo: React.FC<WindowInfoProps> = ({ title, containerRef }) => {
-  const { position, handleMouseDown, zIndex } = useDraggable(190, 640, containerRef, 150, 100);
+const DEFAULT_POSITION = { x: 190, y: 640 };
+const DEFAULT_SIZE = { width: 150, height: 100 };
+
+const WindowInfo: React.FC<WindowInfoProps> = ({ 
+  title, 
+  containerRef, 
+  initialPosition = DEFAULT_POSITION 
+}) => {
+  const { position, handleMouseDown, zIndex } = useDraggable(
+    initialPosition.x, 
+    initialPosition.y, 
+    containerRef, 
+    DEFAULT_SIZE.width, 
+    DEFAULT_SIZE.height
+  );
+
+  const currentYear = new Date().getFullYear();
 
   return (
-      <WindowInfoWrapper
-          style={{
-            left: position.x,
-            top: position.y,
-            position: "absolute", 
-            zIndex,
-          }}
+    <WindowInfoWrapper
+      style={{
+        left: `${position.x}px`,
+        top: `${position.y}px`,
+        zIndex,
+      }}
+      role="dialog"
+      aria-labelledby="window-info-header"
+    >
+      <Header 
+        onMouseDown={handleMouseDown}
+        id="window-info-header"
       >
-      <Header onMouseDown={handleMouseDown}>
         {title}
       </Header>
 
       <Content>
-      <p>
-      © {new Date().getFullYear()} Maria Cecilia. <br />
-        Made with love and caffeine.
+        <p>
+          © {currentYear} Maria Cecilia. <br />
+          Made with love and caffeine.
         </p>
-        <div className="star">
-          <img src={Star} alt="star" width="25" height="25" />
+        <div className="star-decoration">
+          <img 
+            src={Star} 
+            alt="Decorative star" 
+            width="25" 
+            height="25" 
+            draggable="false"
+          />
         </div>
       </Content>
     </WindowInfoWrapper>
