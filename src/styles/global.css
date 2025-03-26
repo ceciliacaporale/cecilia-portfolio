@@ -29,4 +29,20 @@
       font-weight: 400;
       font-style: normal;
     }
+
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background-color: #FE87A4;
+      border-radius: 10px;
+      border: 1px solid #000;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #FCE6CA;
+    }
+    
   }
