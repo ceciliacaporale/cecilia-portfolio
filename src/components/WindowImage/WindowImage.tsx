@@ -18,8 +18,6 @@ const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, width, heigh
     setShowTooltip(true);
   };
   
-  console.log(showTooltip, tooltipPosition);
-
   return (
     <WindowImageWrapper width={width} height={height}>
       <Header headerColor={$headerColor}>
