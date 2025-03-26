@@ -12,6 +12,7 @@ export const SkillsWrapper = styled.div`
   width: 350px;
   height: 160px;
   z-index: 9;
+  position: absolute; 
 `;
 
 export const Header = styled.div`
@@ -26,10 +27,6 @@ export const Header = styled.div`
   margin-bottom: 6px;
   cursor: grab;
   user-select: none;
-`;
-
-export const Title = styled.span`
-  color: black;
 `;
 
 export const SkillsGrid = styled.div`
@@ -52,6 +49,7 @@ export const SkillIcon = styled.div<{ color: string }>`
   border-radius: 5px;
   box-shadow: 2px 2px 0px black;
   position: relative;
+
   svg {
     font-size: 32px;
   }
@@ -60,6 +58,11 @@ export const SkillIcon = styled.div<{ color: string }>`
     transform: scale(1.1);
   }
 
+  .favorite-icon {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+  }
 `;
 
 export const HeaderTitle = styled.span`
@@ -77,7 +80,6 @@ export const Dot = styled.div<{ color: string }>`
   background: ${({ color }) => color};
   border-radius: 50%;
   border: 1px solid black;
-
 `;
 
 export const dotColors = ["#FB44AC", "#FAC951", "#69EF84"];

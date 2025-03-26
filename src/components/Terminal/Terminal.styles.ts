@@ -57,11 +57,9 @@ export const TerminalContent = styled.div`
   white-space: pre-wrap;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 `;
 
 export const Cursor = styled.span`
-  display: inline-block;
-  width: 5px;
-  background-color: #000;
   animation: ${blink} 0.7s step-end infinite;
 `;

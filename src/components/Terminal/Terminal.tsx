@@ -8,10 +8,9 @@ import {
 } from "./Terminal.styles";
 import Star from "./../../assets/staryellow.png?url"
 import useDraggable from "../../hooks/useDraggable"; 
-// import Shine from "./../../assets/shineblue.png?url"
 
 interface TerminalProps {
-  containerRef?: React.RefObject<HTMLDivElement>; 
+  containerRef?: React.RefObject<HTMLDivElement | null>;
 }
 
 const messages = [
@@ -24,28 +23,36 @@ const messages = [
   ];
   
   const Terminal: React.FC<TerminalProps> = ({ containerRef }) => {
-    const { position, handleMouseDown, zIndex } = useDraggable(410, 530, containerRef, 355, 200);
+    const { position, handleMouseDown, zIndex } = useDraggable(
+      410,
+      530,
+      containerRef as React.RefObject<HTMLDivElement> | undefined,
+      355,
+      200
+    );
     const [displayedText, setDisplayedText] = useState<string>("");
     const [messageIndex, setMessageIndex] = useState<number>(0);
     const [charIndex, setCharIndex] = useState<number>(0);
   
     useEffect(() => {
-      if (messageIndex < messages.length) {
-        if (charIndex < messages[messageIndex].length) {
-          setTimeout(() => {
-            setDisplayedText((prev) => prev + messages[messageIndex][charIndex]);
-            setCharIndex((prev) => prev + 1);
-          }, 50);
+      if (messageIndex >= messages.length) return;
+    
+      const currentMessage = messages[messageIndex];
+      
+      const timeout = setTimeout(() => {
+        if (charIndex < currentMessage.length) {
+          setDisplayedText((prev) => prev + currentMessage[charIndex]);
+          setCharIndex((prev) => prev + 1);
         } else {
-          setTimeout(() => {
-            setDisplayedText((prev) => prev + "\n");
-            setMessageIndex((prev) => prev + 1);
-            setCharIndex(0);
-          }, 500);
+          setDisplayedText((prev) => prev + "\n");
+          setMessageIndex((prev) => prev + 1);
+          setCharIndex(0);
         }
-      }
+      }, 50);
+    
+      return () => clearTimeout(timeout);
     }, [charIndex, messageIndex]);
-  
+    
     return (
         <>
         <TerminalWrapper 
@@ -67,9 +74,6 @@ const messages = [
                 <div className="star">
                   <img src={Star} alt="Smile" width="40" height="40" />
                 </div>
-                {/* <div className="shine">
-                  <img src={Shine} alt="Smile" width="40" height="40" />
-                </div> */}
             </TerminalWrapper></>
     );
   };

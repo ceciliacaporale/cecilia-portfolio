@@ -4,7 +4,7 @@ export const RetroComputerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background:rgb(255, 255, 255);
+  background: #fff;
   padding: 12px;
   border-radius: 10px;
   border: 3px solid black;
@@ -18,24 +18,19 @@ export const RetroComputerWrapper = styled.div`
 export const Monitor = styled.div`
   width: 140px;
   height: 110px;
-  background: #92EE96;
+  background: #92ee96;
   border: 3px solid black;
   border-radius: 6px;
   position: relative;
   box-shadow: inset 0px 0px 8px rgba(255, 255, 255, 0.1);
-
-  /* .star {
-    position: absolute;
-    right: -15px;
-    top: 3rem;
-  } */
 `;
 
-export const ScreenContent = styled.div`
+export const ScreenContent = styled.pre`
   color: #000;
   font-family: monospace;
-  font-size: 11px;
+  font-size: 10.5px;
   padding: 4px;
+  white-space: pre-wrap;
 `;
 
 export const Keyboard = styled.div`
@@ -54,7 +49,7 @@ export const Keyboard = styled.div`
 export const Key = styled.div`
   width: 14px;
   height: 14px;
-  background: rgb(255, 255, 255);
+  background: #fff;
   border: 1.7px solid black;
   display: flex;
   align-items: center;

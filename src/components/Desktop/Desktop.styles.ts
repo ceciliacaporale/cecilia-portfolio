@@ -15,7 +15,7 @@ const heightStyles = `
     height: 123vh;
   }
 
- @media (min-height: 639px) and (max-height: 680px) {
+  @media (min-height: 639px) and (max-height: 680px) {
     height: 130vh;
   }
 
@@ -56,7 +56,7 @@ export const DesktopWrapper = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   align-items: center;
   position: absolute;
 
@@ -73,18 +73,18 @@ export const ContentArea = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
-  bottom: 0; 
+  bottom: 0;
 
- @media (max-width: 1900px ) {
-  max-width: 80rem;
- }
+  @media (max-width: 1900px) {
+    max-width: 80rem;
+  }
 
   @media (min-width: 2232px) {
     max-width: 58% !important;
   }
 
   @media (min-width: 1901px) {
-      max-width: 70%;
+    max-width: 70%;
   }
 
   @media (max-width: 1391px) {

@@ -5,7 +5,7 @@ import Star from "./../../assets/web.png?url";
 
 interface WindowInfoProps {
   title?: string;
-  containerRef?: React.RefObject<HTMLDivElement>;
+  containerRef?: React.RefObject<HTMLDivElement | null>;
   initialPosition?: { x: number; y: number };
 }
 
@@ -20,7 +20,7 @@ const WindowInfo: React.FC<WindowInfoProps> = ({
   const { position, handleMouseDown, zIndex } = useDraggable(
     initialPosition.x, 
     initialPosition.y, 
-    containerRef, 
+    containerRef as React.RefObject<HTMLDivElement> | undefined,
     DEFAULT_SIZE.width, 
     DEFAULT_SIZE.height
   );

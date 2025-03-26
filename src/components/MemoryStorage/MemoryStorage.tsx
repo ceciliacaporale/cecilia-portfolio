@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { 
   MemoryStorageWrapper, 
   Header, 
@@ -22,16 +22,28 @@ const categories = [
   { name: "art & creativity", percent: "19%", color: "#FE87A4" }
 ];
 
-const MemoryStorage: React.FC<{ containerRef: React.RefObject<HTMLDivElement> }> = ({ containerRef }) => {
-  const { position, handleMouseDown, zIndex } = useDraggable(350, 380, containerRef, 460, 140);
+const INITIAL_X = 350;
+const INITIAL_Y = 380;
+const WIDTH = 460;
+const HEIGHT = 140;
+
+const MemoryStorage: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | null> }> = ({ containerRef }) => {
+  const { position, handleMouseDown, zIndex } = useDraggable(
+    INITIAL_X, 
+    INITIAL_Y, 
+    containerRef as React.RefObject<HTMLDivElement> | undefined,
+    WIDTH, 
+    HEIGHT
+  );
+
   return (
     <MemoryStorageWrapper
-    style={{ 
-      left: position.x, 
-      top: position.y, 
-      position: "absolute",
-      zIndex,
-    }}
+      style={{ 
+        left: position.x, 
+        top: position.y, 
+        position: "absolute",
+        zIndex,
+      }}
       onMouseDown={handleMouseDown}
     >
       <Header>

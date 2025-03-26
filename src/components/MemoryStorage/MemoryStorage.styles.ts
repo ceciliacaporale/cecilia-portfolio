@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+export const dotColors = ["#FB44AC", "#FAC951", "#69EF84"];
+
 export const MemoryStorageWrapper = styled.div`
   width: 450px;
   height: 119px;
@@ -23,8 +25,10 @@ export const Header = styled.div`
   cursor: grab;
 `;
 
-export const HeaderTitle = styled.span`
+export const HeaderTitle = styled.h2`
   color: #000;
+  font-size: 16px;
+  font-weight: 100;
 `;
 
 export const DotsContainer = styled.div`
@@ -39,8 +43,6 @@ export const Dot = styled.div<{ color: string }>`
   border-radius: 50%;
   border: 1px solid black;
 `;
-
-export const dotColors = ["#FB44AC", "#FAC951", "#69EF84"];
 
 export const StorageInfo = styled.div`
   display: flex;
@@ -90,4 +92,3 @@ export const ColorBox = styled.div<{ color: string }>`
   border-radius: 2px;
   border: 1.6px solid black;
 `;
-
