@@ -13,6 +13,7 @@ import {
   ColorBox,
   dotColors
 } from "./MemoryStorage.styles";
+import useDraggable from "../../hooks/useDraggable";
 
 const categories = [
   { name: "code & tech", percent: "35%", color: "#FAC951" },
@@ -36,14 +37,23 @@ const MemoryStorage: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | 
     return () => clearTimeout(timer);
   }, []);
 
+  const { position, handleMouseDown, zIndex } = useDraggable(
+    INITIAL_X, 
+    INITIAL_Y, 
+    containerRef as React.RefObject<HTMLDivElement> | undefined,
+    WIDTH, 
+    HEIGHT
+  );
+
   return (
     <MemoryStorageWrapper
       style={{ 
-        left: INITIAL_X, 
-        top: INITIAL_Y, 
+        left: position.x, 
+        top: position.y, 
         position: "absolute",
-        zIndex: 1,
+        zIndex,
       }}
+      onMouseDown={handleMouseDown}
     >
       <Header>
         <HeaderTitle>s t o r a g e</HeaderTitle>
