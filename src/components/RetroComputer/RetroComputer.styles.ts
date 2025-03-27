@@ -23,14 +23,16 @@ export const Monitor = styled.div`
   border-radius: 6px;
   position: relative;
   box-shadow: inset 0px 0px 8px rgba(255, 255, 255, 0.1);
+  
 `;
 
 export const ScreenContent = styled.pre`
   color: #000;
   font-family: monospace;
-  font-size: 10.5px;
+  font-size: 12.5px;
   padding: 4px;
   white-space: pre-wrap;
+  font-family: "Pixelify Sans", sans-serif;
 `;
 
 export const Keyboard = styled.div`

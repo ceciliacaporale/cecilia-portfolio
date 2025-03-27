@@ -33,7 +33,7 @@ const Folder: React.FC<FolderProps> = ({ containerRef }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Tooltip className={isOpen ? "visible" : ""} bgColor="#59C0C2">
+      <Tooltip className={isOpen ? "visible" : ""} bgColor="#60FF9A">
         Arquivos
       </Tooltip>
       <div className="star-pink">

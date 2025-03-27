@@ -82,6 +82,8 @@ export const Tooltip = styled.span<TooltipProps>`
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
   font-family: "Pixelify Sans", sans-serif;
+  border: 1px solid black;
+  box-shadow: 1px 1px 0px black;
 `;
 
 export const SmileWrapper = styled.div`

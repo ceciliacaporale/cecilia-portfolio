@@ -29,27 +29,24 @@ export const Tab = styled.div`
     padding: 10px 22px!important;
     background-color: red; //resolver depois 
    }
-
-
 `;
 
 export const TabsContainer = styled.div`
   position: absolute;
-  top: 30px;
   z-index: 1;
   display: flex;
   transition: transform 0.2s ease-in-out;
-  left: 5rem;
-
+  top: 30px;
+  left: 80px;
+ 
   @media (max-width: 652px) {
     top: -100px!important; //resolver
   }
   
   @media (max-width: 1250px) {
-   top: -8px;
-   left: 3.8rem;
+    top: -8px;
+    left: 80px;
   }
-
 
   :hover {
     transform: scale(1.1);

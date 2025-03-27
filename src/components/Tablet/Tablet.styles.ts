@@ -26,10 +26,9 @@ export const ContentArea = styled.div`
   align-items: center;
   position: relative;
 
-  /* @media (min-width: 1901px) {
-      max-width: 60%;
-  } */
-  
+  @media (min-width: 1233px) {
+    height: 41%;
+  }
 `;
 
 export const LoadingWindowContainer = styled.div`

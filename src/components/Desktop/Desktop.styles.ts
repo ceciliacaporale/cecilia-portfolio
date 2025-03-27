@@ -87,7 +87,11 @@ export const ContentArea = styled.div`
     max-width: 70%;
   }
 
+  @media (min-width: 2063px) {
+    max-width: 60%;
+  }
+
   @media (max-width: 1391px) {
-    width: 98%;
+    width: 100%;
   }
 `;

@@ -63,7 +63,7 @@ export const Tooltip = styled.span<{ bgColor: string }>`
   background: ${({ bgColor }) => bgColor};
   color: black;
   left: 50%;
-  bottom: 4.6rem;
+  bottom: 4.8rem;
   padding: 5px 10px;
   border-radius: 10px;
   font-size: 12px;
@@ -72,6 +72,8 @@ export const Tooltip = styled.span<{ bgColor: string }>`
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
   font-family: "Pixelify Sans", sans-serif;
+  border: 1px solid black;
+  box-shadow: 1px 1px 0px black;
   
   &.visible {
     opacity: 1;
