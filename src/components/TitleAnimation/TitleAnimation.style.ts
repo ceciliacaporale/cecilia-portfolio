@@ -9,4 +9,10 @@ export const TitleAnimationWrapper = styled.h1`
     font-weight: 300;
     font-size: 42px;
     -webkit-text-stroke: .025em #000;
+
+    @media (max-width: 1250px) {
+        font-size: 50px;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
 `;
