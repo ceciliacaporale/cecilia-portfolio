@@ -44,6 +44,25 @@ export const SkillsGrid = styled.div`
   justify-items: center;
 `;
 
+export const Tooltip = styled.span<{ bgColor: string }>`
+  position: absolute;
+  bottom: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: ${({ bgColor }) => bgColor};
+  color: black;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  font-family: "Pixelify Sans", sans-serif;
+  border: 1px solid black;
+  box-shadow: 1px 1px 0px black;
+`;
+
 export const SkillIcon = styled.div`
   width: 36px;
   height: 36px;
@@ -61,5 +80,10 @@ export const SkillIcon = styled.div`
   &:hover {
     transform: scale(1.1);
     transition: 0.2s;
+  }
+
+  &:hover ${Tooltip} {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
   }
 `;

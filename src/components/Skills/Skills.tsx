@@ -7,7 +7,8 @@ import {
   HeaderTitle, 
   DotsContainer, 
   Dot, 
-  dotColors 
+  dotColors, 
+  Tooltip
 } from "./Skills.styles";
 import useDraggable from "../../hooks/useDraggable";
 import { skillData } from "./skillsData";
@@ -42,6 +43,7 @@ const Skills: React.FC<SkillsProps> = ({ containerRef }) => {
           <SkillIcon key={skill.name} title={skill.name} color={skillColors[index]}>
             {skill.icon}
             {skill.favorite && <img src={Favorite} alt="Favorite" width="20" height="20" className="favorite-icon" />}
+            <Tooltip>{skill.name}</Tooltip>
           </SkillIcon>
         ))}
       </SkillsGrid>

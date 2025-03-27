@@ -43,7 +43,7 @@ const MainWindow: React.FC<MainWindowProps> = () => {
               autoStart: true,
               loop: true,
               delay: 75, 
-              deleteSpeed: 110,
+              deleteSpeed: 190,
             }}
           />
         </h1>
