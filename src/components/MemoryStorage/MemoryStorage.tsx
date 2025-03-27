@@ -24,8 +24,8 @@ const categories = [
 
 const INITIAL_X = 350;
 const INITIAL_Y = 380;
-const WIDTH = 460;
-const HEIGHT = 140;
+const WIDTH = 455;
+const HEIGHT = 127;
 
 const MemoryStorage: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | null> }> = ({ containerRef }) => {
   const [loading, setLoading] = useState(true);

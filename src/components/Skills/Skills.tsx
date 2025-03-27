@@ -19,7 +19,7 @@ interface SkillsProps {
 
 const Skills: React.FC<SkillsProps> = ({ containerRef }) => {
 
-  const { position, handleMouseDown, zIndex } = useDraggable(830, 550, containerRef as RefObject<HTMLDivElement>, 358, 180);
+  const { position, handleMouseDown, zIndex } = useDraggable(830, 550, containerRef as RefObject<HTMLDivElement>, 358, 168);
 
   const skillColors = useMemo(() => {
     const baseColors = ["#FFF98D", "#57C0C3", "#92EE96", "#ED83A2", "#FAC951", "#8C75F7", "#F74681"];

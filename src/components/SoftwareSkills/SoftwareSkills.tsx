@@ -33,7 +33,7 @@ interface SoftwareSkillsProps {
 }
 
 const SoftwareSkills = ({ containerRef }: SoftwareSkillsProps) => {
-  const { position, handleMouseDown, zIndex } = useDraggable(900, 380, containerRef as RefObject<HTMLDivElement>, 160, 145); 
+  const { position, handleMouseDown, zIndex } = useDraggable(900, 380, containerRef as RefObject<HTMLDivElement>, 160, 140); 
 
   return (
     <SkillsWrapper

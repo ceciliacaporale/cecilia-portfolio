@@ -27,8 +27,8 @@ const messages = [
       410,
       530,
       containerRef as React.RefObject<HTMLDivElement> | undefined,
-      355,
-      200
+      366,
+      210
     );
     const [displayedText, setDisplayedText] = useState<string>("");
     const [messageIndex, setMessageIndex] = useState<number>(0);

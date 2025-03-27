@@ -11,8 +11,8 @@ import useDraggable from "../../hooks/useDraggable";
 
 const INITIAL_X = 105;
 const INITIAL_Y = 400;
-const WIDTH = 180;
-const HEIGHT = 210;
+const WIDTH = 176;
+const HEIGHT = 208;
 
 const perfil = [
   "const perfil = {",
