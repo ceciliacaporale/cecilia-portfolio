@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { 
   MemoryStorageWrapper, 
   Header, 
@@ -13,7 +13,6 @@ import {
   ColorBox,
   dotColors
 } from "./MemoryStorage.styles";
-import useDraggable from "../../hooks/useDraggable";
 
 const categories = [
   { name: "code & tech", percent: "35%", color: "#FAC951" },
@@ -28,23 +27,23 @@ const WIDTH = 460;
 const HEIGHT = 140;
 
 const MemoryStorage: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | null> }> = ({ containerRef }) => {
-  const { position, handleMouseDown, zIndex } = useDraggable(
-    INITIAL_X, 
-    INITIAL_Y, 
-    containerRef as React.RefObject<HTMLDivElement> | undefined,
-    WIDTH, 
-    HEIGHT
-  );
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <MemoryStorageWrapper
       style={{ 
-        left: position.x, 
-        top: position.y, 
+        left: INITIAL_X, 
+        top: INITIAL_Y, 
         position: "absolute",
-        zIndex,
+        zIndex: 1,
       }}
-      onMouseDown={handleMouseDown}
     >
       <Header>
         <HeaderTitle>s t o r a g e</HeaderTitle>
@@ -62,7 +61,11 @@ const MemoryStorage: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | 
 
       <ProgressBar>
         {categories.map((item) => (
-          <BarSegment key={item.name} color={item.color} width={item.percent} />
+          <BarSegment
+            key={item.name}
+            color={item.color}
+            width={loading ? "0%" : item.percent}
+          />
         ))}
       </ProgressBar>
 

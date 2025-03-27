@@ -68,6 +68,7 @@ export const BarSegment = styled.div<{ color: string; width: string }>`
   height: 100%;
   width: ${({ width }) => width};
   background: ${({ color }) => color};
+  transition: width 3s ease-in-out;
 `;
 
 export const Legend = styled.div`
