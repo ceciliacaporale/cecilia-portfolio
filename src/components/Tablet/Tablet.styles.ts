@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TabletWrapper = styled.div`
   width: 100vw;
-  height: 911px;
+  height: 1075px;
   display: flex;
   flex-direction: column;
   justify-content: center;

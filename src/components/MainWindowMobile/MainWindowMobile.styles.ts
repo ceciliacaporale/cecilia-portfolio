@@ -77,7 +77,7 @@ export const ContentWrapper = styled.div`
     font-size: 1.8rem;
     font-family: "Inter", sans-serif;
     text-align: left;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -90,7 +90,12 @@ export const ContainerText = styled.div`
 
 export const ContainerSocialMedia = styled.div`
   position: absolute;
-  top: 41rem;
+  top: 46rem;
   width: 58%;
   z-index: 999;
+`;
+
+export const ContentSkills = styled.div`
+padding: 10px 50px;
+margin-bottom: 2rem;
 `;

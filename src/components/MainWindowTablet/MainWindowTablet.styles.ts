@@ -9,7 +9,7 @@ const COLORS = {
 
 export const MainWindowTabletWrapper = styled.div`
   width: 96%;
-  height: 370px;
+  height: auto;
   background: white;
   border-radius: 2rem;
   top: 1rem;
@@ -88,7 +88,7 @@ export const ContainerText = styled.div`
 
 export const ContainerSocialMedia = styled.div`
   position: absolute;
-  top: 6rem;
+  top: 10.6rem;
   width: 50%;
 `;
 
@@ -134,4 +134,9 @@ export const TabsContainer = styled.div`
     transform: scale(1.1);
     z-index: 999;
   }
+`;
+
+export const ContentSkills = styled.div`
+padding: 10px 50px;
+margin-bottom: 2rem;
 `;

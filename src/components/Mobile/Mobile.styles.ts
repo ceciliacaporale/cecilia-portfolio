@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MobileWrapper = styled.div`
   width: 100vw;
-  height: 1220px;
+  height: 1300px;
   display: flex;
   flex-direction: column;
   justify-content: center;

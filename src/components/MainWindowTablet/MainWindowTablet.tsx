@@ -1,5 +1,5 @@
 import React from "react";
-import { MainWindowTabletWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia } from "./MainWindowTablet.styles";
+import { MainWindowTabletWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia, ContentSkills } from "./MainWindowTablet.styles";
 import Ceci from "../../assets/ceci.png?url"; 
 import Star from "../../assets/star.png?url"; 
 import StarPink from "../../assets/starpink.png?url"; 
@@ -7,6 +7,7 @@ import WindowImage from "../WindowImage/WindowImage";
 import SocialMedia from "../SocialMedia";
 import Tabs from "../Tabs";
 import TitleAnimation from "../TitleAnimation";
+import SkillsMobile from "../SkillsMobile";
 
 const MainWindowTablet: React.FC = () => {
   return (
@@ -37,6 +38,9 @@ const MainWindowTablet: React.FC = () => {
             </p>
           </ContainerText>
         </ContentWrapper>
+        <ContentSkills>
+          <SkillsMobile />
+        </ContentSkills>
         {/* <div className="star-green">
           <img src={Star} width={40} height={40} />
         </div> */}
@@ -44,7 +48,8 @@ const MainWindowTablet: React.FC = () => {
           <img src={StarPink} width={40} height={40} />
         </div>
       </Container>
-    </MainWindowTabletWrapper><ContainerSocialMedia>
+    </MainWindowTabletWrapper>
+      <ContainerSocialMedia>
         <SocialMedia />
       </ContainerSocialMedia></>
   );
