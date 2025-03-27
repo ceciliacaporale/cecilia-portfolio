@@ -73,17 +73,6 @@ export const ContentWrapper = styled.div`
   justify-content: center;
   padding: 10px;
 
-  h1 { 
-    font-family: "Squada One", sans-serif;
-    color: #FDF282;
-    text-shadow: .05em .05em 0 #000;
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 3rem;
-    -webkit-text-stroke: .025em #000;
-    margin-bottom: 8px;
-  }
-
   p {
     font-size: 18px;
     font-family: "Inter", sans-serif;
