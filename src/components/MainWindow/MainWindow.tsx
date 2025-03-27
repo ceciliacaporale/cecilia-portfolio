@@ -1,4 +1,5 @@
 import React from "react";
+import Typewriter from "typewriter-effect";
 import {
   MainWindowWrapper,
   Container,
@@ -34,7 +35,19 @@ const MainWindow: React.FC<MainWindowProps> = () => {
       <Tabs />
       <MainWindowWrapper>
         <WindowHeaderComponent />
-        <h1>Hello World!</h1>
+
+        <h1>
+          <Typewriter
+            options={{
+              strings: ["Hello World!", "Olá Mundo!", "¡Hola Mundo!", "Ciao Mondo!"],
+              autoStart: true,
+              loop: true,
+              delay: 75, 
+              deleteSpeed: 110,
+            }}
+          />
+        </h1>
+
         <Container>
           <ContainerImage>
             <p>
