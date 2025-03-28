@@ -27,7 +27,7 @@ export const Tab = styled.div`
   
   @media (max-width: 652px) {
     padding: 10px 22px!important;
-    background-color: red; //resolver depois 
+    background-color: red; 
    }
 `;
 

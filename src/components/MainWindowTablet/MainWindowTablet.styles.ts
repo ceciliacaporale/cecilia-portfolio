@@ -88,7 +88,7 @@ export const ContainerText = styled.div`
 
 export const ContainerSocialMedia = styled.div`
   position: absolute;
-  top: 10.6rem;
+  top: 12rem;
   width: 50%;
 `;
 
@@ -137,6 +137,6 @@ export const TabsContainer = styled.div`
 `;
 
 export const ContentSkills = styled.div`
-padding: 10px 50px;
+padding: 20px 150px;
 margin-bottom: 2rem;
 `;
