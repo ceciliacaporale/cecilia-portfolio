@@ -1,4 +1,3 @@
-import React from "react";
 import { MainWindowTabletWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia, ContentSkills } from "./MainWindowTablet.styles";
 import Ceci from "../../assets/ceci.png?url"; 
 import Star from "../../assets/star.png?url"; 

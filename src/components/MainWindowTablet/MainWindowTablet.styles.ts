@@ -90,6 +90,18 @@ export const ContainerSocialMedia = styled.div`
   position: absolute;
   top: 12rem;
   width: 50%;
+
+  @media (max-width: 911px) {
+    top: 14rem;
+  }
+
+  @media (max-width: 840px) {
+    top: 15rem;
+  }
+
+  @media (max-width: 797px) {
+    top: 17rem;
+  }
 `;
 
 export const Tab = styled.div`

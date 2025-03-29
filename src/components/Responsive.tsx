@@ -10,9 +10,9 @@ const Responsive: React.FC = () => {
     const checkScreenSize = () => {
       const width = window.screen.width;
 
-      if (width < 653) {
+      if (width < 796) {
         setScreenSize("mobile");
-      } else if (width >= 653 && width < 1251) {
+      } else if (width >= 796 && width < 1251) {
         setScreenSize("tablet");
       } else {
         setScreenSize("desktop");

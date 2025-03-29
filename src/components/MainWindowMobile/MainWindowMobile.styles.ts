@@ -8,7 +8,7 @@ const COLORS = {
 
 export const MainWindowMobileWrapper = styled.div`
   width: 96%;
-  height: auto;
+  height: 97%;
   background: white;
   border-radius: 2rem;
   top: 1rem;
@@ -29,8 +29,8 @@ export const WindowButtons = styled.div`
   gap: 8px;
   padding-top: 1rem;
   span {
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     display: inline-block;
     border: 1px solid #000;
@@ -74,10 +74,11 @@ export const ContentWrapper = styled.div`
   justify-content: center;
   
   p {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-family: "Inter", sans-serif;
-    text-align: left;
-    margin-bottom: 2rem;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -86,13 +87,6 @@ export const ContainerText = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-
-export const ContainerSocialMedia = styled.div`
-  position: absolute;
-  top: 46rem;
-  width: 58%;
-  z-index: 999;
 `;
 
 export const ContentSkills = styled.div`

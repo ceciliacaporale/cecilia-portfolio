@@ -1,14 +1,15 @@
-import React from "react";
 import MainWindowMobile from "../MainWindowMobile/MainWindowMobile";
-import { MobileWrapper, ContentArea } from "./Mobile.styles";
+import { MobileWrapper, ContentArea, ContainerMain } from "./Mobile.styles";
 
 const Mobile: React.FC = () => {
   return (
+    <ContainerMain>
     <MobileWrapper>
      <ContentArea>
     <MainWindowMobile />
      </ContentArea>
     </MobileWrapper>
+    </ContainerMain>
   );
 };
 

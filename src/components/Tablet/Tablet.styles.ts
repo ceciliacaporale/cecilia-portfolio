@@ -24,6 +24,22 @@ export const ContentArea = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
+
+  @media (max-width: 909px) {
+    height: 75%;
+  }
+
+  @media (max-width: 896px) {
+    height: 76%;
+  }
+
+  @media (max-width: 840px) {
+    height: 79%;
+  }
+
+  @media (max-width: 797px) {
+    height: 84%;
+  }
 `;
 
 export const LoadingWindowContainer = styled.div`

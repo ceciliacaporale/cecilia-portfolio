@@ -1,5 +1,4 @@
-import React from "react";
-import { MainWindowMobileWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia, ContentSkills } from "./MainWindowMobile.styles";
+import { MainWindowMobileWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContentSkills } from "./MainWindowMobile.styles";
 import Ceci from "../../assets/ceci.png?url"; 
 import Star from "../../assets/star.png?url"; 
 import StarPink from "../../assets/starpink.png?url"; 
@@ -30,8 +29,8 @@ const MainWindowMobile: React.FC<MainWindowMobileProps> = () => {
           <WindowImage
             title=""
             imageSrc={Ceci}
-            width="400px"
-            height="400px"
+            width="240px"
+            height="240px"
             $headerColor="#FFF982" />
           <ContainerText>
             <TitleAnimation />
@@ -47,16 +46,14 @@ const MainWindowMobile: React.FC<MainWindowMobileProps> = () => {
              <SkillsMobile />
           </ContentSkills>
         <div className="star-green">
-          <img src={Star} width={70} height={70} />
+          <img src={Star} width={30} height={30} />
         </div>
         <div className="star-pink">
-          <img src={StarPink} width={70} height={70} />
+          <img src={StarPink} width={30} height={30} />
         </div>
       </Container>
     </MainWindowMobileWrapper>
-    <ContainerSocialMedia>
-        <SocialMedia  width="360px" height="84px" iconSize="45px" />
-    </ContainerSocialMedia></>
+  </>
   );
 };
 

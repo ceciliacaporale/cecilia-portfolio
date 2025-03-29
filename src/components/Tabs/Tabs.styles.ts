@@ -21,14 +21,15 @@ export const Tab = styled.div`
       font-weight: bold;
     }
   }
+
   @media (max-width: 1250px) {
     padding: 3px 19px;
   }
-  
-  @media (max-width: 652px) {
-    padding: 10px 22px!important;
-    background-color: red; 
-   }
+
+  @media (max-width: 577px) {
+    padding: 4.5px 13px;
+    font-size: 12px;
+  }
 `;
 
 export const TabsContainer = styled.div`
@@ -38,14 +39,14 @@ export const TabsContainer = styled.div`
   transition: transform 0.2s ease-in-out;
   top: 30px;
   left: 80px;
- 
-  @media (max-width: 652px) {
-    top: -100px!important; //resolver
-  }
   
   @media (max-width: 1250px) {
     top: -8px;
-    left: 80px;
+    left: 70px;
+  }
+
+  @media (max-width: 577px) {
+   left: 40px;
   }
 
   :hover {
