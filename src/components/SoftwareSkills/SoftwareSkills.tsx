@@ -15,7 +15,7 @@ import {
   SiFigma, 
   SiAdobeillustrator, 
   SiMiro, 
-  SiNotion, 
+  SiMicrosoftazure, 
   SiGithub 
 } from "react-icons/si";
 import { dotColors } from "../Skills/Skills.styles";
@@ -34,7 +34,7 @@ const softwares = [
   { icon: <SiFigma />, name: "Figma"},
   { icon: <SiAdobeillustrator />, name: "Illustrator"},
   { icon: <SiMiro />, name: "Miro"},
-  { icon: <SiNotion />, name: "Notion"},
+  { icon: <SiMicrosoftazure />, name: "Azure"},
   { icon: <SiGithub />, name: "GitHub"},
 ];
 

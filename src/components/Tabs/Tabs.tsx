@@ -37,12 +37,11 @@ const Tabs = () => {
       { id: 1, name: "home", link: "/", color: "#FE87A4" },
       { id: 2, name: "sobre mim", link: "/sobre", color: "#1CBFC1" },
       { id: 3, name: "projetos", link: "/projetos", color: "#94EE9C" },
-      { id: 4, name: "arquivos", link: "/arquivos", color: "#FFD700" }, // Aba extra no tablet
+      { id: 4, name: "arquivos", link: "/arquivos", color: "#FFD700" },
     ],
     mobile: [
       { id: 1, name: "home", link: "/", color: "#FE87A4" },
       { id: 3, name: "projetos", link: "/projetos", color: "#94EE9C" },
-      { id: 4, name: "arquivos", link: "/arquivos", color: "#FFD700" }, // Aba extra no mobile
     ],
   };
 
