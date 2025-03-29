@@ -8,8 +8,6 @@ import {
   ContainerSocialMedia
 } from "./MainWindow.styles";
 import Ceci from "../../assets/ceci.png?url";
-import Star from "../../assets/star.png?url";
-import StarPink from "../../assets/starpink.png?url";
 import WindowImage from "../WindowImage/WindowImage";
 import SocialMedia from "../SocialMedia";
 import Tabs from "../Tabs";
@@ -53,15 +51,10 @@ const MainWindow: React.FC<MainWindowProps> = () => {
               imageSrc={Ceci}
               width="200px"
               height="200px"
+              shapeStar={true}
               $headerColor="#FFF982"
             />
           </ContainerImage>
-          <div className="star-green">
-            <img src={Star} width={40} height={40} alt="Estrela verde" />
-          </div>
-          <div className="star-pink">
-            <img src={StarPink} width={40} height={40} alt="Estrela rosa" />
-          </div>
         </Container>
       </MainWindowWrapper>
       <ContainerSocialMedia>

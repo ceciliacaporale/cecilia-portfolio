@@ -9,16 +9,22 @@ interface HeaderProps {
   headerColor?: string;
 }
 
+
 export const WindowImageWrapper = styled.div<WindowProps>`
   width: ${(props) => props.width || "200px"};
   height: ${(props) => props.height || "200px"};
   background: white;
   border-radius: 10px;
-  position: relative;
+  /* position: relative; */
   z-index: 9;
   border: 2px solid #000;
   overflow: hidden;
   cursor: url("/cursoryellow.png"), pointer; 
+
+  @media (max-width: 979px) and (min-width: 796px) {
+    margin-top: 2rem;
+    height: 200px;
+  }
 
   &:hover::after {
     content: "Ceci";
@@ -34,6 +40,13 @@ export const WindowImageWrapper = styled.div<WindowProps>`
     white-space: nowrap;
     z-index: 9999;
   }
+
+  .star-green { 
+}
+
+.star-pink { 
+  
+}
 `;
 
 export const Header = styled.div<HeaderProps>`
@@ -57,6 +70,7 @@ export const CodeSymbol = styled.span`
 `;
 
 export const Content = styled.div`
+
 `;
 
 export const WindowButtons = styled.div`

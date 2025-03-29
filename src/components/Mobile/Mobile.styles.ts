@@ -19,10 +19,10 @@ export const MobileWrapper = styled.div`
 `;
 
 export const ContentArea = styled.div`
-  width: 95%; 
+  width: 100%; 
   height: 93%;
   background-color: white;
-  border-radius: 50px; 
+  border-radius: 2rem; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;

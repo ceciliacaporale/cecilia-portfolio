@@ -1,7 +1,5 @@
 import { MainWindowTabletWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia, ContentSkills } from "./MainWindowTablet.styles";
 import Ceci from "../../assets/ceci.png?url"; 
-import Star from "../../assets/star.png?url"; 
-import StarPink from "../../assets/starpink.png?url"; 
 import WindowImage from "../WindowImage/WindowImage";
 import SocialMedia from "../SocialMedia";
 import Tabs from "../Tabs";
@@ -40,12 +38,6 @@ const MainWindowTablet: React.FC = () => {
         <ContentSkills>
           <SkillsMobile />
         </ContentSkills>
-        {/* <div className="star-green">
-          <img src={Star} width={40} height={40} />
-        </div> */}
-        <div className="star-pink">
-          <img src={StarPink} width={40} height={40} />
-        </div>
       </Container>
     </MainWindowTabletWrapper>
       <ContainerSocialMedia>

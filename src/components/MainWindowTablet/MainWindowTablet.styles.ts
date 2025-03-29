@@ -50,20 +50,6 @@ export const WindowButtons = styled.div`
 
 export const Container = styled.div`
   padding: 10px;
-
-  /* .star-green {
-    position: absolute;
-    top: 14rem;
-    left: 16rem;
-    z-index: 9999;
-  } */
-
-  .star-pink {
-    position: absolute;
-    top: 5rem;
-    left: -4px;
-    z-index: 9999;
-  }
 `;
 
 export const ContentWrapper = styled.div`

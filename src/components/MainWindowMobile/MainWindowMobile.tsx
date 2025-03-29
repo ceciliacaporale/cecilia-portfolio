@@ -1,7 +1,5 @@
 import { MainWindowMobileWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContentSkills } from "./MainWindowMobile.styles";
 import Ceci from "../../assets/ceci.png?url"; 
-import Star from "../../assets/star.png?url"; 
-import StarPink from "../../assets/starpink.png?url"; 
 import WindowImage from "../WindowImage/WindowImage";
 import SocialMedia from "../SocialMedia";
 import Tabs from "../Tabs";
@@ -45,12 +43,6 @@ const MainWindowMobile: React.FC<MainWindowMobileProps> = () => {
          <ContentSkills>
              <SkillsMobile />
           </ContentSkills>
-        <div className="star-green">
-          <img src={Star} width={30} height={30} />
-        </div>
-        <div className="star-pink">
-          <img src={StarPink} width={30} height={30} />
-        </div>
       </Container>
     </MainWindowMobileWrapper>
   </>
