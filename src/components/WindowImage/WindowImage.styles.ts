@@ -55,7 +55,7 @@ export const Header = styled.div<HeaderProps>`
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  background-color: ${(props) => props.headerColor || "rgb(253, 103, 153)"};
+  background-color:#FDF28D;
   border-bottom: 2px solid black;
   padding: 0 12px;
   border-radius: 10px 10px 0 0;

@@ -67,12 +67,12 @@ export const IconWrapper = styled.div`
   }
 `;
 
-export const Tooltip = styled.span<TooltipProps>`
+export const Tooltip = styled.span<{ $bgColor: string }>`
   position: absolute;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  background: ${({ bgColor }) => bgColor};
+  background: ${({ $bgColor }) => $bgColor};
   color: black;
   padding: 5px 10px;
   border-radius: 10px;

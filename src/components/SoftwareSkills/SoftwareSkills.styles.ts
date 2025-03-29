@@ -44,12 +44,12 @@ export const SkillsGrid = styled.div`
   justify-items: center;
 `;
 
-export const Tooltip = styled.span<{ bgColor: string }>`
+export const Tooltip = styled.span`
   position: absolute;
   bottom: 38px;
   left: 50%;
   transform: translateX(-50%);
-  background: ${({ bgColor }) => bgColor};
+  background-color: white;
   color: black;
   padding: 3px 8px;
   border-radius: 8px;

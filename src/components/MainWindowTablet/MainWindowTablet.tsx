@@ -24,7 +24,7 @@ const MainWindowTablet: React.FC = () => {
             imageSrc={Ceci}
             width="auto"
             height="253px"
-            $headerColor="#FFF982" />
+            headerColor="#FFF982" />
           <ContainerText>
           <TitleAnimation />
             <p>

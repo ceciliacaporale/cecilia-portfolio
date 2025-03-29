@@ -65,7 +65,7 @@ const SoftwareSkills = ({ containerRef }: SoftwareSkillsProps) => {
         {softwares.map((software, index) => (
           <SkillIcon key={index} aria-label={software.name}>
             {software.icon}
-            <Tooltip bgColor={tooltipColors[index]}>{software.name}</Tooltip>
+            <Tooltip>{software.name}</Tooltip>
           </SkillIcon>
         ))}
       </SkillsGrid>

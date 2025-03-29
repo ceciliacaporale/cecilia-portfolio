@@ -8,11 +8,10 @@ interface WindowImageProps {
   imageSrc?: string;
   width?: string;
   height?: string;
-  $headerColor?: string;
   shapeStar?: boolean;
 }
 
-const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, shapeStar, width, height, $headerColor }) => {
+const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, shapeStar, width, height }) => {
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -30,7 +29,7 @@ const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, shapeStar, w
             <img src={StarPink} width={40} height={40} alt="Estrela rosa" />
           </div></>
       )}
-      <Header headerColor={$headerColor}>
+      <Header>
         <CodeSymbol>&lt;  &gt;</CodeSymbol> 
         <span>{title}</span> 
         <WindowButtons>

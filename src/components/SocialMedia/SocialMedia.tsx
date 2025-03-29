@@ -97,7 +97,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
           <IconWrapper key={id}>
             <a href={url} target="_blank" rel="noopener noreferrer">
               <img src={icon} alt={alt} width={iconSize} height={iconSize} />
-              <Tooltip bgColor={bgColor}>{tooltip}</Tooltip>
+              <Tooltip $bgColor={bgColor}>{tooltip}</Tooltip>
             </a>
           </IconWrapper>
         ))}

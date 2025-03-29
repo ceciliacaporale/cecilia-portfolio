@@ -57,10 +57,10 @@ export const Paper = styled.div`
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 `;
 
-export const Tooltip = styled.span<{ bgColor: string }>`
+export const Tooltip = styled.span`
   position: absolute;
   transform: translateX(-50%);
-  background: ${({ bgColor }) => bgColor};
+  background: #60FF9A;
   color: black;
   left: 50%;
   bottom: 4.8rem;
