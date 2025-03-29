@@ -52,7 +52,6 @@ const MainWindow: React.FC<MainWindowProps> = () => {
               width="200px"
               height="200px"
               shapeStar={true}
-              headerColor="#FFF982"
             />
           </ContainerImage>
         </Container>

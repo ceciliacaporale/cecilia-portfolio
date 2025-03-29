@@ -29,7 +29,7 @@ const MainWindowMobile: React.FC<MainWindowMobileProps> = () => {
             imageSrc={Ceci}
             width="240px"
             height="240px"
-            headerColor="#FFF982" />
+             />
           <ContainerText>
             <TitleAnimation />
             <p>
