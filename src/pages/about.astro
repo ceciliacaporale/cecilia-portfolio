@@ -1,0 +1,16 @@
+---
+import "../styles/global.css";
+import AboutMePage from "../components/AboutMePage";
+---
+
+<html lang="pt-BR">
+  <head>
+    <title>Sobre mim</title>
+    <link rel="stylesheet" href="../styles/global.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" type="image/png" href="/public/favicon.png">
+  </head>
+  <body>
+    <AboutMePage client:only="react" />
+  </body>
+</html>
