@@ -4,6 +4,9 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [react()],
   vite: {
+    ssr: {
+      noExternal: ["styled-components"]
+    },
     build: {
       rollupOptions: {
         output: {
