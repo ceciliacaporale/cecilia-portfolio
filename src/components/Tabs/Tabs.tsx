@@ -31,18 +31,19 @@ const Tabs = () => {
     desktop: [
       { id: 1, name: "home", link: "/", color: "#FE87A4" },
       { id: 2, name: "sobre mim", link: "/about", color: "#1CBFC1" },
-      { id: 3, name: "projetos", link: "/projects", color: "#94EE9C" },
+      { id: 3, name: "projetos", link: "/projects", color: "#FFD700" },
+      { id: 4, name: "arquivos", link: "/files", color: "#94EE9C" },
     ],
     tablet: [
       { id: 1, name: "home", link: "/", color: "#FE87A4" },
       { id: 2, name: "sobre mim", link: "/about", color: "#1CBFC1" },
-      { id: 3, name: "projetos", link: "/projects", color: "#94EE9C" },
-      { id: 4, name: "arquivos", link: "/files", color: "#FFD700" },
+      { id: 3, name: "projetos", link: "/projects", color: "#FFD700" },
+      { id: 4, name: "arquivos", link: "/files", color: "#94EE9C" },
     ],
     mobile: [
       { id: 1, name: "home", link: "/", color: "#FE87A4" },
       { id: 2, name: "sobre mim", link: "/about", color: "#1CBFC1" },
-      { id: 3, name: "projetos", link: "/projects", color: "#94EE9C" },
+      { id: 3, name: "projetos", link: "/projects", color: "#FFD700" },
     ],
   };
 

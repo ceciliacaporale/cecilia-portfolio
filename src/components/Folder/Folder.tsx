@@ -22,6 +22,7 @@ const Folder: React.FC<FolderProps> = ({ containerRef }) => {
   const handleMouseLeave = () => setIsOpen(false);
 
   return (
+    <a href="/files">
     <FolderWrapper
       onMouseDown={handleMouseDown}
       style={{
@@ -43,6 +44,7 @@ const Folder: React.FC<FolderProps> = ({ containerRef }) => {
       {isOpen ? <FolderOpen /> : <FolderClosed />}
       <Paper style={{ transform: isOpen ? "translateY(-5px)" : "translateY(20px)", opacity: isOpen ? 1 : 0 }} />
     </FolderWrapper>
+      </a> 
   );
 };
 

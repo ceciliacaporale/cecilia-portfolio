@@ -4,11 +4,12 @@ import {
   import { 
     SiStyledcomponents, SiTypescript, SiStrapi, SiStorybook 
   } from "react-icons/si";
-  
+  import { TbBrandNextjs } from "react-icons/tb";
+
   export const skillData = [
     { icon: <FaJs />, name: "JavaScript", favorite: true },
     { icon: <FaReact />, name: "React", favorite: true },
-    { icon: <FaNodeJs />, name: "Node.js", favorite: false },
+    { icon: <TbBrandNextjs />, name: "Next.js", favorite: false },
     { icon: <SiTypescript />, name: "TypeScript", favorite: true },
     { icon: <FaHtml5 />, name: "HTML", favorite: false },
     { icon: <FaCss3Alt />, name: "CSS", favorite: false },
