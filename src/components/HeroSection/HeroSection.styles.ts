@@ -24,7 +24,14 @@ export const HeroSectionWrapper = styled.div`
   z-index: 999;
   
   @media (max-width: 795px) {
-    width: 96%; 
+    width: 100%;
+    border-radius: 2rem;
+    top: 4px;
+  }
+
+  @media (min-width: 796px) and (max-width: 1251px) {
+    border-radius: 2rem;
+    top: 16px;
   }
 
   h1 {
