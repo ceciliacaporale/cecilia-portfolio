@@ -1,8 +1,15 @@
-# Astro Starter Kit: Basics
+# Cecilia Caporale - Portfolio
 
-## 🧞 Commands
+This is my personal portfolio, developed to showcase my skills in design, illustration, and programming. Here, you will find projects I have developed using technologies like React, Astro, and Styled Components.
 
-All commands are run from the root of the project, from a terminal:
+## Technologies Used
+- React
+- Astro
+- Styled Components
+- Adobe Illustrator
+- TypeWriter Effect
+- Figma
+
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -12,8 +19,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
