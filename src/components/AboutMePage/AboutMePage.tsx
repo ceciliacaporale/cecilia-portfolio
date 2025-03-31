@@ -1,7 +1,8 @@
 import React from "react";
-// import { ProjectsWrapper, ContainerMain, Container } from "./AboutMePage.styles";
 import HeroSection from "../HeroSection";
 import ResponsiveLayout from "../ResponsiveLayout";
+import { ContainerMaintenance } from "./AboutMePage.styles";
+import MaintenanceWindow from "../MaintenanceWindow";
 
 
 const AboutMePage: React.FC = () => {
@@ -14,6 +15,9 @@ const AboutMePage: React.FC = () => {
 A criatividade sempre esteve presente na minha vida, e no desenvolvimento front-end encontrei o equilíbrio perfeito entre lógica e expressão visual. Amo explorar novas tecnologias, aprender e experimentar maneiras inovadoras de construir interfaces que sejam funcionais e bonitas ao mesmo tempo.
 
 Além da programação, sou movida por novas experiências. Viajar me inspira, comida japonesa é minha paixão, e adoro me aventurar em desafios que me tiram da zona de conforto. Seja criando um design, codificando uma animação ou descobrindo um novo destino, estou sempre buscando algo que desperte minha curiosidade e criatividade." />
+      <ContainerMaintenance>
+          <MaintenanceWindow/>
+      </ContainerMaintenance>
       </ResponsiveLayout>
     </>
   );
