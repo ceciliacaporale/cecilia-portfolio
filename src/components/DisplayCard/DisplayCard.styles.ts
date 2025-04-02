@@ -15,6 +15,11 @@ export const DisplayCardWrapper = styled.div`
   z-index: 9999;
   border: 2px solid ${COLORS.border};
   overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 `;
 
 export const Header = styled.div`
@@ -29,6 +34,11 @@ export const Header = styled.div`
   gap: 5px;
   display: flex;
   align-items: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #57C0C2; //pensar se vai continuar esse hover..
+  }
 `;
 
 export const Content = styled.div`
