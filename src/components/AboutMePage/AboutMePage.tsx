@@ -2,8 +2,8 @@ import React from "react";
 import HeroSection from "../HeroSection";
 import ResponsiveLayout from "../ResponsiveLayout";
 import { ContainerMaintenance } from "./AboutMePage.styles";
-import MaintenanceWindow from "../MaintenanceWindow";
-
+import WindowImageSecondary from "../WindowImageSecondary";
+import ceciimagem from '../../assets/ceciimagem.jpg?url'
 
 const AboutMePage: React.FC = () => {
   
@@ -16,7 +16,13 @@ A criatividade sempre esteve presente na minha vida, e no desenvolvimento front-
 
 Além da programação, sou movida por novas experiências. Viajar me inspira, comida japonesa é minha paixão, e adoro me aventurar em desafios que me tiram da zona de conforto. Seja criando um design, codificando uma animação ou descobrindo um novo destino, estou sempre buscando algo que desperte minha curiosidade e criatividade." />
       <ContainerMaintenance>
-          <MaintenanceWindow/>
+      <WindowImageSecondary 
+        imageSrc={ceciimagem}
+        width="200px" 
+        height="280px"
+        headerColor="#ffff" 
+        dotColors={["#FE87A4", "#FFD700", "#1CBFC1"]}
+      />
       </ContainerMaintenance>
       </ResponsiveLayout>
     </>
