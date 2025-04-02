@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const ContainerMaintenance = styled.div`
- display: flex;
+export const ContainerProjects = styled.div`
+  display: flex;
   justify-content: center;
+  gap: 1.5rem;
   align-items: center;
   width: 100%;
-  height: 50vh;
-  position: absolute;
+  height: 60vh;
 `;

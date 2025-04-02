@@ -35,10 +35,6 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-
-  &:hover {
-    background-color: #57C0C2; //pensar se vai continuar esse hover..
-  }
 `;
 
 export const Content = styled.div`
