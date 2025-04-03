@@ -6,18 +6,9 @@ export const ContainerProjects = styled.div`
   justify-content: center;
   width: 100%;
   max-width: 1150px;
-  margin: 65px auto;
   align-items: stretch;
   padding: 2rem 0;
   position: relative;
-
-    @media (max-width: 1152px) {
-      margin: 20px auto;
-    }
-
-    @media (max-width: 539px) {
-      padding-bottom: 0;
-    }
   `;
 
 export const StyledSwiper = styled(Swiper)`

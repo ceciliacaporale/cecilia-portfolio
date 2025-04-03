@@ -32,6 +32,7 @@ export const Header = styled.div`
   border-bottom: 2px solid ${COLORS.border};
   padding: 0 10px;
   gap: 5px;
+  background-color: #FDF28D;
   display: flex;
   align-items: center;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;

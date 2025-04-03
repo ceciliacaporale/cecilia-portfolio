@@ -79,6 +79,10 @@ export const ContentWrapper = styled.div`
     text-align: center;
     padding: 10px;
     margin-bottom: 1rem;
+
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -92,4 +96,8 @@ export const ContainerText = styled.div`
 export const ContentSkills = styled.div`
 padding: 10px 50px;
 margin-bottom: 2rem;
+
+  @media (max-width: 600px) {
+    padding: 10px 25px;
+    }
 `;

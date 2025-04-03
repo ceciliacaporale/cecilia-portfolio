@@ -14,7 +14,8 @@ export const MobileWrapper = styled.div`
   align-items: center;
   position: absolute;
 
-  @media (max-width: 1901px) {
+  @media (max-width: 430px) {
+    height: 1066px;
   }
 `;
 
