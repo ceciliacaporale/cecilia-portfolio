@@ -41,7 +41,6 @@ const DisplayCard: React.FC<DisplayCardProps> = ({
         )}
       <h2>{title}</h2>
       <p>{description}</p>
-      </Content>
       {technologies.length > 0 && (
         <TechTagsContainer>
           {technologies.map((tech, index) => (
@@ -49,6 +48,7 @@ const DisplayCard: React.FC<DisplayCardProps> = ({
           ))}
         </TechTagsContainer>
       )}
+      </Content>
     </DisplayCardWrapper>
   );
 };

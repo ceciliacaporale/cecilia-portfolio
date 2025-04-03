@@ -35,17 +35,13 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-
-  &:hover {
-    background-color: #57C0C2; //pensar se vai continuar esse hover..
-  }
 `;
 
 export const Content = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   box-sizing: border-box;
   overflow: hidden;
   
@@ -75,10 +71,10 @@ export const Dot = styled.div<{ color: string }>`
 export const TechTagsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 10px;
-  padding: 5px;
-  margin-bottom: 1rem;
+  gap: 4px;
+  padding: 4px;
+  justify-content: center;
+  margin: 12px 0 12px 0;
 `;
 
 export const TechTag = styled.span`
