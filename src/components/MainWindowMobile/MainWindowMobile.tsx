@@ -1,9 +1,10 @@
-import { MainWindowMobileWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContentSkills } from "./MainWindowMobile.styles";
+import { MainWindowMobileWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContentSkills, ContainerSocialMedia } from "./MainWindowMobile.styles";
 import Ceci from "../../assets/ceci.png?url"; 
 import WindowImage from "../WindowImage";
 import Tabs from "../Tabs";
 import TitleAnimation from "../TitleAnimation";
 import SkillsMobile from "../SkillsMobile";
+import SocialMedia from "../SocialMedia";
 
 interface MainWindowMobileProps {
   title?: string;
@@ -39,6 +40,9 @@ const MainWindowMobile: React.FC<MainWindowMobileProps> = () => {
             </p>
           </ContainerText>
         </ContentWrapper>
+            <ContainerSocialMedia>
+              <SocialMedia />
+            </ContainerSocialMedia>
          <ContentSkills>
              <SkillsMobile />
           </ContentSkills>

@@ -15,7 +15,7 @@ export const MobileWrapper = styled.div`
   position: absolute;
 
   @media (max-width: 430px) {
-    height: 1066px;
+    height: 1143px;
   }
 `;
 

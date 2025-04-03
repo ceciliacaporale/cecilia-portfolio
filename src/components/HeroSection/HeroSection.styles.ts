@@ -20,7 +20,7 @@ export const HeroSectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: auto;
+  height: 100%;
   z-index: 999;
   
   @media (max-width: 795px) {

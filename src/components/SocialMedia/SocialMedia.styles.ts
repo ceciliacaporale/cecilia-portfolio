@@ -26,6 +26,18 @@ export const SocialMediaWrapper = styled.div<SocialMediaWrapperProps>`
   border: 2px solid #000000;
   transition: all 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
+
+  @media (max-width: 795px) {
+    box-shadow: 4px 4px 0 ${SHADOW_COLOR}, 5px 5px 0 1px black, 7px 7px 0 1px #FDF28D;
+    width: 200px;
+    height: 60px;
+    z-index: 999;
+    top: 50%;
+    left: 0;
+    margin: 0 auto;
+    position: relative;
+  }
+
   img {
     user-select: none;
     pointer-events: none;
@@ -50,6 +62,10 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 795px) {
+    padding: 14px;
+  }
 `;
 
 export const IconWrapper = styled.div`
