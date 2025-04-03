@@ -27,6 +27,10 @@ export const ContainerMain = styled.div`
   position: relative;
   bottom: 0;
 
+  @media (max-width: 431px) {
+   height: 99%;
+  }
+
   @media (max-width: 1900px) {
     max-width: 80rem;
   }

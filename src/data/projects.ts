@@ -3,7 +3,7 @@ import ceciImg from "../assets/ceciimagem.jpg?url";
 export const projects = [
   {
     title: "Projeto Ceci",
-    description: "Um projeto incrível que desenvolvi com React.",
+    description: "Udsdsa dsa dsad sdsa das dasd asdasd asdasd asd sad asddsad asdsadasdsaddsadsdm projeto incrível que desenvolvi com React.",
     imageSrc: ceciImg,
     technologies: ["React", "TypeScript", "Styled Components"],
   },
