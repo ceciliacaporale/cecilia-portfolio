@@ -20,7 +20,7 @@ export const TerminalWrapper = styled.div`
   box-shadow: 8px 8px 0 ${({ theme }) => theme.colors.pink};
   position: absolute;
 
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   flex-direction: column;
   z-index: 999;
@@ -44,7 +44,7 @@ export const Header = styled.div`
 export const Dot = styled.span<{ color: string }>`
   width: 11px;
   height: 11px;
-  border: 1px solid ${({ theme }) => theme.colors.black};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
   background: ${(props) => props.color};
   border-radius: 50%;
   display: inline-block;

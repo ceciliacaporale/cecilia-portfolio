@@ -21,7 +21,7 @@ export const LoadingWindowWrapper = styled.div`
   background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   position: absolute;
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
   z-index: 999;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
 `;
@@ -34,7 +34,7 @@ export const Header = styled.div`
   align-items: center;
   justify-content: center;
   padding: 5px;
-  border-bottom: 2px solid ${({ theme }) => theme.colors.black};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.borderColor};;
   font-size: 14px;
   user-select: none;
   font-family: "Pixelify Sans", sans-serif;
@@ -54,7 +54,7 @@ export const Content = styled.div`
     position: absolute;
     top: -16px;
     left: -10px;
-    filter: drop-shadow(1px 1px 0 ${({ theme }) => theme.colors.black});
+    filter: drop-shadow(1px 1px 0 ${({ theme }) => theme.colors.borderColor});
   }
 `;
 
@@ -70,7 +70,7 @@ export const WindowButtons = styled.div`
   .close {
     font-size: 10px;
     font-weight: bold;
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.borderColor};
     cursor: pointer;
     padding: 0;
     background: none;
@@ -91,7 +91,7 @@ export const Loader = styled.div`
   .container {
     width: 180px;
     height: 18px;
-    border: 2px solid ${({ theme }) => theme.colors.black};
+    border: 2px solid ${({ theme }) => theme.colors.borderColor};
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -104,7 +104,7 @@ export const Loader = styled.div`
     height: 100%;
     background: ${COLORS.gradient};
     display: inline-block;
-    border: 1px solid ${({ theme }) => theme.colors.black};;
+    border: 1px solid ${({ theme }) => theme.colors.borderColor};
     margin-right: 2px;
     animation: ${loadAnimation} 2s infinite linear;
   }

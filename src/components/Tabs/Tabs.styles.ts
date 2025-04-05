@@ -8,12 +8,12 @@ export const Tab = styled.div`
   position: relative;
   font-family: "Pixelify Sans", sans-serif;
   background: ${({ color }) => color};
-  border: 1px solid ${({ theme }) => theme.colors.black};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
 
   .close-tab {
     margin-left: 10px;
     font-size: 11px;
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.borderColor};
     transition: color 0.2s ease-in-out;
     cursor: pointer;
 

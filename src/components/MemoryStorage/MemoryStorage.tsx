@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { 
   MemoryStorageWrapper, 
   Header, 
@@ -14,13 +14,7 @@ import {
   dotColors
 } from "./MemoryStorage.styles";
 import useDraggable from "../../hooks/useDraggable";
-
-const categories = [
-  { name: "code & tech", percent: "35%", color: "#FAC951" },
-  { name: "coffe", percent: "25%", color: "#12BFC2" },
-  { name: "travel & adventures", percent: "20%", color: "#FFF98D" },
-  { name: "art & creativity", percent: "19%", color: "#FE87A4" }
-];
+import { useTheme } from "styled-components";
 
 const INITIAL_X = 350;
 const INITIAL_Y = 380;
@@ -29,6 +23,7 @@ const HEIGHT = 127;
 
 const MemoryStorage: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | null> }> = ({ containerRef }) => {
   const [loading, setLoading] = useState(true);
+  const theme = useTheme();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -44,6 +39,13 @@ const MemoryStorage: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | 
     WIDTH, 
     HEIGHT
   );
+
+  const categories = useMemo(() => [
+    { name: "code & tech", percent: "35%", color: theme.colors.orange },
+    { name: "coffe", percent: "25%", color: theme.colors.blue },
+    { name: "travel & adventures", percent: "20%", color: theme.colors.yellow },
+    { name: "art & creativity", percent: "19%", color: theme.colors.pink }
+  ], [theme]);
 
   return (
     <MemoryStorageWrapper

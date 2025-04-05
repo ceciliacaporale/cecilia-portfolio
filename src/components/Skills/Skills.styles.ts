@@ -7,8 +7,8 @@ export const SkillsWrapper = styled.div`
   background: ${({ theme }) => theme.colors.white};
   padding: 10px;
   border-radius: 10px;
-  border: 2px solid ${({ theme }) => theme.colors.black};
-  box-shadow: 6px 6px 0px ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
+  box-shadow: 6px 6px 0px ${({ theme }) => theme.colors.borderColor};
   width: 350px;
   height: 160px;
   z-index: 9;
@@ -22,7 +22,7 @@ export const Header = styled.div`
   align-items: center;
   font-family: "Pixelify Sans", sans-serif;
   font-size: 16px;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.black};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
   padding-bottom: 4px;
   margin-bottom: 6px;
   cursor: grab;
@@ -51,8 +51,8 @@ export const Tooltip = styled.span`
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
   font-family: "Pixelify Sans", sans-serif;
-  border: 1px solid ${({ theme }) => theme.colors.black};
-  box-shadow: 1px 1px 0px ${({ theme }) => theme.colors.black};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
+  box-shadow: 1px 1px 0px ${({ theme }) => theme.colors.borderColor};
 `;
 
 export const SkillIcon = styled.div<{ color: string }>`
@@ -64,9 +64,9 @@ export const SkillIcon = styled.div<{ color: string }>`
   width: 48px;
   height: 48px;
   background: ${(props) => props.color}; 
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 5px;
-  box-shadow: 2px 2px 0px ${({ theme }) => theme.colors.black};
+  box-shadow: 2px 2px 0px ${({ theme }) => theme.colors.borderColor};
   position: relative;
 
   svg {
@@ -103,7 +103,7 @@ export const Dot = styled.div<{ color: string }>`
   height: 12px;
   background: ${({ color }) => color};
   border-radius: 50%;
-  border: 1px solid ${({ theme }) => theme.colors.black};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
 `;
 
 export const dotColors = ["#FB44AC", "#FAC951", "#69EF84"];

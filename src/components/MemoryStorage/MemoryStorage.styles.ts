@@ -7,8 +7,8 @@ export const MemoryStorageWrapper = styled.div`
   height: 119px;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
-  border: 2px solid ${({ theme }) => theme.colors.black};
-  box-shadow: 5px 5px 0px ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
+  box-shadow: 5px 5px 0px ${({ theme }) => theme.colors.borderColor};
   position: relative;
   padding: 0 10px;
   user-select: none;
@@ -20,7 +20,7 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.black};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
   padding: 4px 8px;
   cursor: grab;
 `;
@@ -41,7 +41,7 @@ export const Dot = styled.div<{ color: string }>`
   height: 12px;
   background: ${({ color }) => color};
   border-radius: 50%;
-  border: 1px solid ${({ theme }) => theme.colors.black};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
 `;
 
 export const StorageInfo = styled.div`
@@ -59,7 +59,7 @@ export const ProgressBar = styled.div`
   height: 20px;
   background: #dcd6c8;
   border-radius: 5px;
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   overflow: hidden;
   margin-top: 5px;
@@ -93,5 +93,5 @@ export const ColorBox = styled.div<{ color: string }>`
   height: 12px;
   background: ${({ color }) => color};
   border-radius: 2px;
-  border: 1.6px solid ${({ theme }) => theme.colors.black};
+  border: 1.6px solid ${({ theme }) => theme.colors.borderColor};
 `;

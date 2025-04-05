@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Tab, TabsContainer } from "./Tabs.styles";
+import { useTheme } from "styled-components";
 
 const Tabs = () => {
   const [screenSize, setScreenSize] = useState<"mobile" | "tablet" | "desktop">("desktop");
+  const theme = useTheme();
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -29,22 +31,22 @@ const Tabs = () => {
 
   const tabsData = {
     desktop: [
-      { id: 1, name: "home", link: "/", color: "#FE87A4" },
-      // { id: 2, name: "sobre mim", link: "/about", color: "#1CBFC1" },
-      // { id: 3, name: "projetos", link: "/projects", color: "#FFD700" },
-      { id: 4, name: "arquivos", link: "/files", color: "#94EE9C" },
+      { id: 1, name: "home", link: "/", color: theme.colors.pink },
+      // { id: 2, name: "sobre mim", link: "/about", color: theme.colors.blue },
+      // { id: 3, name: "projetos", link: "/projects", color: theme.colors.orange },
+      { id: 4, name: "arquivos", link: "/files", color: theme.colors.lime },
     ],
     tablet: [
-      { id: 1, name: "home", link: "/", color: "#FE87A4" },
-      // { id: 2, name: "sobre mim", link: "/about", color: "#1CBFC1" },
-      // { id: 3, name: "projetos", link: "/projects", color: "#FFD700" },
-      { id: 4, name: "arquivos", link: "/files", color: "#94EE9C" },
+      { id: 1, name: "home", link: "/", color: theme.colors.pink },
+      // { id: 2, name: "sobre mim", link: "/about", color: theme.colors.blue },
+      // { id: 3, name: "projetos", link: "/projects", color: theme.colors.orange },
+      { id: 4, name: "arquivos", link: "/files", color: theme.colors.lime },
     ],
     mobile: [
-      { id: 1, name: "home", link: "/", color: "#FE87A4" },
-      // { id: 2, name: "sobre mim", link: "/about", color: "#1CBFC1" },
-      // { id: 3, name: "projetos", link: "/projects", color: "#FFD700" },
-      { id: 4, name: "arquivos", link: "/files", color: "#94EE9C" },
+      { id: 1, name: "home", link: "/", color: theme.colors.pink },
+      // { id: 2, name: "sobre mim", link: "/about", color: theme.colors.blue },
+      // { id: 3, name: "projetos", link: "/projects", color: theme.colors.orange },
+      { id: 4, name: "arquivos", link: "/files", color: theme.colors.lime },
     ],
   };
 
@@ -52,7 +54,7 @@ const Tabs = () => {
 
   useEffect(() => {
     setTabs(tabsData[screenSize]);
-  }, [screenSize]);
+  }, [screenSize, theme]);
 
   const handleCloseTab = (id: number) => {
     setTabs((prevTabs) => prevTabs.filter((tab) => tab.id !== id));

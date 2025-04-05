@@ -11,7 +11,7 @@ export const WindowImageWrapper = styled.div<WindowProps>`
   background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   z-index: 9;
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
   overflow: hidden;
   cursor: url("/cursoryellow.png"), pointer; 
 
@@ -50,7 +50,7 @@ export const Header = styled.div`
   align-items: center;
   justify-content: space-between; 
   background-color: ${({ theme }) => theme.colors.yellow};
-  border-bottom: 2px solid ${({ theme }) => theme.colors.black};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.borderColor};
   padding: 0 12px;
   border-radius: 10px 10px 0 0;
   position: relative;
@@ -77,14 +77,14 @@ export const WindowButtons = styled.div`
     border-radius: 50%;
     display: flex;
     align-items: center;
-    border: 1px solid ${({ theme }) => theme.colors.black};
+    border: 1px solid ${({ theme }) => theme.colors.borderColor};
     justify-content: center;
     font-size: 10px;
     font-weight: bold;
   }
 
   .minimize, .close, .love {
-    background: ${({ theme }) => theme.colors.white};
+    background: #fff;
   }
 `;
 export const Tooltip = styled.div`
@@ -97,6 +97,6 @@ export const Tooltip = styled.div`
   white-space: nowrap;
   z-index: 99999;
   pointer-events: none;
-  border: 1px solid ${({ theme }) => theme.colors.black};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
   transform: translate(-50%, -100%);
 `;

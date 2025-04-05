@@ -7,7 +7,7 @@ export const HeroSectionWrapper = styled.div`
   border-radius: 12px;
   position: relative;
   top: 51px;
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -29,11 +29,11 @@ export const HeroSectionWrapper = styled.div`
     padding: 20px 0 0 20px;
     font-family: "Squada One", sans-serif;
     color: ${({ theme }) => theme.colors.yellow};
-    text-shadow: .05em .05em 0 ${({ theme }) => theme.colors.black};
+    text-shadow: .05em .05em 0 ${({ theme }) => theme.colors.borderColor};
     text-transform: uppercase;
     font-weight: 300;
     font-size: 42px;
-    -webkit-text-stroke: .025em ${({ theme }) => theme.colors.black};
+    -webkit-text-stroke: .025em ${({ theme }) => theme.colors.borderColor};
 
   }
 `;
@@ -57,7 +57,7 @@ export const WindowButtons = styled.div`
     height: 14px;
     border-radius: 50%;
     display: inline-block;
-    border: 1px solid ${({ theme }) => theme.colors.black};
+    border: 1px solid ${({ theme }) => theme.colors.borderColor};
   }
 
   .close {

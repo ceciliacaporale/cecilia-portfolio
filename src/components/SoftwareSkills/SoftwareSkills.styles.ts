@@ -4,7 +4,7 @@ export const SkillsWrapper = styled.div`
   width: 160px;
   height: 137px;
   background: ${({ theme }) => theme.colors.white};
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 10px;
   padding: 8px;
 `;
@@ -14,7 +14,7 @@ export const Header = styled.div`
   align-items: center;
   padding: 4px 4px;
   border-radius: 6px 6px 0 0;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.black};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
   cursor: grab;
   user-select: none;
 `;
@@ -33,7 +33,7 @@ export const Dot = styled.div<{ color: string }>`
   height: 12px;
   background: ${({ color }) => color};
   border-radius: 50%;
-  border: 1px solid ${({ theme }) => theme.colors.black};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
 `;
 
 export const SkillsGrid = styled.div`
@@ -50,7 +50,7 @@ export const Tooltip = styled.span<{ color: string }>`
   left: 50%;
   transform: translateX(-50%);
   background-color: ${({ color }) => color}; 
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.borderColor};
   padding: 3px 8px;
   border-radius: 8px;
   font-size: 10px;
@@ -59,8 +59,8 @@ export const Tooltip = styled.span<{ color: string }>`
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
   font-family: "Pixelify Sans", sans-serif;
-  border: 1px solid ${({ theme }) => theme.colors.black};
-  box-shadow: 1px 1px 0px ${({ theme }) => theme.colors.black};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
+  box-shadow: 1px 1px 0px ${({ theme }) => theme.colors.borderColor};
 `;
 
 
@@ -72,8 +72,8 @@ export const SkillIcon = styled.div`
   justify-content: center;
   border-radius: 5px;
   background: ${({ theme }) => theme.colors.white};
-  box-shadow: 2px 2px 0px ${({ theme }) => theme.colors.black};
-  border: 1px solid ${({ theme }) => theme.colors.black};
+  box-shadow: 2px 2px 0px ${({ theme }) => theme.colors.borderColor};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
   position: relative;
   font-size: 24px;
   color: ${({ theme }) => theme.colors.black};

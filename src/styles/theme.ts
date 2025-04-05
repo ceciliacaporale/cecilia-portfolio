@@ -1,34 +1,19 @@
-import { type DefaultTheme } from "styled-components";
 
-export const theme: DefaultTheme = {
+import type { DefaultTheme } from 'styled-components';
+
+export const lightTheme: DefaultTheme = {
   colors: {
     lime: '#94EE9C',
     pink: '#FE87A4',
-    pink10:'#FC41AE',
+    pink10: '#fc41ae',
     orange: '#FAC951',
     yellow: '#FFF982',
     blue: '#1CBFC1',
     black: '#000',
     white: '#fff',
-
-    darkMode: {
-      background: '#181718',
-      borderColor: '#353535',
-      limeDark: '#6FA994',
-      pinkDark: '#D9AAB0',
-      orangeDark: '#DBBD79',
-      yellowDark: '#E4C789',
-      blueDark: '#79A0AC',
-      text: '#ffff',
-      backgroundWindow: '#c7c0c0',
-      primary: '#BB86FC',
-      secondary: '#03DAC6',
-      accent: '#CF6679',
-      surface: '#1E1E1E',
-      border: '#333',
-    },
+    borderColor: '#000',
+    darkMode: {} as any
   },
-
   size: {
     xxs: '0.25rem', // 4px
     xs: '0.375rem', // 6px
@@ -38,7 +23,6 @@ export const theme: DefaultTheme = {
     xl: '1.25rem', // 20px
     xxl: '1.5rem', // 24px
   },
-
   borderRadius: {
     none: '0',
     sm: '0.125rem', // 2px
@@ -50,4 +34,18 @@ export const theme: DefaultTheme = {
   },
 };
 
-export default theme;
+export const darkTheme: DefaultTheme = {
+  colors: {
+    lime: '#6FA994',
+    pink: '#FE87A4',
+    pink10: '#FE87A4',
+    orange: '#DBBD79',
+    yellow: '#E4C789',
+    blue: '#79A0AC',
+    black: '#fff',
+    white: '#313131',
+    borderColor: '#000',
+  },
+  size: lightTheme.size,
+  borderRadius: lightTheme.borderRadius,
+};

@@ -6,7 +6,7 @@ export const MainWindowWrapper = styled.div`
   border-radius: 12px;
   position: relative;
   top: 51px;
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -35,7 +35,7 @@ export const WindowButtons = styled.div`
     height: 14px;
     border-radius: 50%;
     display: inline-block;
-    border: 1px solid ${({ theme }) => theme.colors.black};
+    border: 1px solid ${({ theme }) => theme.colors.borderColor};
   }
 
   .close {

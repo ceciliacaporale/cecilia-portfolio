@@ -11,7 +11,8 @@ declare module 'styled-components' {
       blue: string;
       black: string;
       white: string;
-      darkMode: {
+      borderColor: string;
+      darkMode?: {
         background: string;
         borderColor: string;
         limeDark: string;

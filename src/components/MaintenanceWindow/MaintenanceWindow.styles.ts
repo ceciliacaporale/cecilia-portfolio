@@ -13,8 +13,8 @@ export const MaintenanceWindowWrapper = styled.div`
   border-radius: 10px;
   position: relative;
   z-index: 9999;
-  box-shadow: 6px 6px 0px ${({ theme }) => theme.colors.black};
-  border: 3px solid ${({ theme }) => theme.colors.black};
+  box-shadow: 6px 6px 0px ${({ theme }) => theme.colors.borderColor};
+  border: 3px solid ${({ theme }) => theme.colors.borderColor};
   overflow: hidden;
 `;
 
@@ -24,7 +24,7 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.blue};
-  border-bottom: 3px solid ${({ theme }) => theme.colors.black};
+  border-bottom: 3px solid ${({ theme }) => theme.colors.borderColor};
   padding: 0 10px;
   font-family: "Pixelify Sans", sans-serif;
   gap: 5px;
@@ -59,5 +59,5 @@ export const Dot = styled.div<{ color: string }>`
   height: 14px;
   background: ${({ color }) => color};
   border-radius: 50%;
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
 `;

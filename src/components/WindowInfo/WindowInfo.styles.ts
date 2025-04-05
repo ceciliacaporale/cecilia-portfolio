@@ -13,8 +13,8 @@ export const WindowInfoWrapper = styled.div`
   border-radius: 10px;
   position: absolute;
   z-index: 99;
-  box-shadow: 3px 3px 0px ${({ theme }) => theme.colors.black};
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  box-shadow: 3px 3px 0px ${({ theme }) => theme.colors.borderColor};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
   user-select: none;
   overflow: hidden;
 `;
@@ -26,7 +26,7 @@ export const Header = styled.div`
   align-items: center;
   justify-content: flex-end;
   background-color: ${({ theme }) => theme.colors.blue};
-  border-bottom: 2px solid ${({ theme }) => theme.colors.black};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.borderColor};
   padding: 0 10px;
   font-family: "Pixelify Sans", sans-serif;
   cursor: grab;
