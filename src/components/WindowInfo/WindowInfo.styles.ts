@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-const COLORS = {
-  background: "#ffffff",
-  header: "#57C0C3",
-  border: "#000000",
-};
-
 const SIZES = {
   width: "150px",
   height: "100px",
@@ -15,12 +9,12 @@ const SIZES = {
 export const WindowInfoWrapper = styled.div`
   width: ${SIZES.width};
   height: ${SIZES.height};
-  background: ${COLORS.background};
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   position: absolute;
   z-index: 99;
-  box-shadow: 3px 3px 0px ${COLORS.border};
-  border: 2px solid ${COLORS.border};
+  box-shadow: 3px 3px 0px ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.black};
   user-select: none;
   overflow: hidden;
 `;
@@ -31,8 +25,8 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-color: ${COLORS.header};
-  border-bottom: 2px solid ${COLORS.border};
+  background-color: ${({ theme }) => theme.colors.blue};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.black};
   padding: 0 10px;
   font-family: "Pixelify Sans", sans-serif;
   cursor: grab;

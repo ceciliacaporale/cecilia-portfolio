@@ -13,14 +13,14 @@ export const TerminalWrapper = styled.div`
   width: 355px;
   max-width: 100%;
   height: 200px;
-  background-color: #ffff;
-  color: #000;
+  background-color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.black};
   font-family: "Courier New", monospace;
   border-radius: 8px;
-  box-shadow: 8px 8px 0 #fc54a9;
+  box-shadow: 8px 8px 0 ${({ theme }) => theme.colors.pink};
   position: absolute;
 
-  border: 2px solid black;
+  border: 2px solid ${({ theme }) => theme.colors.black};
   display: flex;
   flex-direction: column;
   z-index: 999;
@@ -44,7 +44,7 @@ export const Header = styled.div`
 export const Dot = styled.span<{ color: string }>`
   width: 11px;
   height: 11px;
-  border: 1px solid #000;
+  border: 1px solid ${({ theme }) => theme.colors.black};
   background: ${(props) => props.color};
   border-radius: 50%;
   display: inline-block;

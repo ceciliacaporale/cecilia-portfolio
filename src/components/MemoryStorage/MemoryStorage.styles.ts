@@ -5,10 +5,10 @@ export const dotColors = ["#FB44AC", "#FAC951", "#69EF84"];
 export const MemoryStorageWrapper = styled.div`
   width: 450px;
   height: 119px;
-  background: #ffff;
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
-  border: 2px solid black;
-  box-shadow: 5px 5px 0px #000;
+  border: 2px solid ${({ theme }) => theme.colors.black};
+  box-shadow: 5px 5px 0px ${({ theme }) => theme.colors.black};
   position: relative;
   padding: 0 10px;
   user-select: none;
@@ -20,13 +20,13 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.black};
   padding: 4px 8px;
   cursor: grab;
 `;
 
 export const HeaderTitle = styled.h2`
-  color: #000;
+  color: ${({ theme }) => theme.colors.black};
   font-size: 16px;
   font-weight: 100;
 `;
@@ -41,7 +41,7 @@ export const Dot = styled.div<{ color: string }>`
   height: 12px;
   background: ${({ color }) => color};
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid ${({ theme }) => theme.colors.black};
 `;
 
 export const StorageInfo = styled.div`
@@ -58,7 +58,7 @@ export const ProgressBar = styled.div`
   height: 20px;
   background: #dcd6c8;
   border-radius: 5px;
-  border: 2px solid black;
+  border: 2px solid ${({ theme }) => theme.colors.black};
   display: flex;
   overflow: hidden;
   margin-top: 5px;
@@ -91,5 +91,5 @@ export const ColorBox = styled.div<{ color: string }>`
   height: 12px;
   background: ${({ color }) => color};
   border-radius: 2px;
-  border: 1.6px solid black;
+  border: 1.6px solid ${({ theme }) => theme.colors.black};
 `;
