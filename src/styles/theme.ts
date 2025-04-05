@@ -1,7 +1,10 @@
-export const theme = {
+import { type DefaultTheme } from "styled-components";
+
+export const theme: DefaultTheme = {
   colors: {
     lime: '#94EE9C',
     pink: '#FE87A4',
+    pink10:'#FC41AE',
     orange: '#FAC951',
     yellow: '#FFF982',
     blue: '#1CBFC1',
@@ -9,8 +12,15 @@ export const theme = {
     white: '#fff',
 
     darkMode: {
-      background: '#121212',
-      text: '#E0E0E0',
+      background: '#181718',
+      borderColor: '#353535',
+      limeDark: '#6FA994',
+      pinkDark: '#D9AAB0',
+      orangeDark: '#DBBD79',
+      yellowDark: '#E4C789',
+      blueDark: '#79A0AC',
+      text: '#ffff',
+      backgroundWindow: '#c7c0c0',
       primary: '#BB86FC',
       secondary: '#03DAC6',
       accent: '#CF6679',
@@ -39,3 +49,5 @@ export const theme = {
     full: '9999px',
   },
 };
+
+export default theme;
