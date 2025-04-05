@@ -10,6 +10,7 @@ import Skills from "../Skills";
 import Terminal from "../Terminal";
 import WindowInfo from "../WindowInfo";
 import ThemeWrapper from "../../ThemeWrapper";
+import ThemeToggleButton from "../../ThemeToggleButton/ThemeToggleButton";
 const Desktop: React.FC = () => {
   
   const [isLoadingVisible, setIsLoadingVisible] = useState(true);
@@ -17,6 +18,7 @@ const Desktop: React.FC = () => {
   return (
     <ThemeWrapper>
     <DesktopWrapper>
+      <ThemeToggleButton />
       <ContentArea ref={containerRef}>
         {isLoadingVisible && (
           <LoadingWindow onClose={() => setIsLoadingVisible(false)} />

@@ -2,46 +2,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
 
+:root {
+  --color-background: #FCE6CA;
+  --scrollbar-track: #FCE6CA;
+  --scrollbar-thumb: #FE87A4;
+  --scrollbar-border: #000;
+}
+
+html.dark {
+  --color-background: #181718;
+  --scrollbar-track: #181718;
+  --scrollbar-thumb: #D9AAB0;
+  --scrollbar-border: #fff;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
-    background-color: #FCE6CA;
-    
-    .pixel-font {
-      font-family: "Pixelify Sans", sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .inter-font {
-      font-family: "Inter", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: <weight>;
-      font-style: normal;
-    }
+html, body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  background-color: var(--color-background);
+}
 
-    .squada-one-regular {
-      font-family: "Squada One", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    }
+.pixel-font {
+  font-family: "Pixelify Sans", sans-serif;
+}
 
-    ::-webkit-scrollbar {
-      width: 5px;
-      height: 5px;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background-color: #FE87A4;
-      border-radius: 10px;
-      border: 1px solid #000;
-    }
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
-    ::-webkit-scrollbar-track {
-      background-color: #FCE6CA;
-    }
-  }
+.squada-one-regular {
+  font-family: "Squada One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 10px;
+  border: 1px solid var(--scrollbar-border);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+}
