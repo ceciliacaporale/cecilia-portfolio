@@ -9,10 +9,10 @@ const COLORS = {
 export const MainWindowMobileWrapper = styled.div`
   width: 96%;
   height: 97%;
-  background: white;
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 2rem;
   top: 1rem;
-  border: 2px solid #000;
+  border: 2px solid ${({ theme }) => theme.colors.black};
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -33,17 +33,17 @@ export const WindowButtons = styled.div`
     height: 14px;
     border-radius: 50%;
     display: inline-block;
-    border: 1px solid #000;
+    border: 1px solid ${({ theme }) => theme.colors.black};
   }
 
   .close {
-    background: rgb(252, 65, 174);
+    background: ${({ theme }) => theme.colors.pink10};
   }
   .minimize {
-    background: #ffbd2e;
+    background: ${({ theme }) => theme.colors.orange};
   }
   .maximize {
-    background: rgb(102, 240, 123);
+    background: ${({ theme }) => theme.colors.lime};
   }
 `;
 

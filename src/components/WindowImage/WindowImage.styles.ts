@@ -5,19 +5,13 @@ interface WindowProps {
   height?: string;
 }
 
-interface HeaderProps {
-  headerColor?: string;
-}
-
-
 export const WindowImageWrapper = styled.div<WindowProps>`
   width: ${(props) => props.width || "200px"};
   height: ${(props) => props.height || "200px"};
-  background: white;
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
-  /* position: relative; */
   z-index: 9;
-  border: 2px solid #000;
+  border: 2px solid ${({ theme }) => theme.colors.black};
   overflow: hidden;
   cursor: url("/cursoryellow.png"), pointer; 
 
@@ -32,8 +26,8 @@ export const WindowImageWrapper = styled.div<WindowProps>`
     bottom: 110%;
     left: 50%;
     transform: translateX(-50%);
-    background: black;
-    color: white;
+    background: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.white};
     font-size: 12px;
     padding: 4px 8px;
     border-radius: 4px;
@@ -49,14 +43,14 @@ export const WindowImageWrapper = styled.div<WindowProps>`
 }
 `;
 
-export const Header = styled.div<HeaderProps>`
+export const Header = styled.div`
   height: 20px;
   border-radius: 12px 12px 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  background-color:#FDF28D;
-  border-bottom: 2px solid black;
+  background-color: ${({ theme }) => theme.colors.yellow};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.black};
   padding: 0 12px;
   border-radius: 10px 10px 0 0;
   position: relative;
@@ -83,32 +77,26 @@ export const WindowButtons = styled.div`
     border-radius: 50%;
     display: flex;
     align-items: center;
-    border: 1px solid #000;
+    border: 1px solid ${({ theme }) => theme.colors.black};
     justify-content: center;
     font-size: 10px;
     font-weight: bold;
   }
 
-  .minimize {
-    background: rgb(255, 255, 255);
-  }
-  .close {
-    background: rgb(255, 255, 255);
-  }
-  .love {
-    background: rgb(255, 255, 255);
+  .minimize, .close, .love {
+    background: ${({ theme }) => theme.colors.white};
   }
 `;
 export const Tooltip = styled.div`
   position: absolute;
-  background: #FFF982;
-  color: black;
+  background: ${({ theme }) => theme.colors.yellow};
+  color: ${({ theme }) => theme.colors.black};
   font-size: 12px;
   padding: 4px 8px;
   border-radius: 10px;
   white-space: nowrap;
   z-index: 99999;
   pointer-events: none;
-  border: 1px solid #000;
+  border: 1px solid ${({ theme }) => theme.colors.black};
   transform: translate(-50%, -100%);
 `;

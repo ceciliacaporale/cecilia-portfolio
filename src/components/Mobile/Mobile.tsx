@@ -1,8 +1,10 @@
+import ThemeWrapper from "../../ThemeWrapper";
 import MainWindowMobile from "../MainWindowMobile/MainWindowMobile";
 import { MobileWrapper, ContentArea, ContainerMain } from "./Mobile.styles";
 
 const Mobile: React.FC = () => {
   return (
+  <ThemeWrapper>
     <ContainerMain>
     <MobileWrapper>
      <ContentArea>
@@ -10,6 +12,7 @@ const Mobile: React.FC = () => {
      </ContentArea>
     </MobileWrapper>
     </ContainerMain>
+  </ThemeWrapper>
   );
 };
 
