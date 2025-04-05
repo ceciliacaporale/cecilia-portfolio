@@ -9,17 +9,16 @@ import {
   DEFAULT_WIDTH,
   DEFAULT_HEIGHT,
 } from "./SocialMedia.styles";
-
-import GitHubIcon from "../../assets/github.svg?url";
-import LinkedinIcon from "../../assets/linkedin.svg?url";
-import MediumIcon from "../../assets/medium.svg?url";
-import MailIcon from "../../assets/mail.svg?url";
-import InstagramIcon from "../../assets/instagram.svg?url";
+import { FaGithubAlt } from "react-icons/fa";
+import { AiOutlineLinkedin } from "react-icons/ai";
+import { PiInstagramLogoBold } from "react-icons/pi";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaMedium } from "react-icons/fa6";
 import Smile from "../../assets/smileface.svg?url";
 
 interface SocialIcon {
   id: string;
-  icon: string;
+  icon: string | React.ReactElement;
   alt: string;
   url: string;
   tooltip: string;
@@ -33,7 +32,7 @@ interface SocialMediaProps {
   iconSize?: string;
 }
 
-const DEFAULT_ICON_SIZE = "30px";
+const DEFAULT_ICON_SIZE = "33px";
 
 const SocialMedia: React.FC<SocialMediaProps> = ({
   title,
@@ -44,7 +43,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
   const socialIcons: SocialIcon[] = [
     {
       id: "github",
-      icon: GitHubIcon,
+      icon: <FaGithubAlt size={parseInt(iconSize)} />,
       alt: "GitHub",
       url: "https://github.com/ceciliacaporale",
       tooltip: "GitHub",
@@ -52,7 +51,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
     },
     {
       id: "linkedin",
-      icon: LinkedinIcon,
+      icon: <AiOutlineLinkedin size={parseInt(iconSize)} />,
       alt: "LinkedIn",
       url: "https://www.linkedin.com/in/mariaceciliacaporale/",
       tooltip: "LinkedIn",
@@ -60,7 +59,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
     },
     {
       id: "instagram",
-      icon: InstagramIcon,
+      icon: <PiInstagramLogoBold size={parseInt(iconSize)} />,
       alt: "Instagram",
       url: "https://www.instagram.com/cecicaporale/",
       tooltip: "Instagram",
@@ -68,7 +67,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
     },
     {
       id: "email",
-      icon: MailIcon,
+      icon: <MdOutlineEmail size={parseInt(iconSize)} />,
       alt: "E-mail",
       url: "mailto:cecicaporale16@gmail.com",
       tooltip: "E-mail",
@@ -76,7 +75,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
     },
     {
       id: "medium",
-      icon: MediumIcon,
+      icon: <FaMedium size={parseInt(iconSize)} />,
       alt: "Medium",
       url: "https://medium.com/@cecicaporale16",
       tooltip: "Medium",
@@ -94,9 +93,13 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
 
       <Content>
         {socialIcons.map(({ id, icon, alt, url, tooltip, bgColor }) => (
-          <IconWrapper key={id}>
+          <IconWrapper key={id} bgColor={bgColor}>
             <a href={url} target="_blank" rel="noopener noreferrer">
-              <img src={icon} alt={alt} width={iconSize} height={iconSize} />
+              {typeof icon === "string" ? (
+                <img src={icon} alt={alt} width={iconSize} height={iconSize} />
+              ) : (
+                icon
+              )}
               <Tooltip $bgColor={bgColor}>{tooltip}</Tooltip>
             </a>
           </IconWrapper>
