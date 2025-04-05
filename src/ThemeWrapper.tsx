@@ -23,16 +23,24 @@ export const useTheme = () => useContext(ThemeContext);
 const ThemeWrapper: React.FC<Props> = ({ children }) => {
   const [theme, setTheme] = useState<ThemeType>('light');
 
-  const toggleTheme = () => {
-    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
-  };
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme') as ThemeType;
+    if (storedTheme) {
+      setTheme(storedTheme);
+    }
+  }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      localStorage.setItem('theme', theme);
       document.documentElement.classList.toggle('dark', theme === 'dark');
       document.documentElement.classList.toggle('light', theme === 'light');
     }
   }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+  };
 
   const themeObject = theme === 'light' ? lightTheme : darkTheme;
 
