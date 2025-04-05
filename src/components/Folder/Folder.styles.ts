@@ -61,7 +61,7 @@ export const Tooltip = styled.span`
   position: absolute;
   transform: translateX(-50%);
   background: ${({ theme }) => theme.colors.lime};
-  color: black;
+  color: ${({ theme }) => theme.colors.black};
   left: 50%;
   bottom: 4.8rem;
   padding: 5px 10px;

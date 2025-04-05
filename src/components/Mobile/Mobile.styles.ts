@@ -22,7 +22,7 @@ export const MobileWrapper = styled.div`
 export const ContentArea = styled.div`
   width: 100%; 
   height: 93%;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 2rem; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;

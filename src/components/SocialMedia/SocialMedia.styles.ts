@@ -16,19 +16,19 @@ interface TooltipProps {
 export const SocialMediaWrapper = styled.div<SocialMediaWrapperProps>`
   width: ${({ width }) => width || DEFAULT_WIDTH};
   height: ${({ height }) => height || DEFAULT_HEIGHT};
-  background: white;
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   position: absolute;
-  box-shadow: 8px 8px 0 ${SHADOW_COLOR}, 8px 8px 0 1px black;
+  box-shadow: 8px 8px 0 ${SHADOW_COLOR}, 8px 8px 0 1px ${({ theme }) => theme.colors.black};
   top: 255px;
   left: 90px;
   transform: translate(-6px, -6px);
-  border: 2px solid #000000;
+  border: 2px solid ${({ theme }) => theme.colors.black};
   transition: all 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
 
   @media (max-width: 795px) {
-    box-shadow: 4px 4px 0 ${SHADOW_COLOR}, 5px 5px 0 1px black, 7px 7px 0 1px #FDF28D;
+    box-shadow: 4px 4px 0 ${SHADOW_COLOR}, 5px 5px 0 1px black, 7px 7px 0 1px ${({ theme }) => theme.colors.yellow};
     width: 200px;
     height: 60px;
     z-index: 999;
@@ -89,7 +89,7 @@ export const Tooltip = styled.span<{ $bgColor: string }>`
   left: 50%;
   transform: translateX(-50%);
   background: ${({ $bgColor }) => $bgColor};
-  color: black;
+  color: ${({ theme }) => theme.colors.black};
   padding: 5px 10px;
   border-radius: 10px;
   font-size: 12px;
@@ -98,8 +98,8 @@ export const Tooltip = styled.span<{ $bgColor: string }>`
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
   font-family: "Pixelify Sans", sans-serif;
-  border: 1px solid black;
-  box-shadow: 1px 1px 0px black;
+  border: 1px solid ${({ theme }) => theme.colors.black};
+  box-shadow: 1px 1px 0px ${({ theme }) => theme.colors.black};
 `;
 
 export const SmileWrapper = styled.div`

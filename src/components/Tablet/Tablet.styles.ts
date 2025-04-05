@@ -17,7 +17,7 @@ export const TabletWrapper = styled.div`
 export const ContentArea = styled.div`
   width: 95%; 
   height: 71%;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 50px; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;

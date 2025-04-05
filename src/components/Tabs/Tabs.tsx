@@ -44,6 +44,7 @@ const Tabs = () => {
       { id: 1, name: "home", link: "/", color: "#FE87A4" },
       // { id: 2, name: "sobre mim", link: "/about", color: "#1CBFC1" },
       // { id: 3, name: "projetos", link: "/projects", color: "#FFD700" },
+      { id: 4, name: "arquivos", link: "/files", color: "#94EE9C" },
     ],
   };
 

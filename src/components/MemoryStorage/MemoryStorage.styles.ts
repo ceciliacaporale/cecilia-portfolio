@@ -48,6 +48,7 @@ export const StorageInfo = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: ${({ theme }) => theme.colors.black};
   margin-top: 10px;
   font-size: 14px;
   font-weight: 700;
@@ -76,6 +77,7 @@ export const Legend = styled.div`
   justify-content: space-between;
   margin-top: 10px;
   font-size: 12px;
+  color: ${({ theme }) => theme.colors.black};
   margin-bottom: 6px;
   font-family: "Pixelify Sans", sans-serif;
 `;

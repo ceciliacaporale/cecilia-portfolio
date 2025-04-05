@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const SmilingWrapper = styled.div`
   width: 235px;
   height: 45px;
-  background: white;
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
-  box-shadow: 8px 8px 0 #000;
+  box-shadow: 8px 8px 0 ${({ theme }) => theme.colors.black};
   position: relative;
   top: 350px;
   translate: -6px -6px;
-  border: 2px solid #000000;
+  border: 2px solid ${({ theme }) => theme.colors.black};
   z-index: 99999;
   user-select: none;
   cursor: grab;

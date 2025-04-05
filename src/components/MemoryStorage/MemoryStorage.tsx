@@ -53,9 +53,8 @@ const MemoryStorage: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | 
         position: "absolute",
         zIndex,
       }}
-      onMouseDown={handleMouseDown}
     >
-      <Header>
+      <Header onMouseDown={handleMouseDown}>
         <HeaderTitle>s t o r a g e</HeaderTitle>
         <DotsContainer>
           {dotColors.map((color, index) => (

@@ -12,10 +12,10 @@ interface HeaderProps {
 export const WindowImageSecondaryWrapper = styled.div<WindowProps>`
   width: ${(props) => props.width || "200px"};
   height: ${(props) => props.height || "200px"};
-  background: white;
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   z-index: 9;
-  border: 2px solid #000;
+  border: 2px solid ${({ theme }) => theme.colors.black};
   overflow: hidden;
   flex-direction: column;
   
@@ -32,7 +32,7 @@ export const Header = styled.div<HeaderProps>`
   align-items: center;
   justify-content: space-between; 
   background-color: ${(props) => props.headerColor || "#FDF28D"};
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.black};
   padding: 0 12px;
   border-radius: 10px 10px 0 0;
   position: relative;

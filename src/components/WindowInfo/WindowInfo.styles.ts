@@ -40,6 +40,7 @@ export const Header = styled.div`
 export const Content = styled.div`
   padding: 10px;
   display: flex;
+  color: ${({ theme }) => theme.colors.black};
   position: relative;
   height: calc(100% - ${SIZES.headerHeight});
   box-sizing: border-box;
