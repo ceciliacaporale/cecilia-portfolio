@@ -1,22 +1,13 @@
 import styled from "styled-components";
 
-const COLORS = {
-  yellow: "#FDF282",
-  pink: "#FE87A4",
-  teal: "#1CBFC1",
-  green: "#94EE9C",
-  buttonRed: "rgb(252, 65, 174)",
-  buttonYellow: "#ffbd2e",
-  buttonGreen: "rgb(102, 240, 123)",
-};
 
 export const HeroSectionWrapper = styled.div`
   width: 100%;
-  background: white;
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 12px;
   position: relative;
   top: 51px;
-  border: 2px solid #000;
+  border: 2px solid ${({ theme }) => theme.colors.black};
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -37,12 +28,12 @@ export const HeroSectionWrapper = styled.div`
   h1 {
     padding: 20px 0 0 20px;
     font-family: "Squada One", sans-serif;
-    color: #FDF282;
-    text-shadow: .05em .05em 0 #000;
+    color: ${({ theme }) => theme.colors.yellow};
+    text-shadow: .05em .05em 0 ${({ theme }) => theme.colors.black};
     text-transform: uppercase;
     font-weight: 300;
     font-size: 42px;
-    -webkit-text-stroke: .025em #000;
+    -webkit-text-stroke: .025em ${({ theme }) => theme.colors.black};
 
   }
 `;
@@ -66,19 +57,19 @@ export const WindowButtons = styled.div`
     height: 14px;
     border-radius: 50%;
     display: inline-block;
-    border: 1px solid #000;
+    border: 1px solid ${({ theme }) => theme.colors.black};
   }
 
   .close {
-    background: ${COLORS.buttonRed};
+    background:${({ theme }) => theme.colors.pink10};
   }
   
   .minimize {
-    background: ${COLORS.buttonYellow};
+    background: ${({ theme }) => theme.colors.orange};
   }
   
   .maximize {
-    background: ${COLORS.buttonGreen};
+    background: ${({ theme }) => theme.colors.lime};
   }
 `;
 

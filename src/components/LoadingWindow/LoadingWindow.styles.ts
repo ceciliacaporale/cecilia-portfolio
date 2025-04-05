@@ -1,10 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
 const COLORS = {
-  yellow: "#FAC93E",
-  closeHover: "rgb(14, 13, 14)",
-  border: "#000",
-  background: "white",
   gradient: `linear-gradient(to bottom,
     rgb(199, 255, 108) 0%,
     rgb(105, 177, 22) 17%,
@@ -22,23 +18,23 @@ const loadAnimation = keyframes`
 export const LoadingWindowWrapper = styled.div`
   width: 200px;
   height: 85px;
-  background: ${COLORS.background};
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   position: absolute;
-  border: 2px solid ${COLORS.border};
+  border: 2px solid ${({ theme }) => theme.colors.black};
   z-index: 999;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
 `;
 
 export const Header = styled.div`
   height: 25px;
-  background: ${COLORS.yellow};
+  background: ${({ theme }) => theme.colors.orange};
   border-radius: 8px 8px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px;
-  border-bottom: 2px solid ${COLORS.border};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.black};
   font-size: 14px;
   user-select: none;
   font-family: "Pixelify Sans", sans-serif;
@@ -58,7 +54,7 @@ export const Content = styled.div`
     position: absolute;
     top: -16px;
     left: -10px;
-    filter: drop-shadow(1px 1px 0 ${COLORS.border});
+    filter: drop-shadow(1px 1px 0 ${({ theme }) => theme.colors.black});
   }
 `;
 
@@ -74,7 +70,7 @@ export const WindowButtons = styled.div`
   .close {
     font-size: 10px;
     font-weight: bold;
-    color: ${COLORS.border};
+    color: ${({ theme }) => theme.colors.black};
     cursor: pointer;
     padding: 0;
     background: none;
@@ -82,7 +78,6 @@ export const WindowButtons = styled.div`
     transition: color 0.2s ease-in-out;
     
     &:hover {
-      color: ${COLORS.closeHover};
       transform: scale(1.2);
     }
   }
@@ -96,7 +91,7 @@ export const Loader = styled.div`
   .container {
     width: 180px;
     height: 18px;
-    border: 2px solid ${COLORS.border};
+    border: 2px solid ${({ theme }) => theme.colors.black};
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -109,7 +104,7 @@ export const Loader = styled.div`
     height: 100%;
     background: ${COLORS.gradient};
     display: inline-block;
-    border: 1px solid ${COLORS.border};
+    border: 1px solid ${({ theme }) => theme.colors.black};;
     margin-right: 2px;
     animation: ${loadAnimation} 2s infinite linear;
   }

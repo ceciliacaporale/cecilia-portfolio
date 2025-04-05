@@ -19,8 +19,8 @@ export const FolderWrapper = styled.div`
 export const FolderClosed = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #FAC95F;
-  border: 3px solid black;
+  background-color: ${({ theme }) => theme.colors.orange};
+  border: 3px solid ${({ theme }) => theme.colors.black};
   z-index: 999;
   border-radius: 8px;
   position: absolute;
@@ -30,8 +30,8 @@ export const FolderClosed = styled.div`
 export const FolderTab = styled.div`
   width: 53%;
   height: 20px;
-  background-color: #FAC95F;
-  border: 3px solid black;
+  background-color: ${({ theme }) => theme.colors.orange};
+  border: 3px solid ${({ theme }) => theme.colors.black};
   border-radius: 6px;
   position: absolute;
   top: -8px;
@@ -40,14 +40,14 @@ export const FolderTab = styled.div`
 
 export const FolderOpen = styled(FolderClosed)`
   transform: rotateX(30deg);
-  background-color: #FAC95F;
+  background-color: ${({ theme }) => theme.colors.orange};
 `;
 
 export const Paper = styled.div`
   width: 65px;
   height: 53px;
-  background-color: white;
-  border: 2px solid black;
+  background-color: ${({ theme }) => theme.colors.white};
+  border: 2px solid ${({ theme }) => theme.colors.black};
   border-radius: 4px;
   position: absolute;
   bottom: 15px;
@@ -60,7 +60,7 @@ export const Paper = styled.div`
 export const Tooltip = styled.span`
   position: absolute;
   transform: translateX(-50%);
-  background: #60FF9A;
+  background: ${({ theme }) => theme.colors.lime};
   color: black;
   left: 50%;
   bottom: 4.8rem;
@@ -72,8 +72,8 @@ export const Tooltip = styled.span`
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
   font-family: "Pixelify Sans", sans-serif;
-  border: 1px solid black;
-  box-shadow: 1px 1px 0px black;
+  border: 1px solid ${({ theme }) => theme.colors.black};
+  box-shadow: 1px 1px 0px ${({ theme }) => theme.colors.black};
   
   &.visible {
     opacity: 1;

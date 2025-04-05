@@ -9,12 +9,13 @@ import MemoryStorage from "../MemoryStorage";
 import Skills from "../Skills";
 import Terminal from "../Terminal";
 import WindowInfo from "../WindowInfo";
-
+import ThemeWrapper from "../../ThemeWrapper";
 const Desktop: React.FC = () => {
   
   const [isLoadingVisible, setIsLoadingVisible] = useState(true);
   const containerRef = useRef<HTMLDivElement | null>(null);
   return (
+    <ThemeWrapper>
     <DesktopWrapper>
       <ContentArea ref={containerRef}>
         {isLoadingVisible && (
@@ -30,6 +31,7 @@ const Desktop: React.FC = () => {
         <Folder containerRef={containerRef} />
       </ContentArea>
     </DesktopWrapper>
+    </ThemeWrapper>
   );
 };
 

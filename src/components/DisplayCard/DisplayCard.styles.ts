@@ -1,19 +1,14 @@
 import styled from "styled-components";
 
-const COLORS = {
-  background: "#ffffff",
-  header: "#fff",
-  border: "#000000",
-};
 
 export const DisplayCardWrapper = styled.div`
   width: 300px;
   height: auto;
-  background: ${COLORS.background};
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   position: relative;
   z-index: 9999;
-  border: 2px solid ${COLORS.border};
+  border: 2px solid ${({ theme }) => theme.colors.black};
   overflow: hidden;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
@@ -28,11 +23,11 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: ${COLORS.header};
-  border-bottom: 2px solid ${COLORS.border};
+  background-color: ${({ theme }) => theme.colors.white};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.black};
   padding: 0 10px;
   gap: 5px;
-  background-color: #FDF28D;
+  background-color: ${({ theme }) => theme.colors.yellow};
   display: flex;
   align-items: center;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -66,7 +61,7 @@ export const Dot = styled.div<{ color: string }>`
   height: 11px;
   background: ${({ color }) => color};
   border-radius: 50%;
-  border: 1px solid #000;
+  border: 1px solid ${({ theme }) => theme.colors.black};
 `;
 
 export const TechTagsContainer = styled.div`
@@ -79,16 +74,16 @@ export const TechTagsContainer = styled.div`
 `;
 
 export const TechTag = styled.span`
-  background-color: #fff;
-  color: #000;
+  background-color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.black};
   font-size: 12px;
   padding: 4px 10px;
   border-radius: 10px;
   font-weight: bold;
-  border: 1px solid #000;
-  box-shadow: 2px 2px 0 0 #000;
+  border: 1px solid ${({ theme }) => theme.colors.black};
+  box-shadow: 2px 2px 0 0 ${({ theme }) => theme.colors.black};;
 
   &:hover {
-    background-color: #FE87A4;
+    background-color: ${({ theme }) => theme.colors.pink};;
   }
 `;

@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-const COLORS = {
-  background: "#ffffff",
-  header: "#57C0C2",
-  border: "#000000",
-};
-
 const SIZES = {
   width: "300px",
   height: "230px",
@@ -15,12 +9,12 @@ const SIZES = {
 export const MaintenanceWindowWrapper = styled.div`
   width: ${SIZES.width};
   height: ${SIZES.height};
-  background: ${COLORS.background};
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   position: relative;
   z-index: 9999;
-  box-shadow: 6px 6px 0px ${COLORS.border};
-  border: 3px solid ${COLORS.border};
+  box-shadow: 6px 6px 0px ${({ theme }) => theme.colors.black};
+  border: 3px solid ${({ theme }) => theme.colors.black};
   overflow: hidden;
 `;
 
@@ -29,8 +23,8 @@ export const Header = styled.div`
   border-radius: 8px 8px 0 0;
   display: flex;
   align-items: center;
-  background-color: ${COLORS.header};
-  border-bottom: 3px solid ${COLORS.border};
+  background-color: ${({ theme }) => theme.colors.blue};
+  border-bottom: 3px solid ${({ theme }) => theme.colors.black};
   padding: 0 10px;
   font-family: "Pixelify Sans", sans-serif;
   gap: 5px;
@@ -65,5 +59,5 @@ export const Dot = styled.div<{ color: string }>`
   height: 14px;
   background: ${({ color }) => color};
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 2px solid ${({ theme }) => theme.colors.black};
 `;

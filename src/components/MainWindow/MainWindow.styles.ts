@@ -1,22 +1,12 @@
 import styled from "styled-components";
 
-const COLORS = {
-  yellow: "#FDF282",
-  pink: "#FE87A4",
-  teal: "#1CBFC1",
-  green: "#94EE9C",
-  buttonRed: "rgb(252, 65, 174)",
-  buttonYellow: "#ffbd2e",
-  buttonGreen: "rgb(102, 240, 123)",
-};
-
 export const MainWindowWrapper = styled.div`
   width: 92%;
-  background: white;
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 12px;
   position: relative;
   top: 51px;
-  border: 2px solid #000;
+  border: 2px solid ${({ theme }) => theme.colors.black};
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -45,19 +35,19 @@ export const WindowButtons = styled.div`
     height: 14px;
     border-radius: 50%;
     display: inline-block;
-    border: 1px solid #000;
+    border: 1px solid ${({ theme }) => theme.colors.black};
   }
 
   .close {
-    background: ${COLORS.buttonRed};
+    background: ${({ theme }) => theme.colors.pink10};
   }
   
   .minimize {
-    background: ${COLORS.buttonYellow};
+    background: ${({ theme }) => theme.colors.orange};
   }
   
   .maximize {
-    background: ${COLORS.buttonGreen};
+    background: ${({ theme }) => theme.colors.lime};
   }
 `;
 
