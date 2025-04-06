@@ -2,13 +2,15 @@ import React from "react";
 import HeroSection from "../HeroSection";
 import ResponsiveLayout from "../ResponsiveLayout";
 import { ContainerMaintenance } from "./AboutMePage.styles";
-import WindowImageSecondary from "../WindowImageSecondary";
 import ceciimagem from '../../assets/ceciimagem.jpg?url'
+import ThemeWrapper from "../../ThemeWrapper";
+import WindowImageSecondary from "../WindowImageSecondary";
 
 const AboutMePage: React.FC = () => {
   
   return (
     <>
+     <ThemeWrapper>
     <ResponsiveLayout>
         <HeroSection title="Sobre mim" description="Minha jornada na tecnologia começou quando ingressei na faculdade. Foi ali que me redescobri e percebi que desenvolver interfaces ia muito além de escrever código – era sobre dar vida a ideias, criar experiências e transformar a forma como as pessoas interagem com o digital.
 
@@ -25,6 +27,7 @@ Além da programação, sou movida por novas experiências. Viajar me inspira, c
       />
       </ContainerMaintenance>
       </ResponsiveLayout>
+    </ThemeWrapper>
     </>
   );
 };

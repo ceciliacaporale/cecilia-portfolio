@@ -1,6 +1,6 @@
 import React from "react";
 import { DisplayCardWrapper, Header, Content, DotsContainer, Dot, TechTagsContainer, TechTag } from "./DisplayCard.styles";
-import { dotColors } from "../Skills/Skills.styles";
+import { useTheme } from "styled-components";
 
 interface DisplayCardProps {
   title?: string;
@@ -16,6 +16,9 @@ const DisplayCard: React.FC<DisplayCardProps> = ({
   technologies = [],
 }) => {
 
+  const theme = useTheme();
+  const dotColorKeys: (keyof typeof theme.colors)[] = ['pink', 'orange', 'lime'];
+
   return (
     <DisplayCardWrapper
       role="dialog"
@@ -25,7 +28,7 @@ const DisplayCard: React.FC<DisplayCardProps> = ({
         id="window-info-header"
       >
         <DotsContainer>
-          {dotColors.map((color: string, index: React.Key | null | undefined) => (
+          {dotColorKeys.map((color: string, index: React.Key | null | undefined) => (
             <Dot key={index} color={color} />
           ))}
          </DotsContainer>

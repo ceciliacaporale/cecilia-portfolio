@@ -1,5 +1,4 @@
-import { WindowImageSecondaryWrapper, Header, Content, WindowButtons } from "./WindowImageSecondary.styles";
-import { Dot } from "../Skills/Skills.styles";
+import { WindowImageSecondaryWrapper, Dot,  Header, Content, WindowButtons } from "./WindowImageSecondary.styles";
 
 interface WindowImageSecondaryProps {
   title?: string;
@@ -25,7 +24,7 @@ const WindowImageSecondary: React.FC<WindowImageSecondaryProps> = ({
         <span>{title}</span> 
         <WindowButtons>
           {dotColors.map((color, index) => (
-            <Dot key={index} color={color} />
+            <Dot key={index} $color={color} />
           ))}
         </WindowButtons>
       </Header>

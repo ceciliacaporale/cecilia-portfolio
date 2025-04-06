@@ -38,8 +38,8 @@ export const ScreenContent = styled.pre`
 export const Keyboard = styled.div`
   width: 125px;
   height: 55px;
-  background: rgb(240, 240, 240);
-  border: 2px solid${({ theme }) => theme.colors.borderColor};
+  background: ${({ theme }) => theme.colors.white};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 6px;
   margin-top: 6px;
   display: flex;

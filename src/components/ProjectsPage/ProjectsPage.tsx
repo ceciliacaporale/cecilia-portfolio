@@ -5,15 +5,16 @@ import ResponsiveLayout from "../ResponsiveLayout";
 import DisplayCard from "../DisplayCard";
 import { projects } from "../../data/projects";
 
-// Import Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
+import ThemeWrapper from "../../ThemeWrapper";
 
 const ProjectsPage: React.FC = () => {
   return (
+    <ThemeWrapper>
     <ResponsiveLayout>
     <HeroSection 
       title="Projetos" 
@@ -45,6 +46,7 @@ const ProjectsPage: React.FC = () => {
       </ContainerProjects>
     </HeroSection>
   </ResponsiveLayout>
+   </ThemeWrapper>
   );
 };
 

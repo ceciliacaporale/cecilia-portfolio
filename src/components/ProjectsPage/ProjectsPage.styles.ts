@@ -21,7 +21,7 @@ export const StyledSwiper = styled(Swiper)`
   .swiper-button-prev, 
   .swiper-button-prev:after, 
   .swiper-button-next:after {
-    color: #000;
+    color: ${({ theme }) => theme.colors.black};
     top: 50%;
     transform: translateY(-50%);
     font-size: 22px;
@@ -40,8 +40,8 @@ export const StyledSwiper = styled(Swiper)`
     margin-top: 2rem;
 
     span {
-      background-color: #57C0C3;
-      border: 1px solid #000;
+      background-color: ${({ theme }) => theme.colors.blue};
+      border: 1px solid ${({ theme }) => theme.colors.borderColor};
     }
   }
 `;
@@ -49,7 +49,8 @@ export const StyledSwiper = styled(Swiper)`
 export const StyledSwiperSlide = styled(SwiperSlide)`
   display: flex;
   justify-content: center;
-align-items: stretch;  overflow: visible;
+  align-items: stretch;  
+  overflow: visible;
   padding-top: 10px;
   position: relative;
 `;

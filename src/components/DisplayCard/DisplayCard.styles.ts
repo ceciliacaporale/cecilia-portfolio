@@ -8,7 +8,7 @@ export const DisplayCardWrapper = styled.div`
   border-radius: 10px;
   position: relative;
   z-index: 9999;
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2.5px solid ${({ theme }) => theme.colors.borderColor};
   overflow: hidden;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
@@ -24,10 +24,10 @@ export const Header = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: ${({ theme }) => theme.colors.white};
-  border-bottom: 2px solid ${({ theme }) => theme.colors.black};
+  border-bottom: 2.5px solid ${({ theme }) => theme.colors.borderColor};
   padding: 0 10px;
   gap: 5px;
-  background-color: ${({ theme }) => theme.colors.yellow};
+  background-color: ${({ theme }) => theme.colors.white};
   display: flex;
   align-items: center;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -43,6 +43,7 @@ export const Content = styled.div`
   
   p, h2 {
     padding: 12px 12px 0 12px;
+    color: ${({ theme }) => theme.colors.black};
   }
 
   img {
@@ -61,7 +62,7 @@ export const Dot = styled.div<{ color: string }>`
   height: 11px;
   background: ${({ color }) => color};
   border-radius: 50%;
-  border: 1px solid ${({ theme }) => theme.colors.black};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
 `;
 
 export const TechTagsContainer = styled.div`
@@ -80,10 +81,10 @@ export const TechTag = styled.span`
   padding: 4px 10px;
   border-radius: 10px;
   font-weight: bold;
-  border: 1px solid ${({ theme }) => theme.colors.black};
-  box-shadow: 2px 2px 0 0 ${({ theme }) => theme.colors.black};;
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
+  box-shadow: 2px 2px 0 0 ${({ theme }) => theme.colors.borderColor};
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.pink};;
+    background-color: ${({ theme }) => theme.colors.pink};
   }
 `;

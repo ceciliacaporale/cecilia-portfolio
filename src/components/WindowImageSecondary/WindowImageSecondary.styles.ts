@@ -15,7 +15,7 @@ export const WindowImageSecondaryWrapper = styled.div<WindowProps>`
   background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   z-index: 9;
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
   overflow: hidden;
   flex-direction: column;
   
@@ -32,7 +32,7 @@ export const Header = styled.div<HeaderProps>`
   align-items: center;
   justify-content: space-between; 
   background-color: ${(props) => props.headerColor || "#FDF28D"};
-  border-bottom: 2px solid ${({ theme }) => theme.colors.black};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.borderColor};
   padding: 0 12px;
   border-radius: 10px 10px 0 0;
   position: relative;
@@ -48,4 +48,12 @@ export const Content = styled.div`
 export const WindowButtons = styled.div`
   display: flex;
   gap: 5px;
+`;
+
+export const Dot = styled.span<{ $color: string }>`
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: ${({ $color }) => $color};
+  display: inline-block;
 `;
