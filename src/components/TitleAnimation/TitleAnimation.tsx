@@ -2,12 +2,16 @@ import React from "react";
 import { TitleAnimationWrapper } from "./TitleAnimation.style";
 import Typewriter from "typewriter-effect";
 
-const TitleAnimation = () => {
+interface TitleAnimationProps {
+  strings: string[];
+}
+
+const TitleAnimation: React.FC<TitleAnimationProps> =  ({ strings }) => {
   return (
     <TitleAnimationWrapper>
          <Typewriter
             options={{
-              strings: ["Hello World!", "Olá Mundo!", "¡Hola Mundo!", "Ciao Mondo!"],
+              strings: strings,
               autoStart: true,
               loop: true,
               delay: 75, 

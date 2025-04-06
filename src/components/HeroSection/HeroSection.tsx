@@ -6,9 +6,10 @@ import {
   WindowButtons,
 } from "./HeroSection.styles";
 import Tabs from "../Tabs";
+import TitleAnimation from "../TitleAnimation";
 
 interface HeroSectionProps {
-  title: string;
+  titleStrings: string[];
   description?: string;
   children?: React.ReactNode;
 }
@@ -23,13 +24,13 @@ const WindowHeaderComponent = () => (
   </WindowHeader>
 );
 
-const HeroSection: React.FC<HeroSectionProps> = ({ title, description, children }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ titleStrings, description, children }) => {
   return (
     <>
       <Tabs />
       <HeroSectionWrapper>
         <WindowHeaderComponent />
-        {title && <h1>{title}</h1>}
+        {titleStrings && <TitleAnimation strings={titleStrings} />}
         <Container>
         {description && <p>{description}</p>}
           {children}

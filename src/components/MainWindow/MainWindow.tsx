@@ -33,7 +33,7 @@ const MainWindow: React.FC<MainWindowProps> = () => {
       <Tabs />
       <MainWindowWrapper>
         <WindowHeaderComponent />
-        <TitleAnimation/>
+        <TitleAnimation strings={ ["Hello World!", "Olá Mundo!", "¡Hola Mundo!", "Ciao Mondo!"]}/>
         <Container>
           <ContainerImage>
             <p>

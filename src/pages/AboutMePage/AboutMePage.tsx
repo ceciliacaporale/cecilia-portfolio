@@ -12,7 +12,7 @@ const AboutMePage: React.FC = () => {
     <>
      <ThemeWrapper>
     <ResponsiveLayout>
-        <HeroSection title="Sobre mim" description="Minha jornada na tecnologia começou quando ingressei na faculdade. Foi ali que me redescobri e percebi que desenvolver interfaces ia muito além de escrever código – era sobre dar vida a ideias, criar experiências e transformar a forma como as pessoas interagem com o digital.
+        <HeroSection  titleStrings={["Sobre mim", "About me", "Sobre mí"]} description="Minha jornada na tecnologia começou quando ingressei na faculdade. Foi ali que me redescobri e percebi que desenvolver interfaces ia muito além de escrever código – era sobre dar vida a ideias, criar experiências e transformar a forma como as pessoas interagem com o digital.
 
 A criatividade sempre esteve presente na minha vida, e no desenvolvimento front-end encontrei o equilíbrio perfeito entre lógica e expressão visual. Amo explorar novas tecnologias, aprender e experimentar maneiras inovadoras de construir interfaces que sejam funcionais e bonitas ao mesmo tempo.
 

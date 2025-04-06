@@ -26,7 +26,7 @@ const MainWindowTablet: React.FC = () => {
             height="253px"
           />
           <ContainerText>
-          <TitleAnimation />
+          <TitleAnimation strings={ ["Hello World!", "Olá Mundo!", "¡Hola Mundo!", "Ciao Mondo!"]}/>
             <p>
               Sou Maria Cecília, desenvolvedora front-end.
               Adoro transformar ideias em código e criar experiências interativas. Quando não estou programando, provavelmente estou rabiscando alguma ilustração por aí.
