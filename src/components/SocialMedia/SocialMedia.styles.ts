@@ -123,9 +123,9 @@ export const Tooltip = styled.span<{ $bgColor: string }>`
   transform: translateX(-50%);
   background: ${({ $bgColor }) => $bgColor};
   color: ${({ theme }) => theme.colors.borderColor};
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 10px;
   white-space: nowrap;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
