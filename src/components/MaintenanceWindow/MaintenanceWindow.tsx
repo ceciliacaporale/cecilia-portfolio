@@ -3,7 +3,7 @@ import { MaintenanceWindowWrapper, Header, Content, DotsContainer, Dot } from ".
 import Construcao from "./../../assets/construcao.png?url";
 import Capacete from "./../../assets/capacete.png?url";
 import Ferramenta from "./../../assets/ferramentas-de-construcao.png?url";
-import { dotColors } from "../Skills/Skills.styles";
+import { useTheme } from "styled-components";
 
 interface MaintenanceWindowProps {
   title?: string;
@@ -12,6 +12,9 @@ interface MaintenanceWindowProps {
 const MaintenanceWindow: React.FC<MaintenanceWindowProps> = ({ 
   title, 
 }) => {
+
+  const theme = useTheme();
+  const dotColorKeys: (keyof typeof theme.colors)[] = ['pink', 'orange', 'lime'];
 
   return (
     <MaintenanceWindowWrapper
@@ -23,10 +26,10 @@ const MaintenanceWindow: React.FC<MaintenanceWindowProps> = ({
       >
         {title}
         <DotsContainer>
-          {dotColors.map((color: string, index: React.Key | null | undefined) => (
-            <Dot key={index} color={color} />
+          {dotColorKeys.map((colorKey, index) => (
+            <Dot key={index} $colorKey={colorKey} />
           ))}
-         </DotsContainer>
+        </DotsContainer>
       </Header>
 
       <Content>

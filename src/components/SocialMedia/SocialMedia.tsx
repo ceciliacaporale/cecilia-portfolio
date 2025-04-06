@@ -15,6 +15,7 @@ import { PiInstagramLogoBold } from "react-icons/pi";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaMedium } from "react-icons/fa6";
 import Smile from "../../assets/smileface.svg?url";
+import { useTheme } from "styled-components";
 
 interface SocialIcon {
   id: string;
@@ -40,6 +41,9 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
   height = DEFAULT_HEIGHT,
   iconSize = DEFAULT_ICON_SIZE,
 }) => {
+
+  const theme = useTheme();
+
   const socialIcons: SocialIcon[] = [
     {
       id: "github",
@@ -47,7 +51,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
       alt: "GitHub",
       url: "https://github.com/ceciliacaporale",
       tooltip: "GitHub",
-      bgColor: "#FE87A4",
+      bgColor: theme.colors.pink,
     },
     {
       id: "linkedin",
@@ -55,7 +59,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
       alt: "LinkedIn",
       url: "https://www.linkedin.com/in/mariaceciliacaporale/",
       tooltip: "LinkedIn",
-      bgColor: "#1CBFC1",
+      bgColor: theme.colors.blue,
     },
     {
       id: "instagram",
@@ -63,7 +67,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
       alt: "Instagram",
       url: "https://www.instagram.com/cecicaporale/",
       tooltip: "Instagram",
-      bgColor: "#FAC95F",
+      bgColor: theme.colors.orange,
     },
     {
       id: "email",
@@ -71,7 +75,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
       alt: "E-mail",
       url: "mailto:cecicaporale16@gmail.com",
       tooltip: "E-mail",
-      bgColor: "#FFF996",
+      bgColor: theme.colors.yellow,
     },
     {
       id: "medium",
@@ -79,7 +83,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
       alt: "Medium",
       url: "https://medium.com/@cecicaporale16",
       tooltip: "Medium",
-      bgColor: "#94EE9C",
+      bgColor: theme.colors.lime,
     },
   ];
 
@@ -93,7 +97,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
 
       <Content>
         {socialIcons.map(({ id, icon, alt, url, tooltip, bgColor }) => (
-          <IconWrapper key={id} bgColor={bgColor}>
+          <IconWrapper key={id} $bgColor={bgColor}>
             <a href={url} target="_blank" rel="noopener noreferrer">
               {typeof icon === "string" ? (
                 <img src={icon} alt={alt} width={iconSize} height={iconSize} />

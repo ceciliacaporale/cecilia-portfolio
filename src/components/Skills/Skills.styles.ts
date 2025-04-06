@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled, type DefaultTheme } from "styled-components";
 
 export const SkillsWrapper = styled.div`
   display: flex;
@@ -98,12 +98,10 @@ export const DotsContainer = styled.div`
   gap: 5px;
 `;
 
-export const Dot = styled.div<{ color: string }>`
+export const Dot = styled.div<{ $colorKey: keyof DefaultTheme['colors'] }>`
   width: 12px;
   height: 12px;
-  background: ${({ color }) => color};
+  background: ${({ theme, $colorKey }) => theme.colors[$colorKey]};
   border-radius: 50%;
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
 `;
-
-export const dotColors = ["#FB44AC", "#FAC951", "#69EF84"];

@@ -7,7 +7,6 @@ import {
   HeaderTitle, 
   DotsContainer, 
   Dot, 
-  dotColors, 
   Tooltip
 } from "./Skills.styles";
 import useDraggable from "../../hooks/useDraggable";
@@ -29,13 +28,15 @@ const Skills: React.FC<SkillsProps> = ({ containerRef }) => {
     return skillData.map((_, i) => baseColors[i % baseColors.length]);
   }, [theme]);
 
+  const dotColorKeys: (keyof typeof theme.colors)[] = ['pink', 'orange', 'lime'];
+
   return (
     <SkillsWrapper style={{ left: position.x, top: position.y, zIndex }}>
       <Header onMouseDown={handleMouseDown}>
         <HeaderTitle />
         <DotsContainer>
-          {dotColors.map((color, index) => (
-            <Dot key={index} color={color} />
+          {dotColorKeys.map((colorKey, index) => (
+            <Dot key={index} $colorKey={colorKey} />
           ))}
         </DotsContainer>
       </Header>

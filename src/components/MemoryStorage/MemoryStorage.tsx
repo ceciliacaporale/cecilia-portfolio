@@ -11,7 +11,6 @@ import {
   Legend, 
   LegendItem, 
   ColorBox,
-  dotColors
 } from "./MemoryStorage.styles";
 import useDraggable from "../../hooks/useDraggable";
 import { useTheme } from "styled-components";
@@ -21,10 +20,12 @@ const INITIAL_Y = 380;
 const WIDTH = 455;
 const HEIGHT = 127;
 
+
 const MemoryStorage: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | null> }> = ({ containerRef }) => {
   const [loading, setLoading] = useState(true);
   const theme = useTheme();
-
+  const dotColorKeys: (keyof typeof theme.colors)[] = ['pink', 'orange', 'lime'];
+ 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -59,8 +60,8 @@ const MemoryStorage: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | 
       <Header onMouseDown={handleMouseDown}>
         <HeaderTitle>s t o r a g e</HeaderTitle>
         <DotsContainer>
-          {dotColors.map((color, index) => (
-            <Dot key={index} color={color} />
+          {dotColorKeys.map((colorKey, index) => (
+            <Dot key={index} $colorKey={colorKey} />
           ))}
         </DotsContainer>
       </Header>

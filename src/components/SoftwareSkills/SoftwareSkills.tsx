@@ -18,16 +18,7 @@ import {
   SiMicrosoftazure, 
   SiGithub 
 } from "react-icons/si";
-import { dotColors } from "../Skills/Skills.styles";
-
-const tooltipColors = [
-  "#1CBFC1", 
-  "#FE87A4", 
-  "#FAC95F", 
-  "#FFF996",
-  "#94EE9C",
-  "#EA527F"
-];
+import { useTheme } from "styled-components";
 
 const softwares = [
   { icon: <SiVisualstudiocode />, name: "VS Code"},
@@ -44,6 +35,17 @@ interface SoftwareSkillsProps {
 
 const SoftwareSkills = ({ containerRef }: SoftwareSkillsProps) => {
   const { position, handleMouseDown, zIndex } = useDraggable(900, 380, containerRef as RefObject<HTMLDivElement>, 160, 140); 
+  const theme = useTheme();
+
+  const tooltipColorKeys: (keyof typeof theme.colors)[] = [
+    "blue", 
+    "pink", 
+    "orange", 
+    "yellow",
+    "lime",
+    "pink10"
+  ];
+  const dotColorKeys: (keyof typeof theme.colors)[] = ['pink', 'orange', 'lime'];
 
   return (
     <SkillsWrapper
@@ -56,8 +58,8 @@ const SoftwareSkills = ({ containerRef }: SoftwareSkillsProps) => {
       <Header onMouseDown={handleMouseDown}>
         <HeaderTitle></HeaderTitle>
         <DotsContainer>
-          {dotColors.map((color: string, index: React.Key | null | undefined) => (
-            <Dot key={index} color={color} />
+          {dotColorKeys.map((colorKey, index) => (
+            <Dot key={index} $colorKey={colorKey} />
           ))}
         </DotsContainer>
       </Header>
@@ -65,7 +67,9 @@ const SoftwareSkills = ({ containerRef }: SoftwareSkillsProps) => {
         {softwares.map((software, index) => (
           <SkillIcon key={index} aria-label={software.name}>
             {software.icon}
-            <Tooltip color={tooltipColors[index]}>{software.name}</Tooltip>
+            <Tooltip $colorKey={tooltipColorKeys[index]}>
+              {software.name}
+            </Tooltip>
           </SkillIcon>
         ))}
       </SkillsGrid>

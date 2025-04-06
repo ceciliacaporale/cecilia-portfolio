@@ -6,7 +6,7 @@ const pulseShadowAnimation = (theme: any) => keyframes`
                 8px 8px 0 1px ${theme.colors.borderColor};
   }
   33% {
-    box-shadow: 8px 8px 0 ${theme.colors.lime},
+    box-shadow: 8px 8px 0 ${theme.colors.blue},
                 8px 8px 0 1px ${theme.colors.borderColor};
   }
   66% {
@@ -28,7 +28,7 @@ interface SocialMediaWrapperProps {
 }
 
 interface IconWrapperProps {
-  bgColor: string;
+  $bgColor: string;
 }
 
 export const SocialMediaWrapper = styled.div<SocialMediaWrapperProps>`
@@ -102,7 +102,7 @@ export const IconWrapper = styled.div<IconWrapperProps>`
   }
 
   &:hover svg {
-    fill: ${({ bgColor }) => bgColor};
+    fill: ${({ $bgColor }) => $bgColor};
   }
 
   a {

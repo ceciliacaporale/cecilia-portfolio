@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled, type DefaultTheme } from "styled-components";
 
 const SIZES = {
   width: "300px",
@@ -55,10 +55,10 @@ export const DotsContainer = styled.div`
   gap: 4px;
 `;
 
-export const Dot = styled.div<{ color: string }>`
+export const Dot = styled.div<{ $colorKey: keyof DefaultTheme["colors"] }>`
   width: 14px;
   height: 14px;
-  background: ${({ color }) => color};
+  background: ${({ theme, $colorKey }) => theme.colors[$colorKey]};
   border-radius: 50%;
   border: 2px solid ${({ theme }) => theme.colors.borderColor};
 `;
