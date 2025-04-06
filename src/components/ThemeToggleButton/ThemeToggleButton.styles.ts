@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ContainerToggle = styled.div`
   position: absolute;
   top: 1.8rem;
-  z-index: 9999;
+  z-index: 999;
   right: 26rem;
 
   @media (max-width: 1250px) {

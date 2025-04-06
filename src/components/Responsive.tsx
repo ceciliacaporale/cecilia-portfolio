@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Tablet from "./Tablet";
-import Mobile from "./Mobile";
-import Desktop from "./Desktop";
+import Tablet from "../pages/Tablet";
+import Mobile from "../pages/Mobile";
+import Desktop from "../pages/Desktop";
 
 const Responsive: React.FC = () => {
   const [screenSize, setScreenSize] = useState<"mobile" | "tablet" | "desktop" | null>(null);

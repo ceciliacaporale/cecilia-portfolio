@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ContentArea, ContainerMain, ProjectsWrapper } from "./ResponsiveLayout.styles";
-import ThemeToggleButton from "../../ThemeToggleButton/ThemeToggleButton";
+import ThemeToggleButton from "../ThemeToggleButton/ThemeToggleButton";
 
 interface LayoutProps {
   children: React.ReactNode;

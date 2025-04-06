@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme } from './../ThemeWrapper';
+import { useTheme } from '../../ThemeWrapper';
 import {
   ContainerToggle,
   ToggleButton

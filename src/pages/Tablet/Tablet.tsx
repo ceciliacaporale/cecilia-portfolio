@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
-import MainWindowTablet from "../MainWindowTablet";
+import MainWindowTablet from "../../components/MainWindowTablet";
 import { TabletWrapper, ContainerMain, ContentArea, LoadingWindowContainer } from "./Tablet.styles";
-import LoadingWindow from "../LoadingWindow";
+import LoadingWindow from "../../components/LoadingWindow";
 import ThemeWrapper from "../../ThemeWrapper";
-import ThemeToggleButton from "../../ThemeToggleButton/ThemeToggleButton";
+import ThemeToggleButton from "../../components/ThemeToggleButton/ThemeToggleButton";
 
 const Tablet: React.FC = () => {
 
