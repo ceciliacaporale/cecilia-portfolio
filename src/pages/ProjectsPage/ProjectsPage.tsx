@@ -1,11 +1,10 @@
 import React from "react";
 import { ContainerProjects, StyledSwiper, StyledSwiperSlide } from "./ProjectsPage.styles";
-import HeroSection from "../HeroSection";
-import ResponsiveLayout from "../ResponsiveLayout";
-import DisplayCard from "../DisplayCard";
+import HeroSection from "../../components/HeroSection";
+import ResponsiveLayout from "../../components/ResponsiveLayout";
+import DisplayCard from "../../components/DisplayCard";
 import { projects } from "../../data/projects";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

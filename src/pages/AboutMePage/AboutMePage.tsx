@@ -1,10 +1,10 @@
 import React from "react";
-import HeroSection from "../HeroSection";
-import ResponsiveLayout from "../ResponsiveLayout";
+import HeroSection from "../../components/HeroSection";
+import ResponsiveLayout from "../../components/ResponsiveLayout";
 import { ContainerMaintenance } from "./AboutMePage.styles";
 import ceciimagem from '../../assets/ceciimagem.jpg?url'
 import ThemeWrapper from "../../ThemeWrapper";
-import WindowImageSecondary from "../WindowImageSecondary";
+import WindowImageSecondary from "../../components/WindowImageSecondary";
 
 const AboutMePage: React.FC = () => {
   

@@ -1,8 +1,8 @@
 import React from "react";
-import HeroSection from "../HeroSection";
-import ResponsiveLayout from "../ResponsiveLayout";
+import HeroSection from "../../components/HeroSection";
+import ResponsiveLayout from "../../components/ResponsiveLayout";
 import { ContainerMaintenance } from "./FilesPage.styles";
-import MaintenanceWindow from "../MaintenanceWindow";
+import MaintenanceWindow from "../../components/MaintenanceWindow";
 import ThemeWrapper from "../../ThemeWrapper";
 
 const FilesPage: React.FC = () => {
