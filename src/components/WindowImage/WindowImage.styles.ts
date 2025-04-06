@@ -23,9 +23,8 @@ export const WindowImageWrapper = styled.div<WindowProps>`
   &:hover::after {
     content: "Ceci";
     position: absolute;
-    bottom: 110%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 20px;
+    left: 20px;
     background: ${({ theme }) => theme.colors.black};
     color: ${({ theme }) => theme.colors.white};
     font-size: 12px;
@@ -33,13 +32,6 @@ export const WindowImageWrapper = styled.div<WindowProps>`
     border-radius: 4px;
     white-space: nowrap;
     z-index: 9999;
-  }
-
-  .star-green { 
-}
-
-.star-pink { 
-  
 }
 `;
 
@@ -88,9 +80,9 @@ export const WindowButtons = styled.div`
   }
 `;
 export const Tooltip = styled.div`
-  position: absolute;
-  background: ${({ theme }) => theme.colors.yellow};
-  color: ${({ theme }) => theme.colors.black};
+  position: fixed;
+  background: #FFF982;
+  color: ${({ theme }) => theme.colors.borderColor};
   font-size: 12px;
   padding: 4px 8px;
   border-radius: 10px;
@@ -99,4 +91,5 @@ export const Tooltip = styled.div`
   pointer-events: none;
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
   transform: translate(-50%, -100%);
+  box-shadow: 1px 1px 0px ${({ theme }) => theme.colors.borderColor};
 `;

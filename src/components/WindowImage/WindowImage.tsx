@@ -16,7 +16,7 @@ const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, shapeStar, w
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLImageElement>) => {
-    setTooltipPosition({ x: e.clientX, y: e.clientY });
+    setTooltipPosition({ x: e.clientX + 28, y: e.clientY + 50 });
     setShowTooltip(true);
   };
   

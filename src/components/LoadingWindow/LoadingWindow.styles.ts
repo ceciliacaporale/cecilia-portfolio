@@ -60,6 +60,11 @@ export const Content = styled.div`
     top: -16px;
     left: -10px;
     filter: drop-shadow(1px 1px 0 ${({ theme }) => theme.colors.borderColor});
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 

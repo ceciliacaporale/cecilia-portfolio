@@ -87,9 +87,15 @@ export const LegendItem = styled.div`
 `;
 
 export const ColorBox = styled.div<{ color: string }>`
-  width: 12px;
+ width: 12px;
   height: 12px;
+  display: inline-block;
   background: ${({ color }) => color};
   border-radius: 2px;
   border: 1.6px solid ${({ theme }) => theme.colors.borderColor};
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `;

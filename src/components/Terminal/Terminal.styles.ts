@@ -29,6 +29,11 @@ export const TerminalWrapper = styled.div`
     position: absolute;
     top: 10px;
     right: -1rem;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 

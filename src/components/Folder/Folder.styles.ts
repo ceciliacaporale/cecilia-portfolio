@@ -13,6 +13,11 @@ export const FolderWrapper = styled.div`
     z-index: 9999;
     top: 7px;
     right: -0.4rem;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 `;
 

@@ -31,10 +31,6 @@ export const Header = styled.div`
   font-family: "Pixelify Sans", sans-serif;
   cursor: grab;
   gap: 5px;
-
-  &:active {
-    cursor: grabbing;
-  }
 `;
 
 export const Content = styled.div`
@@ -58,7 +54,11 @@ export const Content = styled.div`
       top: -30px;
       left: 110px;
       position: relative;
-      pointer-events: none;
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }    
     }
   }
 `;

@@ -103,6 +103,7 @@ export const IconWrapper = styled.div<IconWrapperProps>`
 
   &:hover svg {
     fill: ${({ $bgColor }) => $bgColor};
+    filter: drop-shadow(1px 1px 0 ${({ theme }) => theme.colors.borderColor});
   }
 
   a {
@@ -139,4 +140,9 @@ export const SmileWrapper = styled.div`
   position: absolute;
   top: -40px;
   left: -48px;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `;

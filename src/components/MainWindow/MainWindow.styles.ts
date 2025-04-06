@@ -12,7 +12,6 @@ export const MainWindowWrapper = styled.div`
   overflow: hidden;
   min-height: 240px;
   height: 300px;
-  pointer-events: none;
   z-index: 2;
 `;
 
@@ -67,6 +66,11 @@ export const Container = styled.div`
     right: 0px;
     z-index: 9;
     position: absolute;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   .star-pink { 
@@ -74,6 +78,11 @@ export const Container = styled.div`
     right: 250px;
     z-index: 9;
     position: absolute;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 `;
 
