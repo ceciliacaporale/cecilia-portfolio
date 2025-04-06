@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { ContentArea, ContainerMain, ProjectsWrapper } from "./ResponsiveLayout.styles";
-import ThemeToggleButton from "../ThemeToggleButton/ThemeToggleButton";
+import { ContentArea, ContainerMain, ProjectsWrapper, ContainerToggle } from "./ResponsiveLayout.styles";
+import ThemeToggleButton from "../../components/ThemeToggleButton";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -36,7 +36,9 @@ const ResponsiveLayout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <ProjectsWrapper>
-       <ThemeToggleButton />
+        <ContainerToggle>
+          <ThemeToggleButton />
+        </ContainerToggle>
       <ContainerMain>
         <ContentArea>{children}</ContentArea>
       </ContainerMain>

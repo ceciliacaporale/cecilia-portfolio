@@ -67,3 +67,21 @@ export const ContentArea = styled.div`
     padding: 0 12px;
   }
 `;
+
+export const ContainerToggle = styled.div`
+  position: relative;
+  top: 5.9rem;
+  right: -24rem;
+
+  @media (max-width: 1251px) {
+    top: 3.7rem;
+  }
+
+  @media (max-width: 993px) {
+    right: -12rem;
+  }
+
+  @media (max-width: 604px) {
+    right: -5rem;
+  }
+`
