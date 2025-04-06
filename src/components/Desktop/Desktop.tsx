@@ -18,8 +18,8 @@ const Desktop: React.FC = () => {
   return (
     <ThemeWrapper>
     <DesktopWrapper>
-      <ThemeToggleButton />
       <ContentArea ref={containerRef}>
+      <ThemeToggleButton />
         {isLoadingVisible && (
           <LoadingWindow onClose={() => setIsLoadingVisible(false)} />
         )}

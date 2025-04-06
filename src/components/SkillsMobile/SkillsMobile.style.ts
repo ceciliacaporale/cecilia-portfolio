@@ -11,11 +11,11 @@ export const SkillsMobileWrapper = styled.div`
 export const Skills = styled.div<{ color: string }>`
   background-color: ${({ color }) => color};
   padding: 4px 8px;
-  box-shadow: 2px 2px 0px ${({ theme }) => theme.colors.black};
+  box-shadow: 2px 2px 0px ${({ theme }) => theme.colors.borderColor};
   border-radius: 8px;
   font-weight: bold;
   font-size: 14px;
-  border: 1px solid ${({ theme }) => theme.colors.black};;
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   align-items: center;
   gap: 5px;

@@ -9,6 +9,7 @@ declare module 'styled-components' {
       orange: string;
       yellow: string;
       blue: string;
+      purple: string;
       black: string;
       white: string;
       borderColor: string;
@@ -16,6 +17,7 @@ declare module 'styled-components' {
         background: string;
         borderColor: string;
         limeDark: string;
+        purpleDark: string;
         pinkDark: string;
         orangeDark: string;
         yellowDark: string;

@@ -3,6 +3,7 @@ import MainWindowTablet from "../MainWindowTablet";
 import { TabletWrapper, ContainerMain, ContentArea, LoadingWindowContainer } from "./Tablet.styles";
 import LoadingWindow from "../LoadingWindow";
 import ThemeWrapper from "../../ThemeWrapper";
+import ThemeToggleButton from "../../ThemeToggleButton/ThemeToggleButton";
 
 const Tablet: React.FC = () => {
 
@@ -10,6 +11,7 @@ const Tablet: React.FC = () => {
   
   return (
   <ThemeWrapper>
+    <ThemeToggleButton />
     <ContainerMain>
     <TabletWrapper>
      <ContentArea>

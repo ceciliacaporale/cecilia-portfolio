@@ -8,6 +8,7 @@ import {
 } from "./Terminal.styles";
 import Star from "./../../assets/staryellow.png?url"
 import useDraggable from "../../hooks/useDraggable"; 
+import { useTheme } from "styled-components";
 
 interface TerminalProps {
   containerRef?: React.RefObject<HTMLDivElement | null>;
@@ -33,6 +34,7 @@ const messages = [
     const [displayedText, setDisplayedText] = useState<string>("");
     const [messageIndex, setMessageIndex] = useState<number>(0);
     const [charIndex, setCharIndex] = useState<number>(0);
+    const theme = useTheme();
   
     useEffect(() => {
       if (messageIndex >= messages.length) return;
@@ -63,9 +65,9 @@ const messages = [
             zIndex,
           }}>
                 <Header onMouseDown={handleMouseDown}>
-                    <Dot color="#ff86a4" />
-                    <Dot color="#FAC951" />
-                    <Dot color="#94EE9C" />
+                    <Dot color={theme.colors.pink} />
+                    <Dot color={theme.colors.orange} />
+                    <Dot color={theme.colors.lime} />
                 </Header>
                 <TerminalContent>
                     {displayedText}

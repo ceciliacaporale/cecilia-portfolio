@@ -80,6 +80,7 @@ export const Container = styled.div`
   p {
     font-size: 16px;
     font-family: "Inter", sans-serif;
+    color: ${({ theme }) => theme.colors.black};
   }
 `;
 

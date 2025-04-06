@@ -43,6 +43,7 @@ export const Content = styled.div`
     text-align: center;
     font-family: "Pixelify Sans", sans-serif;
     font-size: 35px;
+    color: ${({ theme }) => theme.colors.black};
   }
 
  .construcao {

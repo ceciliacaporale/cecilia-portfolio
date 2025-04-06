@@ -1,19 +1,12 @@
 import styled from "styled-components";
 
-const COLORS = {
-  pink: "#FE87A4",
-  teal: "#1CBFC1",
-  green: "#94EE9C",
-};
-
-
 export const MainWindowTabletWrapper = styled.div`
   width: 96%;
   height: auto;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 2rem;
   top: 1rem;
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -34,7 +27,7 @@ export const WindowButtons = styled.div`
     height: 16px;
     border-radius: 50%;
     display: inline-block;
-    border: 1px solid ${({ theme }) => theme.colors.black};
+    border: 1px solid ${({ theme }) => theme.colors.borderColor};
   }
 
   .close {

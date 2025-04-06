@@ -7,8 +7,8 @@ export const RetroComputerWrapper = styled.div`
   background: ${({ theme }) => theme.colors.white};
   padding: 12px;
   border-radius: 10px;
-  border: 3px solid ${({ theme }) => theme.colors.black};
-  box-shadow: 6px 6px 0px ${({ theme }) => theme.colors.black};
+  border: 3px solid ${({ theme }) => theme.colors.borderColor};
+  box-shadow: 6px 6px 0px ${({ theme }) => theme.colors.borderColor};
   width: 170px;
   z-index: 9;
   cursor: grab;
@@ -19,7 +19,7 @@ export const Monitor = styled.div`
   width: 140px;
   height: 110px;
   background: ${({ theme }) => theme.colors.lime};
-  border: 3px solid ${({ theme }) => theme.colors.black};
+  border: 3px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 6px;
   position: relative;
   box-shadow: inset 0px 0px 8px rgba(255, 255, 255, 0.1);
@@ -27,7 +27,7 @@ export const Monitor = styled.div`
 `;
 
 export const ScreenContent = styled.pre`
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.borderColor};
   font-family: monospace;
   font-size: 12.5px;
   padding: 4px;
@@ -39,7 +39,7 @@ export const Keyboard = styled.div`
   width: 125px;
   height: 55px;
   background: rgb(240, 240, 240);
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2px solid${({ theme }) => theme.colors.borderColor};
   border-radius: 6px;
   margin-top: 6px;
   display: flex;
@@ -52,7 +52,7 @@ export const Key = styled.div`
   width: 14px;
   height: 14px;
   background: ${({ theme }) => theme.colors.white};
-  border: 1.7px solid ${({ theme }) => theme.colors.black};
+  border: 1.7px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   align-items: center;
   justify-content: center;
