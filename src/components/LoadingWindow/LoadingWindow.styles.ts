@@ -24,6 +24,11 @@ export const LoadingWindowWrapper = styled.div`
   border: 2px solid ${({ theme }) => theme.colors.borderColor};
   z-index: 999;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const Header = styled.div`
@@ -96,7 +101,7 @@ export const Loader = styled.div`
     overflow: hidden;
     display: flex;
     padding: 2px 1px;
-    background: rgba(0, 0, 0, 0.05);
+    background: ${({ theme }) => theme.colors.whiteDark};
   }
 
   .box {

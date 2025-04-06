@@ -12,6 +12,7 @@ export const lightTheme: DefaultTheme = {
     purple: '#8C75F7',
     black: '#000',
     white: '#fff',
+    whiteDark: '#fff',
     borderColor: '#000',
     darkMode: {} as any
   },
@@ -28,6 +29,7 @@ export const darkTheme: DefaultTheme = {
     blue: '#79A0AC',
     black: '#fff',
     white: '#313131',
+    whiteDark: '#4f4f4f',
     borderColor: '#000',
   },
 };

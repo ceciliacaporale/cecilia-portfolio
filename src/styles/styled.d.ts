@@ -12,6 +12,7 @@ declare module 'styled-components' {
       purple: string;
       black: string;
       white: string;
+      whiteDark: string;
       borderColor: string;
       darkMode?: {
         background: string;
