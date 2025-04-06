@@ -34,6 +34,10 @@ export const SkillsGrid = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
+
+  svg {
+    color: ${({ theme }) => theme.colors.borderColor};
+  }
 `;
 
 export const Tooltip = styled.span`

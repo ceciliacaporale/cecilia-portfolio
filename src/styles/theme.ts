@@ -40,7 +40,7 @@ export const darkTheme: DefaultTheme = {
     lime: '#6FA994',
     pink: '#FE87A4',
     pink10: '#D7738C',
-    orange: '#D7B054',
+    orange: '#DEBD6F',
     yellow: '#E4C789',
     purple: '#C9BDF9',
     blue: '#79A0AC',
