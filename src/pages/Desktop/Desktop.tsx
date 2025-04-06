@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { DesktopWrapper, ContentArea } from "./Desktop.styles";
+import { DesktopWrapper, ContentArea, ContainerToggle } from "./Desktop.styles";
 import LoadingWindow from "../../components/LoadingWindow";
 import MainWindow from "../../components/MainWindow";
 import RetroComputer from "../../components/RetroComputer";
@@ -10,7 +10,7 @@ import Skills from "../../components/Skills";
 import Terminal from "../../components/Terminal";
 import WindowInfo from "../../components/WindowInfo";
 import ThemeWrapper from "../../ThemeWrapper";
-import ThemeToggleButton from "../../components/ThemeToggleButton/ThemeToggleButton";
+import ThemeToggleButton from "../../components/ThemeToggleButton";
 const Desktop: React.FC = () => {
   
   const [isLoadingVisible, setIsLoadingVisible] = useState(true);
@@ -19,7 +19,9 @@ const Desktop: React.FC = () => {
     <ThemeWrapper>
     <DesktopWrapper>
       <ContentArea ref={containerRef}>
-      <ThemeToggleButton />
+        <ContainerToggle>
+          <ThemeToggleButton />
+        </ContainerToggle>
         {isLoadingVisible && (
           <LoadingWindow onClose={() => setIsLoadingVisible(false)} />
         )}

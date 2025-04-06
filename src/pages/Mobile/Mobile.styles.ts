@@ -34,3 +34,9 @@ export const ContentArea = styled.div`
   }
   
 `;
+
+export const ContainerToggle = styled.div`
+  position: absolute;
+  top: 3.5rem;
+  right: 7rem;
+`

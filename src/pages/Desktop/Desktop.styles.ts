@@ -95,3 +95,9 @@ export const ContentArea = styled.div`
     width: 100%;
   }
 `;
+
+export const ContainerToggle = styled.div`
+  position: relative;
+  top: 2rem;
+  right: -12rem;
+`

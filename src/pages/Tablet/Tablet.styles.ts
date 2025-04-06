@@ -48,3 +48,10 @@ export const LoadingWindowContainer = styled.div`
   left: 10rem;
   position: relative;
 `;
+
+export const ContainerToggle = styled.div`
+  position: absolute;
+  top: 9.5rem;
+  right: 10rem;
+  
+`

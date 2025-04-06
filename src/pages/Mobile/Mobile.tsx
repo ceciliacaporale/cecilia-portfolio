@@ -1,12 +1,14 @@
 import ThemeWrapper from "../../ThemeWrapper";
 import MainWindowMobile from "../../components/MainWindowMobile/MainWindowMobile";
-import { MobileWrapper, ContentArea, ContainerMain } from "./Mobile.styles";
-import ThemeToggleButton from "../../components/ThemeToggleButton/ThemeToggleButton";
+import { MobileWrapper, ContentArea, ContainerMain, ContainerToggle } from "./Mobile.styles";
+import ThemeToggleButton from "../../components/ThemeToggleButton";
 
 const Mobile: React.FC = () => {
   return (
   <ThemeWrapper>
-    <ThemeToggleButton />
+    <ContainerToggle>
+       <ThemeToggleButton />
+    </ContainerToggle>
     <ContainerMain>
     <MobileWrapper>
      <ContentArea>
