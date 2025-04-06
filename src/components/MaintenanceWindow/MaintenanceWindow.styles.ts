@@ -1,14 +1,8 @@
 import { styled, type DefaultTheme } from "styled-components";
 
-const SIZES = {
-  width: "300px",
-  height: "230px",
-  headerHeight: "30px",
-};
-
 export const MaintenanceWindowWrapper = styled.div`
-  width: ${SIZES.width};
-  height: ${SIZES.height};
+  width: 300px;
+  height: 230px;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   position: relative;
@@ -19,7 +13,7 @@ export const MaintenanceWindowWrapper = styled.div`
 `;
 
 export const Header = styled.div`
-  height: ${SIZES.headerHeight};
+  height: 30px;
   border-radius: 8px 8px 0 0;
   display: flex;
   align-items: center;

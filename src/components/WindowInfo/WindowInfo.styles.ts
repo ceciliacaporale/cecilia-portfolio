@@ -1,14 +1,8 @@
 import styled from "styled-components";
 
-const SIZES = {
-  width: "150px",
-  height: "100px",
-  headerHeight: "24px",
-};
-
 export const WindowInfoWrapper = styled.div`
-  width: ${SIZES.width};
-  height: ${SIZES.height};
+  width: 150px;
+  height: 100px;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   position: absolute;
@@ -20,7 +14,7 @@ export const WindowInfoWrapper = styled.div`
 `;
 
 export const Header = styled.div`
-  height: ${SIZES.headerHeight};
+  height: 24px;
   border-radius: 8px 8px 0 0;
   display: flex;
   align-items: center;
@@ -38,7 +32,7 @@ export const Content = styled.div`
   display: flex;
   color: ${({ theme }) => theme.colors.black};
   position: relative;
-  height: calc(100% - ${SIZES.headerHeight});
+  height: calc(100% - 24px);
   box-sizing: border-box;
 
   p { 

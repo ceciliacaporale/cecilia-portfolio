@@ -3,24 +3,21 @@ import styled, { css, keyframes } from 'styled-components';
 const pulseShadowAnimation = (theme: any) => keyframes`
   0% {
     box-shadow: 8px 8px 0 ${theme.colors.pink10},
-                8px 8px 0 1px ${theme.colors.borderColor};
+                9px 9px 0 1px ${theme.colors.borderColor};
   }
   33% {
     box-shadow: 8px 8px 0 ${theme.colors.blue},
-                8px 8px 0 1px ${theme.colors.borderColor};
+                9px 9px 0 1px ${theme.colors.borderColor};
   }
   66% {
     box-shadow: 8px 8px 0 ${theme.colors.yellow},
-                8px 8px 0 1px ${theme.colors.borderColor};
+                9px 9px 0 1px ${theme.colors.borderColor};
   }
   100% {
     box-shadow: 8px 8px 0 ${theme.colors.pink},
-                8px 8px 0 1px ${theme.colors.borderColor};
+                9px 9px 0 1px ${theme.colors.borderColor};
   }
 `;
-
-export const DEFAULT_WIDTH = "235px";
-export const DEFAULT_HEIGHT = "70px";
 
 interface SocialMediaWrapperProps {
   width?: string;
@@ -33,8 +30,8 @@ interface IconWrapperProps {
 
 export const SocialMediaWrapper = styled.div<SocialMediaWrapperProps>`
   ${({ theme }) => css`
-    width: ${DEFAULT_WIDTH};
-    height: ${DEFAULT_HEIGHT};
+    width: 235px;
+    height: 70px;
     background: ${theme.colors.white};
     border-radius: 10px;
     position: absolute;
@@ -44,8 +41,6 @@ export const SocialMediaWrapper = styled.div<SocialMediaWrapperProps>`
     border: 2px solid ${theme.colors.borderColor};
     transition: all 0.3s ease;
     animation: ${pulseShadowAnimation(theme)} 15s infinite ease-in-out;
-    box-shadow: 8px 8px 0 ${theme.colors.pink10}, 
-                8px 8px 0 1px ${theme.colors.borderColor};
 
     @media (max-width: 795px) {
       box-shadow: 4px 4px 0 ${theme.colors.pink10}, 
