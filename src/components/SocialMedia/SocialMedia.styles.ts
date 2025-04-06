@@ -1,4 +1,23 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from 'styled-components';
+
+const pulseShadowAnimation = (theme: any) => keyframes`
+  0% {
+    box-shadow: 8px 8px 0 ${theme.colors.pink10},
+                8px 8px 0 1px ${theme.colors.borderColor};
+  }
+  33% {
+    box-shadow: 8px 8px 0 ${theme.colors.lime},
+                8px 8px 0 1px ${theme.colors.borderColor};
+  }
+  66% {
+    box-shadow: 8px 8px 0 ${theme.colors.yellow},
+                8px 8px 0 1px ${theme.colors.borderColor};
+  }
+  100% {
+    box-shadow: 8px 8px 0 ${theme.colors.pink},
+                8px 8px 0 1px ${theme.colors.borderColor};
+  }
+`;
 
 export const DEFAULT_WIDTH = "235px";
 export const DEFAULT_HEIGHT = "70px";
@@ -11,44 +30,46 @@ interface SocialMediaWrapperProps {
 interface IconWrapperProps {
   bgColor: string;
 }
-interface TooltipProps {
-  bgColor: string;
-}
 
 export const SocialMediaWrapper = styled.div<SocialMediaWrapperProps>`
-  width: ${({ width }) => width || DEFAULT_WIDTH};
-  height: ${({ height }) => height || DEFAULT_HEIGHT};
-  background: ${({ theme }) => theme.colors.white};
-  border-radius: 10px;
-  position: absolute;
-  box-shadow: 8px 8px 0 ${({ theme }) => theme.colors.pink10}, 8px 8px 0 1px ${({ theme }) => theme.colors.borderColor};
-  top: 255px;
-  left: 90px;
-  transform: translate(-6px, -6px);
-  border: 2px solid ${({ theme }) => theme.colors.borderColor};
-  transition: all 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  ${({ theme }) => css`
+    width: ${DEFAULT_WIDTH};
+    height: ${DEFAULT_HEIGHT};
+    background: ${theme.colors.white};
+    border-radius: 10px;
+    position: absolute;
+    top: 255px;
+    left: 90px;
+    transform: translate(-6px, -6px);
+    border: 2px solid ${theme.colors.borderColor};
+    transition: all 0.3s ease;
+    animation: ${pulseShadowAnimation(theme)} 15s infinite ease-in-out;
+    box-shadow: 8px 8px 0 ${theme.colors.pink10}, 
+                8px 8px 0 1px ${theme.colors.borderColor};
 
+    @media (max-width: 795px) {
+      box-shadow: 4px 4px 0 ${theme.colors.pink10}, 
+                  5px 5px 0 1px black, 
+                  7px 7px 0 1px ${theme.colors.yellow};
+      width: 250px;
+      height: 60px;
+      z-index: 999;
+      top: 50%;
+      left: 0;
+      margin: 0 auto;
+      position: relative;
+    }
 
-  @media (max-width: 795px) {
-    box-shadow: 4px 4px 0 ${({ theme }) => theme.colors.pink10}, 5px 5px 0 1px black, 7px 7px 0 1px ${({ theme }) => theme.colors.yellow};
-    width: 200px;
-    height: 60px;
-    z-index: 999;
-    top: 50%;
-    left: 0;
-    margin: 0 auto;
-    position: relative;
-  }
+    img {
+      user-select: none;
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
 
-  img {
-    user-select: none;
-    pointer-events: none;
-    -webkit-user-drag: none;
-  }
-
-  &:hover {
-    transform: translate(-8px, -8px);
-  }
+    &:hover {
+      transform: translate(-8px, -8px);
+    }
+  `}
 `;
 
 export const Header = styled.div`
@@ -67,6 +88,7 @@ export const Content = styled.div`
 
   @media (max-width: 795px) {
     padding: 14px;
+    gap: 8px;
   }
 `;
 
