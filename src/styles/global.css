@@ -28,19 +28,9 @@ html, body {
   background-color: var(--color-background);
 }
 
-.pixel-font {
-  font-family: "Pixelify Sans", sans-serif;
-}
-
 .inter-font {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.squada-one-regular {
-  font-family: "Squada One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -56,6 +46,3 @@ html, body {
   border: 1px solid var(--scrollbar-border);
 }
 
-::-webkit-scrollbar-track {
-  background-color: var(--scrollbar-track);
-}

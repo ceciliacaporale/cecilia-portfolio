@@ -56,6 +56,7 @@ export const ContentWrapper = styled.div`
     font-size: 18px;
     font-family: "Inter", sans-serif;
     text-align: left;
+    color: ${({ theme }) => theme.colors.black};
   }
 `;
 

@@ -27,4 +27,8 @@ export const ToggleButton = styled.button`
     transform: translateY(0px);
     box-shadow: 1px 1px 0px ${({ theme }) => theme.colors.borderColor};
   }
+  
+  @media (max-width: 337px) {
+    display: none;
+  }
 `;

@@ -31,23 +31,5 @@ declare module 'styled-components' {
         border: string;
       };
     };
-    size: {
-      xxs: string;
-      xs: string;
-      sm: string;
-      md: string;
-      lg: string;
-      xl: string;
-      xxl: string;
-    };
-    borderRadius: {
-      none: string;
-      sm: string;
-      md: string;
-      lg: string;
-      xl: string;
-      xxl: string;
-      full: string;
-    };
   }
 }
