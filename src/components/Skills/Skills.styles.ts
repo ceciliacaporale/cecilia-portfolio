@@ -85,6 +85,11 @@ export const SkillIcon = styled.div<{ color: string }>`
     position: absolute;
     top: -8px;
     right: -10px;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }   
   }
 
   &:hover ${Tooltip} {
