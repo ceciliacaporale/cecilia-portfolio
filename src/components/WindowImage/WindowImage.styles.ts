@@ -76,12 +76,14 @@ export const WindowButtons = styled.div`
   }
 
   .minimize, .close, .love {
-    background: #fff;
+    background: ${({ theme }) => theme.colors.whiteDark};
+    color: ${({ theme }) => theme.colors.black};
   }
 `;
 export const Tooltip = styled.div`
   position: fixed;
   background: #FFF982;
+  font-family: "Pixelify Sans", sans-serif;
   color: ${({ theme }) => theme.colors.borderColor};
   font-size: 12px;
   padding: 4px 8px;
