@@ -49,7 +49,7 @@ const LoadingWindow: React.FC<LoadingWindowProps> = ({
             src={Shape} 
             width={SHAPE_SIZE} 
             height={SHAPE_SIZE}
-            alt="Decoração estrela"
+            alt="Shape de uma estrela"
           />
         </div>
         

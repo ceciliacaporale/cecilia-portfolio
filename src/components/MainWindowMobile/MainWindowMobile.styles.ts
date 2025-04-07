@@ -10,7 +10,7 @@ export const MainWindowMobileWrapper = styled.div`
   display: flex;
   position: absolute;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
 `;
 
 export const WindowHeader = styled.div`

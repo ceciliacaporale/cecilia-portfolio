@@ -22,7 +22,7 @@ const Folder: React.FC<FolderProps> = ({ containerRef }) => {
   const handleMouseLeave = () => setIsOpen(false);
 
   return (
-    <a href="/files">
+    <a href="/files" aria-label="Página de arquivos">
     <FolderWrapper
       onMouseDown={handleMouseDown}
       style={{
@@ -38,7 +38,7 @@ const Folder: React.FC<FolderProps> = ({ containerRef }) => {
         Arquivos
       </Tooltip>
       <div className="star-pink">
-        <img src={StarPink} width={30} height={30} />
+        <img src={StarPink} width={30} height={30} alt="Shape de um brilho rosa"/>
       </div>
       <FolderTab />
       {isOpen ? <FolderOpen /> : <FolderClosed />}

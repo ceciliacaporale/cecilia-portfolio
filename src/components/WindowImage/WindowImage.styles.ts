@@ -56,7 +56,11 @@ export const CodeSymbol = styled.span`
 `;
 
 export const Content = styled.div`
-
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 `;
 
 export const WindowButtons = styled.div`

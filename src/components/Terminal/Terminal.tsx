@@ -74,7 +74,7 @@ const messages = [
                     <Cursor>|</Cursor>
                 </TerminalContent>
                 <div className="star">
-                  <img src={Star} alt="Smile" width="40" height="40" />
+                  <img src={Star} alt="Imagem de uma estrela" width="40" height="40" />
                 </div>
             </TerminalWrapper></>
     );

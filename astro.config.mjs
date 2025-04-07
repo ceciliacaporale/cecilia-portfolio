@@ -8,6 +8,7 @@ export default defineConfig({
       noExternal: ["styled-components"]
     },
     build: {
+      sourcemap: true,
       rollupOptions: {
         output: {
           assetFileNames: "assets/[name].[hash][extname]",

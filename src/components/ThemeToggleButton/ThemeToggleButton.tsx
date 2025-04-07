@@ -11,7 +11,10 @@ const ThemeToggleButton = () => {
 
   return (
     <ContainerToggle>
-     <ToggleButton onClick={toggleTheme}>
+     <ToggleButton onClick={toggleTheme}
+       aria-label={`Ativar modo ${theme === 'light' ? 'escuro' : 'claro'}`}
+       title={`Ativar modo ${theme === 'light' ? 'escuro' : 'claro'}`}
+       >
       {theme === 'light' ? (
         <>
           <IoMoonOutline size={20} />

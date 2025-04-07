@@ -38,19 +38,19 @@ const MaintenanceWindow: React.FC<MaintenanceWindowProps> = ({
          <div className="construcao">
           <img 
             src={Construcao} 
-            alt="Decorative star" 
+            alt="Imagem de construção" 
             width="60" 
             height="60" 
           />
           <img 
             src={Capacete} 
-            alt="Decorative star" 
+            alt="Imagem de um capacete de obra." 
             width="60" 
             height="60" 
           />
           <img 
             src={Ferramenta} 
-            alt="Decorative star" 
+            alt="Imagem de uma ferramenta." 
             width="60" 
             height="60" 
           />

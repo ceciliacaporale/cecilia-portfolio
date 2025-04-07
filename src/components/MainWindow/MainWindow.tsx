@@ -49,7 +49,7 @@ const MainWindow: React.FC<MainWindowProps> = () => {
             <WindowImage
               title=""
               imageSrc={Ceci}
-              width="200px"
+              width="250px"
               height="200px"
               shapeStar={true}
             />

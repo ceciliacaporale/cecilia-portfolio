@@ -24,9 +24,9 @@ const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, shapeStar, w
     <WindowImageWrapper width={width} height={height}>
       {shapeStar && (
         <><div className="star-green">
-          <img src={Star} width={40} height={40} alt="Estrela verde" />
+          <img src={Star} width={40} height={40} alt="Shape de uma estrela verde" />
         </div><div className="star-pink">
-            <img src={StarPink} width={40} height={40} alt="Estrela rosa" />
+            <img src={StarPink} width={40} height={40} alt="Shape de um brilho rosa" />
           </div></>
       )}
       <Header>
@@ -43,8 +43,10 @@ const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, shapeStar, w
           <img 
             src={imageSrc} 
             alt={title} 
-            width="100%" 
-            height="auto" 
+            width={width || 900} 
+            height={height || 600}
+            className="responsive-img"
+            loading="lazy"
             onMouseMove={handleMouseMove} 
             onMouseEnter={() => setShowTooltip(true)}
             onMouseLeave={() => setShowTooltip(false)}

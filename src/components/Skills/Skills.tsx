@@ -45,7 +45,7 @@ const Skills: React.FC<SkillsProps> = ({ containerRef }) => {
         {skillData.map((skill, index) => (
           <SkillIcon key={skill.name} title={skill.name} color={skillColors[index]}>
             {skill.icon}
-            {skill.favorite && <img src={Favorite} alt="Favorite" width="20" height="20" className="favorite-icon" />}
+            {skill.favorite && <img src={Favorite} alt="Favorito" width="20" height="20" className="favorite-icon" />}
             <Tooltip>{skill.name}</Tooltip>
           </SkillIcon>
         ))}
