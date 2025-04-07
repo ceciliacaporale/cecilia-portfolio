@@ -2,6 +2,8 @@ import { useState } from "react";
 import { WindowImageWrapper, Header, Content, WindowButtons, CodeSymbol, Tooltip } from "./WindowImage.styles";
 import Star from "../../assets/star.png?url";
 import StarPink from "../../assets/starpink.png?url";
+import { FaRegHeart } from "react-icons/fa6";
+import { IoClose } from "react-icons/io5";
 
 interface WindowImageProps {
   title?: string;
@@ -34,8 +36,8 @@ const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, shapeStar, w
         <span>{title}</span> 
         <WindowButtons>
           <span className="minimize">-</span>
-          <span className="close">x</span>
-          <span className="love">♥</span>
+          <span className="close"><IoClose size={10}/></span>
+          <span className="love"><FaRegHeart size={10}/></span>
         </WindowButtons>
       </Header>
       <Content>
