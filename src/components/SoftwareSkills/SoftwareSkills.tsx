@@ -11,21 +11,21 @@ import {
 } from "./SoftwareSkills.styles";
 import useDraggable from "../../hooks/useDraggable";
 import { 
-  SiVisualstudiocode, 
-  SiFigma, 
   SiAdobeillustrator, 
   SiMiro, 
-  SiMicrosoftazure, 
   SiGithub 
 } from "react-icons/si";
+import { DiVisualstudio } from "react-icons/di";
+import { FiFigma } from "react-icons/fi";
+import { VscAzure } from "react-icons/vsc";
 import { useTheme } from "styled-components";
 
 const softwares = [
-  { icon: <SiVisualstudiocode />, name: "VS Code"},
-  { icon: <SiFigma />, name: "Figma"},
+  { icon: <DiVisualstudio />, name: "VS Code"},
+  { icon: <FiFigma />, name: "Figma"},
   { icon: <SiAdobeillustrator />, name: "Illustrator"},
   { icon: <SiMiro />, name: "Miro"},
-  { icon: <SiMicrosoftazure />, name: "Azure"},
+  { icon: <VscAzure />, name: "Azure"},
   { icon: <SiGithub />, name: "GitHub"},
 ];
 
