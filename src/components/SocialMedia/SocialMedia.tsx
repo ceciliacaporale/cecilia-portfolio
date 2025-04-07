@@ -6,8 +6,6 @@ import {
   IconWrapper,
   Tooltip,
   SmileWrapper,
-  DEFAULT_WIDTH,
-  DEFAULT_HEIGHT,
 } from "./SocialMedia.styles";
 import { FaGithubAlt } from "react-icons/fa";
 import { AiOutlineLinkedin } from "react-icons/ai";
@@ -37,8 +35,6 @@ const DEFAULT_ICON_SIZE = "33px";
 
 const SocialMedia: React.FC<SocialMediaProps> = ({
   title,
-  width = DEFAULT_WIDTH,
-  height = DEFAULT_HEIGHT,
   iconSize = DEFAULT_ICON_SIZE,
 }) => {
 
@@ -88,7 +84,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
   ];
 
   return (
-    <SocialMediaWrapper width={width} height={height}>
+    <SocialMediaWrapper>
       <SmileWrapper>
         <img src={Smile} alt="Smile" width="100" height="100" />
       </SmileWrapper>
