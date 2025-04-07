@@ -12,8 +12,8 @@
 html.dark {
   --color-background: #181718;
   --scrollbar-track: #181718;
-  --scrollbar-thumb: #D9AAB0;
-  --scrollbar-border: #fff;
+  --scrollbar-thumb: #FE87A4;
+  --scrollbar-border: #000;
 }
 
 * {

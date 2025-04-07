@@ -11,7 +11,6 @@ export const RetroComputerWrapper = styled.div`
   box-shadow: 6px 6px 0px ${({ theme }) => theme.colors.borderColor};
   width: 170px;
   z-index: 9;
-  cursor: grab;
   user-select: none;
 `;
 
@@ -19,6 +18,7 @@ export const Monitor = styled.div`
   width: 140px;
   height: 110px;
   background: ${({ theme }) => theme.colors.lime};
+  cursor: grab;
   border: 3px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 6px;
   position: relative;
@@ -59,6 +59,11 @@ export const Key = styled.div`
   font-size: 6px;
   color: ${({ theme }) => theme.colors.black};
   box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
 
 export const keys = "QWERTYUIOPASDFGHJKLZXCVB".split("");
