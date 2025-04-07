@@ -20,7 +20,7 @@ export const lightTheme: DefaultTheme = {
 
 export const darkTheme: DefaultTheme = {
   colors: {
-    lime: '#6FA994',
+    lime: '#b3f2b8',
     pink: '#FE87A4',
     pink10: '#D7738C',
     orange: '#DEBD6F',
