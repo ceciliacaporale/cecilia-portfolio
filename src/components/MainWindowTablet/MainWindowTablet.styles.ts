@@ -68,15 +68,25 @@ export const ContainerText = styled.div`
 
 export const ContainerSocialMedia = styled.div`
   position: relative;
-  top: 12rem;
-  width: 50%;
+  top: 12.2rem;
+  width: 37%;
+
+  @media (max-width: 1120px) {
+    width: 40%;
+  }
+
+  @media (max-width: 959px) {
+    width: 45%;
+  }
 
   @media (max-width: 911px) {
-    top: 13.4rem;
+    top: 14rem;
+    width: 50%;
   }
 
   @media (max-width: 850px) {
     top: 16rem;
+    width: 50%;
   }
 
   @media (max-width: 797px) {

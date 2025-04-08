@@ -25,11 +25,11 @@ export const ContentArea = styled.div`
   position: relative;
 
   @media (max-width: 979px) {
-    height: 70%;
+    height: 73%;
   }
 
   @media (max-width: 909px) {
-    height: 73%;
+    height: 77%;
   }
 
   @media (max-width: 850px) {
