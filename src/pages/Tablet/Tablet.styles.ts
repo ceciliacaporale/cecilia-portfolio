@@ -10,7 +10,10 @@ export const TabletWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
+
+  @media (min-height: 291px) and (max-height: 797px) {
+    margin-top: 6rem;
+  }
 `;
 
 export const ContentArea = styled.div`

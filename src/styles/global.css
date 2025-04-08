@@ -26,6 +26,7 @@ html, body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
   background-color: var(--color-background);
+  overflow-x: hidden;
 }
 
 .inter-font {
