@@ -35,10 +35,9 @@ export const ContentArea = styled.div`
     height: 77%;
   }
 
-  @media (max-width: 850px) {
+  @media (max-width: 860px) {
     height: 80%;
   }
-
 `;
 
 export const LoadingWindowContainer = styled.div`
