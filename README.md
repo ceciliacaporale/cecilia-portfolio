@@ -8,7 +8,7 @@ Todo o design, código e ilustrações foram feitos com muito carinho, utilizand
 A ideia principal foi criar uma experiência interativa que se destaque, com elementos arrastáveis que simulam janelas de um sistema, trazendo uma sensação nostálgica e divertida para navegar.
 
 <p align="center">
-  <a href="https://cecicaporale.com/" target="self">
+  <a href="https://cecicaporale.com/" target="_blank">
     🔗 cecicaporale.com
   </a>
 </p>
