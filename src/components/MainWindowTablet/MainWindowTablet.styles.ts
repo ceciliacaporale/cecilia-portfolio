@@ -80,7 +80,7 @@ export const ContainerSocialMedia = styled.div`
   }
 
   @media (max-width: 911px) {
-    top: 14rem;
+    top: 15rem;
     width: 50%;
   }
 

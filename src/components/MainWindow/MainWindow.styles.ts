@@ -90,6 +90,10 @@ export const ContainerImage = styled.div`
   justify-content: space-between;
   display: flex;
 
+  p{
+    font-size: 15.3px;
+  }
+
   & > div { 
     @media (min-width: 1034px) {
       width: 250px;
