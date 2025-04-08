@@ -1,22 +1,44 @@
-# Cecilia Caporale - Portfolio
 
-This is my personal portfolio, developed to showcase my skills in design, illustration, and programming. Here, you will find projects I have developed using technologies like React, Astro, and Styled Components.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e5deebeb-46ed-41dd-a4d2-cf5b46d3387a" alt="HELLO WORLD" width="600" />
+</p>
 
-## Technologies Used
-- React
-- Astro
-- Styled Components
-- Adobe Illustrator
-- TypeWriter Effect
-- Figma
+Este portfólio foi criado para apresentar meu trabalho de forma **criativa, responsiva** e **acessível**, inspirado na estética de **sistemas operacionais clássicos** e páginas da **web**.  
+Todo o design, código e ilustrações foram feitos com muito carinho, utilizando tecnologias modernas e com foco em **performance**, **SEO** e **boas práticas** de desenvolvimento.  
+A ideia principal foi criar uma experiência interativa que se destaque, com elementos arrastáveis que simulam janelas de um sistema, trazendo uma sensação nostálgica e divertida para navegar.
+
+### ✨ Destaques:
+- Interface interativa inspirada em janelas de sistema operacional
+- Navegação fluida sem scroll (single page com elementos clicáveis)
+- Design responsivo e acessível
+- Ilustrações próprias feitas no Adobe Illustrator
+- Foco em performance, SEO e boas práticas
 
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🛠️ Tecnologias utilizadas
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/09389054-4db1-4b73-86f8-96c4ff383f5b" alt="Tecnologias" width="600"/>
+</p>
+
+- [Astro](https://astro.build/) — para estrutura e performance
+- [React](https://reactjs.org/) — nos componentes interativos
+- [Styled Components](https://styled-components.com/) — para estilização
+- [Typewriter Effect](https://www.npmjs.com/package/typewriter-effect) — para animações de textos
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f08ca85d-cf50-4d50-a5d5-d19d7cd3958c" alt="Design" width="600"/>
+</p>
+
+- [GoodNotes](https://www.goodnotes.com/) — desenho de esboço da página e ideia
+- [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) — ilustrações personalizadas
+- [Storybook](https://storybook.js.org/) - [ próxima feature 📝] 
+
+## 💬 Contato
+
+Se você gostou do projeto, sugestões e colaborações são super bem-vindas!  
+Sinta-se à vontade para abrir uma issue, contribuir com ideias ou me chamar para bater um papo. 😊
+
+<p align="center">
+  <strong>Obrigada por visitar meu cantinho na web 💻🌈</strong>
+</p>
