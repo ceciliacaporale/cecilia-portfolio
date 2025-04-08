@@ -7,6 +7,12 @@ Este portfólio foi criado para apresentar meu trabalho de forma **criativa, res
 Todo o design, código e ilustrações foram feitos com muito carinho, utilizando tecnologias modernas e com foco em **performance**, **SEO** e **boas práticas** de desenvolvimento.  
 A ideia principal foi criar uma experiência interativa que se destaque, com elementos arrastáveis que simulam janelas de um sistema, trazendo uma sensação nostálgica e divertida para navegar.
 
+<p align="center">
+  <a href="https://cecicaporale.com/" target="self">
+    🔗 cecicaporale.com
+  </a>
+</p>
+
 ### ✨ Destaques:
 - Interface interativa inspirada em janelas de sistema operacional
 - Navegação fluida sem scroll (single page com elementos clicáveis)
