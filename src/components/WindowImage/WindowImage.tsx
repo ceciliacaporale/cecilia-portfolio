@@ -4,6 +4,7 @@ import Star from "../../assets/star.png?url";
 import StarPink from "../../assets/starpink.png?url";
 import { FaRegHeart } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
+import { PiCodeSimpleBold } from "react-icons/pi";
 
 interface WindowImageProps {
   title?: string;
@@ -32,7 +33,7 @@ const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, shapeStar, w
           </div></>
       )}
       <Header>
-        <CodeSymbol>&lt;  &gt;</CodeSymbol> 
+        <PiCodeSimpleBold size={15}/>
         <span>{title}</span> 
         <WindowButtons>
           <span className="minimize">-</span>

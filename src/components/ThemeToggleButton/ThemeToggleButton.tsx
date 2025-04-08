@@ -17,11 +17,11 @@ const ThemeToggleButton = () => {
        >
       {theme === 'light' ? (
         <>
-          <IoMoonOutline size={20} />
+          <IoMoonOutline size={20} color="#000" />
         </>
       ) : (
         <>
-          <IoSunnyOutline size={20} />
+          <IoSunnyOutline size={20} color="#000" />
         </>
       )}
     </ToggleButton>

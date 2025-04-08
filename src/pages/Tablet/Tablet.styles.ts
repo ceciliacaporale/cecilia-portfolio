@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ContainerMain = styled.div`
-
 `;
 
 export const TabletWrapper = styled.div`
@@ -25,21 +24,18 @@ export const ContentArea = styled.div`
   align-items: center;
   position: relative;
 
+  @media (max-width: 979px) {
+    height: 70%;
+  }
+
   @media (max-width: 909px) {
-    height: 75%;
+    height: 73%;
   }
 
-  @media (max-width: 896px) {
-    height: 76%;
+  @media (max-width: 850px) {
+    height: 80%;
   }
 
-  @media (max-width: 840px) {
-    height: 79%;
-  }
-
-  @media (max-width: 797px) {
-    height: 84%;
-  }
 `;
 
 export const LoadingWindowContainer = styled.div`

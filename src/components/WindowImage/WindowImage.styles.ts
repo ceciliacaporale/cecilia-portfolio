@@ -23,21 +23,15 @@ export const WindowImageWrapper = styled.div<WindowProps>`
   &:hover::after {
     content: "Ceci";
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    display: none;
     background: ${({ theme }) => theme.colors.black};
     color: ${({ theme }) => theme.colors.white};
-    font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 4px;
-    white-space: nowrap;
     z-index: 9999;
 }
 `;
 
 export const Header = styled.div`
   height: 20px;
-  border-radius: 12px 12px 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between; 
@@ -51,8 +45,7 @@ export const Header = styled.div`
 `;
 
 export const CodeSymbol = styled.span`
-  font-weight: bold;
-  font-size: 12px;
+
 `;
 
 export const Content = styled.div`
