@@ -119,4 +119,8 @@ export const TabsContainer = styled.div`
 export const ContentSkills = styled.div`
 padding: 20px 150px;
 margin-bottom: 2rem;
+
+@media (max-width: 890px) {
+  padding: 20px 100px;
+  }
 `;
