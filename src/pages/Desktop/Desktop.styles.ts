@@ -50,6 +50,7 @@ const heightStyles = `
   @media (max-height: 344px) {
     height: 380vh;
   }
+  
 `;
 
 export const DesktopWrapper = styled.div`
@@ -61,6 +62,10 @@ export const DesktopWrapper = styled.div`
   position: absolute;
 
   ${heightStyles}
+
+  @media (min-height: 1346px){
+    justify-content: center;
+  }
 `;
 
 export const ContentArea = styled.div`
@@ -75,16 +80,26 @@ export const ContentArea = styled.div`
   position: relative;
   bottom: 0;
 
+  @media (min-height: 1120px) {
+    bottom: 196px;
+    height: 900px;
+    border-radius: 50px;
+  }
+
+  /* @media (min-height: 1346px){
+    background-color: pink;
+  } */
+ 
   @media (max-width: 1900px) {
     max-width: 80rem;
   }
 
   @media (min-width: 2380px) {
-    max-width: 52% !important;
+    max-width: 1300px!important;
   }
 
   @media (min-width: 1901px) {
-    max-width: 70%;
+    max-width: 1300px;
   }
 
   @media (min-width: 2063px) {

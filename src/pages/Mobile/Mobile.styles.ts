@@ -14,8 +14,12 @@ export const MobileWrapper = styled.div`
   align-items: center;
   position: absolute;
 
-  @media (max-width: 430px) {
-    height: 1143px;
+  @media (max-width: 4340px) {
+    height: 1150px;
+  }
+
+  @media (max-width: 336px) {
+    height: 1300px;
   }
 `;
 
@@ -29,10 +33,6 @@ export const ContentArea = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
-
-  @media (max-width: 1901px) {
-  }
-  
 `;
 
 export const ContainerToggle = styled.div`
