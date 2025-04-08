@@ -3,7 +3,7 @@
   <img src="https://github.com/user-attachments/assets/e5deebeb-46ed-41dd-a4d2-cf5b46d3387a" alt="HELLO WORLD" width="600" />
 </p>
 
-Este portfólio foi criado para apresentar meu trabalho de forma **criativa, responsiva** e **acessível**, inspirado na estética de **sistemas operacionais clássicos** e páginas da **web**.  
+Este portfólio foi criado para apresentar meu trabalho de forma **criativa, responsiva** e **acessível**, inspirado na estética de **sistemas operacionais** e páginas da **web**.  
 Todo o design, código e ilustrações foram feitos com muito carinho, utilizando tecnologias modernas e com foco em **performance**, **SEO** e **boas práticas** de desenvolvimento.  
 A ideia principal foi criar uma experiência interativa que se destaque, com elementos arrastáveis que simulam janelas de um sistema, trazendo uma sensação nostálgica e divertida para navegar.
 
