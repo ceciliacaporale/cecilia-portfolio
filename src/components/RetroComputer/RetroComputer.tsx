@@ -1,4 +1,4 @@
-import React, { type RefObject } from "react";
+import React, { useEffect, useState, type RefObject } from "react";
 import { 
   RetroComputerWrapper, 
   Monitor, 
@@ -26,6 +26,21 @@ const perfil = [
 const RetroComputer: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | null> }> = ({ containerRef }) => {
   const { position, handleMouseDown, zIndex } = useDraggable(INITIAL_X, INITIAL_Y, containerRef as RefObject<HTMLDivElement>, WIDTH, HEIGHT);  
 
+  const [displayedText, setDisplayedText] = useState<string>("");
+  const [charIndex, setCharIndex] = useState<number>(0);
+
+  const fullText = perfil.join("\n");
+
+  useEffect(() => {
+    if (charIndex < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText(prev => prev + fullText[charIndex]);
+        setCharIndex(prev => prev + 1);
+      }, 40);
+      return () => clearTimeout(timeout);
+    }
+  }, [charIndex, fullText]);
+
   return (
     <RetroComputerWrapper
       style={{
@@ -37,13 +52,7 @@ const RetroComputer: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | 
       onMouseDown={handleMouseDown}
     >
       <Monitor>
-        <ScreenContent>
-          {perfil.map((linha, index) => (
-            <React.Fragment key={index}>
-              {linha} <br />
-            </React.Fragment>
-          ))}
-        </ScreenContent>
+        <ScreenContent>{displayedText}</ScreenContent>
       </Monitor>
       
       <Keyboard>
