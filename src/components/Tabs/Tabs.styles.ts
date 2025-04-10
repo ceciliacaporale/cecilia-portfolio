@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const Tab = styled.div`
-  padding: 2px 18px;
+  padding: 2px 24px;
   border-radius: 8px 8px 0 0;
   font-size: 14px;
   position: relative;
