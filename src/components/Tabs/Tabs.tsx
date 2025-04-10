@@ -52,14 +52,6 @@ const Tabs = () => {
 
   const [tabs, setTabs] = useState(tabsData.desktop);
 
-  useEffect(() => {
-    setTabs(tabsData[screenSize]);
-  }, [screenSize, theme]);
-
-  const handleCloseTab = (id: number) => {
-    setTabs((prevTabs) => prevTabs.filter((tab) => tab.id !== id));
-  };
-
   return (
     <TabsContainer>
       {tabs.map((tab) => (
@@ -67,9 +59,6 @@ const Tabs = () => {
           <a href={tab.link} aria-label="Abas para outras páginas" style={{ textDecoration: "none", color: "inherit" }}>
             {tab.name}
           </a>
-          <span className="close-tab" onClick={() => handleCloseTab(tab.id)}>
-            ✕
-          </span>
         </Tab>
       ))}
     </TabsContainer>
