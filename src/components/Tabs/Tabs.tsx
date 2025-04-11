@@ -5,6 +5,8 @@ import { useTheme } from "styled-components";
 const Tabs = () => {
   const [screenSize, setScreenSize] = useState<"mobile" | "tablet" | "desktop">("desktop");
   const theme = useTheme();
+  const [tabs, setTabs] = useState<{ id: number; name: string; link: string; color: string }[]>([]);
+  const [currentPath, setCurrentPath] = useState<string>("");
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -21,6 +23,7 @@ const Tabs = () => {
 
     if (typeof window !== "undefined") {
       checkScreenSize();
+      setCurrentPath(window.location.pathname);
       window.addEventListener("resize", checkScreenSize);
     }
 
@@ -29,28 +32,20 @@ const Tabs = () => {
     };
   }, []);
 
-  const tabsData = {
-    desktop: [
-      { id: 1, name: "home", link: "/", color: theme.colors.pink },
-      // { id: 2, name: "sobre mim", link: "/about", color: theme.colors.blue },
-      // { id: 3, name: "projetos", link: "/projects", color: theme.colors.orange },
-      { id: 4, name: "arquivos", link: "/files", color: theme.colors.lime },
-    ],
-    tablet: [
-      { id: 1, name: "home", link: "/", color: theme.colors.pink },
-      // { id: 2, name: "sobre mim", link: "/about", color: theme.colors.blue },
-      // { id: 3, name: "projetos", link: "/projects", color: theme.colors.orange },
-      // { id: 4, name: "arquivos", link: "/files", color: theme.colors.lime },
-    ],
-    mobile: [
-      { id: 1, name: "home", link: "/", color: theme.colors.pink },
-      // { id: 2, name: "sobre mim", link: "/about", color: theme.colors.blue },
-      // { id: 3, name: "projetos", link: "/projects", color: theme.colors.orange },
-      // { id: 4, name: "arquivos", link: "/files", color: theme.colors.lime },
-    ],
-  };
+  const allTabs = [
+    { id: 1, name: "home", link: "/", color: theme.colors.pink },
+    // { id: 2, name: "sobre mim", link: "/about", color: theme.colors.blue },
+    { id: 3, name: "projetos", link: "/projects", color: theme.colors.orange },
+    { id: 4, name: "arquivos", link: "/files", color: theme.colors.lime },
+  ];
 
-  const [tabs, setTabs] = useState(tabsData.desktop);
+  useEffect(() => {
+    if (screenSize === "mobile") {
+      setTabs(allTabs.filter((tab) => tab.link !== currentPath));
+    } else {
+      setTabs(allTabs);
+    }
+  }, [screenSize, currentPath]);
 
   return (
     <TabsContainer>
@@ -58,7 +53,7 @@ const Tabs = () => {
         <Tab key={tab.id} color={tab.color}>
           <a href={tab.link} aria-label="Abas para outras páginas" style={{ textDecoration: "none", color: "inherit" }}>
             {tab.name}
-              <span className="tab-close">x</span>
+            <span className="tab-close">x</span>
           </a>
         </Tab>
       ))}

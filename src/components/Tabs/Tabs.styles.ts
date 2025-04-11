@@ -23,6 +23,10 @@ export const Tab = styled.div`
     padding: 4.5px 20px;
     font-size: 12px;
   }
+
+  @media (max-width: 396px) {
+    padding: 4.5px 15px;
+  }
 `;
 
 export const TabsContainer = styled.div`
