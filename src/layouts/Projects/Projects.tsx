@@ -25,7 +25,6 @@ const ProjectsPage: React.FC = () => {
           spaceBetween={5}
           slidesPerView={1}
           navigation
-          pagination={{ clickable: true }}
           breakpoints={{
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },

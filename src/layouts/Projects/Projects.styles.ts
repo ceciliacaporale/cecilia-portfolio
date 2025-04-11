@@ -2,13 +2,18 @@ import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export const ContainerProjects = styled.div`
- display: flex;
+  display: flex;
   justify-content: center;
   width: 100%;
+  height: 100%;
   max-width: 1150px;
   align-items: stretch;
-  padding: 2rem 0;
+  padding-top: 2rem;
   position: relative;
+
+  @media (max-width: 422px) {
+    padding-top: 8px;
+  }
   `;
 
 export const StyledSwiper = styled(Swiper)`
@@ -16,7 +21,14 @@ export const StyledSwiper = styled(Swiper)`
   max-width: 1200px;
   overflow: hidden;
   padding: 0 2rem; 
+
+  @media (max-width: 422px) {
+    padding: 0 11px;
+  }
   
+  .swiper-wrapper {
+    height: 97%;
+  }
   .swiper-button-next,
   .swiper-button-prev, 
   .swiper-button-prev:after, 
@@ -33,16 +45,6 @@ export const StyledSwiper = styled(Swiper)`
 
   .swiper-button-prev {
     left: 0;
-  }
-
-  .swiper-pagination  {
-    position: relative;
-    margin-top: 2rem;
-
-    span {
-      background-color: ${({ theme }) => theme.colors.blue};
-      border: 1px solid ${({ theme }) => theme.colors.borderColor};
-    }
   }
 `;
 

@@ -1,27 +1,27 @@
-import ceciImg from "../assets/ceciimagem.jpg?url";
+import ceciImg from "../assets/imagem-em-construcao.png?url";
 
 export const projects = [
   {
-    title: "Projeto Ceci",
-    description: "Udsdsa dsa dsad sdsa das dasd asdasd asdasd asd sad asddsad asdsadasdsaddsadsdm projeto incrível que desenvolvi com React.",
+    title: "Em Construção",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     imageSrc: ceciImg,
     technologies: ["React", "TypeScript", "Styled Components"],
   },
   {
-    title: "Outro Projeto",
-    description: "Mais um projeto que fiz para aprender novas tecnologias.",
+    title: "Em Construção",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     imageSrc: ceciImg,
     technologies: ["Astro", "Tailwind", "JavaScript"],
   },
   {
-    title: "Outro Projeto",
-    description: "Mais um projeto que fiz para aprender novas tecnologias.",
+    title: "Em Construção",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     imageSrc: ceciImg,
-    technologies: ["Astro", "Tailwind", "JavaScript"],
+    technologies: ["Next.js", "Tailwind", "JavaScript"],
   },
   {
-    title: "Outro Projeto",
-    description: "Mais um projeto que fiz para aprender novas tecnologias.",
+    title: "Em Construção",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     imageSrc: ceciImg,
     technologies: ["Astro", "Tailwind", "JavaScript"],
   },
