@@ -27,14 +27,25 @@ const DisplayCard: React.FC<DisplayCardProps> = ({
   technologies = [],
 }) => {
   const theme = useTheme();
-  const dotColorKeys: (keyof typeof theme.colors)[] = ["pink", "orange", "lime"];
+  
+  const techColors = [
+    theme.colors.pink,
+    theme.colors.orange,
+    theme.colors.lime,
+    theme.colors.blue,
+    theme.colors.purple,
+    theme.colors.yellow,
+  ];
 
   return (
     <DisplayCardWrapper role="region" aria-label={`Projeto: ${title}`}>
       <Header>
         <DotsContainer>
-          {dotColorKeys.map((color, index) => (
-            <Dot key={index} color={typeof theme.colors[color] === "string" ? theme.colors[color] : ""} />
+          {(["pink", "orange", "lime"] as Array<keyof typeof theme.colors>).map((color, index) => (
+            <Dot
+              key={index}
+              color={typeof theme.colors[color] === "string" ? theme.colors[color] : ""}
+            />
           ))}
         </DotsContainer>
       </Header>
@@ -51,7 +62,12 @@ const DisplayCard: React.FC<DisplayCardProps> = ({
         {technologies.length > 0 && (
           <TechTagsContainer>
             {technologies.map((tech, index) => (
-              <TechTag key={index}>{tech}</TechTag>
+              <TechTag
+                key={index}
+                color={techColors[index % techColors.length]}
+              >
+                {tech}
+              </TechTag>
             ))}
           </TechTagsContainer>
         )}
@@ -59,5 +75,4 @@ const DisplayCard: React.FC<DisplayCardProps> = ({
     </DisplayCardWrapper>
   );
 };
-
 export default DisplayCard;

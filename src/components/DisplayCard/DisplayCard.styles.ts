@@ -7,19 +7,23 @@ export const DisplayCardWrapper = styled.div`
   border: 2.5px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 6px 6px 0px ${({ theme }) => theme.colors.borderColor};
+  box-shadow: 5px 5px 0px ${({ theme }) => theme.colors.borderColor};
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 422px) {
+    box-shadow: none;
+  }
+
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 10px 10px 0px ${({ theme }) => theme.colors.borderColor};
+    box-shadow: 8px 8px 0px ${({ theme }) => theme.colors.borderColor};
   }
 `;
 
 export const Header = styled.div`
-  height: 34px;
+  min-height: 34px;
   display: flex;
   align-items: center;
   padding: 0 12px;
@@ -45,6 +49,10 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+   
+  @media (max-width: 422px) {
+    padding: 6px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -71,6 +79,7 @@ export const Title = styled.h2`
   font-family: "Pixelify Sans", sans-serif;
   color: ${({ theme }) => theme.colors.black};
   margin-bottom: 8px;
+  font-weight: 200;
 `;
 
 export const Description = styled.p`
@@ -86,16 +95,20 @@ export const TechTagsContainer = styled.div`
   margin-top: auto;
 `;
 
-export const TechTag = styled.span`
+export const TechTag = styled.span<{ color: string }>`
   padding: 4px 8px;
-  border: 1px solid #000;
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
   font-size: 11px;
   border-radius: 8px;
-  color: ${({ theme }) => theme.colors.borderColor};
+  background: ${({ color }) => color};
   box-shadow: 2px 2px 0 ${({ theme }) => theme.colors.borderColor};
-  transition: #000 0.2s;
+
+  @media (max-width: 422px) {
+    font-size: 10px;
+    padding: 4px 7px;
+  }
 
   &:hover {
-    background: ${({ theme }) => theme.colors.orange};
+    opacity: 0.9;
   }
 `;
