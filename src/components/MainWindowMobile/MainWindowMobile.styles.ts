@@ -11,6 +11,7 @@ export const MainWindowMobileWrapper = styled.div`
   position: absolute;
   flex-direction: column;
   overflow: visible;
+  z-index: 999;
 `;
 
 export const WindowHeader = styled.div`
