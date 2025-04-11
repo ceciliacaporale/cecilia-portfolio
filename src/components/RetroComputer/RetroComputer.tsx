@@ -36,7 +36,7 @@ const RetroComputer: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | 
       const timeout = setTimeout(() => {
         setDisplayedText(prev => prev + fullText[charIndex]);
         setCharIndex(prev => prev + 1);
-      }, 40);
+      }, 60);
       return () => clearTimeout(timeout);
     }
   }, [charIndex, fullText]);

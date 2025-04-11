@@ -1,7 +1,7 @@
 import React from "react";
 import HeroSection from "../../components/HeroSection";
 import ResponsiveLayout from "../../components/ResponsiveLayout";
-import { ContainerMaintenance } from "./FilesPage.styles";
+import { ContainerMaintenance } from "./Files.styles";
 import MaintenanceWindow from "../../components/MaintenanceWindow";
 import ThemeWrapper from "../../ThemeWrapper";
 

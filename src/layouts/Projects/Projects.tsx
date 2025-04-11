@@ -1,5 +1,5 @@
 import React from "react";
-import { ContainerProjects, StyledSwiper, StyledSwiperSlide } from "./ProjectsPage.styles";
+import { ContainerProjects, StyledSwiper, StyledSwiperSlide } from "./Projects.styles";
 import HeroSection from "../../components/HeroSection";
 import ResponsiveLayout from "../../components/ResponsiveLayout";
 import DisplayCard from "../../components/DisplayCard";

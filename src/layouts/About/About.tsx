@@ -1,7 +1,7 @@
 import React from "react";
 import HeroSection from "../../components/HeroSection";
 import ResponsiveLayout from "../../components/ResponsiveLayout";
-import { ContainerMaintenance } from "./AboutMePage.styles";
+import { ContainerMaintenance } from "./About.styles";
 import ceciimagem from '../../assets/ceciimagem.jpg?url'
 import ThemeWrapper from "../../ThemeWrapper";
 import WindowImageSecondary from "../../components/WindowImageSecondary";
