@@ -1,5 +1,16 @@
 import React from "react";
-import { DisplayCardWrapper, Header, Content, DotsContainer, Dot, TechTagsContainer, TechTag } from "./DisplayCard.styles";
+import {
+  DisplayCardWrapper,
+  Header,
+  Content,
+  DotsContainer,
+  Dot,
+  TechTagsContainer,
+  TechTag,
+  ImageWrapper,
+  Title,
+  Description,
+} from "./DisplayCard.styles";
 import { useTheme } from "styled-components";
 
 interface DisplayCardProps {
@@ -9,48 +20,41 @@ interface DisplayCardProps {
   technologies?: string[];
 }
 
-const DisplayCard: React.FC<DisplayCardProps> = ({ 
-  title, 
-  imageSrc,
+const DisplayCard: React.FC<DisplayCardProps> = ({
+  title,
   description,
+  imageSrc,
   technologies = [],
 }) => {
-
   const theme = useTheme();
-  const dotColorKeys: (keyof typeof theme.colors)[] = ['pink', 'orange', 'lime'];
+  const dotColorKeys: (keyof typeof theme.colors)[] = ["pink", "orange", "lime"];
 
   return (
-    <DisplayCardWrapper
-      role="dialog"
-      aria-labelledby="window-info-header"
-    >
-      <Header 
-        id="window-info-header"
-      >
+    <DisplayCardWrapper role="region" aria-label={`Projeto: ${title}`}>
+      <Header>
         <DotsContainer>
-          {dotColorKeys.map((color: string, index: React.Key | null | undefined) => (
-            <Dot key={index} color={color} />
+          {dotColorKeys.map((color, index) => (
+            <Dot key={index} color={typeof theme.colors[color] === "string" ? theme.colors[color] : ""} />
           ))}
-         </DotsContainer>
+        </DotsContainer>
       </Header>
+
       <Content>
         {imageSrc && (
-          <img 
-            src={imageSrc} 
-            alt={title} 
-            width="100%" 
-            height="140px"
-          />
+          <ImageWrapper>
+            <img src={imageSrc} alt={`Imagem do projeto ${title}`} />
+          </ImageWrapper>
         )}
-      <h2>{title}</h2>
-      <p>{description}</p>
-      {technologies.length > 0 && (
-        <TechTagsContainer>
-          {technologies.map((tech, index) => (
-            <TechTag key={index}>{tech}</TechTag>
-          ))}
-        </TechTagsContainer>
-      )}
+        <Title>{title}</Title>
+        <Description>{description}</Description>
+
+        {technologies.length > 0 && (
+          <TechTagsContainer>
+            {technologies.map((tech, index) => (
+              <TechTag key={index}>{tech}</TechTag>
+            ))}
+          </TechTagsContainer>
+        )}
       </Content>
     </DisplayCardWrapper>
   );
