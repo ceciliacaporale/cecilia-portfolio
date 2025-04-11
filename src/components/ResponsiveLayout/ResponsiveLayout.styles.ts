@@ -108,7 +108,7 @@ export const ContainerMain = styled.div`
 `;
 
 export const ContentArea = styled.div`
-  padding: 0 3rem;
+  padding: 0 2rem;
   height: 89%;
 
   @media (max-width: 795px) {
