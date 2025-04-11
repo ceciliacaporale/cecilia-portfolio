@@ -23,7 +23,7 @@ const MainWindowTablet: React.FC = () => {
           <WindowImage
             imageSrc={Ceci}
             width="auto"
-            height="253px"
+            height="242px"
           />
           <ContainerText>
           <TitleAnimation strings={ ["Hello World!", "Olá Mundo!", "¡Hola Mundo!", "Ciao Mondo!"]}/>

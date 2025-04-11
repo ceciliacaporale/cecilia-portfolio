@@ -14,10 +14,11 @@ export const WindowImageWrapper = styled.div<WindowProps>`
   border: 2px solid ${({ theme }) => theme.colors.borderColor};
   overflow: hidden;
   cursor: url("/cursoryellow.png"), pointer; 
+  min-width: 200px;
 
   @media (max-width: 979px) and (min-width: 796px) {
-    margin-top: 2rem;
-    height: 200px;
+    margin-top: 3rem;
+    height: 197px;
   }
 
   &:hover::after {
