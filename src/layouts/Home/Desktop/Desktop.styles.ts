@@ -85,10 +85,6 @@ export const ContentArea = styled.div`
     height: 900px;
     border-radius: 50px;
   }
-
-  /* @media (min-height: 1346px){
-    background-color: pink;
-  } */
  
   @media (max-width: 1900px) {
     max-width: 80rem;
