@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Files from "../layouts/Files";
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 ---
 
 <html lang="pt-BR">
@@ -13,6 +14,7 @@ import Files from "../layouts/Files";
   </head>
   <body>
     <Files client:only="react" />
+    <SpeedInsights />
   </body>
   <script>
   try {

@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Responsive from "../components/Responsive";
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 ---
 
 <html lang="pt-BR">
@@ -14,6 +15,7 @@ import Responsive from "../components/Responsive";
 </head>
   <body>
     <Responsive client:only="react" />
+     <SpeedInsights />
   </body>
   <script>
   try {
