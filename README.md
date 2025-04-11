@@ -29,6 +29,7 @@ A ideia principal foi criar uma experiência interativa que se destaque, com ele
 
 - [Astro](https://astro.build/) — para estrutura e performance
 - [React](https://reactjs.org/) — nos componentes interativos
+- [TypeScript](https://www.typescriptlang.org/) — para tipagem estática e maior segurança no desenvolvimento
 - [Styled Components](https://styled-components.com/) — para estilização
 - [Typewriter Effect](https://www.npmjs.com/package/typewriter-effect) — para animações de textos
 
