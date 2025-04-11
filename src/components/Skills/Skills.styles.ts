@@ -13,6 +13,11 @@ export const SkillsWrapper = styled.div`
   height: 160px;
   z-index: 9;
   position: absolute; 
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }  
 `;
 
 export const Header = styled.div`

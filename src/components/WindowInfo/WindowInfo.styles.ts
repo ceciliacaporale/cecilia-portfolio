@@ -11,6 +11,11 @@ export const WindowInfoWrapper = styled.div`
   border: 2px solid ${({ theme }) => theme.colors.borderColor};
   user-select: none;
   overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }    
 `;
 
 export const Header = styled.div`

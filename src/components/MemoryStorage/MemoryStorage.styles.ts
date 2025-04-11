@@ -10,6 +10,11 @@ export const MemoryStorageWrapper = styled.div`
   position: relative;
   padding: 0 10px;
   user-select: none;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }  
 `;
 
 export const Header = styled.div`

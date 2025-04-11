@@ -12,6 +12,11 @@ export const RetroComputerWrapper = styled.div`
   width: 170px;
   z-index: 9;
   user-select: none;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }  
 `;
 
 export const Monitor = styled.div`

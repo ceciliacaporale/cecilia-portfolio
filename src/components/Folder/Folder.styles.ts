@@ -7,6 +7,11 @@ export const FolderWrapper = styled.div`
   cursor: pointer;
   right: -30rem;
   user-select: none;
+  transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+    }  
 
   .star-pink {
     position: absolute;

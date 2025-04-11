@@ -7,6 +7,11 @@ export const SkillsWrapper = styled.div`
   border: 2px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 10px;
   padding: 8px;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }  
 `;
 
 export const Header = styled.div`

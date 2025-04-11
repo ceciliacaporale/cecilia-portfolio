@@ -19,11 +19,15 @@ export const TerminalWrapper = styled.div`
   border-radius: 8px;
   box-shadow: 8px 8px 0 ${({ theme }) => theme.colors.pink};
   position: absolute;
-
   border: 2px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   flex-direction: column;
   z-index: 999;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }  
 
   .star {
     position: absolute;
