@@ -58,6 +58,7 @@ const Tabs = () => {
         <Tab key={tab.id} color={tab.color}>
           <a href={tab.link} aria-label="Abas para outras páginas" style={{ textDecoration: "none", color: "inherit" }}>
             {tab.name}
+              <span className="tab-close">x</span>
           </a>
         </Tab>
       ))}

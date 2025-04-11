@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const Tab = styled.div`
-  padding: 2px 24px;
+  padding: 2px 18px;
   border-radius: 8px 8px 0 0;
   font-size: 14px;
   position: relative;
@@ -10,12 +10,17 @@ export const Tab = styled.div`
   background: ${({ color }) => color};
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
 
+  .tab-close {
+    margin-left: 8px;
+    font-size: 13px;
+  }
+
   @media (max-width: 1250px) {
     padding: 3px 24px;
   }
 
   @media (max-width: 577px) {
-    padding: 4.5px 23px;
+    padding: 4.5px 20px;
     font-size: 12px;
   }
 `;
