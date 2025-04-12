@@ -5,7 +5,7 @@ export const projects = [
     title: "Em Construção",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     imageSrc: ceciImg,
-    technologies: ["React", "TypeScript", "Styled Components"],
+    technologies: ["React", "TypeScript", "Styled Components", "Strapi", "TypeWriter", "Etc"],
   },
   {
     title: "Em Construção",
