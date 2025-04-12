@@ -11,7 +11,7 @@ export const ContainerProjects = styled.div`
   padding-top: 2rem;
   position: relative;
 
-  @media (min-width:1346px) {
+  @media (min-width: 1900px) {
     max-width: 1250px!important;
   }
   
