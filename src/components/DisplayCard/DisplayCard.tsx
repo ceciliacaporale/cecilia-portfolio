@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   DisplayCardWrapper,
   Header,
@@ -8,6 +8,7 @@ import {
   TechTagsContainer,
   TechTag,
   ImageWrapper,
+  ImageSkeleton,
   Title,
   Description,
 } from "./DisplayCard.styles";
@@ -27,7 +28,8 @@ const DisplayCard: React.FC<DisplayCardProps> = ({
   technologies = [],
 }) => {
   const theme = useTheme();
-  
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
   const techColors = [
     theme.colors.pink,
     theme.colors.orange,
@@ -53,8 +55,24 @@ const DisplayCard: React.FC<DisplayCardProps> = ({
       <Content>
         {imageSrc && (
           <ImageWrapper>
-            <img src={imageSrc} alt={`Imagem do projeto ${title}`} />
-          </ImageWrapper>
+          <img
+            src={imageSrc}
+            alt={`Imagem do projeto ${title}`}
+            loading="lazy"
+            onLoad={() => setIsImageLoaded(true)}
+            onError={() => setIsImageLoaded(true)} 
+            style={{
+              opacity: isImageLoaded ? 1 : 0,
+              transition: 'opacity 0.3s ease',
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+            }}
+          />
+          {!isImageLoaded && <ImageSkeleton />}
+        </ImageWrapper>
+        
         )}
         <Title>{title}</Title>
         <Description>{description}</Description>
@@ -75,4 +93,5 @@ const DisplayCard: React.FC<DisplayCardProps> = ({
     </DisplayCardWrapper>
   );
 };
+
 export default DisplayCard;

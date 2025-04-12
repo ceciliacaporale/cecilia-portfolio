@@ -56,18 +56,12 @@ export const Content = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+    position: relative;
   width: 100%;
   height: 160px;
   overflow: hidden;
   border-radius: 6px;
   margin-bottom: 12px;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-  }
 
   &:hover img {
     transform: scale(1.05);
@@ -110,5 +104,26 @@ export const TechTag = styled.span<{ color: string }>`
 
   &:hover {
     opacity: 0.9;
+  }
+`;
+
+export const ImageSkeleton = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f4f4f4 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
   }
 `;
