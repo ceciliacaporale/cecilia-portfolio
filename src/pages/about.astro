@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import About from "../layouts/About";
 import  SpeedInsights  from "@vercel/speed-insights/astro"
+import Analytics from '@vercel/analytics/astro'
 ---
 
 <html lang="pt-BR">
@@ -15,6 +16,7 @@ import  SpeedInsights  from "@vercel/speed-insights/astro"
   <body>
     <About client:only="react" />
     <SpeedInsights />
+    <Analytics /> 
   </body>
   <script>
   try {
