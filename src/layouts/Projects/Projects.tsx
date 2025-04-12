@@ -1,7 +1,7 @@
 import React from "react";
 import { ContainerProjects, StyledSwiper, StyledSwiperSlide } from "./Projects.styles";
 import HeroSection from "../../components/HeroSection";
-import ResponsiveLayout from "../../components/ResponsiveLayout";
+import ResponsiveLayout from "../ResponsiveLayout";
 import DisplayCard from "../../components/DisplayCard";
 import { projects } from "../../data/projects";
 

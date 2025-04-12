@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSection from "../../components/HeroSection";
-import ResponsiveLayout from "../../components/ResponsiveLayout";
+import ResponsiveLayout from "../ResponsiveLayout";
 import { ContainerMaintenance } from "./About.styles";
 import ThemeWrapper from "../../ThemeWrapper";
 
