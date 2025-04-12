@@ -114,7 +114,10 @@ export const ImageSkeleton = styled.div`
   width: 100%;
   height: 160px;
   border-radius: 6px;
-  background: linear-gradient(90deg, #e0e0e0 25%, #f4f4f4 50%, #e0e0e0 75%);
+  background: ${({ theme }) =>
+    theme.colors.darkMode
+      ? "linear-gradient(90deg, #e0e0e0 25%, #f4f4f4 50%, #e0e0e0 75%)"
+      : "linear-gradient(90deg, #777 25%, #666 50%, #555 75%)"};
   background-size: 200% 100%;
   animation: shimmer 1.2s infinite;
 
