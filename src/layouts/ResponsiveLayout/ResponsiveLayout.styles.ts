@@ -129,6 +129,11 @@ export const ContainerToggle = styled.div`
   top: 5.9rem;
   right: -24rem;
 
+  
+  @media (min-height: 1120px) {
+    top: -8.3rem!important;
+  }
+  
   @media (max-width: 1251px) {
     top: 3.7rem;
   }
