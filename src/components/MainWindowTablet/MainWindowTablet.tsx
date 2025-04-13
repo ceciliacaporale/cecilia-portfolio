@@ -1,10 +1,9 @@
-import { MainWindowTabletWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia, ContentSkills } from "./MainWindowTablet.styles";
+import { MainWindowTabletWrapper, ContainerSocialMedia,  Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText } from "./MainWindowTablet.styles";
 import Ceci from "../../assets/ceci.png?url"; 
 import WindowImage from "../WindowImage";
-import SocialMedia from "../SocialMedia";
 import Tabs from "../Tabs";
 import TitleAnimation from "../TitleAnimation";
-import SkillsMobile from "../SkillsMobile";
+import SocialMedia from "@components/SocialMedia";
 
 const MainWindowTablet: React.FC = () => {
   return (
@@ -23,7 +22,7 @@ const MainWindowTablet: React.FC = () => {
           <WindowImage
             imageSrc={Ceci}
             width="auto"
-            height="242px"
+            height="285px"
           />
           <ContainerText>
           <TitleAnimation strings={ ["Hello World!", "Olá Mundo!", "¡Hola Mundo!", "Ciao Mondo!"]}/>
@@ -32,14 +31,12 @@ const MainWindowTablet: React.FC = () => {
             </p>
           </ContainerText>
         </ContentWrapper>
-        <ContentSkills>
-          <SkillsMobile />
-        </ContentSkills>
       </Container>
     </MainWindowTabletWrapper>
-      <ContainerSocialMedia>
-        <SocialMedia />
-      </ContainerSocialMedia></>
+    <ContainerSocialMedia>
+      <SocialMedia /> 
+    </ContainerSocialMedia>
+      </>
   );
 };
 

@@ -30,11 +30,18 @@ const softwares = [
 ];
 
 interface SoftwareSkillsProps {
-  containerRef: React.RefObject<HTMLDivElement | null>;
+  containerRef?: React.RefObject<HTMLDivElement | null>;
+  isDraggable?: boolean;
 }
 
-const SoftwareSkills = ({ containerRef }: SoftwareSkillsProps) => {
-  const { position, handleMouseDown, zIndex } = useDraggable(900, 380, containerRef as RefObject<HTMLDivElement>, 160, 140); 
+const SoftwareSkills = ({ containerRef, isDraggable = true }: SoftwareSkillsProps) => {
+  const { position, handleMouseDown, zIndex } = useDraggable(
+    900,
+    380,
+    containerRef as RefObject<HTMLDivElement>,
+    160,
+    140
+  ); 
   const theme = useTheme();
 
   const tooltipColorKeys: (keyof typeof theme.colors)[] = [
@@ -45,24 +52,27 @@ const SoftwareSkills = ({ containerRef }: SoftwareSkillsProps) => {
     "lime",
     "pink10"
   ];
+
   const dotColorKeys: (keyof typeof theme.colors)[] = ['pink', 'orange', 'lime'];
 
   return (
     <SkillsWrapper
-      style={{
-        left: position.x,
-        top: position.y,
-        position: "absolute", 
-        zIndex,
-      }}>
-      <Header onMouseDown={handleMouseDown}>
-        <HeaderTitle></HeaderTitle>
+      style={
+        isDraggable
+          ? { left: position.x, top: position.y, position: "absolute", zIndex }
+          : { position: "relative" }
+      }
+      onMouseDown={isDraggable ? handleMouseDown : undefined}
+    >
+      <Header>
+        <HeaderTitle />
         <DotsContainer>
           {dotColorKeys.map((colorKey, index) => (
             <Dot key={index} $colorKey={colorKey} />
           ))}
         </DotsContainer>
       </Header>
+
       <SkillsGrid>
         {softwares.map((software, index) => (
           <SkillIcon key={index} aria-label={software.name}>

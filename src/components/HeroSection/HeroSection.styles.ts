@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const HeroSectionWrapper = styled.div`
   width: 100%;
+  height: 100%;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 12px;
   position: relative;
@@ -11,7 +12,6 @@ export const HeroSectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 100%;
   z-index: 99;
   
   @media (max-width: 795px) {
@@ -27,14 +27,6 @@ export const HeroSectionWrapper = styled.div`
 
   h1 {
     padding: 20px 0 0 20px;
-    font-family: "Squada One", sans-serif;
-    color: ${({ theme }) => theme.colors.yellow};
-    text-shadow: .05em .05em 0 ${({ theme }) => theme.colors.borderColor};
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 42px;
-    -webkit-text-stroke: .025em ${({ theme }) => theme.colors.borderColor};
-
   }
 `;
 

@@ -23,8 +23,22 @@ const perfil = [
   "};",
 ];
 
-const RetroComputer: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | null> }> = ({ containerRef }) => {
-  const { position, handleMouseDown, zIndex } = useDraggable(INITIAL_X, INITIAL_Y, containerRef as RefObject<HTMLDivElement>, WIDTH, HEIGHT);  
+type RetroComputerProps = {
+  containerRef?: React.RefObject<HTMLDivElement | null>;
+  isDraggable?: boolean;
+};
+
+const RetroComputer: React.FC<RetroComputerProps> = ({
+  containerRef,
+  isDraggable = true,
+}) => {
+  const { position, handleMouseDown, zIndex } = useDraggable(
+    INITIAL_X,
+    INITIAL_Y,
+    containerRef as RefObject<HTMLDivElement>,
+    WIDTH,
+    HEIGHT
+  );
 
   const [displayedText, setDisplayedText] = useState<string>("");
   const [charIndex, setCharIndex] = useState<number>(0);
@@ -34,8 +48,8 @@ const RetroComputer: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | 
   useEffect(() => {
     if (charIndex < fullText.length) {
       const timeout = setTimeout(() => {
-        setDisplayedText(prev => prev + fullText[charIndex]);
-        setCharIndex(prev => prev + 1);
+        setDisplayedText((prev) => prev + fullText[charIndex]);
+        setCharIndex((prev) => prev + 1);
       }, 60);
       return () => clearTimeout(timeout);
     }
@@ -43,18 +57,24 @@ const RetroComputer: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | 
 
   return (
     <RetroComputerWrapper
-      style={{
-        left: position.x,
-        top: position.y,
-        position: "absolute", 
-        zIndex,
-      }}
-      onMouseDown={handleMouseDown}
+      style={
+        isDraggable
+          ? {
+              left: position.x,
+              top: position.y,
+              position: "absolute",
+              zIndex,
+            }
+          : {
+              position: "relative", 
+            }
+      }
+      onMouseDown={isDraggable ? handleMouseDown : undefined}
     >
       <Monitor>
         <ScreenContent>{displayedText}</ScreenContent>
       </Monitor>
-      
+
       <Keyboard>
         {keys.map((key) => (
           <Key key={key}>{key}</Key>

@@ -16,9 +16,20 @@ export const WindowImageWrapper = styled.div<WindowProps>`
   cursor: url("/cursoryellow.png"), pointer; 
   min-width: 200px;
 
-  @media (max-width: 979px) and (min-width: 796px) {
-    margin-top: 3rem;
-    height: 197px;
+  @media (max-width: 1099px) {
+    height: 270px;
+  }
+
+  @media (max-width: 1019px) {
+    height: 250px;
+  }
+
+  @media (max-width: 947px) {
+    height: 230px;
+  }
+
+  @media (max-width: 871px) {
+    height: 215px;
   }
 
   &:hover::after {

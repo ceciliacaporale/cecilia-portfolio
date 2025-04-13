@@ -1,16 +1,24 @@
 import styled from "styled-components";
 
 export const MainWindowTabletWrapper = styled.div`
-  width: 96%;
-  height: 94%;
+  width: 100%;
+  height: 48%;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 2rem;
   top: 1rem;
   border: 2px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
-  position: absolute;
+  position: relative;
   flex-direction: column;
   overflow: hidden;
+
+  @media (max-width: 913px) and (min-width: 845px) {
+    height: 45%!important;
+  }
+
+  @media (max-width: 912px) {
+    height: 50%;
+  }
 `;
 
 export const WindowHeader = styled.div`
@@ -66,34 +74,6 @@ export const ContainerText = styled.div`
   justify-content: center;
 `;
 
-export const ContainerSocialMedia = styled.div`
-  position: relative;
-  top: 12.2rem;
-  width: 37%;
-
-  @media (max-width: 1120px) {
-    width: 40%;
-  }
-
-  @media (max-width: 959px) {
-    width: 45%;
-  }
-
-  @media (max-width: 911px) {
-    top: 15rem;
-    width: 50%;
-  }
-
-  @media (max-width: 860px) {
-    top: 16rem;
-    width: 50%;
-  }
-
-  @media (max-width: 797px) {
-    top: 17rem;
-  }
-`;
-
 export const Tab = styled.div`
   padding: 2px 16px;
   border-radius: 8px 8px 0 0;
@@ -116,11 +96,19 @@ export const TabsContainer = styled.div`
   }
 `;
 
-export const ContentSkills = styled.div`
-padding: 20px 150px;
-margin-bottom: 2rem;
 
-@media (max-width: 890px) {
-  padding: 20px 100px;
+export const ContainerSocialMedia = styled.div`
+  position: absolute;
+  top: 5rem;
+  z-index: 999;
+  left: 59%;
+
+  @media (max-width: 913px) and (min-width: 845px) {
+    top: 5rem!important;
+  }
+
+  @media (max-width: 912px) {
+    left: 53%;
+    top: 6.8rem;
   }
 `;

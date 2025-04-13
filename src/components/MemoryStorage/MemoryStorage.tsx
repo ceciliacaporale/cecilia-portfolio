@@ -20,12 +20,16 @@ const INITIAL_Y = 380;
 const WIDTH = 455;
 const HEIGHT = 127;
 
+type MemoryStorageProps = {
+  containerRef?: React.RefObject<HTMLDivElement | null>;
+  isDraggable?: boolean;
+};
 
-const MemoryStorage: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | null> }> = ({ containerRef }) => {
+const MemoryStorage: React.FC<MemoryStorageProps> = ({ containerRef, isDraggable = true }) => {
   const [loading, setLoading] = useState(true);
   const theme = useTheme();
   const dotColorKeys: (keyof typeof theme.colors)[] = ['pink', 'orange', 'lime'];
- 
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -50,14 +54,21 @@ const MemoryStorage: React.FC<{ containerRef?: React.RefObject<HTMLDivElement | 
 
   return (
     <MemoryStorageWrapper
-      style={{ 
-        left: position.x, 
-        top: position.y, 
-        position: "absolute",
-        zIndex,
-      }}
+      style={
+        isDraggable
+          ? {
+              left: position.x,
+              top: position.y,
+              position: "absolute",
+              zIndex,
+            }
+          : {
+              position: "relative",
+            }
+      }
+      onMouseDown={isDraggable ? handleMouseDown : undefined}
     >
-      <Header onMouseDown={handleMouseDown}>
+      <Header>
         <HeaderTitle>s t o r a g e</HeaderTitle>
         <DotsContainer>
           {dotColorKeys.map((colorKey, index) => (

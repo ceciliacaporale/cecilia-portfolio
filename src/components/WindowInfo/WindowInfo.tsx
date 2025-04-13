@@ -7,6 +7,7 @@ interface WindowInfoProps {
   title?: string;
   containerRef?: React.RefObject<HTMLDivElement | null>;
   initialPosition?: { x: number; y: number };
+  isDraggable?: boolean;
 }
 
 const DEFAULT_POSITION = { x: 190, y: 640 };
@@ -15,7 +16,8 @@ const DEFAULT_SIZE = { width: 150, height: 100 };
 const WindowInfo: React.FC<WindowInfoProps> = ({ 
   title, 
   containerRef, 
-  initialPosition = DEFAULT_POSITION 
+  initialPosition = DEFAULT_POSITION,
+  isDraggable = true
 }) => {
   const { position, handleMouseDown, zIndex } = useDraggable(
     initialPosition.x, 
@@ -29,18 +31,16 @@ const WindowInfo: React.FC<WindowInfoProps> = ({
 
   return (
     <WindowInfoWrapper
-      style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        zIndex,
-      }}
+      style={
+        isDraggable
+          ? { left: `${position.x}px`, top: `${position.y}px`, position: "absolute", zIndex }
+          : { position: "relative" }
+      }
       role="dialog"
       aria-labelledby="window-info-header"
+      onMouseDown={isDraggable ? handleMouseDown : undefined}
     >
-      <Header 
-        onMouseDown={handleMouseDown}
-        id="window-info-header"
-      >
+      <Header id="window-info-header">
         {title}
       </Header>
 

@@ -1,59 +1,115 @@
 import styled from "styled-components";
 
-export const ContainerMain = styled.div`
-`;
+export const ContainerComponents = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
 
-export const TabletWrapper = styled.div`
-  width: 100vw;
-  height: 700px;
-  margin-top: 10rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .retro {
+   left: 7rem;
+   position: absolute;
 
-  @media (min-height: 291px) and (max-height: 797px) {
-    margin-top: 6rem;
-  }
-`;
-
-export const ContentArea = styled.div`
-  width: 95%; 
-  height: 71%;
-  background-color: ${({ theme }) => theme.colors.white};
-  border-radius: 50px; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-
-  @media (max-width: 979px) {
-    height: 73%;
+   @media (max-width: 1090px) {
+    left: 4rem;
+   }
   }
 
-  @media (max-width: 909px) {
-    height: 77%;
-  }
+  .memory {
+    left: 23rem;
+    top: 26rem;
+    position: absolute;
 
-  @media (max-width: 860px) {
-    height: 80%;
-  }
-`;
+    @media (max-width: 1090px) {
+    left: 17rem;
+   }
 
-export const LoadingWindowContainer = styled.div`
-  top: -2rem;
-  display: flex;
-  left: 2rem;
-  position: relative;
-`;
-
-export const ContainerToggle = styled.div`
-  position: absolute;
-  top: 9.5rem;
-  right: 10rem;
-
-  @media (min-height: 291px) and (max-height: 797px) {
-    top: 6rem;
+    @media (max-width: 844px) {
+      top: 28rem;
+      left: 18rem;
+    }
   }
   
-`
+  .skills {
+    position: absolute;
+    top: 36rem;
+    left: 27rem;
+
+    @media (max-width: 1090px) {
+    left: 20rem;
+   }
+
+    @media (max-width: 934px) {
+      left: 19rem;
+    }
+
+    @media (max-width: 874px) {
+      left: 17rem;
+    }
+
+    @media (max-width: 844px) {
+      left: 23rem;
+      top: 37rem;
+    }
+  }
+
+  .software {
+    position: absolute;
+    top: 37rem;
+    left: 53rem;
+
+    @media (max-width: 1090px) {
+    left: 46rem;
+   }
+
+    @media (max-width: 934px) {
+      left: 44rem;
+    }
+
+    @media (max-width: 874px) {
+      left: 42rem;
+    }
+
+    @media (max-width: 844px) {
+      display: none;
+    }
+  }
+
+  .info {
+    position: absolute;
+    left: 13rem;
+    top: 40rem;
+
+    @media (max-width: 1090px) {
+      left: 6rem;
+     }
+
+     @media (max-width: 844px) {
+      left: 10rem;
+    }
+  }
+
+  .folder {
+    position: absolute;
+    left: 29rem;
+    top: 28rem;
+
+    @media (max-width: 1091px) {
+    left: 20rem;
+   }
+
+   @media (max-width: 919px) {
+    left: 18rem;
+   }
+
+   @media (max-width: 885px) {
+    display: none;
+   }
+  }
+
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
