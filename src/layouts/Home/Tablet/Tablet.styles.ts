@@ -20,6 +20,9 @@ export const ContainerComponents = styled.div`
     top: 26rem;
     position: absolute;
 
+    @media (min-height: 923px) {
+      top: 27rem;
+    }
     @media (max-width: 1090px) {
     left: 17rem;
    }

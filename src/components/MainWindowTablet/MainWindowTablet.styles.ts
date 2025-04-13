@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainWindowTabletWrapper = styled.div`
   width: 100%;
-  height: 48%;
+  height: 361px;
   max-height: 400px!important;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 2rem;
@@ -18,7 +18,7 @@ export const MainWindowTabletWrapper = styled.div`
   }
 
   @media (max-width: 912px) {
-    height: 50%;
+    height: 400px;
   }
 `;
 
