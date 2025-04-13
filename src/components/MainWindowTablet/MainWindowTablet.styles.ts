@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const MainWindowTabletWrapper = styled.div`
   width: 100%;
   height: 48%;
+  max-height: 400px!important;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 2rem;
   top: 1rem;
@@ -110,5 +111,8 @@ export const ContainerSocialMedia = styled.div`
   @media (max-width: 912px) {
     left: 53%;
     top: 6.8rem;
+  }
+
+  @media (min-height: 894px) {
   }
 `;

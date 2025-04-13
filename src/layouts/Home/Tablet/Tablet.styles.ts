@@ -80,6 +80,10 @@ export const ContainerComponents = styled.div`
     left: 13rem;
     top: 40rem;
 
+    @media (min-height: 923px) {
+      top: 43rem;
+    }
+
     @media (max-width: 1090px) {
       left: 6rem;
      }
