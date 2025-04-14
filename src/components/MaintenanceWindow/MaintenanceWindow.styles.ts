@@ -10,6 +10,11 @@ export const MaintenanceWindowWrapper = styled.div`
   box-shadow: 6px 6px 0px ${({ theme }) => theme.colors.borderColor};
   border: 3px solid ${({ theme }) => theme.colors.borderColor};
   overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+    } 
 `;
 
 export const Header = styled.div`
