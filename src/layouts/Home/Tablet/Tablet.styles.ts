@@ -93,6 +93,7 @@ export const ContainerComponents = styled.div`
 
      @media (max-width: 844px) {
       left: 10rem;
+      top: 40.5rem;
     }
   }
 
