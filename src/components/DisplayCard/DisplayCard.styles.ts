@@ -31,19 +31,6 @@ export const Header = styled.div`
   border-bottom: 2.5px solid ${({ theme }) => theme.colors.borderColor};
 `;
 
-export const DotsContainer = styled.div`
-  display: flex;
-  gap: 6px;
-`;
-
-export const Dot = styled.div<{ color: string }>`
-  width: 12px;
-  height: 12px;
-  background: ${({ color }) => color};
-  border-radius: 50%;
-  border: 1.5px solid ${({ theme }) => theme.colors.borderColor};
-`;
-
 export const Content = styled.div`
   padding: 12px;
   display: flex;

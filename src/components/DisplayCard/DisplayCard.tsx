@@ -3,8 +3,6 @@ import {
   DisplayCardWrapper,
   Header,
   Content,
-  DotsContainer,
-  Dot,
   TechTagsContainer,
   TechTag,
   ImageWrapper,
@@ -13,6 +11,7 @@ import {
   Description,
 } from "./DisplayCard.styles";
 import { useTheme } from "styled-components";
+import Dots from "@components/Dots";
 
 interface DisplayCardProps {
   title?: string;
@@ -42,14 +41,7 @@ const DisplayCard: React.FC<DisplayCardProps> = ({
   return (
     <DisplayCardWrapper role="region" aria-label={`Projeto: ${title}`}>
       <Header>
-        <DotsContainer>
-          {(["pink", "orange", "lime"] as Array<keyof typeof theme.colors>).map((color, index) => (
-            <Dot
-              key={index}
-              color={typeof theme.colors[color] === "string" ? theme.colors[color] : ""}
-            />
-          ))}
-        </DotsContainer>
+        <Dots />
       </Header>
 
       <Content>
