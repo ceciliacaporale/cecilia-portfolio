@@ -69,11 +69,9 @@ export const ContentWrapper = styled.div`
   justify-content: center;
   
   p {
-    font-size: 1.2rem;
-    font-family: "Inter", sans-serif;
+    font-size: 18px;
     text-align: center;
     padding: 10px;
-    color: ${({ theme }) => theme.colors.black};
     margin-bottom: 1rem;
 
     @media (max-width: 600px) {

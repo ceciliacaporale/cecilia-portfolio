@@ -55,10 +55,7 @@ export const Container = styled.div`
   width: 100%;
  
   p {
-    color: ${({ theme }) => theme.colors.black};
     max-width: 70%;
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
   }
 
   .star-green { 

@@ -4,6 +4,7 @@ import WindowImage from "../WindowImage";
 import Tabs from "../Tabs";
 import TitleAnimation from "../TitleAnimation";
 import SocialMedia from "@components/SocialMedia";
+import BioParagraph from "@components/BioParagraph";
 
 const MainWindowTablet: React.FC = () => {
   return (
@@ -26,9 +27,7 @@ const MainWindowTablet: React.FC = () => {
           />
           <ContainerText>
           <TitleAnimation strings={ ["Hello World!", "Olá Mundo!", "¡Hola Mundo!", "Ciao Mondo!"]}/>
-            <p>
-            Sou Maria Cecília, desenvolvedora front-end. Adoro transformar ideias em código e criar experiências interativas. Quando não estou programando, provavelmente estou estudando novas tecnologias ou repensando alguma solução. Iniciei minha carreira no início de 2022 e, desde então, sigo aprendendo e evoluindo a cada projeto. Estou sempre aberta a colaborações, então sinta-se à vontade para entrar em contato para qualquer oportunidade! Bem-vindo ao meu cantinho na internet e espero que aproveite a visita!
-            </p>
+            <BioParagraph />
           </ContainerText>
         </ContentWrapper>
       </Container>

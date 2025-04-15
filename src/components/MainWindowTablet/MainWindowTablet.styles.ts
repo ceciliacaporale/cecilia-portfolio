@@ -62,10 +62,7 @@ export const ContentWrapper = styled.div`
   padding: 10px;
 
   p {
-    font-size: 18px;
-    font-family: "Inter", sans-serif;
     text-align: left;
-    color: ${({ theme }) => theme.colors.black};
   }
 `;
 
