@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import {
   TerminalWrapper,
   Header,
-  Dot,
   TerminalContent,
   Cursor,
 } from "./Terminal.styles";
 import Star from "./../../assets/staryellow.png?url"
 import useDraggable from "../../hooks/useDraggable"; 
 import { useTheme } from "styled-components";
+import Dots from "@components/Dots";
 
 interface TerminalProps {
   containerRef?: React.RefObject<HTMLDivElement | null>;
@@ -65,9 +65,7 @@ const messages = [
             zIndex,
           }}>
                 <Header onMouseDown={handleMouseDown}>
-                    <Dot color={theme.colors.pink} />
-                    <Dot color={theme.colors.orange} />
-                    <Dot color={theme.colors.lime} />
+                    <Dots />
                 </Header>
                 <TerminalContent>
                     {displayedText}

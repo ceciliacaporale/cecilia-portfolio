@@ -106,16 +106,3 @@ export const SkillIcon = styled.div<{ color: string }>`
 export const HeaderTitle = styled.span`
   color: ${({ theme }) => theme.colors.black};
 `;
-
-export const DotsContainer = styled.div`
-  display: flex;
-  gap: 5px;
-`;
-
-export const Dot = styled.div<{ $colorKey: keyof DefaultTheme['colors'] }>`
-  width: 12px;
-  height: 12px;
-  background: ${({ theme, $colorKey }) => theme.colors[$colorKey]};
-  border-radius: 50%;
-  border: 1px solid ${({ theme }) => theme.colors.borderColor};
-`;

@@ -5,14 +5,13 @@ import {
   SkillsGrid, 
   SkillIcon, 
   HeaderTitle, 
-  DotsContainer, 
-  Dot, 
   Tooltip
 } from "./Skills.styles";
 import useDraggable from "../../hooks/useDraggable";
 import { skillData } from "./skillsData";
 import Favorite from "../../assets/favorite.png?url";
 import { useTheme } from "styled-components";
+import Dots from "@components/Dots";
 
 interface SkillsProps {
   containerRef?: React.RefObject<HTMLDivElement | null>;
@@ -48,11 +47,7 @@ const Skills: React.FC<SkillsProps> = ({ containerRef, isDraggable = true }) => 
     >
       <Header>
         <HeaderTitle />
-        <DotsContainer>
-          {dotColorKeys.map((colorKey, index) => (
-            <Dot key={index} $colorKey={colorKey} />
-          ))}
-        </DotsContainer>
+        <Dots />
       </Header>
       
       <SkillsGrid>

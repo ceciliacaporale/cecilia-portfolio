@@ -5,8 +5,6 @@ import {
   SkillsGrid, 
   SkillIcon, 
   HeaderTitle, 
-  DotsContainer, 
-  Dot,
   Tooltip,  
 } from "./SoftwareSkills.styles";
 import useDraggable from "../../hooks/useDraggable";
@@ -19,6 +17,7 @@ import { DiVisualstudio } from "react-icons/di";
 import { FiFigma } from "react-icons/fi";
 import { VscAzure } from "react-icons/vsc";
 import { useTheme } from "styled-components";
+import Dots from "@components/Dots";
 
 const softwares = [
   { icon: <DiVisualstudio />, name: "VS Code"},
@@ -53,8 +52,6 @@ const SoftwareSkills = ({ containerRef, isDraggable = true }: SoftwareSkillsProp
     "pink10"
   ];
 
-  const dotColorKeys: (keyof typeof theme.colors)[] = ['pink', 'orange', 'lime'];
-
   return (
     <SkillsWrapper
       style={
@@ -66,11 +63,7 @@ const SoftwareSkills = ({ containerRef, isDraggable = true }: SoftwareSkillsProp
     >
       <Header>
         <HeaderTitle />
-        <DotsContainer>
-          {dotColorKeys.map((colorKey, index) => (
-            <Dot key={index} $colorKey={colorKey} />
-          ))}
-        </DotsContainer>
+        <Dots />
       </Header>
 
       <SkillsGrid>

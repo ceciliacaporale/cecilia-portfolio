@@ -28,19 +28,6 @@ export const HeaderTitle = styled.span`
 
 `;
 
-export const DotsContainer = styled.div`
-  display: flex;
-  gap: 4px;
-`;
-
-export const Dot = styled.div<{ $colorKey: keyof DefaultTheme['colors'] }>`
-  width: 12px;
-  height: 12px;
-  background: ${({ theme, $colorKey }) => theme.colors[$colorKey]};
-  border-radius: 50%;
-  border: 1px solid ${({ theme }) => theme.colors.borderColor};
-`;
-
 export const SkillsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);

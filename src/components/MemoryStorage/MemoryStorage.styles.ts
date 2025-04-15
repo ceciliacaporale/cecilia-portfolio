@@ -34,19 +34,6 @@ export const HeaderTitle = styled.h2`
   font-weight: 100;
 `;
 
-export const DotsContainer = styled.div`
-  display: flex;
-  gap: 5px;
-`;
-
-export const Dot = styled.div<{ $colorKey: keyof DefaultTheme['colors'] }>`
-  width: 12px;
-  height: 12px;
-  background: ${({ theme, $colorKey }) => theme.colors[$colorKey]};
-  border-radius: 50%;
-  border: 1px solid ${({ theme }) => theme.colors.borderColor};
-`;
-
 export const StorageInfo = styled.div`
   display: flex;
   justify-content: space-between;

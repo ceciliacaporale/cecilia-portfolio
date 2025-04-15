@@ -9,7 +9,7 @@ import Tabs from "../Tabs";
 import TitleAnimation from "../TitleAnimation";
 
 interface HeroSectionProps {
-  titleStrings: string[];
+  titleStrings?: string[];
   description?: string;
   children?: React.ReactNode;
 }

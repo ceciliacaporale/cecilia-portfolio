@@ -3,8 +3,6 @@ import {
   MemoryStorageWrapper, 
   Header, 
   HeaderTitle, 
-  DotsContainer, 
-  Dot, 
   StorageInfo, 
   ProgressBar, 
   BarSegment, 
@@ -14,6 +12,7 @@ import {
 } from "./MemoryStorage.styles";
 import useDraggable from "../../hooks/useDraggable";
 import { useTheme } from "styled-components";
+import Dots from "../Dots";
 
 const INITIAL_X = 350;
 const INITIAL_Y = 380;
@@ -28,7 +27,6 @@ type MemoryStorageProps = {
 const MemoryStorage: React.FC<MemoryStorageProps> = ({ containerRef, isDraggable = true }) => {
   const [loading, setLoading] = useState(true);
   const theme = useTheme();
-  const dotColorKeys: (keyof typeof theme.colors)[] = ['pink', 'orange', 'lime'];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -70,11 +68,7 @@ const MemoryStorage: React.FC<MemoryStorageProps> = ({ containerRef, isDraggable
     >
       <Header>
         <HeaderTitle>s t o r a g e</HeaderTitle>
-        <DotsContainer>
-          {dotColorKeys.map((colorKey, index) => (
-            <Dot key={index} $colorKey={colorKey} />
-          ))}
-        </DotsContainer>
+        <Dots />
       </Header>
 
       <StorageInfo>

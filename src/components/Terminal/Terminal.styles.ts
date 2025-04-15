@@ -50,15 +50,6 @@ export const Header = styled.div`
   cursor: grab;
 `;
 
-export const Dot = styled.span<{ color: string }>`
-  width: 11px;
-  height: 11px;
-  border: 1px solid ${({ theme }) => theme.colors.borderColor};
-  background: ${(props) => props.color};
-  border-radius: 50%;
-  display: inline-block;
-`;
-
 export const TerminalContent = styled.div`
   padding: 10px;
   height: 100%;
