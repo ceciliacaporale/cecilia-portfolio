@@ -29,6 +29,9 @@ export const Monitor = styled.div`
   position: relative;
   box-shadow: inset 0px 0px 8px rgba(255, 255, 255, 0.1);
   
+  &:active {
+    cursor: grabbing;
+  }
 `;
 
 export const ScreenContent = styled.pre`

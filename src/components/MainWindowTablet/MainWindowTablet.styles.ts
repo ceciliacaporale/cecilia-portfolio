@@ -18,7 +18,7 @@ export const MainWindowTabletWrapper = styled.div`
   }
 
   @media (max-width: 912px) {
-    height: 400px;
+    height: 360px;
   }
 `;
 
@@ -102,14 +102,11 @@ export const ContainerSocialMedia = styled.div`
   left: 59%;
 
   @media (max-width: 913px) and (min-width: 845px) {
-    top: 5rem!important;
+    top: 4rem!important;
   }
 
   @media (max-width: 912px) {
     left: 53%;
-    top: 6.8rem;
-  }
-
-  @media (min-height: 894px) {
+    top: 5rem;
   }
 `;

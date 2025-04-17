@@ -30,6 +30,10 @@ export const Header = styled.div`
   font-family: "Pixelify Sans", sans-serif;
   cursor: grab;
   gap: 5px;
+
+  &:active {
+    cursor: grabbing;
+  }
 `;
 
 export const Content = styled.div`

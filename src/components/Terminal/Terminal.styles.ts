@@ -48,6 +48,10 @@ export const Header = styled.div`
   padding: 5px 10px;
   user-select: none;
   cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
 `;
 
 export const TerminalContent = styled.div`

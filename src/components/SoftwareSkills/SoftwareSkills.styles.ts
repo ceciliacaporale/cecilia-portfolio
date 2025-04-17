@@ -22,6 +22,10 @@ export const Header = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
   cursor: grab;
   user-select: none;
+  
+  &:active {
+    cursor: grabbing;
+  }
 `;
 
 export const HeaderTitle = styled.span`

@@ -26,6 +26,10 @@ export const Header = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
   padding: 4px 8px;
   cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
 `;
 
 export const HeaderTitle = styled.h2`

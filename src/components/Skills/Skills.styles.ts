@@ -32,6 +32,10 @@ export const Header = styled.div`
   margin-bottom: 6px;
   cursor: grab;
   user-select: none;
+
+  &:active {
+    cursor: grabbing;
+  }
 `;
 
 export const SkillsGrid = styled.div`
