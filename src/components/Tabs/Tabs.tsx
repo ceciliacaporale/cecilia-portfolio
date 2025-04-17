@@ -4,7 +4,7 @@ import { useTheme } from "styled-components";
 
 const getTabs = (theme: any) => [
   { id: 1, name: "home", link: "/", color: theme.colors.pink },
-  { id: 2, name: "sobre mim", link: "/about", color: theme.colors.blue },
+  // { id: 2, name: "sobre mim", link: "/about", color: theme.colors.blue },
   { id: 3, name: "projetos", link: "/projects", color: theme.colors.orange },
   { id: 4, name: "arquivos", link: "/files", color: theme.colors.lime },
 ];
