@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ContainerToggle = styled.div`
   position: absolute;
-  z-index: 9999;
+  z-index: 99;
 `;
 
 export const ToggleButton = styled.button`
