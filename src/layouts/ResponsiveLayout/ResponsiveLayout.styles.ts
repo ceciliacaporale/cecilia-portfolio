@@ -79,6 +79,7 @@ export const ContainerMain = styled.div`
   align-items: center;
   position: relative;
   bottom: 0;
+  z-index: 9;
 
   @media (min-height: 1120px) {
     bottom: 196px;
