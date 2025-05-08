@@ -57,14 +57,14 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
       tooltip: "LinkedIn",
       bgColor: theme.colors.blue,
     },
-    {
-      id: "instagram",
-      icon: <PiInstagramLogoBold size={parseInt(iconSize)} />,
-      alt: "Instagram",
-      url: "https://www.instagram.com/cecicaporale/",
-      tooltip: "Instagram",
-      bgColor: theme.colors.orange,
-    },
+    // {
+    //   id: "instagram",
+    //   icon: <PiInstagramLogoBold size={parseInt(iconSize)} />,
+    //   alt: "Instagram",
+    //   url: "https://www.instagram.com/cecicaporale/",
+    //   tooltip: "Instagram",
+    //   bgColor: theme.colors.orange,
+    // },
     {
       id: "email",
       icon: <MdOutlineEmail size={parseInt(iconSize)} />,
