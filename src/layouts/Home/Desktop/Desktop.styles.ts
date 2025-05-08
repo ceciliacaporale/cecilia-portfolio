@@ -88,6 +88,8 @@ export const ContentArea = styled.div`
  
   @media (max-width: 1900px) {
     max-width: 80rem;
+    margin-top: 3rem;
+    height: 98%;
   }
 
   @media (min-width: 2380px) {
