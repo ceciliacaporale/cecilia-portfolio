@@ -69,7 +69,7 @@ export const ProjectsWrapper = styled.div`
 
 export const ContainerMain = styled.div`
   margin-top: 4rem;
-  height: 100%;
+  height: 840px;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 50px 50px 0 0;
@@ -80,6 +80,10 @@ export const ContainerMain = styled.div`
   position: relative;
   bottom: 0;
   z-index: 9;
+
+  @media (max-width: 712px) {
+  height: 820px;
+  }
 
   @media (min-height: 1120px) {
     bottom: 196px;

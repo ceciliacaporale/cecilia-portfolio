@@ -6,6 +6,10 @@ export const SkillsMobileWrapper = styled.div`
   gap: 8px;
   z-index: 999;
   justify-content: center;
+
+  @media (max-width: 450px) {
+   display: none;
+  } 
 `;
 
 export const Skills = styled.div<{ color: string }>`
