@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ProjectsWrapper = styled.div`
   width: 100vw;
   display: flex;
+  height: 100vh;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
