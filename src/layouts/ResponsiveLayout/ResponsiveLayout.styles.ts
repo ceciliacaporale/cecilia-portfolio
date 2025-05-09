@@ -12,7 +12,7 @@ const heightStyles = `
   }
 
   @media (min-height: 681px) and (max-height: 757px) {
-    height: 123vh;
+    height: 120vh;
   }
 
   @media (min-height: 639px) and (max-height: 680px) {
@@ -44,11 +44,11 @@ const heightStyles = `
   }
 
   @media (min-height: 344px) and (max-height: 437px) {
-    height: 240vh;
+    height: 190vh;
   }
 
   @media (max-height: 344px) {
-    height: 380vh;
+    height: 200vh;
   }
   
 `;
