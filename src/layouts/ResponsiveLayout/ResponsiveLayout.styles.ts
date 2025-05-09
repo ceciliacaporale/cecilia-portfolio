@@ -3,11 +3,12 @@ import styled from "styled-components";
 export const ProjectsWrapper = styled.div`
   width: 100vw;
   display: flex;
-  height: 100vh;
+  min-height: 100dvh;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   position: absolute;
+  overflow-y: auto;
 
   @media (min-height: 1346px) {
     justify-content: center;
