@@ -19,7 +19,7 @@ export const WindowImageSecondaryWrapper = styled.div<WindowProps>`
   overflow: hidden;
   flex-direction: column;
   
-  @media (max-width: 979px) and (min-width: 796px) {
+  @media (max-width: 979px) and (min-width: 606px) {
     margin-top: 2rem;
     height: 200px;
   }
