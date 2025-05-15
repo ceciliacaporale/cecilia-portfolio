@@ -12,6 +12,7 @@ import Dots from "@components/Dots";
 
 interface TerminalProps {
   containerRef?: React.RefObject<HTMLDivElement | null>;
+  isDraggable?: boolean;
 }
 
 const messages = [
@@ -23,7 +24,7 @@ const messages = [
     "..."
   ];
   
-  const Terminal: React.FC<TerminalProps> = ({ containerRef }) => {
+  const Terminal: React.FC<TerminalProps> = ({ containerRef, isDraggable = true }) => {
     const { position, handleMouseDown, zIndex } = useDraggable(
       410,
       530,
@@ -58,12 +59,11 @@ const messages = [
     return (
         <>
         <TerminalWrapper 
-           style={{
-            left: position.x,
-            top: position.y,
-            position: "absolute", 
-            zIndex,
-          }}>
+            style={
+              isDraggable
+                ? { left: position.x, top: position.y, position: "absolute", zIndex }
+                : { position: "relative" }
+            }>
                 <Header onMouseDown={handleMouseDown}>
                     <Dots />
                 </Header>
