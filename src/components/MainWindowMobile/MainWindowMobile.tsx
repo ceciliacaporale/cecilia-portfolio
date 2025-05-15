@@ -1,4 +1,4 @@
-import { MainWindowMobileWrapper, Container, RowContainer, ContainerComponents, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContentSkills, ContainerSocialMedia } from "./MainWindowMobile.styles";
+import { MainWindowMobileWrapper, Container, RowContainer, ContainerComponents, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia } from "./MainWindowMobile.styles";
 import Ceci from "../../assets/ceci.png?url"; 
 import WindowImage from "../WindowImage";
 import Tabs from "../Tabs";

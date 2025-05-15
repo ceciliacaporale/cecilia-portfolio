@@ -106,19 +106,6 @@ export const ContainerText = styled.div`
   align-items: center;
 `;
 
-export const ContentSkills = styled.div`
-  padding: 10px 50px;
-  margin-bottom: 2rem;
-
-  @media (max-width: 600px) {
-    padding: 10px 25px;
-    }
-  
-  @media (max-width: 529px) {
-    padding: 5px 10px;
-  }
-`;
-
 export const ContainerSocialMedia = styled.div`
   margin-bottom: 2rem;
 `
