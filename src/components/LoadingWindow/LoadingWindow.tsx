@@ -5,6 +5,8 @@ import { Content, Header, Loader, LoadingWindowWrapper, WindowButtons } from "./
 
 interface LoadingWindowProps {
   onClose: () => void;
+  onOpen: () => void;
+  isVisible: boolean;
   delay?: number;
 }
 
@@ -13,19 +15,21 @@ const SHAPE_SIZE = 35;
 
 const LoadingWindow: React.FC<LoadingWindowProps> = ({ 
   onClose, 
+  onOpen,
+  isVisible,
   delay = DEFAULT_DELAY 
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [internalVisible, setInternalVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(true);
+      setInternalVisible(true);
     }, delay);
 
     return () => clearTimeout(timer);
   }, [delay]);
 
-  if (!isVisible) return null;
+  if (!isVisible || !internalVisible) return null;
 
   return (
     <LoadingWindowWrapper>
