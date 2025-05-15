@@ -13,6 +13,16 @@ export const ContainerComponents = styled.div`
    @media (max-width: 1090px) {
     left: 4rem;
    }
+   @media (max-width: 742px) {
+    left: 2rem;
+   }
+
+   @media (max-width: 690px) {
+      left: 1rem;
+   }
+    @media (max-width: 666px) {
+        left: 0.5rem;
+    }
   }
 
   .memory {
@@ -31,7 +41,37 @@ export const ContainerComponents = styled.div`
       top: 28rem;
       left: 18rem;
     }
+        
+    @media (max-width: 776px) {
+      left: 17rem;
+    }
+
+    @media (max-width: 762px) {
+      left: 16rem;
+    }
+
+    @media (max-width: 742px) {
+      left: 15rem;
+   }
+
+   @media (max-width: 708px) {
+      left: 14rem;
+   }
+
+    @media (max-width: 690px) {
+      left: 13rem;
+   }
+
+   @media (max-width: 672px) {
+      left: 12.6rem;  
   }
+    @media (max-width: 666px) {
+      left: 11.5rem;
+    }
+    @media (max-width: 612px) {
+      left: 11.2rem;
+    }
+}
   
   .skills {
     position: absolute;
@@ -53,6 +93,17 @@ export const ContainerComponents = styled.div`
     @media (max-width: 844px) {
       left: 23rem;
       top: 37rem;
+    }
+
+    @media (max-width: 762px) {
+      left: 21rem;
+    }
+
+    @media (max-width: 724px) {
+      left: 17rem;
+    } 
+    @media (max-width: 672px) {
+      left: 15rem;
     }
   }
 
@@ -94,6 +145,18 @@ export const ContainerComponents = styled.div`
      @media (max-width: 844px) {
       left: 10rem;
       top: 40.5rem;
+    }
+    @media (max-width: 762px) {
+      left: 8rem;
+    } 
+
+    @media (max-width: 724px) {
+      left: 5rem;
+    } 
+
+    @media (max-width: 672px) {
+      left: 4rem;
+      top: 39rem;
     }
   }
 

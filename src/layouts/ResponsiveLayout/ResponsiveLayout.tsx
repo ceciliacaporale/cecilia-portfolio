@@ -13,9 +13,9 @@ const ResponsiveLayout: React.FC<LayoutProps> = ({ children }) => {
     const checkScreenSize = () => {
       const width = window.innerWidth;
 
-      if (width < 796) {
+      if (width < 606) {
         setScreenSize("mobile");
-      } else if (width >= 796 && width < 1251) {
+      } else if (width >= 606 && width < 1251) {
         setScreenSize("tablet");
       } else {
         setScreenSize("desktop");

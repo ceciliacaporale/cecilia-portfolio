@@ -17,6 +17,11 @@ export const RetroComputerWrapper = styled.div`
   &:hover {
     transform: scale(1.03);
   }  
+
+  @media (max-width: 666px) {
+    width: 159px;
+    padding: 7px;
+  }
 `;
 
 export const Monitor = styled.div`
@@ -31,6 +36,10 @@ export const Monitor = styled.div`
   
   &:active {
     cursor: grabbing;
+  }
+
+  @media (max-width: 666px) {
+    width: 139px;
   }
 `;
 

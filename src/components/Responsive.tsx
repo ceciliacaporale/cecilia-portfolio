@@ -6,7 +6,7 @@ import Desktop from "../layouts/Home/Desktop";
 type ScreenType = "mobile" | "tablet" | "desktop";
 
 const getScreenType = (width: number): ScreenType => {
-  if (width < 796) return "mobile";
+  if (width < 606) return "mobile";
   if (width < 1251) return "tablet";
   return "desktop";
 };

@@ -20,7 +20,7 @@ const Tabs = () => {
     const checkScreenSize = () => {
       const width = window.innerWidth;
 
-      if (width < 796) setScreenSize("mobile");
+      if (width < 606) setScreenSize("mobile");
       else if (width < 1251) setScreenSize("tablet");
       else setScreenSize("desktop");
     };

@@ -1,7 +1,7 @@
 import { styled, type DefaultTheme } from "styled-components";
 
 export const MemoryStorageWrapper = styled.div`
-  width: 450px;
+  width: 440px;
   height: 119px;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
@@ -15,6 +15,18 @@ export const MemoryStorageWrapper = styled.div`
   &:hover {
     transform: scale(1.03);
   }  
+
+  @media (max-width: 644px) { 
+    width: 435px;
+  }
+
+  @media (max-width: 628px) { 
+    width: 430px;
+  }
+
+  @media (max-width: 624px) { 
+    width: 420px;
+  }
 `;
 
 export const Header = styled.div`

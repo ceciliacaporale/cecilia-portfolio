@@ -109,4 +109,16 @@ export const ContainerSocialMedia = styled.div`
     left: 53%;
     top: 5rem;
   }
+
+  @media (max-width: 795px) {
+    top: 22rem;
+  }
+  
+  @media (max-width: 704px) {
+    top: 23rem;
+  }
+
+  @media (max-width: 718px) {
+    top: 21rem;
+  }
 `;

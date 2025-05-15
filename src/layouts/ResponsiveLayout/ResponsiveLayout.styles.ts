@@ -70,7 +70,7 @@ export const ContentArea = styled.div`
     height: 99%;
   }
 
-  @media (min-width: 796px) and (max-width: 1250px) {
+  @media (min-width: 606px) and (max-width: 1250px) {
     width: 100%;
     padding: 0 12px;
     height: 96%;
