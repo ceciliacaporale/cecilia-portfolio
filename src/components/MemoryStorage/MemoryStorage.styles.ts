@@ -12,6 +12,10 @@ export const MemoryStorageWrapper = styled.div`
   user-select: none;
   transition: transform 0.2s ease-in-out;
 
+  @media (max-width: 384px) { 
+    box-shadow:  none;
+  }
+
   &:hover {
     transform: scale(1.03);
   }  
@@ -26,6 +30,26 @@ export const MemoryStorageWrapper = styled.div`
 
   @media (max-width: 624px) { 
     width: 420px;
+  }
+
+  @media (max-width: 461px) { 
+    width: 400px;
+  }
+
+  @media (max-width: 439px) { 
+    width: 370px;
+  }
+
+  @media (max-width: 407px) { 
+    width: 363px;
+  }
+
+  @media (max-width: 396px) { 
+    width: 350px;
+  }
+
+  @media (max-width: 374px) { 
+    width: 340px;
   }
 `;
 
@@ -86,6 +110,18 @@ export const Legend = styled.div`
   color: ${({ theme }) => theme.colors.black};
   margin-bottom: 6px;
   font-family: "Pixelify Sans", sans-serif;
+
+  @media (max-width: 461px) { 
+    font-size: 10px;
+  }
+
+  @media (max-width: 396px) { 
+    font-size: 9.7px;
+  }
+  
+  @media (max-width: 374px) { 
+    font-size: 10px;
+  }
 `;
 
 export const LegendItem = styled.div`

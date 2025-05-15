@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainWindowMobileWrapper = styled.div`
   width: 96%;
-  height: 97%;
+  height: 98%;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 2rem;
   top: 1rem;
@@ -18,6 +18,26 @@ export const WindowHeader = styled.div`
   border-radius: 12px 12px 0 0;
   padding: 0 12px;
 `;
+
+export const ContainerComponents = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+`;
+
+export const RowContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+
+  @media (max-width: 372px) {
+    gap: 0.5rem;
+  }
+`;
+
 
 export const WindowButtons = styled.div`
   display: flex;
@@ -72,7 +92,6 @@ export const ContentWrapper = styled.div`
     font-size: 18px;
     text-align: center;
     padding: 10px;
-    margin-bottom: 1rem;
 
     @media (max-width: 600px) {
       font-size: 1rem;

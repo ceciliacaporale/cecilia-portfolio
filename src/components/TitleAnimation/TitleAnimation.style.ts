@@ -15,4 +15,8 @@ export const TitleAnimationWrapper = styled.h1`
         padding: 0;
         margin-bottom: 1rem;
     }
+    
+    @media (max-width: 605px) {
+        margin-bottom: 0;
+    }
 `;

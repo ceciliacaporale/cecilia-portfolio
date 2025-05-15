@@ -16,6 +16,10 @@ export const WindowInfoWrapper = styled.div`
   &:hover {
     transform: scale(1.05);
   }    
+
+  @media (max-width: 384px) { 
+    box-shadow:  none;
+  }
 `;
 
 export const Header = styled.div`
