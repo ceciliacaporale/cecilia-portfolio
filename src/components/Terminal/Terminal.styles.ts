@@ -25,6 +25,10 @@ export const TerminalWrapper = styled.div`
   z-index: 999;
   transition: transform 0.2s ease-in-out;
 
+  @media (max-width: 384px) { 
+    box-shadow: 4px 4px 0 ${({ theme }) => theme.colors.pink};
+  }
+
   &:hover {
     transform: scale(1.03);
   }  

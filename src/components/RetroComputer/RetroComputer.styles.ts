@@ -22,6 +22,10 @@ export const RetroComputerWrapper = styled.div`
     width: 159px;
     padding: 7px;
   }
+
+  @media (max-width: 384px) { 
+    box-shadow:  none;
+  }
 `;
 
 export const Monitor = styled.div`
@@ -40,6 +44,10 @@ export const Monitor = styled.div`
 
   @media (max-width: 666px) {
     width: 139px;
+  }
+
+  @media (max-width: 605px) {
+    width: 140px;
   }
 `;
 

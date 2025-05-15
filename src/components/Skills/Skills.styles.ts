@@ -18,6 +18,18 @@ export const SkillsWrapper = styled.div`
   &:hover {
     transform: scale(1.03);
   }  
+
+  @media (max-width: 394px) {
+    width: 330px;
+  }
+
+  @media (max-width: 370px) {
+    width: 310px;
+  }
+
+  @media (max-width: 384px) { 
+    box-shadow:  none;
+  }
 `;
 
 export const Header = styled.div`
