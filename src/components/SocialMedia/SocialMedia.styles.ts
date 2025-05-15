@@ -93,12 +93,10 @@ export const IconWrapper = styled.div<IconWrapperProps>`
 
   svg {
     fill: ${({ theme }) => theme.colors.black};
-    transition: fill 0.3s ease;
   }
 
   &:hover svg {
-    fill: ${({ $bgColor }) => $bgColor};
-    filter: drop-shadow(1px 1px 0 ${({ theme }) => theme.colors.borderColor});
+    transform: scale(1.1);
   }
 
   a {
