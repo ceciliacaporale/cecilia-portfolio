@@ -1,11 +1,16 @@
-import { MainWindowMobileWrapper, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContentSkills, ContainerSocialMedia } from "./MainWindowMobile.styles";
+import { MainWindowMobileWrapper, Container, RowContainer, ContainerComponents, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContentSkills, ContainerSocialMedia } from "./MainWindowMobile.styles";
 import Ceci from "../../assets/ceci.png?url"; 
 import WindowImage from "../WindowImage";
 import Tabs from "../Tabs";
 import TitleAnimation from "../TitleAnimation";
-import SkillsMobile from "../SkillsMobile";
 import SocialMedia from "../SocialMedia";
 import BioParagraph from "@components/BioParagraph";
+import Skills from "@components/Skills";
+import SoftwareSkills from "@components/SoftwareSkills";
+import RetroComputer from "@components/RetroComputer";
+import MemoryStorage from "@components/MemoryStorage";
+import Terminal from "@components/Terminal";
+import WindowInfo from "@components/WindowInfo";
 
 interface MainWindowMobileProps {
   title?: string;
@@ -39,9 +44,19 @@ const MainWindowMobile: React.FC<MainWindowMobileProps> = () => {
             <ContainerSocialMedia>
               <SocialMedia />
             </ContainerSocialMedia>
-         <ContentSkills>
-             <SkillsMobile />
-          </ContentSkills>
+            <ContainerComponents>
+            <div className="memory">
+              <MemoryStorage  isDraggable={false} />
+            </div>
+            <Terminal isDraggable={false} />
+            <Skills isDraggable={false} />
+            <RowContainer>
+            <SoftwareSkills isDraggable={false} />
+            <RetroComputer isDraggable={false} />
+            </RowContainer>
+            <WindowInfo isDraggable={false} />  
+            </ContainerComponents>
+        
       </Container>
     </MainWindowMobileWrapper>
   </>
