@@ -46,7 +46,7 @@ const Desktop: React.FC = () => {
           <MemoryStorage containerRef={containerRef} />
           <RetroComputer containerRef={containerRef} />
           <SoftwareSkills containerRef={containerRef} />
-          <Folder containerRef={containerRef} />
+          <Folder />
         </ContentArea>
       </DesktopWrapper>
     </ThemeWrapper>
