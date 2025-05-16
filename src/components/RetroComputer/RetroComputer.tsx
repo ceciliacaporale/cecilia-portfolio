@@ -16,9 +16,9 @@ const HEIGHT = 208;
 
 const perfil = [
   "const perfil = {",
-  "  nome: 'Cecília',",
-  "  idade: 24,",
-  "  local: 'Minas Gerais',",
+  "  name: 'Cecília',",
+  "  age: 24,",
+  "  location: 'Brazil',",
   "  area: 'Front-end',",
   "};",
 ];
