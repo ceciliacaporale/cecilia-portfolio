@@ -20,7 +20,7 @@ const FilesPage: React.FC = () => {
             placeholder="Em construção..."
            />
         <ContainerMaintenance>
-           {/* <MaintenanceWindow/> */}
+           <MaintenanceWindow/>
         </ContainerMaintenance>
         </HeroSection>
       </ResponsiveLayout>
