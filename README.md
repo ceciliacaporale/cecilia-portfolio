@@ -15,10 +15,9 @@ A ideia principal foi criar uma experiência interativa que se destaque, com ele
 
 ### ✨ Destaques:
 - Interface interativa inspirada em janelas de sistema operacional
-- Navegação fluida sem scroll (single page com elementos clicáveis)
-- Design responsivo e acessível
-- Ilustrações próprias feitas no Adobe Illustrator
-- Foco em performance, SEO e boas práticas
+- Design responsivo
+- Ilustrações feitas no Adobe Illustrator
+- Performance, SEO e boas práticas
 
 
 ## 🛠️ Tecnologias utilizadas
