@@ -35,7 +35,7 @@ A ideia principal foi criar uma experiência interativa que se destaque, com ele
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f08ca85d-cf50-4d50-a5d5-d19d7cd3958c" alt="Design" width="600"/>
 </p>
-
+- [Figma] (https://www.figma.com/) - layout dos componentes e processo criativo
 - [GoodNotes](https://www.goodnotes.com/) — desenho de esboço da página e ideia
 - [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) — ilustrações personalizadas
 - [Storybook](https://storybook.js.org/) - [ próxima feature 📝] 
