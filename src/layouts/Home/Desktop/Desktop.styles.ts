@@ -70,7 +70,7 @@ export const DesktopWrapper = styled.div`
 
 export const ContentArea = styled.div`
   margin-top: 4rem;
-  height: 90%;
+  height: 99%;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 50px 50px 0 0; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
