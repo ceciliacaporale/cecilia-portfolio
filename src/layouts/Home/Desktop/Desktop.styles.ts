@@ -66,6 +66,7 @@ export const DesktopWrapper = styled.div`
   @media (min-height: 1346px){
     justify-content: center;
   }
+
 `;
 
 export const ContentArea = styled.div`
@@ -79,6 +80,10 @@ export const ContentArea = styled.div`
   align-items: center;
   position: relative;
   bottom: 0;
+
+  @media (min-height: 870px){
+    height: 88%;
+  }
 
   @media (min-height: 1120px) {
     bottom: 196px;
