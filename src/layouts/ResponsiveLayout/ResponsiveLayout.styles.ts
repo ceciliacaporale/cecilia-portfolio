@@ -30,7 +30,7 @@ export const ContainerMain = styled.div`
   z-index: 9;
 
   @media (max-height: 879px) {
-    height: 776px;
+    height: 767px;
   }
 
   @media (max-width: 712px) {
