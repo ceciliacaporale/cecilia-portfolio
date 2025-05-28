@@ -45,7 +45,9 @@ A ideia principal foi criar uma experiência interativa que se destaque, com ele
 
 Se você gostou do projeto, sugestões e colaborações são super bem-vindas!  
 Sinta-se à vontade para abrir uma issue, contribuir com ideias ou me chamar para bater um papo. 😊
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/78904d49-6109-44e2-bf99-8e90498b1577" alt="Demonstração do Portfólio" />
+</p>
 <p align="center">
   <strong>Obrigada por visitar meu cantinho na web 💻🌈</strong>
 </p>
