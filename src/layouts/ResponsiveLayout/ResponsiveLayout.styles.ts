@@ -29,6 +29,10 @@ export const ContainerMain = styled.div`
   bottom: 0;
   z-index: 9;
 
+  @media (max-height: 879px) {
+    height: 767px;
+  }
+
   @media (max-width: 712px) {
   height: 820px;
   }
