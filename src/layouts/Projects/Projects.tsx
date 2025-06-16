@@ -37,6 +37,7 @@ const ProjectsPage: React.FC = () => {
                 description={project.description}
                 imageSrc={project.imageSrc}
                 technologies={project.technologies}
+                link={project.link}
               />
             </StyledSwiperSlide>
           ))}

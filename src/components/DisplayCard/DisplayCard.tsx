@@ -18,6 +18,7 @@ interface DisplayCardProps {
   description?: string;
   imageSrc?: string;
   technologies?: string[];
+  link?: string;
 }
 
 const DisplayCard: React.FC<DisplayCardProps> = ({
@@ -25,6 +26,7 @@ const DisplayCard: React.FC<DisplayCardProps> = ({
   description,
   imageSrc,
   technologies = [],
+  link
 }) => {
   const theme = useTheme();
   const [isImageLoaded, setIsImageLoaded] = useState(false);
@@ -43,28 +45,28 @@ const DisplayCard: React.FC<DisplayCardProps> = ({
       <Header>
         <Dots />
       </Header>
-
       <Content>
         {imageSrc && (
-          <ImageWrapper>
-          <img
-            src={imageSrc}
-            alt={`Imagem do projeto ${title}`}
-            loading="lazy"
-            onLoad={() => setIsImageLoaded(true)}
-            onError={() => setIsImageLoaded(true)} 
-            style={{
-              opacity: isImageLoaded ? 1 : 0,
-              transition: 'opacity 0.3s ease',
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-            }}
-          />
-          {!isImageLoaded && <ImageSkeleton />}
-        </ImageWrapper>
-        
+          <a href={link} target="_blank">
+            <ImageWrapper>
+              <img
+                src={imageSrc}
+                alt={`Imagem do projeto ${title}`}
+                loading="lazy"
+                onLoad={() => setIsImageLoaded(true)}
+                onError={() => setIsImageLoaded(true)} 
+                style={{
+                  opacity: isImageLoaded ? 1 : 0,
+                  transition: 'opacity 0.3s ease',
+                  position: 'absolute',
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
+              {!isImageLoaded && <ImageSkeleton />}
+            </ImageWrapper>
+          </a>
         )}
         <Title>{title}</Title>
         <Description>{description}</Description>
