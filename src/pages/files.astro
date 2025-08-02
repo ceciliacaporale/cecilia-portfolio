@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import Files from "../layouts/Files";
+import FilesLayout from "../layouts/Files";
 import  SpeedInsights  from "@vercel/speed-insights/astro"
 import Analytics from '@vercel/analytics/astro'
 ---
@@ -14,7 +14,7 @@ import Analytics from '@vercel/analytics/astro'
     <link rel="icon" type="image/png" href="/favicon.png">
   </head>
   <body>
-    <Files client:only="react" />
+    <FilesLayout client:only="react" />
     <SpeedInsights />
     <Analytics /> 
   </body>
