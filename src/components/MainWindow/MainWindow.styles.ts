@@ -1,4 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const float = keyframes`
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+`;
 
 export const MainWindowWrapper = styled.div`
   width: 92%;
@@ -73,6 +85,8 @@ export const Container = styled.div`
     z-index: 9;
     position: absolute;
     transition: transform 0.2s ease-in-out;
+    animation: ${float} 3s ease-in-out infinite;
+
 
     &:hover {
       transform: scale(1.2);
@@ -85,6 +99,8 @@ export const Container = styled.div`
     z-index: 9;
     position: absolute;
     transition: transform 0.2s ease-in-out;
+      animation: ${float} 3s ease-in-out infinite;
+
 
     &:hover {
       transform: scale(1.2);
