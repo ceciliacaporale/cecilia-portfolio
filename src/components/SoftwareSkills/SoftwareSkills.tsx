@@ -10,22 +10,22 @@ import {
 import useDraggable from "../../hooks/useDraggable";
 import { 
   SiAdobeillustrator, 
-  SiMiro, 
-  SiGithub 
+  SiGithub,
+  SiOpenai,
 } from "react-icons/si";
-import { DiVisualstudio } from "react-icons/di";
 import { FiFigma } from "react-icons/fi";
 import { VscAzure } from "react-icons/vsc";
 import { useTheme } from "styled-components";
 import Dots from "@components/Dots";
+import { FaDocker } from "react-icons/fa";
 
 const softwares = [
-  { icon: <DiVisualstudio />, name: "VS Code"},
-  { icon: <FiFigma />, name: "Figma"},
-  { icon: <SiAdobeillustrator />, name: "Illustrator"},
-  { icon: <SiMiro />, name: "Miro"},
-  { icon: <VscAzure />, name: "Azure"},
   { icon: <SiGithub />, name: "GitHub"},
+  { icon: <FiFigma />, name: "Figma"},
+  { icon: <SiOpenai />, name: "OpenAI"},
+  { icon: <FaDocker />, name: "Docker"},
+  { icon: <SiAdobeillustrator />, name: "Illustrator"},
+  { icon: <VscAzure />, name: "Azure"},
 ];
 
 interface SoftwareSkillsProps {
