@@ -25,6 +25,15 @@ export const TerminalWrapper = styled.div`
   z-index: 999;
   transition: transform 0.2s ease-in-out;
 
+   &::selection {
+    background: ${({ theme }) => theme.colors.pink};
+    color: ${({ theme }) => theme.colors.white};
+  }
+  *::selection {
+    background: ${({ theme }) => theme.colors.pink};
+    color: ${({ theme }) => theme.colors.white};
+  }
+
   @media (max-width: 384px) { 
     box-shadow: 4px 4px 0 ${({ theme }) => theme.colors.pink};
   }

@@ -13,6 +13,10 @@ export const HeroSectionWrapper = styled.div`
   flex-direction: column;
   overflow: hidden;
   z-index: 99;
+  &::selection {
+    background: ${({ theme }) => theme.colors.blue};
+    color: ${({ theme }) => theme.colors.white};
+  }
   
   @media (max-width: 795px) {
     width: 100%;

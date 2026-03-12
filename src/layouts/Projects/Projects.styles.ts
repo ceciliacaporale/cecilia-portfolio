@@ -10,6 +10,11 @@ export const ContainerProjects = styled.div`
   align-items: stretch;
   padding-top: 2rem;
   position: relative;
+  
+  &::selection {
+    background: ${({ theme }) => theme.colors.pink};
+    color: ${({ theme }) => theme.colors.white};
+  }
 
   @media (min-width: 1900px) {
     max-width: 1250px!important;

@@ -13,6 +13,11 @@ export const MainWindowWrapper = styled.div`
   min-height: 240px;
   height: 300px;
   z-index: 2;
+
+  &::selection {
+    background: ${({ theme }) => theme.colors.pink};
+    color: ${({ theme }) => theme.colors.white};
+  }
 `;
 
 export const WindowHeader = styled.div`
@@ -56,6 +61,10 @@ export const Container = styled.div`
  
   p {
     max-width: 70%;
+  &::selection {
+    background: ${({ theme }) => theme.colors.blue};
+    color: ${({ theme }) => theme.colors.black};
+  }
   }
 
   .star-green { 
