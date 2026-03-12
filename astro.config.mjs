@@ -2,7 +2,19 @@ import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 
 export default defineConfig({
-  integrations: [react()],
+  integrations: [
+    react({
+      babel: {
+        plugins: [
+          ['babel-plugin-styled-components', {
+            ssr: true,
+            displayName: true,
+            preprocess: false
+          }]
+        ]
+      }
+    })
+  ],
   vite: {
     ssr: {
       noExternal: ["styled-components"]
