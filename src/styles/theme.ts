@@ -14,7 +14,6 @@ export const lightTheme: DefaultTheme = {
     white: '#fff',
     whiteDark: '#fff',
     borderColor: '#000',
-    darkMode: {} as any
   },
 };
 

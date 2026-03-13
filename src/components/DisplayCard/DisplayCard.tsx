@@ -11,7 +11,7 @@ import {
   Description,
 } from "./DisplayCard.styles";
 import { useTheme } from "styled-components";
-import Dots from "@components/Dots";
+import Dots from "../Dots/Dots";
 
 interface DisplayCardProps {
   title?: string;

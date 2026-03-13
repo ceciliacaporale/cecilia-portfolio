@@ -1,56 +1,38 @@
 import React, { type RefObject } from "react";
-import { 
-  SkillsWrapper, 
-  Header, 
-  SkillsGrid, 
-  SkillIcon, 
-  HeaderTitle, 
-  Tooltip,  
+import {
+  SkillsWrapper,
+  Header,
+  SkillsGrid,
+  SkillIcon,
+  Tooltip,
 } from "./SoftwareSkills.styles";
 import useDraggable from "../../hooks/useDraggable";
-import { 
-  SiAdobeillustrator, 
-  SiGithub,
-  SiOpenai,
-} from "react-icons/si";
-import { FiFigma } from "react-icons/fi";
-import { VscAzure } from "react-icons/vsc";
-import { useTheme } from "styled-components";
-import Dots from "@components/Dots";
-import { FaDocker } from "react-icons/fa";
+import Dots from "../Dots/Dots";
+import { DEFAULT_SOFTWARES, type SoftwareItem } from "../../data/softwareSkillsData";
 
-const softwares = [
-  { icon: <SiGithub />, name: "GitHub"},
-  { icon: <FiFigma />, name: "Figma"},
-  { icon: <SiOpenai />, name: "OpenAI"},
-  { icon: <FaDocker />, name: "Docker"},
-  { icon: <SiAdobeillustrator />, name: "Illustrator"},
-  { icon: <VscAzure />, name: "Azure"},
-];
+const INITIAL_X = 900;
+const INITIAL_Y = 380;
+const WIDTH = 160;
+const HEIGHT = 140;
 
-interface SoftwareSkillsProps {
+export interface SoftwareSkillsProps {
   containerRef?: React.RefObject<HTMLDivElement | null>;
   isDraggable?: boolean;
+  softwares?: SoftwareItem[];
 }
 
-const SoftwareSkills = ({ containerRef, isDraggable = true }: SoftwareSkillsProps) => {
+const SoftwareSkills = ({
+  containerRef,
+  isDraggable = true,
+  softwares = DEFAULT_SOFTWARES,
+}: SoftwareSkillsProps) => {
   const { position, handleMouseDown, zIndex } = useDraggable(
-    900,
-    380,
+    INITIAL_X,
+    INITIAL_Y,
     containerRef as RefObject<HTMLDivElement>,
-    160,
-    140
-  ); 
-  const theme = useTheme();
-
-  const tooltipColorKeys: (keyof typeof theme.colors)[] = [
-    "blue", 
-    "pink", 
-    "orange", 
-    "yellow",
-    "lime",
-    "pink10"
-  ];
+    WIDTH,
+    HEIGHT
+  );
 
   return (
     <SkillsWrapper
@@ -62,19 +44,19 @@ const SoftwareSkills = ({ containerRef, isDraggable = true }: SoftwareSkillsProp
       onMouseDown={isDraggable ? handleMouseDown : undefined}
     >
       <Header>
-        <HeaderTitle />
         <Dots />
       </Header>
 
       <SkillsGrid>
-        {softwares.map((software, index) => (
-          <SkillIcon key={index} aria-label={software.name}>
-            {software.icon}
-            <Tooltip $colorKey={tooltipColorKeys[index]}>
-              {software.name}
-            </Tooltip>
-          </SkillIcon>
-        ))}
+        {softwares.map((software) => {
+          const Icon = software.icon;
+          return (
+            <SkillIcon key={software.name} aria-label={software.name}>
+              <Icon />
+              <Tooltip $colorKey={software.colorKey}>{software.name}</Tooltip>
+            </SkillIcon>
+          );
+        })}
       </SkillsGrid>
     </SkillsWrapper>
   );

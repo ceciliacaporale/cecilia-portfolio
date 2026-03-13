@@ -1,36 +1,32 @@
-import React, { useEffect, useState, type RefObject } from "react";
-import { 
-  RetroComputerWrapper, 
-  Monitor, 
-  ScreenContent, 
-  Keyboard, 
-  Key, 
-  keys 
+import React, { type RefObject } from "react";
+import {
+  RetroComputerWrapper,
+  Monitor,
+  ScreenContent,
+  Keyboard,
+  Key,
 } from "./RetroComputer.styles";
-import useDraggable from "../../hooks/useDraggable"; 
+import { DEFAULT_PROFILE_LINES, KEYBOARD_KEYS } from "../../data/retroComputerData";
+import { useTypingAnimation } from "../../hooks/useTypingAnimation";
+import useDraggable from "../../hooks/useDraggable";
 
 const INITIAL_X = 105;
 const INITIAL_Y = 400;
 const WIDTH = 176;
 const HEIGHT = 208;
 
-const perfil = [
-  "const perfil = {",
-  "  name: 'Cecília',",
-  "  age: 25,",
-  "  location: 'Brazil',",
-  "  area: 'Front-end',",
-  "};",
-];
-
-type RetroComputerProps = {
+export interface RetroComputerProps {
   containerRef?: React.RefObject<HTMLDivElement | null>;
   isDraggable?: boolean;
-};
+  lines?: string[];
+  typingSpeed?: number;
+}
 
 const RetroComputer: React.FC<RetroComputerProps> = ({
   containerRef,
   isDraggable = true,
+  lines = DEFAULT_PROFILE_LINES,
+  typingSpeed = 60,
 }) => {
   const { position, handleMouseDown, zIndex } = useDraggable(
     INITIAL_X,
@@ -40,34 +36,14 @@ const RetroComputer: React.FC<RetroComputerProps> = ({
     HEIGHT
   );
 
-  const [displayedText, setDisplayedText] = useState<string>("");
-  const [charIndex, setCharIndex] = useState<number>(0);
-
-  const fullText = perfil.join("\n");
-
-  useEffect(() => {
-    if (charIndex < fullText.length) {
-      const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + fullText[charIndex]);
-        setCharIndex((prev) => prev + 1);
-      }, 60);
-      return () => clearTimeout(timeout);
-    }
-  }, [charIndex, fullText]);
+  const displayedText = useTypingAnimation(lines, typingSpeed);
 
   return (
     <RetroComputerWrapper
       style={
         isDraggable
-          ? {
-              left: position.x,
-              top: position.y,
-              position: "absolute",
-              zIndex,
-            }
-          : {
-              position: "relative", 
-            }
+          ? { left: position.x, top: position.y, position: "absolute", zIndex }
+          : { position: "relative" }
       }
       onMouseDown={isDraggable ? handleMouseDown : undefined}
     >
@@ -76,7 +52,7 @@ const RetroComputer: React.FC<RetroComputerProps> = ({
       </Monitor>
 
       <Keyboard>
-        {keys.map((key) => (
+        {KEYBOARD_KEYS.map((key) => (
           <Key key={key}>{key}</Key>
         ))}
       </Keyboard>

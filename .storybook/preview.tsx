@@ -5,11 +5,8 @@ import '../src/styles/global.css';
 
 const preview: Preview = {
   parameters: {
-    // 👇 A mágica da ordenação acontece aqui!
     options: {
       storySort: {
-        // Coloque exatamente o nome dos seus títulos aqui. 
-        // O que não estiver na lista, vai para baixo em ordem alfabética.
         order: ['Apresentação', 'Componentes'], 
       },
     },
@@ -34,7 +31,7 @@ const preview: Preview = {
   
   decorators: [
     (Story) => (
-      <ThemeWrapper>
+      <ThemeWrapper initialTheme="light">
         <Story />
       </ThemeWrapper>
     ),

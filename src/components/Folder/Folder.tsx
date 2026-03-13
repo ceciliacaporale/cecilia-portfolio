@@ -1,33 +1,43 @@
 import React, { useState, type RefObject } from "react";
-import useDraggable from "../../hooks/useDraggable"; 
-import { 
-  FolderClosed, 
-  FolderOpen, 
-  FolderTab, 
-  FolderWrapper, 
-  Paper, 
-  Tooltip 
+import useDraggable from "../../hooks/useDraggable";
+import {
+  FolderClosed,
+  FolderOpen,
+  FolderTab,
+  FolderWrapper,
+  Paper,
+  Tooltip,
 } from "./Folder.styles";
-import StarPink from "../../assets/starpink.png?url"; 
+import StarPink from "../../assets/starpink.png?url";
 
-interface FolderProps {
+export interface FolderProps {
   containerRef?: React.RefObject<HTMLDivElement | null>;
   isDraggable?: boolean;
+  href?: string;
+  tooltipText?: string;
+  showStar?: boolean;
 }
 
-const Folder: React.FC<FolderProps> = ({ containerRef, isDraggable = true }) => {
+const Folder: React.FC<FolderProps> = ({
+  containerRef,
+  isDraggable = true,
+  href = "/files",
+  tooltipText = "Arquivos",
+  showStar = true,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { position, handleMouseDown, zIndex } = useDraggable(1130, 400, containerRef as RefObject<HTMLDivElement>, 100, 70);
-
-  const handleMouseEnter = () => setIsOpen(true);
-  const handleMouseLeave = () => setIsOpen(false);
+  const { position, handleMouseDown, zIndex } = useDraggable(
+    1130, 400,
+    containerRef as RefObject<HTMLDivElement>,
+    100, 70
+  );
 
   return (
-    <a href="/files" aria-label="Página de arquivos">
+    <a href={href} aria-label={tooltipText}>
       <FolderWrapper
         onMouseDown={isDraggable ? handleMouseDown : undefined}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
         style={
           isDraggable
             ? { left: position.x, top: position.y, position: "absolute", zIndex }
@@ -35,16 +45,20 @@ const Folder: React.FC<FolderProps> = ({ containerRef, isDraggable = true }) => 
         }
       >
         <Tooltip className={isOpen ? "visible" : ""}>
-          Arquivos
+          {tooltipText}
         </Tooltip>
-        <div className="star-pink">
-          <img src={StarPink} width={30} height={30} alt="Shape de um brilho rosa"/>
-        </div>
+
+        {showStar && (
+          <div className="star-pink">
+            <img src={StarPink} width={30} height={30} alt="Shape de um brilho rosa" />
+          </div>
+        )}
+
         <FolderTab />
         {isOpen ? <FolderOpen /> : <FolderClosed />}
         <Paper style={{ transform: isOpen ? "translateY(-5px)" : "translateY(20px)", opacity: isOpen ? 1 : 0 }} />
       </FolderWrapper>
-    </a> 
+    </a>
   );
 };
 

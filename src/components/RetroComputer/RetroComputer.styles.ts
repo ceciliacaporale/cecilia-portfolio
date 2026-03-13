@@ -10,21 +10,20 @@ export const RetroComputerWrapper = styled.div`
   border: 3px solid ${({ theme }) => theme.colors.borderColor};
   box-shadow: 6px 6px 0px ${({ theme }) => theme.colors.borderColor};
   width: 170px;
-  z-index: 9;
   user-select: none;
   transition: transform 0.2s ease-in-out;
 
   &:hover {
     transform: scale(1.03);
-  }  
+  }
 
   @media (max-width: 666px) {
     width: 159px;
     padding: 7px;
   }
 
-  @media (max-width: 384px) { 
-    box-shadow:  none;
+  @media (max-width: 384px) {
+    box-shadow: none;
   }
 `;
 
@@ -35,29 +34,19 @@ export const Monitor = styled.div`
   cursor: grab;
   border: 3px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 6px;
-  position: relative;
   box-shadow: inset 0px 0px 8px rgba(255, 255, 255, 0.1);
-  
+
   &:active {
     cursor: grabbing;
-  }
-
-  @media (max-width: 666px) {
-    width: 139px;
-  }
-
-  @media (max-width: 605px) {
-    width: 140px;
   }
 `;
 
 export const ScreenContent = styled.pre`
   color: ${({ theme }) => theme.colors.borderColor};
-  font-family: monospace;
   font-size: 12.5px;
   padding: 4px;
   white-space: pre-wrap;
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: "Pixelify Sans", monospace;
 `;
 
 export const Keyboard = styled.div`
@@ -85,10 +74,8 @@ export const Key = styled.div`
   color: ${({ theme }) => theme.colors.black};
   box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease-in-out;
-  
+
   &:hover {
     transform: scale(1.2);
   }
 `;
-
-export const keys = "QWERTYUIOPASDFGHJKLZXCVB".split("");

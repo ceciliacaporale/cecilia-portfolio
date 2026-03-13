@@ -1,19 +1,33 @@
 import React from "react";
 import { DotsContainer, Dot } from "./Dots.styles";
-import { useTheme } from "styled-components";
+import type { DefaultTheme } from "styled-components";
 
-type DotsProps = {
-  colorKeys?: (keyof ReturnType<typeof useTheme>['colors'])[];
+export type DotColorKey = keyof DefaultTheme["colors"];
+export type DotSize = "sm" | "md" | "lg";
+
+const DOT_SIZES: Record<DotSize, number> = {
+  sm: 8,
+  md: 12,
+  lg: 16,
 };
 
-const Dots: React.FC<DotsProps> = ({ colorKeys }) => {
-  const theme = useTheme();
-  const dotColorKeys = colorKeys ?? ['pink', 'orange', 'lime'];
+const DEFAULT_COLOR_KEYS: DotColorKey[] = ["pink", "orange", "lime"];
+
+export interface DotsProps {
+  colorKeys?: DotColorKey[];
+  size?: DotSize;
+}
+
+const Dots: React.FC<DotsProps> = ({
+  colorKeys = DEFAULT_COLOR_KEYS,
+  size = "md",
+}) => {
+  const sizePx = DOT_SIZES[size];
 
   return (
     <DotsContainer>
-      {dotColorKeys.map((colorKey, index) => (
-        <Dot key={index} $colorKey={colorKey} />
+      {colorKeys.map((colorKey, index) => (
+        <Dot key={index} $colorKey={colorKey} $size={sizePx} />
       ))}
     </DotsContainer>
   );

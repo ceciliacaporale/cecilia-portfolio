@@ -1,4 +1,5 @@
-import { styled, type DefaultTheme } from "styled-components";
+import styled from "styled-components";
+import type { DotColorKey } from "../Dots/Dots";
 
 export const SkillsWrapper = styled.div`
   width: 160px;
@@ -11,25 +12,21 @@ export const SkillsWrapper = styled.div`
 
   &:hover {
     transform: scale(1.03);
-  }  
+  }
 `;
 
 export const Header = styled.div`
   display: flex;
   align-items: center;
-  padding: 4px 4px;
+  padding: 4px;
   border-radius: 6px 6px 0 0;
   border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
   cursor: grab;
   user-select: none;
-  
+
   &:active {
     cursor: grabbing;
   }
-`;
-
-export const HeaderTitle = styled.span`
-
 `;
 
 export const SkillsGrid = styled.div`
@@ -40,7 +37,7 @@ export const SkillsGrid = styled.div`
   justify-items: center;
 `;
 
-export const Tooltip = styled.div<{ $colorKey: keyof DefaultTheme["colors"] }>`
+export const Tooltip = styled.div<{ $colorKey: DotColorKey }>`
   position: absolute;
   bottom: 38px;
   left: 50%;
@@ -52,13 +49,12 @@ export const Tooltip = styled.div<{ $colorKey: keyof DefaultTheme["colors"] }>`
   font-size: 10px;
   white-space: nowrap;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
   font-family: "Pixelify Sans", sans-serif;
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
   box-shadow: 1px 1px 0px ${({ theme }) => theme.colors.borderColor};
+  transition: opacity 0.3s ease, transform 0.3s ease;
 `;
-
 
 export const SkillIcon = styled.div`
   width: 36px;
@@ -73,10 +69,10 @@ export const SkillIcon = styled.div`
   position: relative;
   font-size: 24px;
   color: ${({ theme }) => theme.colors.black};
-  
+  transition: transform 0.2s ease-in-out;
+
   &:hover {
     transform: scale(1.1);
-    transition: 0.2s;
   }
 
   &:hover ${Tooltip} {

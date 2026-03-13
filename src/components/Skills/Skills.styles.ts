@@ -1,4 +1,5 @@
-import { styled, type DefaultTheme } from "styled-components";
+import styled from "styled-components";
+import type { DotColorKey } from "../Dots/Dots";
 
 export const SkillsWrapper = styled.div`
   display: flex;
@@ -28,7 +29,7 @@ export const SkillsWrapper = styled.div`
   }
 
   @media (max-width: 384px) { 
-    box-shadow:  none;
+    box-shadow: none;
   }
 `;
 
@@ -80,7 +81,7 @@ export const Tooltip = styled.span`
   box-shadow: 1px 1px 0px ${({ theme }) => theme.colors.borderColor};
 `;
 
-export const SkillIcon = styled.div<{ color: string }>`
+export const SkillIcon = styled.div<{ $colorKey: DotColorKey }>`
   font-size: 20px;
   color: ${({ theme }) => theme.colors.black};
   display: flex;
@@ -88,7 +89,7 @@ export const SkillIcon = styled.div<{ color: string }>`
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: ${(props) => props.color}; 
+  background: ${({ theme, $colorKey }) => theme.colors[$colorKey]};
   border: 2px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 5px;
   box-shadow: 2px 2px 0px ${({ theme }) => theme.colors.borderColor};
