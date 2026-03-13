@@ -8,10 +8,10 @@ import {
   ContainerSocialMedia
 } from "./MainWindow.styles";
 import Ceci from "../../assets/ceci.png?url";
-import WindowImage from "../WindowImage";
-import SocialMedia from "../SocialMedia";
-import Tabs from "../Tabs";
-import TitleAnimation from "../TitleAnimation";
+import WindowImage from "../../components/WindowImage";
+import SocialMedia from "../../components/SocialMedia";
+import Tabs from "../../components/Tabs";
+import TitleAnimation from "../../components/TitleAnimation";
 import BioParagraph from "@components/BioParagraph";
 
 interface MainWindowProps {

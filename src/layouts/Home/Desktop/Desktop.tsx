@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { DesktopWrapper, ContentArea, ContainerToggle } from "./Desktop.styles";
 import LoadingWindow from "../../../components/LoadingWindow";
 import ToggleIcon from "../../../components/ToggleIcon";
-import MainWindow from "../../../components/MainWindow";
+import MainWindow from "../../../sections/MainWindow";
 import RetroComputer from "../../../components/RetroComputer";
 import Folder from "../../../components/Folder";
 import SoftwareSkills from "../../../components/SoftwareSkills";
@@ -32,7 +32,6 @@ const Desktop: React.FC = () => {
           <LoadingWindow 
             isVisible={isLoadingVisible}
             onClose={() => setIsLoadingVisible(false)}
-            onOpen={() => setIsLoadingVisible(true)}
           />
           
           {!isLoadingVisible && (

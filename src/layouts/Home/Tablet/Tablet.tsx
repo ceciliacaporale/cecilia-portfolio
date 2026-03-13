@@ -1,5 +1,5 @@
 import React from "react";
-import MainWindowTablet from "../../../components/MainWindowTablet";
+import MainWindowTablet from "../../../sections/MainWindowTablet";
 import ThemeWrapper from "../../../ThemeWrapper";
 import ResponsiveLayout from "src/layouts/ResponsiveLayout";
 import { ContainerComponents } from "./Tablet.styles";

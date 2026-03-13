@@ -1,5 +1,5 @@
 import ThemeWrapper from "../../../ThemeWrapper";
-import MainWindowMobile from "../../../components/MainWindowMobile/MainWindowMobile";
+import MainWindowMobile from "../../../sections/MainWindowMobile/MainWindowMobile";
 import { MobileWrapper, ContentArea, ContainerMain, ContainerToggle } from "./Mobile.styles";
 import ThemeToggleButton from "../../../components/ThemeToggleButton";
 

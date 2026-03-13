@@ -1,9 +1,9 @@
 import { MainWindowMobileWrapper, Container, RowContainer, ContainerComponents, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia } from "./MainWindowMobile.styles";
 import Ceci from "../../assets/ceci.png?url"; 
-import WindowImage from "../WindowImage";
-import Tabs from "../Tabs";
-import TitleAnimation from "../TitleAnimation";
-import SocialMedia from "../SocialMedia";
+import WindowImage from "../../components/WindowImage";
+import Tabs from "../../components/Tabs";
+import TitleAnimation from "../../components/TitleAnimation";
+import SocialMedia from "../../components/SocialMedia";
 import BioParagraph from "@components/BioParagraph";
 import Skills from "@components/Skills";
 import SoftwareSkills from "@components/SoftwareSkills";
