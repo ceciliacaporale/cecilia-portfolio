@@ -17,10 +17,10 @@ export const skillData = [
   { icon: <FaReact />, name: "React", favorite: true },
   { icon: <TbBrandNextjs />, name: "Next.js", favorite: false },
   { icon: <SiTypescript />, name: "TypeScript", favorite: true },
-  { icon: <SiTailwindcss />, name: "Tailwind CSS", favorite: false }, // substitui HTML
+  { icon: <SiTailwindcss />, name: "Tailwind CSS", favorite: false },
   { icon: <FaCss3Alt />, name: "CSS", favorite: false },
   { icon: <SiStyledcomponents />, name: "Styled Components", favorite: false },
   { icon: <SiStrapi />, name: "Strapi", favorite: true },
-  { icon: <SiPhp />, name: "PHP", favorite: false }, // substitui Storybook
+  { icon: <SiPhp />, name: "PHP", favorite: false },
   { icon: <FaGitAlt />, name: "Git", favorite: false },
 ];
