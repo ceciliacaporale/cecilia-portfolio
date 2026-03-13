@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import type { DotColorKey } from "../Dots/Dots";
 
 const COLORS = {
   gradient: `linear-gradient(to bottom,
@@ -31,15 +32,15 @@ export const LoadingWindowWrapper = styled.div`
   }
 `;
 
-export const Header = styled.div`
+export const Header = styled.div<{ $colorKey: DotColorKey }>`
   height: 25px;
-  background: ${({ theme }) => theme.colors.orange};
+  background: ${({ theme, $colorKey }) => theme.colors[$colorKey]};
   border-radius: 8px 8px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px;
-  border-bottom: 2px solid ${({ theme }) => theme.colors.borderColor};;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.borderColor};
   font-size: 14px;
   user-select: none;
   font-family: "Pixelify Sans", sans-serif;
@@ -86,7 +87,7 @@ export const WindowButtons = styled.div`
     background: none;
     border: none;
     transition: color 0.2s ease-in-out;
-    
+
     &:hover {
       transform: scale(1.2);
     }

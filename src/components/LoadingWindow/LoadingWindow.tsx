@@ -1,62 +1,79 @@
 import React, { useState, useEffect } from "react";
-import styled, { keyframes } from "styled-components";
 import Shape from "../../assets/shape.png?url";
-import { Content, Header, Loader, LoadingWindowWrapper, WindowButtons } from "./LoadingWindow.styles";
+import {
+  Content,
+  Header,
+  Loader,
+  LoadingWindowWrapper,
+  WindowButtons,
+} from "./LoadingWindow.styles";
+import type { DotColorKey } from "../Dots/Dots";
 
-interface LoadingWindowProps {
+const DEFAULT_DELAY = 5000;
+const DEFAULT_SHAPE_SIZE = 35;
+
+export interface LoadingWindowProps {
   onClose: () => void;
-  onOpen: () => void;
   isVisible: boolean;
   delay?: number;
+  title?: string;
+  headerColorKey?: DotColorKey;
+  shapeSize?: number;
+  showStar?: boolean;
+  skipDelay?: boolean;
 }
 
-const DEFAULT_DELAY = 5000; 
-const SHAPE_SIZE = 35;
-
-const LoadingWindow: React.FC<LoadingWindowProps> = ({ 
-  onClose, 
-  onOpen,
+const LoadingWindow: React.FC<LoadingWindowProps> = ({
+  onClose,
   isVisible,
-  delay = DEFAULT_DELAY 
+  delay = DEFAULT_DELAY,
+  title = "constant evolution",
+  headerColorKey = "orange",
+  shapeSize = DEFAULT_SHAPE_SIZE,
+  showStar = true,
+  skipDelay = false,
 }) => {
-  const [internalVisible, setInternalVisible] = useState(false);
+  const [internalVisible, setInternalVisible] = useState(skipDelay);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if (skipDelay) {
       setInternalVisible(true);
-    }, delay);
-
+      return;
+    }
+    const timer = setTimeout(() => setInternalVisible(true), delay);
     return () => clearTimeout(timer);
-  }, [delay]);
+  }, [delay, skipDelay]);
 
   if (!isVisible || !internalVisible) return null;
 
   return (
     <LoadingWindowWrapper>
       <WindowButtons>
-        <button 
-          className="close" 
+        <button
+          className="close"
           onClick={onClose}
           aria-label="Fechar janela"
         >
           ✕
         </button>
       </WindowButtons>
-      
-      <Header className="draggable-header">
-        constant evolution
+
+      <Header $colorKey={headerColorKey}>
+        {title}
       </Header>
-      
+
       <Content>
-        <div className="star">
-          <img 
-            src={Shape} 
-            width={SHAPE_SIZE} 
-            height={SHAPE_SIZE}
-            alt="Shape de uma estrela"
-          />
-        </div>
-        
+        {showStar && (
+          <div className="star">
+            <img
+              src={Shape}
+              width={shapeSize}
+              height={shapeSize}
+              alt="Shape decorativo"
+            />
+          </div>
+        )}
+
         <Loader>
           <div className="container">
             {[...Array(3)].map((_, i) => (

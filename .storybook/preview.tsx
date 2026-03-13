@@ -1,21 +1,36 @@
 import type { Preview } from '@storybook/react-vite';
 import React from 'react';
-import ThemeWrapper from '../src/ThemeWrapper'; 
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from '../src/styles/theme';
 import '../src/styles/global.css';
 
 const preview: Preview = {
+  globalTypes: {
+    theme: {
+      name: 'Tema',
+      defaultValue: 'light',
+      toolbar: {
+        icon: 'circlehollow',
+        items: [
+          { value: 'light', title: '☀️ Light' },
+          { value: 'dark',  title: '🌙 Dark'  },
+        ],
+        dynamicTitle: true,
+      },
+    },
+  },
   parameters: {
     options: {
       storySort: {
-        order: ['Apresentação', 'Componentes'], 
+        order: ['Apresentação', 'Componentes'],
       },
     },
     backgrounds: {
       default: 'Claro (Projeto)',
       values: [
-        { name: 'Claro (Projeto)', value: '#FCE6CA' }, 
-        { name: 'Branco', value: '#FFFFFF' },
-        { name: 'Escuro (Projeto)', value: '#181718' }, 
+        { name: 'Claro (Projeto)', value: '#FCE6CA' },
+        { name: 'Branco',          value: '#FFFFFF'  },
+        { name: 'Escuro (Projeto)',value: '#181718'  },
       ],
     },
     controls: {
@@ -24,17 +39,20 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    a11y: {
-      test: 'todo',
-    },
+    a11y: { test: 'todo' },
   },
-  
+
   decorators: [
-    (Story) => (
-      <ThemeWrapper initialTheme="light">
-        <Story />
-      </ThemeWrapper>
-    ),
+    (Story, context) => {
+      const isDark = context.globals.theme === 'dark';
+      const theme  = isDark ? darkTheme : lightTheme;
+
+      return (
+        <ThemeProvider theme={theme}>
+          <Story />
+        </ThemeProvider>
+      );
+    },
   ],
 };
 

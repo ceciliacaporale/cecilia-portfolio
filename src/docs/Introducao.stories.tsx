@@ -69,7 +69,7 @@ const Tag = ({ name, color }: { name: string; color: string }) => (
     padding: '6px 14px',
     fontSize: 13,
     fontWeight: 700,
-    fontFamily: '"Pixelify Sans", sans-serif',
+    fontFamily: '"Inter", sans-serif',
     boxShadow: '2px 2px 0px #000',
     whiteSpace: 'nowrap',
   }}>
@@ -133,8 +133,7 @@ export const BemVindo: Story = {
             cecicaporale.com
           </h1>
           <p style={{ fontSize: 16, lineHeight: 1.7, maxWidth: 540, margin: '0 0 28px', opacity: 0.8 }}>
-            Documentação dos componentes do meu portfólio — 
-            desenvolvidos com React, Styled Components e Storybook. 
+            Documentação dos componentes do meu portfólio
           </p>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {techStack.map(t => <Tag key={t.name} name={t.name} color={t.color} />)}
