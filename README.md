@@ -12,6 +12,11 @@ A ideia principal foi criar uma experiência interativa que se destaque, com ele
     🔗 cecicaporale.com
   </a>
 </p>
+<p align="center">
+  <a href="https://storybook.cecicaporale.com/" target="_blank">
+    🔗 storybook
+  </a>
+</p>
 
 ### ✨ Destaques:
 - Interface interativa inspirada em janelas de sistema operacional
@@ -39,7 +44,7 @@ A ideia principal foi criar uma experiência interativa que se destaque, com ele
 - [Figma](https://www.figma.com/) — layout dos componentes e processo criativo  
 - [GoodNotes](https://www.goodnotes.com/) — desenho de esboço da página e ideia  
 - [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) — ilustrações personalizadas  
-- [Storybook](https://storybook.js.org/) — próxima feature 📝  
+- [Storybook](https://storybook.js.org/) — para documentar os componentes utilizados no portfólio  
 
 ## 💬 Contato
 
