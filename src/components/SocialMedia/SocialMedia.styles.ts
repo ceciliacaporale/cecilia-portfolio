@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
+import type { DotColorKey } from '../Dots/Dots';
 
 const pulseShadowAnimation = (theme: any) => keyframes`
   0% {
@@ -19,16 +20,7 @@ const pulseShadowAnimation = (theme: any) => keyframes`
   }
 `;
 
-interface SocialMediaWrapperProps {
-  width?: string;
-  height?: string;
-}
-
-interface IconWrapperProps {
-  $bgColor: string;
-}
-
-export const SocialMediaWrapper = styled.div<SocialMediaWrapperProps>`
+export const SocialMediaWrapper = styled.div`
   ${({ theme }) => css`
     width: 235px;
     height: 70px;
@@ -87,7 +79,7 @@ export const Content = styled.div`
   }
 `;
 
-export const IconWrapper = styled.div<IconWrapperProps>`
+export const IconWrapper = styled.div<{ $colorKey: DotColorKey }>`
   position: relative;
   display: inline-block;
 
@@ -110,12 +102,12 @@ export const IconWrapper = styled.div<IconWrapperProps>`
   }
 `;
 
-export const Tooltip = styled.span<{ $bgColor: string }>`
+export const Tooltip = styled.span<{ $colorKey: DotColorKey }>`
   position: absolute;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  background: ${({ $bgColor }) => $bgColor};
+  background: ${({ theme, $colorKey }) => theme.colors[$colorKey]};
   color: ${({ theme }) => theme.colors.borderColor};
   padding: 3px 8px;
   border-radius: 8px;

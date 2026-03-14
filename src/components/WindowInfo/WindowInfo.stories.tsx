@@ -10,10 +10,6 @@ const meta = {
   },
 
   argTypes: {
-    isDraggable: {
-      control: "boolean",
-    },
-
     showStar: {
       control: "boolean",
     },

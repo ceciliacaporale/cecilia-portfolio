@@ -21,6 +21,7 @@ export interface LoadingWindowProps {
   shapeSize?: number;
   showStar?: boolean;
   skipDelay?: boolean;
+  standalone?: boolean;
 }
 
 const LoadingWindow: React.FC<LoadingWindowProps> = ({
@@ -32,6 +33,7 @@ const LoadingWindow: React.FC<LoadingWindowProps> = ({
   shapeSize = DEFAULT_SHAPE_SIZE,
   showStar = true,
   skipDelay = false,
+  standalone = false,
 }) => {
   const [internalVisible, setInternalVisible] = useState(skipDelay);
 
@@ -47,7 +49,7 @@ const LoadingWindow: React.FC<LoadingWindowProps> = ({
   if (!isVisible || !internalVisible) return null;
 
   return (
-    <LoadingWindowWrapper>
+     <LoadingWindowWrapper style={standalone ? { position: "relative" } : undefined}>
       <WindowButtons>
         <button
           className="close"

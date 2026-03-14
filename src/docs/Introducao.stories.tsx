@@ -124,7 +124,7 @@ export const BemVindo: Story = {
             Design System
           </p>
           <h1 style={{
-            fontFamily: '"Pixelify Sans", sans-serif',
+            fontFamily: '"Monospace", monospace',
             fontSize: 48,
             fontWeight: 700,
             lineHeight: 1.1,

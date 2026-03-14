@@ -16,6 +16,7 @@ export interface FolderProps {
   href?: string;
   tooltipText?: string;
   showStar?: boolean;
+  standalone?: boolean;
 }
 
 const Folder: React.FC<FolderProps> = ({
@@ -24,6 +25,7 @@ const Folder: React.FC<FolderProps> = ({
   href = "/files",
   tooltipText = "Arquivos",
   showStar = true,
+  standalone = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { position, handleMouseDown, zIndex } = useDraggable(
@@ -35,13 +37,14 @@ const Folder: React.FC<FolderProps> = ({
   return (
     <a href={href} aria-label={tooltipText}>
       <FolderWrapper
+        $standalone={standalone}
         onMouseDown={isDraggable ? handleMouseDown : undefined}
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
         style={
           isDraggable
             ? { left: position.x, top: position.y, position: "absolute", zIndex }
-            : { position: "relative" }
+            : undefined
         }
       >
         <Tooltip className={isOpen ? "visible" : ""}>

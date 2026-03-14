@@ -8,18 +8,23 @@ const meta = {
   component: LoadingWindow,
   tags: ["autodocs"],
   parameters: { layout: "centered" },
+  decorators: [
+    (Story) => (
+      <div style={{ paddingTop: "40px", paddingBottom: "20px", paddingLeft: "20px" }}>
+        <Story />
+      </div>
+    ),
+  ],
   argTypes: {
     isVisible:      { control: "boolean" },
-    skipDelay:      { control: "boolean", description: "Pula o delay — usar sempre true no Storybook" },
+    skipDelay:      { control: "boolean" },
+    standalone:     { control: "boolean" },
     title:          { control: "text" },
     showStar:       { control: "boolean" },
     shapeSize:      { control: { type: "range", min: 16, max: 60, step: 4 } },
-    delay:          { control: { type: "range", min: 0, max: 8000, step: 500 }, description: "Delay em ms (ignorado se skipDelay=true)" },
-    headerColorKey: {
-      control: "select",
-      options: ["orange", "pink", "lime", "blue", "yellow", "purple", "pink10"],
-    },
-    onClose: { action: "fechou" },
+    delay:          { control: { type: "range", min: 0, max: 8000, step: 500 } },
+    headerColorKey: { control: "select", options: ["orange", "pink", "lime", "blue", "yellow", "purple", "pink10"] },
+    onClose:        { action: "fechou" },
   },
 } satisfies Meta<typeof LoadingWindow>;
 
@@ -27,32 +32,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    isVisible: true,
-    skipDelay: true,
-    onClose:        () => {},
-
-  },
+  args: { isVisible: true, skipDelay: true, standalone: true, onClose: () => {} },
 };
 
 export const CustomHeader: Story = {
-  args: {
-    isVisible:      true,
-    skipDelay:      true,
-    title:          "loading skills...",
-    headerColorKey: "purple",
-    onClose:        () => {},
-  },
+  args: { isVisible: true, skipDelay: true, standalone: true, title: "loading skills...", headerColorKey: "purple", onClose: () => {} },
 };
 
 export const NoStar: Story = {
-  args: {
-    isVisible: true,
-    skipDelay: true,
-    showStar:  false,
-    onClose:        () => {},
-
-  },
+  args: { isVisible: true, skipDelay: true, standalone: true, showStar: false, onClose: () => {} },
 };
 
 export const Interativa: Story = {
@@ -69,17 +57,11 @@ export const Interativa: Story = {
           {...args}
           isVisible={visible}
           skipDelay={true}
+          standalone={true}
           onClose={() => setVisible(false)}
         />
       </div>
     );
   },
-  args: {
-    isVisible:      true,
-    skipDelay:      true,
-    title:          "constant evolution",
-    headerColorKey: "orange",
-    showStar:       true,
-    onClose:        () => {},
-  },
+  args: { isVisible: true, title: "constant evolution", headerColorKey: "orange", showStar: true, onClose: () => {} },
 };

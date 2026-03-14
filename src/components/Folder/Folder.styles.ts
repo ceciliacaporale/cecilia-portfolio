@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const FolderWrapper = styled.div`
+export const FolderWrapper = styled.div<{ $standalone?: boolean }>`
   position: relative;
   width: 100px;
   height: 70px;
   cursor: pointer;
-  right: -30rem;
+  right: ${({ $standalone }) => $standalone ? 'auto' : '-30rem'};
   user-select: none;
   transition: transform 0.2s ease-in-out;
 

@@ -34,8 +34,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    title: "Projeto Exemplo",
-    description: "Descrição breve do projeto, destacando suas principais funcionalidades e tecnologias utilizadas.",
+    title: "Construção",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     imageSrc: "/../../src/assets/imagem-em-construcao.png",
     technologies: ["React", "TypeScript", "Astro"],
     link: "https://example.com",

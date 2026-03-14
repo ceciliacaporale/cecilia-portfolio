@@ -6,8 +6,14 @@ const meta = {
   component: Folder,
   tags: ["autodocs"],
   parameters: { layout: "centered" },
+  decorators: [
+    (Story) => (
+      <div style={{ paddingTop: "60px", paddingBottom: "20px" }}>
+        <Story />
+      </div>
+    ),
+  ],
   argTypes: {
-    isDraggable: { control: "boolean" },
     href:        { control: "text" },
     tooltipText: { control: "text" },
     showStar:    { control: "boolean" },
@@ -15,16 +21,17 @@ const meta = {
 } satisfies Meta<typeof Folder>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+
+type Story = StoryObj<typeof Folder>;
 
 export const Default: Story = {
-  args: { isDraggable: false },
+  args: { isDraggable: false, standalone: true },
 };
 
 export const NoStar: Story = {
-  args: { isDraggable: false, showStar: false },
+  args: { isDraggable: false, standalone: true, showStar: false },
 };
 
 export const CustomTooltip: Story = {
-  args: { isDraggable: false, tooltipText: "Projetos", href: "/projects" },
+  args: { isDraggable: false, standalone: true, tooltipText: "Projetos", href: "/projects" },
 };
