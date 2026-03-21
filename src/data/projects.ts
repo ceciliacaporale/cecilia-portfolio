@@ -2,6 +2,7 @@ import ceciImg from "../assets/imagem-em-construcao.png?url";
 import boxShadow from "../assets/box-shadow.png?url";
 import PsicologaImg from "../assets/psicologa-laura.png?url";
 import Storybook from "../assets/storybook.png?url";
+import Lucas from "../assets/lucasprof.png?url";
 
 export const projects = [
   {
@@ -26,9 +27,9 @@ export const projects = [
     link: "https://www.psicologalauralacerda.com.br"
   },
   {
-    title: "Em Construção",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageSrc: ceciImg,
-    technologies: ["Astro", "Tailwind", "JavaScript"],
+    title: "Prof. Lucas Gomes",
+    description: "Site institucional com foco nas aulas particulares do Prof. Lucas Gomes. Visual moderno, navegação intuitiva e totalmente responsivo.",
+    imageSrc: Lucas,
+    technologies: ["Next.js", "Tailwind", "TypeScript"],
   },
 ];
