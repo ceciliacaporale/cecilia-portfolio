@@ -31,5 +31,6 @@ export const projects = [
     description: "Site institucional com foco nas aulas particulares do Prof. Lucas Gomes. Visual moderno, navegação intuitiva e totalmente responsivo.",
     imageSrc: Lucas,
     technologies: ["Next.js", "Tailwind", "TypeScript"],
+    link: "https://www.lucasgomesprof.com.br/"
   },
 ];
