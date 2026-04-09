@@ -7,7 +7,7 @@ import {
   WindowButtons,
   ContainerSocialMedia
 } from "./MainWindow.styles";
-import Ceci from "../../assets/ceci.png?url";
+import Ceci from "../../assets/3d.png?url";
 import WindowImage from "../../components/WindowImage";
 import SocialMedia from "../../components/SocialMedia";
 import Tabs from "../../components/Tabs";

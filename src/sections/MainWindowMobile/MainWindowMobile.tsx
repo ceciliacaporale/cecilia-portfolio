@@ -1,5 +1,5 @@
 import { MainWindowMobileWrapper, Container, RowContainer, ContainerComponents, WindowHeader, WindowButtons, ContentWrapper, ContainerText, ContainerSocialMedia } from "./MainWindowMobile.styles";
-import Ceci from "../../assets/ceci.png?url"; 
+import Ceci from "../../assets/3d.png?url"; 
 import WindowImage from "../../components/WindowImage";
 import Tabs from "../../components/Tabs";
 import TitleAnimation from "../../components/TitleAnimation";

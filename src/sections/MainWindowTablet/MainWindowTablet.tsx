@@ -1,5 +1,5 @@
 import { MainWindowTabletWrapper, ContainerSocialMedia, Container, WindowHeader, WindowButtons, ContentWrapper, ContainerText } from "./MainWindowTablet.styles";
-import Ceci from "../../assets/ceci.png?url"; 
+import Ceci from "../../assets/3d.png?url"; 
 import WindowImage from "../../components/WindowImage";
 import Tabs from "../../components/Tabs";
 import TitleAnimation from "../../components/TitleAnimation";
