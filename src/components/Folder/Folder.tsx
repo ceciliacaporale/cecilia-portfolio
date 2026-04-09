@@ -23,7 +23,7 @@ const Folder: React.FC<FolderProps> = ({
   containerRef,
   isDraggable = true,
   href = "/files",
-  tooltipText = "Arquivos",
+  tooltipText = "Files",
   showStar = true,
   standalone = false,
 }) => {

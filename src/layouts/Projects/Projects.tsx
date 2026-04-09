@@ -27,8 +27,8 @@ const ProjectsPage: React.FC = () => {
       <ThemeWrapper>
         <ResponsiveLayout>
           <HeroSection
-            titleStrings={["Projetos", "Projects", "Proyectos"]}
-            description="Aqui estão alguns dos projetos que desenvolvi ao longo da minha jornada de aprendizado. Além de programá-los, também cuidei do design e da experiência visual, trazendo minha identidade para cada detalhe. Cada projeto representa um desafio superado e novas habilidades adquiridas!"
+            titleStrings={["Projects", "Projetos", "Proyectos"]}
+            description="Here are some of the projects I've developed along my learning journey. In addition to coding them, I also took care of the design and visual experience, bringing my personal touch to every detail. Each project represents a challenge overcome and new skills acquired!"
           >
             <ContainerProjects>
               <StyledSwiper

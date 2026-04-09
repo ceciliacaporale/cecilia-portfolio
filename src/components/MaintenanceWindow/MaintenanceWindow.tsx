@@ -34,7 +34,7 @@ const MaintenanceWindow: React.FC<MaintenanceWindowProps> = ({
 
       <Content>
         <p>
-         página em construção
+         Under construction...
          <div className="construcao">
           <img 
             src={Construcao} 

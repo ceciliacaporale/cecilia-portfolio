@@ -21,10 +21,10 @@ interface TerminalProps {
 
 const defaultMessages = [
   "$ initializing...",
-  "✔ carregando habilidades...",
-  "✔ renderizando projetos...",
-  "✔ conectando criatividade e código...",
-  "✔ pronto! explore meu portfólio :)",
+  "✔ loading skills...",
+  "✔ rendering projects...",
+  "✔ connecting creativity and code...",
+  "✔ done! explore my portfolio :)",
   "...",
 ];
 
@@ -130,7 +130,7 @@ const Terminal: React.FC<TerminalProps> = ({
         <div className="star">
           <img
             src={Star}
-            alt="Imagem de uma estrela"
+            alt="Star icon"
             width="40"
             height="40"
           />

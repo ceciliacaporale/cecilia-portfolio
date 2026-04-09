@@ -35,16 +35,16 @@ const DesktopText = styled(StyledParagraph)`
 const BioParagraph: React.FC<StyledParagraphProps> = (props) => (
   <>
     <MobileText {...props}>
-      Sou Maria Cecília, desenvolvedora front-end. Transformo ideias em código e crio experiências interativas há mais de quatro anos.
-      Estou sempre aberta a colaborações, então sinta-se à vontade para entrar em contato para qualquer oportunidade!
-      Bem-vindo ao meu cantinho na internet e espero que aproveite a visita!
+      I'm Maria Cecília, a front-end developer. I've been turning ideas into code and creating interactive experiences for over four years.
+      I'm always open to collaborations, so feel free to reach out for any opportunities!
+      Welcome to my corner of the internet, I hope you enjoy your visit!
     </MobileText>
     
     <DesktopText {...props}>
-      Sou Maria Cecília, desenvolvedora front-end. Transformo ideias em código e crio experiências interativas há mais de quatro anos.
-      Atualmente, trabalho com React e tudo o que envolve o ecossistema web. Adoro atuar nesse universo e contribuir para que ele continue sendo um espaço acessível, criativo e repleto de possibilidades.
-      Estou sempre aberta a colaborações, então sinta-se à vontade para entrar em contato para qualquer oportunidade!
-      Bem-vindo ao meu cantinho na internet e espero que aproveite a visita!
+      I'm Maria Cecília, a front-end developer. I've been turning ideas into code and creating interactive experiences for over four years.
+      Currently, I work with React and everything involving the web ecosystem. I love working in this space and contributing to keeping it accessible, creative, and full of possibilities.
+      I'm always open to collaborations, so feel free to reach out for any opportunities!
+      Welcome to my corner of the internet, I hope you enjoy your visit!
     </DesktopText>
   </>
 );

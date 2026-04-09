@@ -22,12 +22,15 @@ const FilesPage: React.FC = () => {
     <PageWrapper>
       <ThemeWrapper>
         <ResponsiveLayout>
-          <HeroSection titleStrings={["Arquivos", "Files", "Archivos"]} description="Bem-vindo à minha coleção de arquivos! Aqui você encontrará uma mistura de estudos, anotações, documentos e conteúdos relacionados ao meu aprendizado e evolução como desenvolvedora. Cada item reflete uma parte da minha jornada, compartilhando o conhecimento adquirido, insights e reflexões ao longo do caminho. Fique à vontade para explorar e acompanhar meu crescimento profissional!">
+          <HeroSection 
+            titleStrings={["Files", "Arquivos", "Archivos"]} 
+            description="Welcome to my file collection! Here you'll find a mix of studies, notes, documents, and content related to my learning and evolution as a developer. Each item reflects a part of my journey, sharing the knowledge acquired, insights, and reflections along the way. Feel free to explore and follow my professional growth!"
+          >
             <SearchInput
               searchQuery=""
               tags={["react", "nextjs", "design", "pixel", "typescript"]}
               onChange={() => {}}
-              placeholder="Em construção..."
+              placeholder="Under construction..."
             />
             <ContainerMaintenance>
               <MaintenanceWindow />

@@ -33,5 +33,5 @@ export const NoStar: Story = {
 };
 
 export const CustomTooltip: Story = {
-  args: { isDraggable: false, standalone: true, tooltipText: "Projetos", href: "/projects" },
+  args: { isDraggable: false, standalone: true, tooltipText: "Projects", href: "/projects" },
 };
