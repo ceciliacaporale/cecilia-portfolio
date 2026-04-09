@@ -29,7 +29,7 @@ export const WindowImageWrapper = styled.div<WindowProps>`
   }
 
   @media (max-width: 871px) {
-    height: 215px;
+    height: 240px;
   }
 
   &:hover::after {
