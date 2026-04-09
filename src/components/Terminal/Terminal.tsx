@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   TerminalWrapper,
   Header,
   TerminalContent,
   Cursor,
+  Tooltip, 
 } from "./Terminal.styles";
 import Star from "./../../assets/staryellow.png?url";
 import useDraggable from "../../hooks/useDraggable";
@@ -48,6 +49,32 @@ const Terminal: React.FC<TerminalProps> = ({
 
   const theme = useTheme();
 
+  const [showTooltip, setShowTooltip] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (!isDraggable) return;
+    
+    setShowTooltip(true);
+    
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    
+    timeoutRef.current = setTimeout(() => {
+      setShowTooltip(false);
+    }, 2000);
+  };
+
+  const handleMouseLeave = () => {
+    setShowTooltip(false);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
   useEffect(() => {
     if (messageIndex >= messages.length) return;
 
@@ -67,7 +94,6 @@ const Terminal: React.FC<TerminalProps> = ({
     return () => clearTimeout(timeout);
   }, [charIndex, messageIndex, messages, typingSpeed]);
 
-  // reset animation when messages change
   useEffect(() => {
     setDisplayedText("");
     setMessageIndex(0);
@@ -82,7 +108,16 @@ const Terminal: React.FC<TerminalProps> = ({
           : { position: "relative" }
       }
     >
-      <Header onMouseDown={isDraggable ? handleMouseDown : undefined}>
+      <Tooltip $visible={showTooltip}>click to drag</Tooltip>
+
+      <Header 
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onMouseDown={(e) => {
+          setShowTooltip(false); 
+          if (isDraggable) handleMouseDown(e);
+        }}
+      >
         <Dots />
       </Header>
 

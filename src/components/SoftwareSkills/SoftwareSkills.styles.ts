@@ -80,3 +80,34 @@ export const SkillIcon = styled.div`
     transform: translateX(-50%) translateY(-5px);
   }
 `;
+
+export const DragTooltip = styled.div<{ $visible: boolean }>`
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%) ${({ $visible }) => ($visible ? "translateY(0)" : "translateY(5px)")};
+  background: ${({ theme }) => theme.colors.purple};
+  color: ${({ theme }) => theme.colors.black};
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 11px;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 1000;
+
+  opacity: ${({ $visible }) => ($visible ? 1 : 0)};
+  visibility: ${({ $visible }) => ($visible ? "visible" : "hidden")};
+  transition: all 0.3s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: ${({ theme }) => theme.colors.purple} transparent transparent transparent;
+  }
+`;

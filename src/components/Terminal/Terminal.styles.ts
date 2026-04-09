@@ -80,3 +80,34 @@ export const TerminalContent = styled.div`
 export const Cursor = styled.span`
   animation: ${blink} 0.7s step-end infinite;
 `;
+
+export const Tooltip = styled.div<{ $visible: boolean }>`
+  position: absolute;
+  top: -25px;
+  left: 10px; 
+  background: ${({ theme }) => theme.colors.pink};
+  color: ${({ theme }) => theme.colors.black};
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: bold;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 1000;
+
+  opacity: ${({ $visible }) => ($visible ? 1 : 0)};
+  visibility: ${({ $visible }) => ($visible ? "visible" : "hidden")};
+  transform: ${({ $visible }) => ($visible ? "translateY(0)" : "translateY(5px)")};
+  transition: all 0.3s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 15px; 
+    border-width: 5px;
+    border-style: solid;
+    border-color: ${({ theme }) => theme.colors.pink} transparent transparent transparent;
+  }
+`;

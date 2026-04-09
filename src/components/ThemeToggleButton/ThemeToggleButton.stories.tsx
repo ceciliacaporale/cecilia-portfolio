@@ -8,7 +8,6 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  // Configurando os controles que vão aparecer na tela do Storybook
   argTypes: {
     activeTheme: {
       control: 'radio',
@@ -29,7 +28,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// Variação 1: Como o botão fica no modo claro
 export const LightMode: Story = {
   args: {
     activeTheme: 'light',
@@ -37,10 +35,9 @@ export const LightMode: Story = {
   },
 };
 
-// Variação 2: Como o botão fica no modo escuro
 export const DarkMode: Story = {
   args: {
     activeTheme: 'dark',
-    iconSize: 24, // Exemplo passando um tamanho diferente
+    iconSize: 24,
   },
 };

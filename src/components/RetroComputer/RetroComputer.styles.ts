@@ -79,3 +79,33 @@ export const Key = styled.div`
     transform: scale(1.2);
   }
 `;
+
+export const Tooltip = styled.div<{ $visible: boolean }>`
+  position: absolute;
+  top: -20px;
+  background: ${({ theme }) => theme.colors.blue};
+  color: ${({ theme }) => theme.colors.black};
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: "Pixelify Sans", monospace;
+  white-space: nowrap;
+  pointer-events: none; 
+  
+  opacity: ${({ $visible }) => ($visible ? 1 : 0)};
+  visibility: ${({ $visible }) => ($visible ? "visible" : "hidden")};
+  transform: ${({ $visible }) => ($visible ? "translateY(0)" : "translateY(5px)")};
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: ${({ theme }) => theme.colors.blue} transparent transparent transparent;
+  }
+`;

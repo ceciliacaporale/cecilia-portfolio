@@ -1,10 +1,11 @@
-import React, { type RefObject } from "react";
+import React, { type RefObject, useState, useRef, useEffect } from "react";
 import {
   RetroComputerWrapper,
   Monitor,
   ScreenContent,
   Keyboard,
   Key,
+  Tooltip,
 } from "./RetroComputer.styles";
 import { DEFAULT_PROFILE_LINES, KEYBOARD_KEYS } from "../../data/retroComputerData";
 import { useTypingAnimation } from "../../hooks/useTypingAnimation";
@@ -37,6 +38,32 @@ const RetroComputer: React.FC<RetroComputerProps> = ({
   );
 
   const displayedText = useTypingAnimation(lines, typingSpeed);
+  
+  const [showTooltip, setShowTooltip] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (!isDraggable) return;
+    
+    setShowTooltip(true);
+    
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    
+    timeoutRef.current = setTimeout(() => {
+      setShowTooltip(false);
+    }, 2000);
+  };
+
+  const handleMouseLeave = () => {
+    setShowTooltip(false);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   return (
     <RetroComputerWrapper
@@ -45,8 +72,15 @@ const RetroComputer: React.FC<RetroComputerProps> = ({
           ? { left: position.x, top: position.y, position: "absolute", zIndex }
           : { position: "relative" }
       }
-      onMouseDown={isDraggable ? handleMouseDown : undefined}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onMouseDown={(e) => {
+        setShowTooltip(false);
+        if (isDraggable) handleMouseDown(e);
+      }}
     >
+      <Tooltip $visible={showTooltip}>click to drag</Tooltip>
+
       <Monitor>
         <ScreenContent>{displayedText}</ScreenContent>
       </Monitor>

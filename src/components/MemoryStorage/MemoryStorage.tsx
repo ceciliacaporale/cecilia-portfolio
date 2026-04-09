@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   MemoryStorageWrapper,
   Header,
@@ -9,6 +9,7 @@ import {
   Legend,
   LegendItem,
   ColorBox,
+  Tooltip,
 } from "./MemoryStorage.styles";
 import useDraggable from "../../hooks/useDraggable";
 import Dots from "../Dots";
@@ -48,6 +49,31 @@ const MemoryStorage: React.FC<MemoryStorageProps> = ({
     HEIGHT
   );
 
+  const [showTooltip, setShowTooltip] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (!isDraggable) return;
+    setShowTooltip(true);
+
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
+    timeoutRef.current = setTimeout(() => {
+      setShowTooltip(false);
+    }, 2000);
+  };
+
+  const handleMouseLeave = () => {
+    setShowTooltip(false);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), loadingDelay);
     return () => clearTimeout(timer);
@@ -60,9 +86,17 @@ const MemoryStorage: React.FC<MemoryStorageProps> = ({
           ? { left: position.x, top: position.y, position: "absolute", zIndex }
           : { position: "relative" }
       }
-      onMouseDown={isDraggable ? handleMouseDown : undefined}
     >
-      <Header>
+      <Tooltip $visible={showTooltip}>click to drag</Tooltip>
+
+      <Header
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onMouseDown={(e) => {
+          setShowTooltip(false);
+          if (isDraggable) handleMouseDown(e);
+        }}
+      >
         <HeaderTitle>{title}</HeaderTitle>
         <Dots />
       </Header>

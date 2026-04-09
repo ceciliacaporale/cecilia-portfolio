@@ -98,3 +98,33 @@ export const ColorBox = styled.div<{ $colorKey: DotColorKey }>`
     transform: scale(1.2);
   }
 `;
+
+export const Tooltip = styled.div<{ $visible: boolean }>`
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%) ${({ $visible }) => ($visible ? "translateY(0)" : "translateY(5px)")};
+  background: ${({ theme }) => theme.colors.orange};
+  color: ${({ theme }) => theme.colors.black};
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 11px;
+  pointer-events: none;
+  white-space: nowrap;
+
+  opacity: ${({ $visible }) => ($visible ? 1 : 0)};
+  visibility: ${({ $visible }) => ($visible ? "visible" : "hidden")};
+  transition: all 0.3s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: ${({ theme }) => theme.colors.orange} transparent transparent transparent;
+  }
+`;
