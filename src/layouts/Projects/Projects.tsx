@@ -11,19 +11,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import ThemeWrapper from "../../ThemeWrapper";
-
-const PageWrapper = styled.div`
-  min-height: 100vh;
-  background-color: #acf3f5;
-
-  html.dark & {
-    background-color: #181718;
-  }
-`;
-
 const ProjectsPage: React.FC = () => {
   return (
-    <PageWrapper>
       <ThemeWrapper>
         <ResponsiveLayout>
           <HeroSection
@@ -57,7 +46,6 @@ const ProjectsPage: React.FC = () => {
           </HeroSection>
         </ResponsiveLayout>
       </ThemeWrapper>
-    </PageWrapper>
   );
 };
 

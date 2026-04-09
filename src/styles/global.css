@@ -8,6 +8,8 @@
   --scrollbar-track: #FCE6CA;
   --scrollbar-thumb: #FE87A4;
   --scrollbar-border: #000;
+  
+  --grid-color: rgba(0, 0, 0, 0.08);
 }
 
 html.dark {
@@ -15,6 +17,8 @@ html.dark {
   --scrollbar-track: #181718;
   --scrollbar-thumb: #FE87A4;
   --scrollbar-border: #000;
+  
+  --grid-color: rgba(255, 255, 255, 0.05);
 }
 
 * {
@@ -26,6 +30,11 @@ html.dark {
 html, body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--color-background);
+  
+  background-image: 
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 24px 24px;
   overflow-x: hidden;
 }
 
@@ -46,4 +55,3 @@ html, body {
   border-radius: 10px;
   border: 1px solid var(--scrollbar-border);
 }
-

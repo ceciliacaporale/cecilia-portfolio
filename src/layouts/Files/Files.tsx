@@ -7,19 +7,9 @@ import MaintenanceWindow from "../../components/MaintenanceWindow";
 import ThemeWrapper from "../../ThemeWrapper";
 import SearchInput from "@components/SearchInput";
 
-const PageWrapper = styled.div`
-  min-height: 100vh;
-  background-color: #fddced;
-
-  html.dark & {
-    background-color: #181718;
-  }
-`;
-
 const FilesPage: React.FC = () => {
   
   return (
-    <PageWrapper>
       <ThemeWrapper>
         <ResponsiveLayout>
           <HeroSection 
@@ -38,7 +28,6 @@ const FilesPage: React.FC = () => {
           </HeroSection>
         </ResponsiveLayout>
       </ThemeWrapper>
-    </PageWrapper>
   );
 };
 
