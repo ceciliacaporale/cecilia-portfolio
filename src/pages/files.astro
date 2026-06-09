@@ -3,15 +3,36 @@ import "../styles/global.css";
 import FilesLayout from "../layouts/Files";
 import  SpeedInsights  from "@vercel/speed-insights/astro"
 import Analytics from '@vercel/analytics/astro'
+
+const canonicalURL = Astro.url.href;
 ---
 
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Arquivos</title>
-    <meta name="description" content="Coleção de arquivos, estudos, anotacoes e documentos." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Files | Cecilia Caporale</title>
+    <meta name="description" content="Collection of files, studies, notes and documents by Cecilia Caporale – front-end developer." />
+    <meta name="author" content="Cecilia Caporale" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content="Files | Cecilia Caporale" />
+    <meta property="og:description" content="Collection of files, studies, notes and documents by Cecilia Caporale – front-end developer." />
+    <meta property="og:image" content="/apple-touch-icon.png" />
+    <meta property="og:site_name" content="Cecilia Caporale" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Files | Cecilia Caporale" />
+    <meta name="twitter:description" content="Collection of files, studies, notes and documents by Cecilia Caporale." />
+    <meta name="twitter:image" content="/apple-touch-icon.png" />
+
     <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   </head>
   <body>
     <FilesLayout client:only="react" />

@@ -3,15 +3,36 @@ import "../styles/global.css";
 import ProjectsLayout from "../layouts/Projects";
 import  SpeedInsights  from "@vercel/speed-insights/astro"
 import Analytics from '@vercel/analytics/astro'
+
+const canonicalURL = Astro.url.href;
 ---
 
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Projects</title>
-     <meta name="description" content="Projetos desenvolvido por Cecilia Caporale" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Projects | Cecilia Caporale</title>
+    <meta name="description" content="Projects developed by Cecilia Caporale – front-end developer. Web apps, interfaces and experiments with React, TypeScript and more." />
+    <meta name="author" content="Cecilia Caporale" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content="Projects | Cecilia Caporale" />
+    <meta property="og:description" content="Projects developed by Cecilia Caporale – front-end developer. Web apps, interfaces and experiments with React, TypeScript and more." />
+    <meta property="og:image" content="/apple-touch-icon.png" />
+    <meta property="og:site_name" content="Cecilia Caporale" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Projects | Cecilia Caporale" />
+    <meta name="twitter:description" content="Projects developed by Cecilia Caporale – front-end developer." />
+    <meta name="twitter:image" content="/apple-touch-icon.png" />
+
     <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   </head>
   <body>
     <ProjectsLayout client:only="react" />

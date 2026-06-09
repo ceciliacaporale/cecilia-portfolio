@@ -3,17 +3,54 @@ import "../styles/global.css";
 import Responsive from "../components/Responsive";
 import  SpeedInsights  from "@vercel/speed-insights/astro"
 import Analytics from '@vercel/analytics/astro'
+
+const canonicalURL = Astro.url.href;
 ---
 
-<html lang="pt-BR">
+<html lang="en">
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>Cecilia Caporale</title>
-  <meta name="description" content="Portfólio da Cecilia Caporale – desenvolvedora front-end." />
+  <title>Cecilia Caporale | Front-End Developer</title>
+  <meta name="description" content="Portfolio of Cecilia Caporale – front-end developer specialized in React, TypeScript and modern web technologies. Explore projects, skills and contact." />
+  <meta name="author" content="Cecilia Caporale" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content="Cecilia Caporale | Front-End Developer" />
+  <meta property="og:description" content="Portfolio of Cecilia Caporale – front-end developer specialized in React, TypeScript and modern web technologies." />
+  <meta property="og:image" content="/apple-touch-icon.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Cecilia Caporale" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cecilia Caporale | Front-End Developer" />
+  <meta name="twitter:description" content="Portfolio of Cecilia Caporale – front-end developer specialized in React, TypeScript and modern web technologies." />
+  <meta name="twitter:image" content="/apple-touch-icon.png" />
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#0f0f0f" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" href="/favicon.ico" />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Cecilia Caporale",
+    "jobTitle": "Front-End Developer",
+    "url": canonicalURL,
+    "sameAs": [
+      "https://github.com/ceciliacaporale",
+      "https://www.linkedin.com/in/ceciliacaporale"
+    ]
+  })} />
 </head>
   <body>
     <Responsive client:only="react" />
