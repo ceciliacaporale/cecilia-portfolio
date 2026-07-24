@@ -19,7 +19,6 @@ export const Window = styled.div<{ $open: boolean }>`
   background: ${({ theme }) => theme.colors.white};
   border: 2px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 12px;
-  box-shadow: 4px 4px 0px ${({ theme }) => theme.colors.borderColor};
   overflow: hidden;
   transform: ${({ $open }) => ($open ? 'scale(1) translateY(0)' : 'scale(0.9) translateY(10px)')};
   transition: transform 0.2s ease;
