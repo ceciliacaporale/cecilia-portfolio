@@ -12,6 +12,7 @@ import Terminal from "../../../components/Terminal";
 import WindowInfo from "../../../components/WindowInfo";
 import ThemeWrapper from "../../../ThemeWrapper";
 import ThemeToggleButton from "../../../components/ThemeToggleButton";
+import ColorPickerButton from "../../../components/ColorPickerButton";
 
 const Desktop: React.FC = () => {
   const [isLoadingVisible, setIsLoadingVisible] = useState(true);
@@ -27,6 +28,7 @@ const Desktop: React.FC = () => {
         <ContentArea ref={containerRef}>
           <ContainerToggle>
             <ThemeToggleButton />
+            <ColorPickerButton />
           </ContainerToggle>
           
           <LoadingWindow 
