@@ -12,9 +12,10 @@ interface WindowImageProps {
   width?: string;
   height?: string;
   shapeStar?: boolean;
+  onImageClick?: () => void;
 }
 
-const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, shapeStar, width, height }) => {
+const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, shapeStar, width, height, onImageClick }) => {
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -43,16 +44,19 @@ const WindowImage: React.FC<WindowImageProps> = ({ title, imageSrc, shapeStar, w
       </Header>
       <Content>
         {imageSrc ? (
-          <img 
-            src={imageSrc} 
-            alt={title} 
-            width={width || 900} 
+          <img
+            src={imageSrc}
+            alt={title}
+            width={width || 900}
             height={height || 600}
             className="responsive-img"
             loading="lazy"
-            onMouseMove={handleMouseMove} 
+            onMouseMove={handleMouseMove}
             onMouseEnter={() => setShowTooltip(true)}
             onMouseLeave={() => setShowTooltip(false)}
+            onClick={onImageClick}
+            role={onImageClick ? "button" : undefined}
+            aria-label={onImageClick ? "Sobre este Mac" : undefined}
           />
         ) : (
           <p>Imagem indisponível :c</p>
