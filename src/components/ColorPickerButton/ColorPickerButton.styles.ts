@@ -38,7 +38,7 @@ export const ToggleButton = styled.button`
 export const Palette = styled.div<{ $open: boolean }>`
   position: absolute;
   top: calc(100% + 0.6rem);
-  right: 0;
+  left: 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -51,7 +51,7 @@ export const Palette = styled.div<{ $open: boolean }>`
   opacity: ${({ $open }) => ($open ? 1 : 0)};
   visibility: ${({ $open }) => ($open ? 'visible' : 'hidden')};
   transform: ${({ $open }) => ($open ? 'scale(1) translateY(0)' : 'scale(0.85) translateY(-6px)')};
-  transform-origin: top right;
+  transform-origin: top left;
   transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
   pointer-events: ${({ $open }) => ($open ? 'auto' : 'none')};
 `;
