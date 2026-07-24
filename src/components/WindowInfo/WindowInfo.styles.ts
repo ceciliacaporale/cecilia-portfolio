@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const WindowInfoWrapper = styled.div<{
   $width?: number;
@@ -86,4 +86,24 @@ export const Content = styled.div`
       }
     }
   }
+`;
+
+const blink = keyframes`
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+`;
+
+export const Cursor = styled.span`
+  display: inline-block;
+  margin-left: 1px;
+  animation: ${blink} 1s step-end infinite;
+`;
+
+export const IconRow = styled.div`
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
 `;

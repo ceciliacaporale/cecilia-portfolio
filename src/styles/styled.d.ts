@@ -13,6 +13,7 @@ declare module 'styled-components' {
       black: string;
       white: string;
       whiteDark: string;
+      keyActive: string;
       borderColor: string;
       darkMode?: {
         background: string;

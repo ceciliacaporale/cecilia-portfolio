@@ -1,7 +1,27 @@
-import React from "react";
-import useDraggable from "../../hooks/useDraggable"; 
-import { WindowInfoWrapper, Header, Content } from "./WindowInfo.styles";
+import React, { useState } from "react";
+import useDraggable from "../../hooks/useDraggable";
+import { useTypingAnimation } from "../../hooks/useTypingAnimation";
+import { WindowInfoWrapper, Header, Content, Cursor, IconRow } from "./WindowInfo.styles";
+import CoffeeCup from "./CoffeeCup";
+import PixelHeart from "./PixelHeart";
 import Star from "./../../assets/web.png?url";
+
+const TypedText: React.FC<{ lines: string[]; speed: number }> = ({ lines, speed }) => {
+  const displayed = useTypingAnimation(lines, speed);
+  const parts = displayed.split("\n");
+
+  return (
+    <>
+      {parts.map((part, index) => (
+        <React.Fragment key={index}>
+          {index > 0 && <br />}
+          {part}
+        </React.Fragment>
+      ))}
+      <Cursor>_</Cursor>
+    </>
+  );
+};
 
 interface WindowInfoProps {
   title?: string;
@@ -34,14 +54,15 @@ const WindowInfo: React.FC<WindowInfoProps> = ({
   isDraggable = true
 }) => {
   const { position, handleMouseDown, zIndex } = useDraggable(
-    initialPosition.x, 
-    initialPosition.y, 
+    initialPosition.x,
+    initialPosition.y,
     containerRef as React.RefObject<HTMLDivElement> | undefined,
-    DEFAULT_SIZE.width, 
+    DEFAULT_SIZE.width,
     DEFAULT_SIZE.height,
   );
 
   const currentYear = new Date().getFullYear();
+  const [typingKey, setTypingKey] = useState(0);
 
    return (
     <WindowInfoWrapper
@@ -61,7 +82,10 @@ const WindowInfo: React.FC<WindowInfoProps> = ({
       }
       role="dialog"
       aria-labelledby="window-info-header"
-      onMouseDown={isDraggable ? handleMouseDown : undefined}
+      onMouseDown={(e) => {
+        setTypingKey((key) => key + 1);
+        if (isDraggable) handleMouseDown(e);
+      }}
     >
       <Header
         id="window-info-header"
@@ -73,8 +97,7 @@ const WindowInfo: React.FC<WindowInfoProps> = ({
 
       <Content>
         <p>
-          © {currentYear}<br />
-          {text}
+          <TypedText key={typingKey} lines={[`© ${currentYear}`, text]} speed={40} />
         </p>
 
         {showStar && (
@@ -88,6 +111,11 @@ const WindowInfo: React.FC<WindowInfoProps> = ({
             />
           </div>
         )}
+
+        <IconRow>
+          <PixelHeart />
+          <CoffeeCup />
+        </IconRow>
       </Content>
     </WindowInfoWrapper>
   );

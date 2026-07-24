@@ -13,6 +13,7 @@ export const lightTheme: DefaultTheme = {
     black: '#000',
     white: '#fff',
     whiteDark: '#fff',
+    keyActive: '#edebeb',
     borderColor: '#000',
   },
 };
@@ -29,6 +30,7 @@ export const darkTheme: DefaultTheme = {
     black: '#fff',
     white: '#313131',
     whiteDark: '#4f4f4f',
+    keyActive: '#4a4a4a',
     borderColor: '#000',
   },
 };

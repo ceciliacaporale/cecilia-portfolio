@@ -86,7 +86,7 @@ export const Keyboard = styled.div`
 export const Key = styled.div<{ $active?: boolean }>`
   width: 14px;
   height: 14px;
-  background: ${({ theme, $active }) => ($active ? "#edebeb" : theme.colors.white)};
+  background: ${({ theme, $active }) => ($active ? theme.colors.keyActive : theme.colors.white)};
   border: 1.7px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   align-items: center;
