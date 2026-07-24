@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 export const RetroComputerWrapper = styled.div`
   display: flex;
@@ -27,14 +27,35 @@ export const RetroComputerWrapper = styled.div`
   }
 `;
 
-export const Monitor = styled.div`
+const crtGlitch = keyframes`
+  0%, 100% { background-color: var(--monitor-lime); transform: translate(0, 0); filter: none; }
+  8% { background-color: var(--monitor-yellow); transform: translate(-1px, 1px); }
+  16% { background-color: var(--monitor-lime); transform: translate(1px, -1px); }
+  24% { background-color: #2b2b2b; transform: translate(-1px, 0); filter: brightness(0.6); }
+  32% { background-color: var(--monitor-yellow); transform: translate(1px, 1px); filter: brightness(1.4); }
+  45% { background-color: var(--monitor-lime); transform: translate(0, -1px); filter: none; }
+  60% { background-color: var(--monitor-yellow); transform: translate(-1px, 0); }
+  72% { background-color: var(--monitor-lime); transform: translate(1px, 0); }
+  85% { background-color: #2b2b2b; transform: translate(0, 1px); filter: brightness(0.7); }
+`;
+
+export const Monitor = styled.div<{ $glitching?: boolean }>`
   width: 140px;
   height: 110px;
   background: ${({ theme }) => theme.colors.lime};
-  cursor: grab;
+  cursor: pointer;
   border: 3px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 6px;
   box-shadow: inset 0px 0px 8px rgba(255, 255, 255, 0.1);
+
+  --monitor-lime: ${({ theme }) => theme.colors.lime};
+  --monitor-yellow: ${({ theme }) => theme.colors.yellow};
+
+  ${({ $glitching }) =>
+    $glitching &&
+    css`
+      animation: ${crtGlitch} 0.7s steps(1, end);
+    `}
 
   &:active {
     cursor: grabbing;
@@ -62,10 +83,10 @@ export const Keyboard = styled.div`
   padding: 1px;
 `;
 
-export const Key = styled.div`
+export const Key = styled.div<{ $active?: boolean }>`
   width: 14px;
   height: 14px;
-  background: ${({ theme }) => theme.colors.white};
+  background: ${({ theme, $active }) => ($active ? "#edebeb" : theme.colors.white)};
   border: 1.7px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   align-items: center;
@@ -73,7 +94,8 @@ export const Key = styled.div`
   font-size: 6px;
   color: ${({ theme }) => theme.colors.black};
   box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.15s ease-in-out, background 0.15s ease-in-out;
+  transform: ${({ $active }) => ($active ? "scale(1.25) translateY(-1px)" : "scale(1)")};
 
   &:hover {
     transform: scale(1.2);

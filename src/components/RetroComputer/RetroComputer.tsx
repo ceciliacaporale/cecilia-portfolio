@@ -38,17 +38,20 @@ const RetroComputer: React.FC<RetroComputerProps> = ({
   );
 
   const displayedText = useTypingAnimation(lines, typingSpeed);
-  
+
   const [showTooltip, setShowTooltip] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  const [isGlitching, setIsGlitching] = useState(false);
+  const [activeKeyIndex, setActiveKeyIndex] = useState<number | null>(null);
+
   const handleMouseEnter = () => {
     if (!isDraggable) return;
-    
+
     setShowTooltip(true);
-    
+
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    
+
     timeoutRef.current = setTimeout(() => {
       setShowTooltip(false);
     }, 2000);
@@ -59,9 +62,29 @@ const RetroComputer: React.FC<RetroComputerProps> = ({
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
   };
 
+  const handleScreenClick = () => {
+    if (isGlitching) return;
+    setIsGlitching(true);
+  };
+
   useEffect(() => {
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    let ghostTimeout: ReturnType<typeof setTimeout>;
+
+    const ghostInterval = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * KEYBOARD_KEYS.length);
+      setActiveKeyIndex(randomIndex);
+      ghostTimeout = setTimeout(() => setActiveKeyIndex(null), 220);
+    }, 650 + Math.random() * 500);
+
+    return () => {
+      clearInterval(ghostInterval);
+      clearTimeout(ghostTimeout);
     };
   }, []);
 
@@ -81,13 +104,19 @@ const RetroComputer: React.FC<RetroComputerProps> = ({
     >
       <Tooltip $visible={showTooltip}>click to drag</Tooltip>
 
-      <Monitor>
+      <Monitor
+        $glitching={isGlitching}
+        onClick={handleScreenClick}
+        onAnimationEnd={() => setIsGlitching(false)}
+      >
         <ScreenContent>{displayedText}</ScreenContent>
       </Monitor>
 
       <Keyboard>
-        {KEYBOARD_KEYS.map((key) => (
-          <Key key={key}>{key}</Key>
+        {KEYBOARD_KEYS.map((key, index) => (
+          <Key key={key} $active={activeKeyIndex === index}>
+            {key}
+          </Key>
         ))}
       </Keyboard>
     </RetroComputerWrapper>
