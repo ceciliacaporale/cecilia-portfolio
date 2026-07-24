@@ -53,7 +53,7 @@ const ThemeWrapper: React.FC<Props> = ({ children, initialTheme }) => {
   useEffect(() => {
     const resolved = initialTheme
       ?? (localStorage.getItem('theme') as ThemeType | null)
-      ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      ?? 'light';
 
     setTheme(resolved);
 
