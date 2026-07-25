@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   MainWindowWrapper,
   Container,
@@ -13,7 +13,6 @@ import SocialMedia from "../../components/SocialMedia";
 import Tabs from "../../components/Tabs";
 import TitleAnimation from "../../components/TitleAnimation";
 import BioParagraph from "@components/BioParagraph";
-import AboutModal from "../../components/AboutModal";
 
 interface MainWindowProps {
   title?: string;
@@ -30,8 +29,6 @@ const WindowHeaderComponent = () => (
 );
 
 const MainWindow: React.FC<MainWindowProps> = () => {
-  const [isAboutOpen, setIsAboutOpen] = useState(false);
-
   return (
     <>
       <Tabs />
@@ -47,7 +44,6 @@ const MainWindow: React.FC<MainWindowProps> = () => {
               width="250px"
               height="200px"
               shapeStar={true}
-              onImageClick={() => setIsAboutOpen(true)}
             />
           </ContainerImage>
         </Container>
@@ -55,8 +51,6 @@ const MainWindow: React.FC<MainWindowProps> = () => {
       <ContainerSocialMedia>
         <SocialMedia />
       </ContainerSocialMedia>
-
-      <AboutModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
     </>
   );
 };
