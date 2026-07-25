@@ -20,6 +20,7 @@ export interface FolderProps {
   standalone?: boolean;
   colorKey?: ColorKey;
   tooltipColorKey?: ColorKey;
+  compactTooltip?: boolean;
 }
 
 const Folder: React.FC<FolderProps> = ({
@@ -31,6 +32,7 @@ const Folder: React.FC<FolderProps> = ({
   standalone = false,
   colorKey = "orange",
   tooltipColorKey = "lime",
+  compactTooltip = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { position, handleMouseDown, zIndex } = useDraggable(
@@ -52,7 +54,7 @@ const Folder: React.FC<FolderProps> = ({
             : undefined
         }
       >
-        <Tooltip $colorKey={tooltipColorKey} className={isOpen ? "visible" : ""}>
+        <Tooltip $colorKey={tooltipColorKey} $compact={compactTooltip} className={isOpen ? "visible" : ""}>
           {tooltipText}
         </Tooltip>
 

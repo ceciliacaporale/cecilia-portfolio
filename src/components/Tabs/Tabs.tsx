@@ -1,16 +1,19 @@
 import { useState, useEffect } from "react";
 import { Tab, TabsContainer } from "./Tabs.styles";
 import { useTheme } from "styled-components";
+import { useLanguage } from "../../LanguageWrapper";
+import { TAB_LABELS, type Language } from "../../i18n/translations";
 
-const getTabs = (theme: any) => [
-  { id: 1, name: "home", link: "/", color: theme.colors.pink },
+const getTabs = (theme: any, language: Language) => [
+  { id: 1, name: TAB_LABELS.home[language], link: "/", color: theme.colors.pink },
   // { id: 2, name: "sobre mim", link: "/about", color: theme.colors.blue },
-  { id: 3, name: "projects", link: "/projects", color: theme.colors.orange },
-  { id: 4, name: "files", link: "/files", color: theme.colors.lime },
+  { id: 3, name: TAB_LABELS.projects[language], link: "/projects", color: theme.colors.orange },
+  { id: 4, name: TAB_LABELS.files[language], link: "/files", color: theme.colors.lime },
 ];
 
 const Tabs = () => {
   const theme = useTheme();
+  const { language } = useLanguage();
 
   const [screenSize, setScreenSize] = useState<"mobile" | "tablet" | "desktop">("desktop");
   const [tabs, setTabs] = useState<{ id: number; name: string; link: string; color: string }[]>([]);
@@ -35,7 +38,7 @@ const Tabs = () => {
   }, []);
 
   useEffect(() => {
-    const updatedTabs = getTabs(theme);
+    const updatedTabs = getTabs(theme, language);
     const isMobile = screenSize === "mobile";
     const inNestedFilesRoute = currentPath.startsWith("/files/");
 
@@ -45,7 +48,7 @@ const Tabs = () => {
     });
 
     setTabs(filteredTabs);
-  }, [screenSize, currentPath, theme]);
+  }, [screenSize, currentPath, theme, language]);
 
   return (
     <TabsContainer>

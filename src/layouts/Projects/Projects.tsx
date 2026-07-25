@@ -11,40 +11,53 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import ThemeWrapper from "../../ThemeWrapper";
+import LanguageWrapper, { useLanguage } from "../../LanguageWrapper";
+import { PAGE_DESCRIPTIONS, PROJECT_DESCRIPTIONS } from "../../i18n/translations";
+
+const ProjectsContent: React.FC = () => {
+  const { language } = useLanguage();
+
+  return (
+    <ResponsiveLayout>
+      <HeroSection
+        titleStrings={["Projects", "Projetos", "Proyectos"]}
+        description={PAGE_DESCRIPTIONS.projects[language]}
+      >
+        <ContainerProjects>
+          <StyledSwiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={5}
+            slidesPerView={1}
+            navigation
+            breakpoints={{
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+          >
+            {projects.map((project) => (
+              <StyledSwiperSlide key={project.id}>
+                <DisplayCard
+                  title={project.title}
+                  description={PROJECT_DESCRIPTIONS[project.id]?.[language] ?? project.description}
+                  imageSrc={project.imageSrc}
+                  technologies={project.technologies}
+                  link={project.link}
+                />
+              </StyledSwiperSlide>
+            ))}
+          </StyledSwiper>
+        </ContainerProjects>
+      </HeroSection>
+    </ResponsiveLayout>
+  );
+};
+
 const ProjectsPage: React.FC = () => {
   return (
       <ThemeWrapper>
-        <ResponsiveLayout>
-          <HeroSection
-            titleStrings={["Projects", "Projetos", "Proyectos"]}
-            description="Here are some of the projects I've developed along my learning journey. In addition to coding them, I also took care of the design and visual experience, bringing my personal touch to every detail. Each project represents a challenge overcome and new skills acquired!"
-          >
-            <ContainerProjects>
-              <StyledSwiper
-                modules={[Navigation, Pagination]}
-                spaceBetween={5}
-                slidesPerView={1}
-                navigation
-                breakpoints={{
-                  768: { slidesPerView: 2 },
-                  1024: { slidesPerView: 3 },
-                }}
-              >
-                {projects.map((project, index) => (
-                  <StyledSwiperSlide key={index}>
-                    <DisplayCard
-                      title={project.title}
-                      description={project.description}
-                      imageSrc={project.imageSrc}
-                      technologies={project.technologies}
-                      link={project.link}
-                    />
-                  </StyledSwiperSlide>
-                ))}
-              </StyledSwiper>
-            </ContainerProjects>
-          </HeroSection>
-        </ResponsiveLayout>
+        <LanguageWrapper>
+          <ProjectsContent />
+        </LanguageWrapper>
       </ThemeWrapper>
   );
 };

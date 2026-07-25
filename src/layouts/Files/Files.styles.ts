@@ -32,6 +32,8 @@ export const CategoryTile = styled.div`
     font-family: "Pixelify Sans", sans-serif;
     font-size: 14px;
     color: ${({ theme }) => theme.colors.black};
+    text-align: center;
+    max-width: 150px;
   }
 
   p {

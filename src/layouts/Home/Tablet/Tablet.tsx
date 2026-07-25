@@ -1,6 +1,7 @@
 import React from "react";
 import MainWindowTablet from "../../../sections/MainWindowTablet";
 import ThemeWrapper from "../../../ThemeWrapper";
+import LanguageWrapper from "../../../LanguageWrapper";
 import ResponsiveLayout from "src/layouts/ResponsiveLayout";
 import { ContainerComponents } from "./Tablet.styles";
 import Skills from "@components/Skills";
@@ -13,6 +14,7 @@ import Folder from "@components/Folder";
 const Tablet: React.FC = () => {
   return (
   <ThemeWrapper>
+    <LanguageWrapper>
     <ResponsiveLayout >
     <MainWindowTablet />
     <ContainerComponents>
@@ -30,6 +32,7 @@ const Tablet: React.FC = () => {
       </div>
     </ContainerComponents>
     </ResponsiveLayout>
+    </LanguageWrapper>
   </ThemeWrapper>
   );
 };

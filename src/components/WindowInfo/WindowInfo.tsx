@@ -5,6 +5,8 @@ import { WindowInfoWrapper, Header, Content, Cursor, IconRow } from "./WindowInf
 import CoffeeCup from "./CoffeeCup";
 import PixelHeart from "./PixelHeart";
 import Star from "./../../assets/web.png?url";
+import { useLanguage } from "../../LanguageWrapper";
+import { WINDOW_INFO_TEXT } from "../../i18n/translations";
 
 const TypedText: React.FC<{ lines: string[]; speed: number }> = ({ lines, speed }) => {
   const displayed = useTypingAnimation(lines, speed);
@@ -40,19 +42,21 @@ interface WindowInfoProps {
 const DEFAULT_POSITION = { x: 190, y: 640 };
 const DEFAULT_SIZE = { width: 150, height: 100 };
 
-const WindowInfo: React.FC<WindowInfoProps> = ({ 
+const WindowInfo: React.FC<WindowInfoProps> = ({
   title,
-  text = "Made with love and caffeine.",
+  text,
   showStar = true,
   width = DEFAULT_SIZE.width,
   height = DEFAULT_SIZE.height,
   headerColor,
   backgroundColor,
   borderColor,
-  containerRef, 
+  containerRef,
   initialPosition = DEFAULT_POSITION,
   isDraggable = true
 }) => {
+  const { language } = useLanguage();
+  const resolvedText = text ?? WINDOW_INFO_TEXT[language];
   const { position, handleMouseDown, zIndex } = useDraggable(
     initialPosition.x,
     initialPosition.y,
@@ -97,7 +101,7 @@ const WindowInfo: React.FC<WindowInfoProps> = ({
 
       <Content>
         <p>
-          <TypedText key={typingKey} lines={[`© ${currentYear}`, text]} speed={40} />
+          <TypedText key={typingKey} lines={[`© ${currentYear}`, resolvedText]} speed={40} />
         </p>
 
         {showStar && (

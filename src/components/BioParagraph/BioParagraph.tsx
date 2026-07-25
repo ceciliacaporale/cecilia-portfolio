@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useLanguage } from "../../LanguageWrapper";
+import { BIO_SHORT, BIO_FULL } from "../../i18n/translations";
 
 interface StyledParagraphProps {
   fontSize?: string;
@@ -32,20 +34,14 @@ const DesktopText = styled(StyledParagraph)`
   }
 `;
 
-const BioParagraph: React.FC<StyledParagraphProps> = (props) => (
-  <>
-    <MobileText {...props}>
-      I'm Maria Cecília, a front-end developer. I've been turning ideas into code and creating interactive experiences for over four years.
-      I'm always open to collaborations, so feel free to reach out for any opportunities!
-      Welcome to my corner of the internet, I hope you enjoy your visit!
-    </MobileText>
-    
-    <DesktopText {...props}>
-      I'm Maria Cecília, a front-end developer. I've been turning ideas into code and creating interactive experiences for over four years.
-      Currently, I work with React and everything involving the web ecosystem. I love working in this space and contributing to keeping it accessible, creative, and full of possibilities.
-      I'm always open to collaborations, so feel free to reach out for any opportunities!
-      Welcome to my corner of the internet, I hope you enjoy your visit!
-    </DesktopText>
-  </>
-);
+const BioParagraph: React.FC<StyledParagraphProps> = (props) => {
+  const { language } = useLanguage();
+
+  return (
+    <>
+      <MobileText {...props}>{BIO_SHORT[language]}</MobileText>
+      <DesktopText {...props}>{BIO_FULL[language]}</DesktopText>
+    </>
+  );
+};
 export default BioParagraph;

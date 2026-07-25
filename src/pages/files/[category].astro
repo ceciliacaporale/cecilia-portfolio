@@ -16,29 +16,44 @@ export async function getStaticPaths() {
 
 const { category } = Astro.props;
 
+// Fetch every language variant for this category — posts translated later
+// (same filename across src/content/posts/{lang}/) automatically group under
+// the same slug below. CategoryView picks the variant matching the visitor's
+// selected language, falling back to English if a translation isn't there yet.
 const entries = await getCollection(
   "posts",
   ({ data }) =>
     data.category === category.id &&
-    data.lang === "en" &&
     (import.meta.env.DEV || !data.draft)
 );
 
-const posts = entries
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .map((entry) => {
-    const slug = entry.id.split("/").slice(1).join("/");
-    return {
-      slug,
-      title: entry.data.title,
-      formattedDate: entry.data.pubDate.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-      }),
-      minutes: readingTime(entry.body ?? ""),
-    };
-  });
+const sortedEntries = entries.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const postGroups = new Map<string, Record<string, { title: string; formattedDate: string; minutes: number }>>();
+
+for (const entry of sortedEntries) {
+  const slug = entry.id.split("/").slice(1).join("/");
+  const variant = {
+    title: entry.data.title,
+    formattedDate: entry.data.pubDate.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    }),
+    minutes: readingTime(entry.body ?? ""),
+  };
+
+  const group = postGroups.get(slug) ?? {};
+  group[entry.data.lang] = variant;
+  postGroups.set(slug, group);
+}
+
+const posts = Array.from(postGroups.entries()).map(([slug, variants]) => ({
+  slug,
+  variants,
+}));
 
 const canonicalURL = Astro.url.href;
 const pageTitle = `${category.label} | Files | Cecilia Caporale`;

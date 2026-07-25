@@ -11,8 +11,10 @@ import Skills from "../../../components/Skills";
 import Terminal from "../../../components/Terminal";
 import WindowInfo from "../../../components/WindowInfo";
 import ThemeWrapper from "../../../ThemeWrapper";
+import LanguageWrapper from "../../../LanguageWrapper";
 import ThemeToggleButton from "../../../components/ThemeToggleButton";
 import ColorPickerButton from "../../../components/ColorPickerButton";
+import LanguageToggleButton from "../../../components/LanguageToggleButton";
 
 const Desktop: React.FC = () => {
   const [isLoadingVisible, setIsLoadingVisible] = useState(true);
@@ -24,13 +26,15 @@ const Desktop: React.FC = () => {
 
   return (
     <ThemeWrapper>
+      <LanguageWrapper>
+      <LanguageToggleButton />
       <DesktopWrapper>
         <ContentArea ref={containerRef}>
           <ContainerToggle>
             <ThemeToggleButton />
             <ColorPickerButton />
           </ContainerToggle>
-          
+
           <LoadingWindow 
             isVisible={isLoadingVisible}
             onClose={() => setIsLoadingVisible(false)}
@@ -50,6 +54,7 @@ const Desktop: React.FC = () => {
           <Folder />
         </ContentArea>
       </DesktopWrapper>
+      </LanguageWrapper>
     </ThemeWrapper>
   );
 };

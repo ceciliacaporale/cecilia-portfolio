@@ -6,6 +6,7 @@ import Lucas from "../assets/lucasprof.png?url";
 
 export const projects = [
   {
+    id: "box-shadow-generator",
     title: "Box Shadow Generator",
     description: "Generate and copy custom CSS shadows with a real-time preview.",
     imageSrc: boxShadow,
@@ -13,6 +14,7 @@ export const projects = [
     link: "https://github.com/ceciliacaporale/shadow-lab"
   },
   {
+    id: "design-system",
     title: "Design System",
     description: "Documentation for my portfolio components.",
     imageSrc: Storybook,
@@ -20,6 +22,7 @@ export const projects = [
     link: "https://storybook.cecicaporale.com/"
   },
   {
+    id: "psychologist-laura-lacerda",
     title: "Psychologist Laura Lacerda",
     description: "Institutional website focused on psychologist Laura Lacerda's clinical practice. Features a welcoming design, easy navigation, and is fully responsive.",
     imageSrc: PsicologaImg,
@@ -27,6 +30,7 @@ export const projects = [
     link: "https://www.psicologalauralacerda.com.br"
   },
   {
+    id: "prof-lucas-gomes",
     title: "Prof. Lucas Gomes",
     description: "Institutional website focused on Prof. Lucas Gomes's private tutoring. Features a modern design, intuitive navigation, and is fully responsive.",
     imageSrc: Lucas,

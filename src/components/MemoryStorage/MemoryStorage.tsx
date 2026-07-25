@@ -14,6 +14,8 @@ import {
 import useDraggable from "../../hooks/useDraggable";
 import Dots from "../Dots";
 import { DEFAULT_CATEGORIES, type StorageCategory } from "../../data/memoryStorageData";
+import { useLanguage } from "../../LanguageWrapper";
+import { MEMORY_STORAGE_TITLE, MEMORY_STORAGE_FREE_TEXT, MEMORY_CATEGORY_LABELS } from "../../i18n/translations";
 
 const INITIAL_X = 350;
 const INITIAL_Y = 380;
@@ -33,12 +35,15 @@ export interface MemoryStorageProps {
 const MemoryStorage: React.FC<MemoryStorageProps> = ({
   containerRef,
   isDraggable = true,
-  title = "s t o r a g e",
+  title,
   storageLabel = "Ceci HD",
-  storageFreeText = "0.02 GB free of 24 GB",
+  storageFreeText,
   categories = DEFAULT_CATEGORIES,
   loadingDelay = 2000,
 }) => {
+  const { language } = useLanguage();
+  const resolvedTitle = title ?? MEMORY_STORAGE_TITLE[language];
+  const resolvedFreeText = storageFreeText ?? MEMORY_STORAGE_FREE_TEXT[language];
   const [loading, setLoading] = useState(true);
 
   const { position, handleMouseDown, zIndex } = useDraggable(
@@ -97,13 +102,13 @@ const MemoryStorage: React.FC<MemoryStorageProps> = ({
           if (isDraggable) handleMouseDown(e);
         }}
       >
-        <HeaderTitle>{title}</HeaderTitle>
+        <HeaderTitle>{resolvedTitle}</HeaderTitle>
         <Dots />
       </Header>
 
       <StorageInfo>
         <span>{storageLabel}</span>
-        <span>{storageFreeText}</span>
+        <span>{resolvedFreeText}</span>
       </StorageInfo>
 
       <ProgressBar>
@@ -120,7 +125,7 @@ const MemoryStorage: React.FC<MemoryStorageProps> = ({
         {categories.map((item) => (
           <LegendItem key={item.name}>
             <ColorBox $colorKey={item.colorKey} />
-            <span>{item.name}</span>
+            <span>{MEMORY_CATEGORY_LABELS[item.name]?.[language] ?? item.name}</span>
           </LegendItem>
         ))}
       </Legend>

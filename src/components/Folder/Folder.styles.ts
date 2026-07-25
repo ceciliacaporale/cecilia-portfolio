@@ -67,24 +67,28 @@ export const Paper = styled.div`
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 `;
 
-export const Tooltip = styled.span<{ $colorKey: ColorKey }>`
+export const Tooltip = styled.span<{ $colorKey: ColorKey; $compact?: boolean }>`
   position: absolute;
   transform: translateX(-50%);
   background: ${({ theme, $colorKey }) => theme.colors[$colorKey]};
   color: ${({ theme }) => theme.colors.borderColor};
   left: 50%;
   bottom: 4.8rem;
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 12px;
-  white-space: nowrap;
+  padding: ${({ $compact }) => ($compact ? "2px 6px" : "5px 10px")};
+  border-radius: ${({ $compact }) => ($compact ? "6px" : "10px")};
+  font-size: ${({ $compact }) => ($compact ? "8px" : "12px")};
+  line-height: ${({ $compact }) => ($compact ? "1.2" : "normal")};
+  white-space: ${({ $compact }) => ($compact ? "normal" : "nowrap")};
+  max-width: ${({ $compact }) => ($compact ? "100px" : "none")};
+  width: ${({ $compact }) => ($compact ? "max-content" : "auto")};
+  text-align: center;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
   font-family: "Pixelify Sans", sans-serif;
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
   box-shadow: 1px 1px 0px ${({ theme }) => theme.colors.borderColor};
-  
+
   &.visible {
     opacity: 1;
     transform: translateX(-50%) translateY(-5px);

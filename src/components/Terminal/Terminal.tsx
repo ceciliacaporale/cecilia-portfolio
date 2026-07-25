@@ -10,6 +10,8 @@ import Star from "./../../assets/staryellow.png?url";
 import useDraggable from "../../hooks/useDraggable";
 import { useTheme } from "styled-components";
 import Dots from "../Dots/Dots";
+import { useLanguage } from "../../LanguageWrapper";
+import { TERMINAL_MESSAGES } from "../../i18n/translations";
 
 interface TerminalProps {
   containerRef?: React.RefObject<HTMLDivElement | null>;
@@ -19,22 +21,15 @@ interface TerminalProps {
   showStar?: boolean;
 }
 
-const defaultMessages = [
-  "$ initializing...",
-  "✔ loading skills...",
-  "✔ rendering projects...",
-  "✔ connecting creativity and code...",
-  "✔ done! explore my portfolio :)",
-  "...",
-];
-
 const Terminal: React.FC<TerminalProps> = ({
   containerRef,
   isDraggable = true,
-  messages = defaultMessages,
+  messages,
   typingSpeed = 50,
   showStar = true,
 }) => {
+  const { language } = useLanguage();
+  const resolvedMessages = messages ?? TERMINAL_MESSAGES[language];
   const { position, handleMouseDown, zIndex } = useDraggable(
     410,
     530,
@@ -76,9 +71,9 @@ const Terminal: React.FC<TerminalProps> = ({
   }, []);
 
   useEffect(() => {
-    if (messageIndex >= messages.length) return;
+    if (messageIndex >= resolvedMessages.length) return;
 
-    const currentMessage = messages[messageIndex];
+    const currentMessage = resolvedMessages[messageIndex];
 
     const timeout = setTimeout(() => {
       if (charIndex < currentMessage.length) {
@@ -92,13 +87,13 @@ const Terminal: React.FC<TerminalProps> = ({
     }, typingSpeed);
 
     return () => clearTimeout(timeout);
-  }, [charIndex, messageIndex, messages, typingSpeed]);
+  }, [charIndex, messageIndex, resolvedMessages, typingSpeed]);
 
   useEffect(() => {
     setDisplayedText("");
     setMessageIndex(0);
     setCharIndex(0);
-  }, [messages]);
+  }, [resolvedMessages]);
 
   return (
     <TerminalWrapper

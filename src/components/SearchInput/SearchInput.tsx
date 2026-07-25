@@ -6,13 +6,18 @@ import {
   TagItem,
 } from "./SearchInput.styles";
 
+export interface SearchTag {
+  id: string;
+  label: string;
+}
+
 interface SearchInputProps {
   searchQuery: string;
   onChange: (value: string) => void;
   placeholder?: string;
-  tags?: string[];
+  tags?: SearchTag[];
   activeTag?: string;
-  onTagClick?: (tag: string) => void;
+  onTagClick?: (tagId: string) => void;
   showInput?: boolean;
 }
 
@@ -40,11 +45,11 @@ export const SearchInput: React.FC<SearchInputProps> = ({
         <TagsWrapper>
           {tags.map((tag) => (
             <TagItem
-              key={tag}
-              onClick={() => onTagClick?.(tag)}
-              $active={tag === activeTag}
+              key={tag.id}
+              onClick={() => onTagClick?.(tag.id)}
+              $active={tag.id === activeTag}
             >
-              {tag}
+              {tag.label}
             </TagItem>
           ))}
         </TagsWrapper>

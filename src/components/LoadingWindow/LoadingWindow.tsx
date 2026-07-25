@@ -8,6 +8,8 @@ import {
   WindowButtons,
 } from "./LoadingWindow.styles";
 import type { DotColorKey } from "../Dots/Dots";
+import { useLanguage } from "../../LanguageWrapper";
+import { LOADING_WINDOW_TITLE } from "../../i18n/translations";
 
 const DEFAULT_DELAY = 5000;
 const DEFAULT_SHAPE_SIZE = 35;
@@ -28,13 +30,15 @@ const LoadingWindow: React.FC<LoadingWindowProps> = ({
   onClose,
   isVisible,
   delay = DEFAULT_DELAY,
-  title = "constant evolution",
+  title,
   headerColorKey = "orange",
   shapeSize = DEFAULT_SHAPE_SIZE,
   showStar = true,
   skipDelay = false,
   standalone = false,
 }) => {
+  const { language } = useLanguage();
+  const resolvedTitle = title ?? LOADING_WINDOW_TITLE[language];
   const [internalVisible, setInternalVisible] = useState(skipDelay);
 
   useEffect(() => {
@@ -61,7 +65,7 @@ const LoadingWindow: React.FC<LoadingWindowProps> = ({
       </WindowButtons>
 
       <Header $colorKey={headerColorKey}>
-        {title}
+        {resolvedTitle}
       </Header>
 
       <Content>
