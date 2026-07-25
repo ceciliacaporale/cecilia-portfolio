@@ -6,9 +6,12 @@ declare module 'styled-components' {
       lime: string;
       pink: string;
       pink10: string;
+      pinkLight: string;
       orange: string;
       yellow: string;
+      yellowLight: string;
       blue: string;
+      blueLight: string;
       purple: string;
       black: string;
       white: string;
