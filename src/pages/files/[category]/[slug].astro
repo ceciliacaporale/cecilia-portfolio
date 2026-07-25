@@ -1,0 +1,379 @@
+---
+import { getCollection, render } from "astro:content";
+import "../../../styles/global.css";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
+import { getCategoryById } from "../../../data/blogCategories";
+import { readingTime } from "../../../utils/readingTime";
+import PostThemeToggle from "../../../components/PostThemeToggle";
+
+export async function getStaticPaths() {
+  const entries = await getCollection(
+    "posts",
+    ({ data }) => import.meta.env.DEV || !data.draft
+  );
+
+  return entries.map((entry) => {
+    const slug = entry.id.split("/").slice(1).join("/");
+    return {
+      params: { category: entry.data.category, slug },
+      props: { entry },
+    };
+  });
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const category = getCategoryById(entry.data.category);
+const minutes = readingTime(entry.body ?? "");
+const formattedDate = entry.data.pubDate.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+
+const canonicalURL = Astro.url.href;
+const pageTitle = `${entry.data.title} | Cecilia Caporale`;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>{pageTitle}</title>
+    <meta name="description" content={entry.data.description} />
+    <meta name="author" content="Cecilia Caporale" />
+    <meta name="keywords" content={entry.data.tags.join(", ")} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={entry.data.description} />
+    <meta property="og:image" content="/apple-touch-icon.png" />
+    <meta property="og:site_name" content="Cecilia Caporale" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={entry.data.description} />
+    <meta name="twitter:image" content="/apple-touch-icon.png" />
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  </head>
+  <body>
+    <main class="post-page">
+      <div class="post-window">
+        <header class="post-window-header">
+          <div class="post-dots" aria-hidden="true">
+            <span class="post-dot post-dot--pink"></span>
+            <span class="post-dot post-dot--orange"></span>
+            <span class="post-dot post-dot--lime"></span>
+          </div>
+          <nav class="post-breadcrumb">
+            <a href="/files">Files</a>
+            {category && (
+              <>
+                {" / "}
+                <a href={`/files/${category.id}`}>{category.label}</a>
+              </>
+            )}
+          </nav>
+          <div class="post-toggle-slot">
+            <PostThemeToggle client:load />
+          </div>
+        </header>
+
+        <article class="post-article">
+          {category && (
+            <a href={`/files/${category.id}`} class="post-back-link">
+              &larr; Back to {category.label}
+            </a>
+          )}
+          {entry.data.draft && <p class="post-draft-banner">Draft — visible in dev only</p>}
+          <h1>{entry.data.title}</h1>
+          <p class="post-meta">{formattedDate} &middot; {minutes} min read</p>
+          <div class="post-tags">
+            {entry.data.tags.map((tag) => <span class="post-tag">{tag}</span>)}
+          </div>
+
+          <div class="post-prose">
+            <Content />
+          </div>
+        </article>
+      </div>
+    </main>
+    <SpeedInsights />
+    <Analytics />
+  </body>
+  <script>
+  try {
+    const stored = localStorage.getItem('theme');
+    const theme = stored || 'light';
+    document.documentElement.classList.add(theme);
+  } catch (e) {}
+  </script>
+</html>
+
+<style is:global>
+  .post-page {
+    --post-border: #000;
+    --post-card-bg: #fff;
+    --post-code-bg: #fff;
+    --post-tag-bg: #edebeb;
+    --post-pink10: #fc41ae;
+    --post-orange: #FAC951;
+    --post-lime: #94EE9C;
+    --post-text: #000;
+
+    display: flex;
+    justify-content: center;
+    padding: 40px 16px 80px;
+    min-height: 100vh;
+  }
+
+  html.dark .post-page {
+    --post-card-bg: #313131;
+    --post-code-bg: #262626;
+    --post-tag-bg: #4a4a4a;
+    --post-pink10: #D7738C;
+    --post-orange: #DEBD6F;
+    --post-lime: #b3f2b8;
+    --post-text: #fff;
+  }
+
+  .post-window {
+    width: 100%;
+    max-width: 720px;
+    background: var(--post-card-bg);
+    border: 2px solid var(--post-border);
+    border-radius: 12px;
+    box-shadow: 6px 6px 0 var(--post-border);
+    overflow: hidden;
+  }
+
+  .post-window-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--post-border);
+    flex-wrap: nowrap;
+    min-height: 52px;
+  }
+
+  .post-dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .post-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--post-border);
+    flex-shrink: 0;
+  }
+
+  .post-dot--pink {
+    background: var(--post-pink10);
+  }
+
+  .post-dot--orange {
+    background: var(--post-orange);
+  }
+
+  .post-dot--lime {
+    background: var(--post-lime);
+  }
+
+  .post-breadcrumb {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--post-text);
+  }
+
+  .post-breadcrumb a {
+    color: var(--post-text);
+    opacity: 0.7;
+    text-decoration: none;
+  }
+
+  .post-breadcrumb a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .post-toggle-slot {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  /* PostThemeToggle renders the site's real ThemeToggleButton, whose own
+     wrapper is absolutely positioned for a different layout context (the
+     home ResponsiveLayout). Here it just needs to sit inline in the header. */
+  .post-toggle-slot astro-island {
+    display: flex;
+  }
+
+  .post-toggle-slot [class*="ThemeToggleButtonstyles__ContainerToggle"] {
+    position: static;
+  }
+
+  .post-article {
+    padding: 28px 32px 40px;
+    color: var(--post-text);
+  }
+
+  .post-back-link {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: var(--post-text);
+    opacity: 0.7;
+    text-decoration: none;
+  }
+
+  .post-back-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .post-draft-banner {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 4px 10px;
+    border: 1px solid var(--post-border);
+    border-radius: 6px;
+    background: var(--post-orange);
+    color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+  }
+
+  .post-article h1 {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .post-meta {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    opacity: 0.6;
+    margin-bottom: 12px;
+  }
+
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+
+  .post-tag {
+    padding: 3px 8px;
+    border: 1px solid var(--post-border);
+    border-radius: 8px;
+    background: var(--post-tag-bg);
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+  }
+
+  .post-prose {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .post-prose h2 {
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 32px 0 12px;
+  }
+
+  .post-prose h3 {
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 24px 0 10px;
+  }
+
+  .post-prose p {
+    margin-bottom: 16px;
+  }
+
+  .post-prose ul,
+  .post-prose ol {
+    margin: 0 0 16px 20px;
+  }
+
+  .post-prose a {
+    color: var(--post-pink10);
+  }
+
+  .post-prose blockquote {
+    margin: 20px 0;
+    padding: 4px 16px;
+    border-left: 3px solid var(--post-pink10);
+    opacity: 0.85;
+    font-style: italic;
+  }
+
+  .post-prose code {
+    font-family: "Courier New", monospace;
+    background: var(--post-tag-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  .post-prose pre.astro-code {
+    position: relative;
+    margin: 24px 0;
+    padding: 34px 16px 16px;
+    border: 2px solid var(--post-border);
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 var(--post-border);
+    overflow-x: auto;
+    background: var(--post-code-bg) !important;
+  }
+
+  .post-prose pre.astro-code code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .post-prose pre.astro-code::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--post-pink10);
+    border: 1px solid var(--post-border);
+    box-shadow: 18px 0 0 var(--post-orange), 18px 0 0 1px var(--post-border),
+      36px 0 0 var(--post-lime), 36px 0 0 1px var(--post-border);
+  }
+
+  @media (max-width: 606px) {
+    .post-article {
+      padding: 22px 18px 32px;
+    }
+  }
+</style>
