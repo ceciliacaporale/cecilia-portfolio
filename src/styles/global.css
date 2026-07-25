@@ -5,19 +5,11 @@
 
 :root {
   --color-background: #FCE6CA;
-  --scrollbar-track: #FCE6CA;
-  --scrollbar-thumb: #FE87A4;
-  --scrollbar-border: #000;
-  
   --grid-color: rgba(0, 0, 0, 0.08);
 }
 
 html.dark {
   --color-background: #181718;
-  --scrollbar-track: #181718;
-  --scrollbar-thumb: #FE87A4;
-  --scrollbar-border: #000;
-  
   --grid-color: rgba(255, 255, 255, 0.05);
 }
 
@@ -45,13 +37,17 @@ html, body {
   font-style: normal;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+/* Shiki dual-theme code blocks: astro emits --shiki-light/--shiki-dark
+   per span with defaultColor:false, we switch which one wins based on
+   the same html.dark/html.light class the rest of the site uses. */
+.astro-code,
+.astro-code span {
+  color: var(--shiki-light) !important;
+  background-color: var(--shiki-light-bg) !important;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-thumb);
-  border-radius: 10px;
-  border: 1px solid var(--scrollbar-border);
+html.dark .astro-code,
+html.dark .astro-code span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
 }
