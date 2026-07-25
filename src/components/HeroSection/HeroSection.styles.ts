@@ -11,7 +11,8 @@ export const HeroSectionWrapper = styled.div`
   border: 2px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index: 99;
   &::selection {
     background: ${({ theme }) => theme.colors.blue};

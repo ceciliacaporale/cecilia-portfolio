@@ -65,6 +65,7 @@ export const ContainerMain = styled.div`
 `;
 
 export const ContentArea = styled.div`
+  width: 100%;
   padding: 0 2rem;
   height: 89%;
 
