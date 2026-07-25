@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import type { ColorKey } from "../../styles/theme";
 
 export const FolderWrapper = styled.div<{ $standalone?: boolean }>`
   position: relative;
@@ -26,10 +27,10 @@ export const FolderWrapper = styled.div<{ $standalone?: boolean }>`
   }
 `;
 
-export const FolderClosed = styled.div`
+export const FolderClosed = styled.div<{ $colorKey: ColorKey }>`
   width: 100%;
   height: 100%;
-  background-color: ${({ theme }) => theme.colors.orange};
+  background-color: ${({ theme, $colorKey }) => theme.colors[$colorKey]};
   border: 3px solid ${({ theme }) => theme.colors.borderColor};
   z-index: 999;
   border-radius: 8px;
@@ -37,10 +38,10 @@ export const FolderClosed = styled.div`
   transition: transform 0.3s ease-in-out;
 `;
 
-export const FolderTab = styled.div`
+export const FolderTab = styled.div<{ $colorKey: ColorKey }>`
   width: 53%;
   height: 20px;
-  background-color: ${({ theme }) => theme.colors.orange};
+  background-color: ${({ theme, $colorKey }) => theme.colors[$colorKey]};
   border: 3px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 6px;
   position: absolute;
@@ -50,7 +51,6 @@ export const FolderTab = styled.div`
 
 export const FolderOpen = styled(FolderClosed)`
   transform: rotateX(30deg);
-  background-color: ${({ theme }) => theme.colors.orange};
 `;
 
 export const Paper = styled.div`
@@ -67,10 +67,10 @@ export const Paper = styled.div`
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 `;
 
-export const Tooltip = styled.span`
+export const Tooltip = styled.span<{ $colorKey: ColorKey }>`
   position: absolute;
   transform: translateX(-50%);
-  background: ${({ theme }) => theme.colors.lime};
+  background: ${({ theme, $colorKey }) => theme.colors[$colorKey]};
   color: ${({ theme }) => theme.colors.borderColor};
   left: 50%;
   bottom: 4.8rem;

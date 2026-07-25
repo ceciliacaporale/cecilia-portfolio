@@ -9,6 +9,7 @@ import {
   Tooltip,
 } from "./Folder.styles";
 import StarPink from "../../assets/starpink.png?url";
+import type { ColorKey } from "../../styles/theme";
 
 export interface FolderProps {
   containerRef?: React.RefObject<HTMLDivElement | null>;
@@ -17,6 +18,8 @@ export interface FolderProps {
   tooltipText?: string;
   showStar?: boolean;
   standalone?: boolean;
+  colorKey?: ColorKey;
+  tooltipColorKey?: ColorKey;
 }
 
 const Folder: React.FC<FolderProps> = ({
@@ -26,6 +29,8 @@ const Folder: React.FC<FolderProps> = ({
   tooltipText = "Files",
   showStar = true,
   standalone = false,
+  colorKey = "orange",
+  tooltipColorKey = "lime",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { position, handleMouseDown, zIndex } = useDraggable(
@@ -47,7 +52,7 @@ const Folder: React.FC<FolderProps> = ({
             : undefined
         }
       >
-        <Tooltip className={isOpen ? "visible" : ""}>
+        <Tooltip $colorKey={tooltipColorKey} className={isOpen ? "visible" : ""}>
           {tooltipText}
         </Tooltip>
 
@@ -57,8 +62,12 @@ const Folder: React.FC<FolderProps> = ({
           </div>
         )}
 
-        <FolderTab />
-        {isOpen ? <FolderOpen /> : <FolderClosed />}
+        <FolderTab $colorKey={colorKey} />
+        {isOpen ? (
+          <FolderOpen $colorKey={colorKey} />
+        ) : (
+          <FolderClosed $colorKey={colorKey} />
+        )}
         <Paper style={{ transform: isOpen ? "translateY(-5px)" : "translateY(20px)", opacity: isOpen ? 1 : 0 }} />
       </FolderWrapper>
     </a>
