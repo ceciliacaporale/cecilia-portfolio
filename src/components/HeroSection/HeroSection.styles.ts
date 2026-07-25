@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export const HeroSectionWrapper = styled.div`
   width: 100%;
-  height: 100%;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 12px;
   position: relative;
@@ -11,8 +10,7 @@ export const HeroSectionWrapper = styled.div`
   border: 2px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   z-index: 99;
   &::selection {
     background: ${({ theme }) => theme.colors.blue};

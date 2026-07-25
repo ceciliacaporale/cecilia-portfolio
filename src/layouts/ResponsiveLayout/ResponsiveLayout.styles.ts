@@ -17,7 +17,7 @@ export const ProjectsWrapper = styled.div`
 
 export const ContainerMain = styled.div`
   margin-top: 4rem;
-  height: 840px;
+  min-height: 840px;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 50px 50px 0 0;
@@ -30,16 +30,16 @@ export const ContainerMain = styled.div`
   z-index: 9;
 
   @media (max-height: 879px) {
-    height: 767px;
+    min-height: 767px;
   }
 
   @media (max-width: 712px) {
-  height: 820px;
+  min-height: 820px;
   }
 
   @media (min-height: 1120px) {
     bottom: 196px;
-    height: 900px;
+    min-height: 900px;
     border-radius: 50px;
   }
 
@@ -67,18 +67,15 @@ export const ContainerMain = styled.div`
 export const ContentArea = styled.div`
   width: 100%;
   padding: 0 2rem;
-  height: 89%;
 
   @media (max-width: 795px) {
-    width: 100%; 
+    width: 100%;
     padding: 12px;
-    height: 99%;
   }
 
   @media (min-width: 606px) and (max-width: 1250px) {
     width: 100%;
     padding: 0 12px;
-    height: 96%;
   }
 `;
 
