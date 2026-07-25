@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 export const HeroSectionWrapper = styled.div`
   width: 100%;
+  flex: 1;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 12px;
   position: relative;
-  top: 51px;
+  margin-top: 51px;
   border: 2px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   flex-direction: column;
@@ -16,16 +17,16 @@ export const HeroSectionWrapper = styled.div`
     background: ${({ theme }) => theme.colors.blue};
     color: ${({ theme }) => theme.colors.white};
   }
-  
+
   @media (max-width: 795px) {
     width: 100%;
     border-radius: 2rem;
-    top: 4px;
+    margin-top: 4px;
   }
 
   @media (min-width: 606px) and (max-width: 1251px) {
     border-radius: 2rem;
-    top: 16px;
+    margin-top: 16px;
   }
 
   h1 {
@@ -71,7 +72,10 @@ export const WindowButtons = styled.div`
 export const Container = styled.div`
   padding: 20px;
   width: 100%;
- 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
   p {
     font-size: 16px;
     font-family: "Inter", sans-serif;

@@ -67,6 +67,9 @@ export const ContainerMain = styled.div`
 export const ContentArea = styled.div`
   width: 100%;
   padding: 0 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 795px) {
     width: 100%;
