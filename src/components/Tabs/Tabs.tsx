@@ -36,11 +36,13 @@ const Tabs = () => {
 
   useEffect(() => {
     const updatedTabs = getTabs(theme);
+    const isMobile = screenSize === "mobile";
+    const inNestedFilesRoute = currentPath.startsWith("/files/");
 
-    const filteredTabs =
-      screenSize === "mobile"
-        ? updatedTabs.filter((tab) => tab.link !== currentPath)
-        : updatedTabs;
+    const filteredTabs = updatedTabs.filter((tab) => {
+      if (tab.link === "/files" && isMobile && inNestedFilesRoute) return false;
+      return isMobile ? tab.link !== currentPath : true;
+    });
 
     setTabs(filteredTabs);
   }, [screenSize, currentPath, theme]);
