@@ -29,14 +29,14 @@ export const StyledSwiper = styled(Swiper)`
   width: 100%;
   max-width: 1200px;
   overflow: hidden;
-  padding: 0 2rem; 
+  padding: 0 2rem 16px;
 
   @media (max-width: 422px) {
-    padding: 0 11px;
+    padding: 0 11px 16px;
   }
-  
+
   .swiper-wrapper {
-    height: 97%;
+    height: 100%;
   }
   .swiper-button-next,
   .swiper-button-prev, 

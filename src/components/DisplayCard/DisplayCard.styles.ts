@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const DisplayCardWrapper = styled.div`
   width: 280px;
-  max-height: 400px;
+  min-height: 360px;
   background: ${({ theme }) => theme.colors.white};
   border: 2.5px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 5px 5px 0px ${({ theme }) => theme.colors.borderColor};
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
@@ -27,6 +26,7 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   padding: 0 12px;
+  border-radius: 10px 10px 0 0;
   background-color: ${({ theme }) => theme.colors.white};
   border-bottom: 2.5px solid ${({ theme }) => theme.colors.borderColor};
 `;
