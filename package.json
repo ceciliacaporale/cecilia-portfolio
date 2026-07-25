@@ -11,6 +11,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.14",
     "@astrojs/react": "^4.2.2",
     "@svgr/webpack": "^8.1.0",
     "@types/react": "^18.0.10",
