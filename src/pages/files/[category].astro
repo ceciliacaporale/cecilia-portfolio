@@ -1,0 +1,84 @@
+---
+import { getCollection } from "astro:content";
+import "../../styles/global.css";
+import CategoryView from "../../layouts/CategoryView";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
+import { blogCategories } from "../../data/blogCategories";
+import { readingTime } from "../../utils/readingTime";
+
+export async function getStaticPaths() {
+  return blogCategories.map((category) => ({
+    params: { category: category.id },
+    props: { category },
+  }));
+}
+
+const { category } = Astro.props;
+
+const entries = await getCollection(
+  "posts",
+  ({ data }) =>
+    data.category === category.id &&
+    data.lang === "en" &&
+    (import.meta.env.DEV || !data.draft)
+);
+
+const posts = entries
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .map((entry) => {
+    const slug = entry.id.split("/").slice(1).join("/");
+    return {
+      slug,
+      title: entry.data.title,
+      formattedDate: entry.data.pubDate.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      }),
+      minutes: readingTime(entry.body ?? ""),
+    };
+  });
+
+const canonicalURL = Astro.url.href;
+const pageTitle = `${category.label} | Files | Cecilia Caporale`;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>{pageTitle}</title>
+    <meta name="description" content={category.description} />
+    <meta name="author" content="Cecilia Caporale" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={category.description} />
+    <meta property="og:image" content="/apple-touch-icon.png" />
+    <meta property="og:site_name" content="Cecilia Caporale" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={category.description} />
+    <meta name="twitter:image" content="/apple-touch-icon.png" />
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  </head>
+  <body>
+    <CategoryView category={category} posts={posts} client:only="react" />
+    <SpeedInsights />
+    <Analytics />
+  </body>
+  <script>
+  try {
+    const stored = localStorage.getItem('theme');
+    const theme = stored || 'light';
+    document.documentElement.classList.add(theme);
+  } catch (e) {}
+  </script>
+</html>
