@@ -13,6 +13,7 @@ interface SearchInputProps {
   tags?: string[];
   activeTag?: string;
   onTagClick?: (tag: string) => void;
+  showInput?: boolean;
 }
 
 export const SearchInput: React.FC<SearchInputProps> = ({
@@ -22,15 +23,18 @@ export const SearchInput: React.FC<SearchInputProps> = ({
   tags = [],
   activeTag,
   onTagClick,
+  showInput = true,
 }) => {
   return (
     <InputWrapper>
-      <InputField
-        type="text"
-        value={searchQuery}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-      />
+      {showInput && (
+        <InputField
+          type="text"
+          value={searchQuery}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder={placeholder}
+        />
+      )}
 
       {tags.length > 0 && (
         <TagsWrapper>
