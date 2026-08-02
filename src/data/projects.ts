@@ -3,6 +3,7 @@ import boxShadow from "../assets/box-shadow.png?url";
 import PsicologaImg from "../assets/psicologa-laura.png?url";
 import Storybook from "../assets/storybook.png?url";
 import Lucas from "../assets/lucasprof.png?url";
+import Coreale from "../assets/coreale.png?url";
 
 export const projects = [
   {
@@ -20,6 +21,14 @@ export const projects = [
     imageSrc: Storybook,
     technologies: ["React", "TypeScript", "Styled Components", "Storybook"],
     link: "https://storybook.cecicaporale.com/"
+  },
+     {
+    id: "coreale",
+    title: "Coreale",
+    description: "Studio that designs and develops websites for businesses and independent professionals.",
+    imageSrc: Coreale,
+    technologies: ["Next.js", "Tailwind", "TypeScript"],
+    link: "https://www.coreale.com.br/"
   },
   {
     id: "psychologist-laura-lacerda",
